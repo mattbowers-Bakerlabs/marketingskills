@@ -2,6 +2,25 @@
 
 Detailed, source-by-source playbooks for gathering customer intelligence from online watering holes.
 
+<!-- BML:START bml-local-sources -->
+## BML — Local Service Review Sources
+
+For BML client work (see `SKILL.md`), start here. The sections after this one apply when the client sells software or sells B2B. Privacy and quoting rules from `SKILL.md` apply to every source.
+
+| Segment | Where customers talk |
+|---|---|
+| Home services and construction | Google Business Profile, Houzz, Angi, Nextdoor, Yelp, BBB, local Facebook groups; Thumbtack or HomeAdvisor if the client is listed |
+| Clinical | Google Business Profile, Healthgrades, Zocdoc, Vitals, Yelp; condition forums for themes only. No snippets; no condition linked to a person |
+| Professional services | Google Business Profile, Yelp, BBB; Avvo or Martindale (legal); Clutch (agencies and B2B services) |
+| Multi-location | Each location's own GBP listing and platform pages, kept separate (rows suffixed per location) |
+
+**Reading order** (extends the L-5 procedure): most recent first, then 1–2 star, then 3 star, then 5 star for praise language. Read the owner's replies too — how complaints get handled is a theme.
+
+**Themes to look for:** response time and communication (compare I-3), quote accuracy and price surprises, scheduling and no-shows, workmanship and cleanup, staff manner, wait times, insurance and billing (clinical), what tipped the choice over another provider.
+
+The counts, quotes and confidence examples later in this file are illustrative, not client facts.
+<!-- BML:END bml-local-sources -->
+
 ---
 
 ## Reddit Research

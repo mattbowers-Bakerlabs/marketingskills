@@ -9,6 +9,7 @@ Called from:
 - `product-marketing` Intake mode — for prospects and new clients, before the first interview
 - `client-context-miner` Backfill — for existing clients, alongside its Web and Benchmark passes
 - the quarterly market refresh loop (`marketing-loops`) — refreshes L-3, L-4, L-5 and L-7
+- `customer-research` — for L-5 competitor review themes when the row is OPEN or older than 90 days (its output goes in the customer-research review file, as DRAFT rows)
 
 ---
 

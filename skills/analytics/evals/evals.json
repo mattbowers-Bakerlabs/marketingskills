@@ -112,6 +112,64 @@
         "Tests grouped and localized display controls"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Set up GA4 tracking for [TST], a home-services client on Wix. Most leads are phone calls and a quote form; they also have a Google Business Profile.",
+      "expected_output": "Should read context-rules.md and the staged file, check scope on page 00, and answer from rows (A-13, A-14, A-15, I-3) before asking. Plan uses generate_lead with lead_type (form, call, booking) and click_to_call/click_directions, not signup_completed or form_submitted. Uses Wix Marketing Integrations plus conversion-tracking's wix-forms detector, and checks whether Wix already sends a lead event. Lists GBP actions and call tracking as separate sources, never summed. Delivers a plan, install sheet and verification checklist for a person to install after J-1 approval; makes no live change. Saves to Drive OUTPUTS/REPORTING, proposes a ClickUp task tagged website, and ends with the §9 footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and checks scope",
+        "Uses generate_lead with lead_type, no SaaS events",
+        "Uses Wix Marketing Integrations and conversion-tracking Wix detectors",
+        "Keeps GBP and call-tracking sources separate from GA4",
+        "Makes no live change; install sheet for a person after J-1 approval",
+        "Saves to OUTPUTS/REPORTING and proposes a website-tagged ClickUp task",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Audit tracking for [TST], a clinical client (imaging practice); A-13 lists its GA4 property ID. Also set up Meta Pixel plus a remarketing audience of people who visited the service pages. J-3 has no tracking sign-off.",
+      "expected_output": "Should run the GA4 property health check on the A-13 property only (pass/fail/unknown with Observed/Reported/Inferred, Windsor reads only, Benchmark: Windsor.ai source labels) and hand conversion arrival to conversion-tracking's audit, with one A-12 row staged once. Basic GA4 is allowed. Stops on the Meta Pixel and remarketing audience with 'Blocked by J-3 (context-rules.md §7): …'; lists any existing pixels, Signals or recording tools and flags them for a person without recommending add or remove (Signals is flagged, not scored fail). Keeps form_name/page_type generic, turns off site search on the install sheet, no personal data in URLs, no test submissions on patient forms.",
+      "assertions": [
+        "Reads only the A-13 property",
+        "Runs the GA4 property health check with evidence labels",
+        "Delegates conversion arrival to conversion-tracking; A-12 staged once",
+        "Allows basic GA4 measurement",
+        "Refuses pixel and remarketing setup with the Blocked by J-3 sentence",
+        "Flags existing gated tools (including Signals) without recommending add/remove or scoring fail",
+        "No patient data, condition parameters, site-search terms or test submissions on patient forms"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Run the GA4 health check for [TST]. Site recon found one GA4 measurement ID and one GTM container, and call-tracking numbers on every page. A-12, A-13 and A-15 are OPEN; A-14 is APPROVED as Wix. conversion-tracking has not run this session.",
+      "expected_output": "Before any Windsor read, should ask the user to confirm the exact GA4 property ID (A-13 is OPEN) and never pick one from Windsor's account list by name. Once confirmed, stages A-13 as DRAFT (Client-stated:, IDs only, no logins). Stages A-12 as DRAFT marked 'partial — GA4 property health only; arrival not checked (run conversion-tracking)' and A-15 as DRAFT with a Research: label, in context-rules §10 format, shown to the user. Windsor figures use 'Benchmark: Windsor.ai googleanalytics4, <property ID>, pulled <date>'. Does not stage A-14 again and writes nothing to ClickUp. Keeps call-tracking calls separate from click_to_call and notes a NAP check (A-11) before a call-tracking number appears on GBP.",
+      "assertions": [
+        "Asks the user to confirm the GA4 property ID before reading Windsor",
+        "Never selects a Windsor account by name",
+        "Stages A-13 as DRAFT Client-stated once confirmed",
+        "Stages A-12 as partial with the run-conversion-tracking note",
+        "Uses Research: for site observations and Benchmark: Windsor.ai labels for Windsor data",
+        "Stages only OPEN rows; does not write to ClickUp",
+        "Keeps call-tracking calls separate from click_to_call"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Give me UTM links for [TST]'s Google Business Profile listings at two locations and for a truck-wrap QR code.",
+      "expected_output": "Should use lowercase hyphenated values: GBP link with utm_source=google, utm_medium=organic, utm_campaign=gbp-<location> per location; QR code with medium print and a dated campaign. Should note the convention is PROVISIONAL until Ops Manual 04 Baker Standards records one, recommend a GA4 channel group rule for print, keep allowed values in the client's UTM sheet, and use placeholders rather than invented figures or names.",
+      "assertions": [
+        "Uses GBP pattern with a per-location campaign",
+        "Uses a print/QR pattern",
+        "Lowercase hyphenated values, no PII",
+        "Flags the convention as PROVISIONAL pending Baker Standards",
+        "Recommends a channel group rule for the print medium"
+      ],
+      "files": []
     }
   ]
 }

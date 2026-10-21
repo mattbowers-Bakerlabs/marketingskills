@@ -1,5 +1,9 @@
 # Measurement Paradigms — MTA vs. MMM vs. Incrementality
 
+<!-- BML:START bml-local-scale -->
+> **Baker Labs (BML) client work:** at local-service budgets (B-10) and service areas (B-8), MMM is out of scope and geo-holdouts fit only multi-location clients with separate markets. Read natural pauses (B-6 capacity, I-10 season) as evidence; any deliberate on/off or holdout test changes spend, so it is written as a proposal for the approver and run by a person. See `by-business-type.md`, BML block. Figures in this file are illustrations, not benchmarks.
+<!-- BML:END bml-local-scale -->
+
 Attribution *models* (see `attribution-models.md`) split credit *within* your tracked data. They can't tell you what would have happened anyway. That's what these three paradigms are for — increasingly rigorous, increasingly expensive ways to get closer to causality. Use this reference to help a user pick, and to explain how a test *reads* (not how to run the statistics).
 
 ## The three, compared

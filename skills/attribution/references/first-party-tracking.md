@@ -1,5 +1,9 @@
 # First-Party Attribution — The Own-Your-Attribution Runbook
 
+<!-- BML:START bml-pillar-b-gate -->
+> **Baker Labs (BML) client work:** this runbook is reference material for a plain-language brief to the client's developer or vendor — see the BML gate at the top of Pillar B in `SKILL.md`. Claude installs no code, deploys nothing, edits no site code or settings and writes nothing to a client CRM; a person puts any change live after the approver OKs it. Clinical clients: patient identity is never joined to browsing history, even with a J-3 sign-off (context-rules.md §7). The code below is upstream's example, not a template for client sites.
+<!-- BML:END bml-pillar-b-gate -->
+
 How to instrument and stitch attribution yourself when you control the site/app. This is the build track (Pillar B). It's distilled from real production builds and kept tool-agnostic — **PostHog + SavvyCal are the worked example**, but the pattern maps to any product-analytics tool with `identify()`/merge (Segment, Amplitude, GA4 user-id) and any third-party conversion domain with a metadata passthrough + webhook (Calendly, Cal.com, Stripe Checkout, Typeform).
 
 The core method — closing the `identify()` gap so conversions join to anonymous browsing history — is **adapted from Tessa Kriesel's PostHog attribution approach**. Several of the production refinements that make this operate at scale are also hers, credited inline: the full-touch-path capture that feeds the model track (Step 4), the CRM last-mile with source/confidence/basis and a Paid-vs-Organic read (Step 5), the account rollup, and the "expect ~zero until the stitch is verified, with a campaign-window fallback + backfill" window (Cross-subdomain stitching). Credit where due.

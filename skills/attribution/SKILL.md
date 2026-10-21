@@ -2,7 +2,7 @@
 name: attribution
 description: When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools. Also use when the user mentions "attribution," "attribution model," "first-touch vs last-touch," "multi-touch," "which channel drives revenue," "what's my real CAC," "my dashboards disagree," "Google/Meta says X but GA says Y," "media mix model," "MMM," "incrementality," "geo lift," "holdout test," "how did you hear about us," "self-reported attribution," "dark social," or wants to instrument attribution themselves — "stitch my bookings to their source," "SavvyCal/Calendly attribution," "close the identify gap," "track conversions on a third-party domain," "first-party / self-hosted attribution." For event tracking setup and UTMs, see analytics. For ad-platform pixels/CAPI and conversion tracking, see conversion-tracking. For pipeline and CRM revenue reporting, see revops. For the AI-search attribution blind spot, see ai-seo.
 metadata:
-  version: 1.1.6
+  version: 1.1.6-bml.1
 ---
 
 # Attribution
@@ -17,6 +17,21 @@ This skill has two pillars. Know which one the user needs before you dive in:
 Most requests start with (A). Reach for (B) only when they control the surface and want to build.
 
 Product context: check for `.agents/product-marketing.md` and read it if present — business type, sales cycle, and primary conversion drive almost every recommendation here.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the request names a BML client, runs in a client's Claude Project, or `.agents/product-marketing.md` starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`, read `bml/context-rules.md` before anything else (the staged file's `Rules file:` line gives the path; otherwise `../../bml/context-rules.md` from this skill's folder). Its rules win where they conflict with this skill. If the staged file is missing or names a different client, run `product-marketing` in Load mode first. Never edit the staged file or page 13, and never add Learnings to it.
+<!-- BML:END context -->
+
+<!-- BML:START bml-scope -->
+**BML client work — before you start:**
+
+- **Scope gate.** Check the service on page 00 via the staged file's scope summary (context-rules.md §3). Services this skill runs under: reporting / analytics, and paid media where the retainer includes performance reporting — ⚠ Ops Manual 03 Service Definitions is not written yet; confirm with the account lead if the mapping is unclear.
+- **Read order.** Router → staged page 13 → current Monthly Context Brief → this client's ClickUp tasks completed in the period (what launched, paused or changed — a new campaign, a booked-out month, a site change) → source pages only for a cited row. Never browse Drive or search ClickUp broadly. One client per run.
+- **Which pillar.** BML clients are local service businesses: Pillar A is the job. Pillar B is gated (see the gate at the top of Pillar B). The business type is **local services** (`references/by-business-type.md`, BML block) unless page 13 says otherwise; the SaaS and DTC playbooks are for non-client work.
+- **Leads are not customers.** GA4 `generate_lead` (`lead_type` = `form` | `call` | `booking`), `click_to_call`, `click_directions`, Ads/Meta conversions, GBP actions and call-tracking answered calls are *leads*, each from its own source — never summed with each other. Signed jobs or kept appointments come only from the client's records (I-4). Job value from B-7 × I-4 only if both rows are usable; otherwise `[NEEDS PROOF: B-7]`.
+- **Example figures are illustrations.** Every number, company and journey in this skill and its references (survey shares, test lifts, deal values, platform counts) is a teaching example — never a client figure or a benchmark. Client numbers come only from a Windsor.ai read, a client-provided export or a cited row; otherwise `[NEEDS PROOF: <row ID>]`.
+- **Segments.** Clinical: apply context-rules.md §7 (what's allowed, what's gated behind a J-3 row naming the item and the person, and what's never allowed). In this skill that means: aggregate counts by source only — never request, read or produce patient-level rows (names, contact details, dates of service, call recordings or transcripts with patient details), never tie a "how did you hear" answer to a named patient, and never join patient identity to browsing history, even with a J-3 sign-off. When a readout touches a §7 gated item (any ad-platform tag, advanced matching, Google Signals, `user_id`, session-recording or heatmap tools and the rest of the §7 list), list and flag it for a person with no recommendation to add or remove; if the request needs one, stop with `Blocked by J-3 (context-rules.md §7): <item> on patient-facing pages needs an APPROVED J-3 sign-off from a named person.` Multi-location: reconcile each location separately; never mix one location's numbers into another's.
+<!-- BML:END bml-scope -->
 
 ## Boundaries — what this skill does NOT own
 
@@ -88,6 +103,10 @@ The most underused signal, and often the most honest for long cycles and dark so
 - **Treat it as a triangulation input, not gospel** — recall is fuzzy and people credit the *memorable* touch, not the first. **Discount survey share when turning it into credit** (e.g. 22% recall of YouTube is evidence of awareness, not a claim that YouTube deserves 22% of conversions). Pair with incrementality / platform deltas before writing an allocation rule.
 - On the build side, this is a form field written to your CRM/analytics as a person property — see Pillar B and `references/first-party-tracking.md`.
 
+<!-- BML:START bml-self-reported -->
+**BML local-service version.** The moments of conversion are the contact/quote form, the phone call (whoever answers per I-3) and the booking or job signing. Recommend asking "How did you hear about us?" at each, as a pick-list built from the client's own channels (B-9, I-1, L-11 category platforms, L-8 referral partners) plus "Other — tell us more". Write it as a recommendation for the approver (J-1; A-19 if J-1 is OPEN): a form change is a `website` task a person puts live, and a phone-intake question is a script line for the client's staff. BML never adds the field itself and never writes the answers into the client's CRM. Clinical: a form change on a patient-facing page is a compliance question for a person (context-rules.md §7) — flag it, don't recommend it; the phone-intake question is fine; answers are reported only as counts by source.
+<!-- BML:END bml-self-reported -->
+
 ### 5. Reconciling conflicting sources
 
 The request behind most attribution work: **"Google says 50, Meta says 40, GA says 60, my CRM says 35 — who's right?"** Nobody is. Here's the framework.
@@ -111,6 +130,18 @@ The request behind most attribution work: **"Google says 50, Meta says 40, GA sa
 
 The output is an honest allocation with confidence levels, not a false reconciliation to the decimal.
 
+<!-- BML:START bml-source-of-truth -->
+**BML source-of-truth ladder.** For a BML client, step 1 above ("usually your CRM") becomes the highest rung available. Name the rung in the readout and its confidence:
+
+1. **The client's record of signed jobs / kept appointments** — the CRM, field-service or practice-management system named in A-15, read from an export or report the user provides (aggregate by source and month; for clinical, counts only). This is the count of customers.
+2. **Call tracking (A-15) + the form/booking inbox** — answered calls and submissions. This is the count of *leads*, not customers; say so.
+3. **Client-stated lead sources (B-9)** — the client's own view of where work comes from. Use it to sanity-check, not to count.
+
+Platform and GA4 numbers (read through Windsor.ai) never define the count at any rung; they explain where it came from. BML is **read-only** on every client system: never write to, sync to or "fix" a client CRM, booking tool or call-tracking account, and never ask for login credentials — ask the user for an export. If no rung above 3 exists, the readout says the customer count is unknown and names the rows to fill (A-15, I-4).
+
+A channel-level override (step 6) is a labeled adjustment in the readout, with the raw numbers shown beside it — never a change to a client dashboard or account.
+<!-- BML:END bml-source-of-truth -->
+
 ### 6. The blind spots
 
 Where conversions hide, making real channels look weak:
@@ -122,6 +153,16 @@ Where conversions hide, making real channels look weak:
 
 When direct and branded search dominate, the most common explanation is a top of funnel that's working while attribution hides it. Confirm before concluding: rule out existing customers, lost referrers, and offline discovery, then check self-reported attribution or run an incrementality test. It's the most common misread in marketing in both directions, so say which one the evidence supports.
 
+<!-- BML:START bml-local-blind-spots -->
+**Local-service blind spots** (add these before reading a BML client's numbers):
+
+- **Google Business Profile** — calls, direction requests and website clicks from Maps and Search (A-6). Calls and directions never touch the site, so GA4 sees nothing. Report GBP as a channel in its own right from Windsor.ai (`google_my_business`); never fold it into "direct" or sum it with GA4 events.
+- **Call extensions and call-only ads** — counted by Google Ads (or call tracking), not GA4.
+- **Local Services Ads and directories** (Angi, Houzz, Zocdoc and the platforms in L-11) — leads reported only inside those platforms.
+- **Referrals and word of mouth** (L-8), **yard signs, vehicle wraps, print** — no digital trail; only the "how did you hear" question (§4) sees them.
+- **Walk-ins and repeat customers** — appear as direct or branded search, or not at all.
+<!-- BML:END bml-local-blind-spots -->
+
 ### 7. Business-type fork
 
 Defaults differ sharply. Summary here; full playbooks in `references/by-business-type.md`.
@@ -129,11 +170,25 @@ Defaults differ sharply. Summary here; full playbooks in `references/by-business
 - **B2B SaaS (long cycle, sales-assisted):** journeys span weeks–months and multiple people, so single-touch models mislead badly. Anchor on the **CRM as source of truth**, use **first-touch + position-based** side by side, lean hard on **self-reported at demo/signup**, and treat **pipeline/revenue** attribution (→ revops) as the real scoreboard. Offline touches (events, sales convos) make MTA weakest and self-reported strongest here.
 - **Ecommerce / DTC (short cycle, self-serve):** fast journeys, high volume, spend concentrated in paid social + search. Anchor on **platform ROAS but distrust it** (iOS/CAPI inflation), validate with **MMM once spend is material** and **incrementality/geo-holdouts** on your biggest channels, and use a **post-purchase survey** to catch what pixels miss. Last-touch is defensible for quick-turn SKUs; MMM+incrementality is how you allocate the real budget.
 
+<!-- BML:START bml-local-services -->
+- **Local services (BML clients — the default for client work):** the conversion is a call, booking or form; the outcome is a signed job or kept appointment closed offline (I-4); volume is low. Use **last-non-direct** (GA4: *Paid and organic last click*) plus the "how did you hear" question and GBP as its own channel; in Google Ads/GA4 report last-click and say data-driven ≈ last-click at this volume — don't sell a model change as a lever. **No MMM.** Incrementality only as reading past natural pauses (booked out, seasonal shutdown) or as a written on/off proposal for the approver. Vocabulary: CAC → cost per signed job; pipeline → leads → estimates/consults → signed jobs; MRR/LTV → B-7 job value and LTV. Revops hand-offs don't apply — note them for the account lead. Full playbook: `references/by-business-type.md`, BML block.
+<!-- BML:END bml-local-services -->
+
 ---
 
 ## Pillar B — Own your attribution (first-party)
 
 Use this when the user **controls the site/app** and wants to instrument attribution themselves — especially for a conversion that happens on a **domain they don't own** (a SavvyCal/Calendly/Cal.com booking, a Stripe Checkout page). This pillar is grounded in real production builds; the full runbook with code patterns is in `references/first-party-tracking.md`. The essentials:
+
+<!-- BML:START bml-pillar-b-gate -->
+**BML gate — advisory only.** For BML client work, Pillar B is explanation, not implementation:
+
+- **Deliver a plain-language brief for the client's developer or platform vendor:** what is un-joined (e.g. bookings on `<booking tool>` lose their source), the pattern that would close it, what it needs (metadata passthrough + webhook), the privacy guard, and how to verify it. Claude writes no code to install, deploys nothing, edits no site code or settings (Wix included), and uses no connector write action. A person puts any change live after the approver (J-1; A-19 if J-1 is OPEN) OKs it, recorded on the ClickUp task.
+- **Never write to a client CRM** — the "last mile" CRM sync below and account rollup are for the client's own team to decide; BML may describe them, not build or run them.
+- **One recommendation worth making:** the first-touch data-quality fix (exclude booking, payment and login domains as unwanted referrals in GA4). It is a config change, so Claude doesn't make it: write the steps as a recommended `website` (tracking work) task, handed to `analytics` / `conversion-tracking`, for a named person with A-13 access to apply after approval.
+- **Clinical clients: stop.** Joining a known identity (email, phone, `user_id`) to browsing history is patient data, which context-rules.md §7 never allows — a J-3 sign-off doesn't change this. Say "Blocked by context-rules.md §7: patient identity is never joined to browsing history" and offer aggregate source reporting instead.
+- **No visitor de-anonymization** (RB2B and similar) for any BML client.
+<!-- BML:END bml-pillar-b-gate -->
 
 ### The identity graph
 
@@ -201,6 +256,18 @@ Deliver an **attribution readout**, not a data dump:
 [Allocation call with confidence levels; the tiebreaker test worth running]
 ```
 
+<!-- BML:START bml-output -->
+**BML client readouts:**
+
+- **Title:** `Attribution Readout — [CODE] — [period]`. It's an agency artifact: Baker house style; do not load the client's voice or style pages; Distinctiveness `n/a — agency artifact`.
+- **Source table columns:** Channel · Windsor.ai (Google Ads / Meta / GA4 `generate_lead` by `lead_type` / GBP actions — each its own column, never summed) · Call tracking · Forms/bookings · Client job log · "How did you hear" · Our read. Add a **lead → signed job** row from I-4 or the client export; if missing, `[NEEDS PROOF: I-4]`.
+- **Model comparison:** for local services, show last-click vs. the self-reported split instead of a long-cycle first/last table.
+- **Recommendation:** any test that pauses, cuts or shifts spend is a recommendation for the approver (J-1; A-19 if J-1 is OPEN), with B-6 capacity and I-10 season noted — never executed. Any pause or spend change is made by a named person (the account lead or the client), never Claude, even after approval. Tracking defects found along the way (the tracking-health part of A-9, A-12) go to `conversion-tracking` / `analytics` as a recommended `website` task, not a fix.
+- **Where it goes:** the client's Drive `OUTPUTS/REPORTING`, resolved from the router by folder ID — never search Drive or create folders; if the folder is missing, stop and report. Propose a ClickUp record tagged `reporting`; create it only after the user approves. Anything written to the working directory is scratch only.
+- **Write-back:** a finding that answers an `OPEN` A-6 row (when this run pulled the GBP data) or the spend/CPL part of an `OPEN` A-9 row is staged as `DRAFT` in context-rules.md §10 format (`ID | Answer | Benchmark: Windsor.ai <connector>, <account/property ID>, pulled <YYYY-MM-DD> + link to the platform report or listing page | Confidence | Date`), shown to the user, never written to ClickUp. Attribution never stages A-12 or the tracking-health part of A-9 — cite them, or list them under "Gaps to ask about". Measured lead-source shares and lead-to-job rates do **not** fill B-9 or I-4 (those are the client's own answers); put them under "Gaps to ask about" in the footer. A finding that disagrees with a non-OPEN row is a conflict for the monthly check, not an edit.
+- **Footer:** end with the context-rules.md §9 footer (internal; stripped before the piece goes to the client).
+<!-- BML:END bml-output -->
+
 ## Tool Integrations
 
 For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key tools:
@@ -215,6 +282,15 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Salesforce** | CRM as revenue source of truth | - | [salesforce.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/salesforce.md) |
 | **Supermetrics** | Pull platform numbers into one place to reconcile | ✓ | [supermetrics.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/supermetrics.md) |
 | **RB2B** | De-anonymize B2B website visitors | - | [rb2b.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/rb2b.md) |
+
+<!-- BML:START bml-tools -->
+**BML tools.** BML reads GA4, Google Ads, Search Console, Business Profile and Meta through Windsor.ai (read only), SEO data through Semrush, transcripts through Fireflies; client sites are often Wix. Anything else (Mixpanel, Amplitude, Segment, PostHog, HubSpot, Optimizely, VWO, Supermetrics, paid tracking partners) is used only if the client already uses it (see A-15 / 00 §8) and any paid tool is client spend — recommend, never sign up.
+
+- **Windsor.ai:** `get_data` on `googleanalytics4`, `google_ads`, `facebook`, `google_my_business`, `searchconsole`, using only the account/property IDs on A-13 (or 00 §8). If A-13 is OPEN or ambiguous, ask the user to confirm the exact ID before reading — never pick an account from Windsor's list by name — and stage the confirmed ID as an A-13 `DRAFT` row (`Client-stated:` if the user or client gave it). Never call `execute_action` — it changes budgets, bids and listings.
+- **Fireflies (A-18):** intake and sales-call transcripts can show how customers say they found the client — count mentions by source; never quote or name a customer. Clinical: use only the meetings the account lead has pre-screened and given you by meeting ID — never search or browse transcripts — and report a `SENSITIVE` source by ID, never by title.
+- **Call tracking, CRM, booking tool (A-15):** read from an export the user provides; no logins, no writes.
+- **RB2B:** not for BML client work.
+<!-- BML:END bml-tools -->
 
 ---
 

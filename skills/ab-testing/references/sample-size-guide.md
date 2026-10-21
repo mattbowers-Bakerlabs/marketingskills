@@ -212,6 +212,25 @@ Apply Bonferroni correction or use tools that handle this automatically.
 
 ---
 
+<!-- BML:START bml-low-traffic -->
+## BML clients: low traffic is the normal case
+
+The scenarios above call 500 visitors a day "low traffic". Many BML client pages see well under 50 eligible sessions a day, so check conversion counts first:
+
+```
+Needed visitors   = <n per arm, from the tables (visitors)> × <arms>
+Months to finish  = needed visitors ÷ <eligible sessions/month on this page>
+Sanity check      = <eligible sessions/month> × <baseline CR> ÷ <arms> = <conversions per arm per month>
+```
+
+The tables count visitors, not conversions; never divide a visitor sample by a conversion count. If the sanity check shows only a handful of conversions per arm per month, step down the ladder.
+
+- More than ~8 weeks, or the window crosses a season change (I-10) or an ad, budget, GBP or tracking change → don't run the page test. Step down the ladder in SKILL.md (ad-platform experiment → proxy → pooled → before/after → don't test).
+- For anything reported to a client as a result, don't use options 2 or 7 below: never raise α above 0.05 (no 90% confidence), and don't stretch a test across seasons.
+- Option 6 ("Don't test") is a legitimate verdict. State it with the reason and the evidence label `Not tested`.
+
+<!-- BML:END bml-low-traffic -->
+
 ## When Sample Size Requirements Are Too High
 
 Options when you can't get enough traffic:

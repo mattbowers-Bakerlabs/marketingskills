@@ -11,6 +11,18 @@ Templates for planning, documenting, and analyzing experiments.
 - Experiment Prioritization Scorecard
 - Hypothesis Bank Template
 
+<!-- BML:START bml-templates -->
+## BML clients: using these templates
+
+- The example rows in the Test Repository and Hypothesis Bank templates are illustrative SaaS examples. Never reuse their figures, names or page types in client work; fill fields from rows and Windsor data, or `[NEEDS PROOF: <row ID>]`.
+- Add to every plan and results doc: `Test verdict: <rung> — <reason>`, `Evidence: <Randomized (page) | Randomized (ad platform) | Proxy | Before/after — not causal | Not tested>`, `Rows cited: <IDs>`, `Status:`.
+- **Owner** = the BML account lead. **Stakeholders informed** = the client's approver (J-1; A-19 if J-1 is `OPEN`), with sign-off recorded on the ClickUp task. The Test ID comes from the ad platform or testing tool once a person has launched it.
+- Guardrails always include lead quality (I-4); the plan records the capacity gate result (B-6, I-10).
+- **Test repository and hypothesis bank** = ClickUp tasks (`strategy` / `research`), proposed and created only after the user approves. Not a file or the staged context.
+- End each doc with the context-rules.md §9 footer (Distinctiveness: `n/a — agency artifact`).
+
+<!-- BML:END bml-templates -->
+
 ## Test Plan Template
 
 ```markdown

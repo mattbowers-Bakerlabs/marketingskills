@@ -105,7 +105,8 @@ The staged file lists the client's segments; a client can have more than one (a 
 - Clinical claims (outcomes, efficacy, results) only from approved published copy, and flagged for review by a named provider.
 - Testimonials and patient stories need written patient authorization on file (G-5, J-6).
 - No scarcity, urgency, fear or outcome-promise framing unless a page 12 row permits it. Use reassurance instead: approved social proof, process clarity, credentials, access (hours, insurance, booking).
-- Tracking pixels and lead forms on patient-facing pages are a compliance question for a person, not a skill. Flag them; don't add them.
+- Tracking on patient-facing pages. **Allowed:** basic GA4 measurement (page views and lead events such as `generate_lead`) with no personal data. **Gated** behind an `APPROVED` J-3 row that names the specific item and the person who signed it off (a general HIPAA or licensing row is not sign-off): any ad-platform tag, including the Google Ads conversion tag and remarketing, the Meta Pixel, Microsoft UET, LinkedIn and TikTok; Enhanced Conversions, advanced or automatic matching, the Conversions API or any other send of hashed personal data; Google Signals and advertising features; remarketing audiences; `user_id`; session recording, heatmap and A/B-testing scripts; and ad-platform experiments or lead-form ads that depend on any of these. Without that row, audits list and flag them for a person (no recommendation to add or remove), and setup stops and names the row. **Never**, even with sign-off: patient data, or a condition, treatment or service tied to a person, in any event, parameter, page path, query string or site-search term sent to a tool; joining patient identity to browsing history; test submissions on patient forms.
+- New lead forms on patient-facing pages are a compliance question for a person, not a skill. Flag them; don't add them.
 
 **Multi-location brands** (franchise or several offices)
 

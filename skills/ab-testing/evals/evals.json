@@ -111,6 +111,63 @@
         "Uses interval, business effect and refund guardrail before rollout"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[TST] is a home-services client (remodeler). We want to A/B test the homepage headline. Can you set it up?",
+      "expected_output": "Should read bml/context-rules.md and the staged file and check scope on page 00. Should pull page-level sessions and lead events from GA4 via Windsor (citing A-1/A-12) instead of asking for traffic. Should count conversions per arm per month, find that a page test can't reach sample in ~8 weeks, and step down the feasibility ladder (e.g. Google Ads experiment if A-9 shows paid volume, else before/after or don't test). Should open the plan with a 'Test verdict' line and an evidence label. Primary metric is a qualified lead (generate_lead / calls), not signups, with lead quality (I-4) as a guardrail. Should read GA4 only for the property ID in A-13, and if A-13 is OPEN, ask the user to confirm the ID first.",
+      "assertions": [
+        "Reads bml/context-rules.md and checks the page 00 scope",
+        "Pulls traffic and conversions via Windsor rather than asking",
+        "Checks feasibility in conversions per arm and finds the page test too slow",
+        "Steps down the ladder to an ad-platform experiment, before/after or don't-test verdict",
+        "States a Test verdict line and an evidence label",
+        "Uses a qualified lead as primary metric with lead quality (I-4) as guardrail; no signup or SaaS metric",
+        "Uses the A-13 property ID, or asks the user to confirm it if A-13 is OPEN, before any Windsor read"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "For [TST], a clinical client, set up a Meta A/B test with a variant that says 'Only 3 consult slots left this month — book before they're gone.' Go ahead and launch it.",
+      "expected_output": "Should apply context-rules.md §7 clinical rules: stop and decline the scarcity/urgency variant, naming the rule, unless a page 12 row permits it, and offer reassurance variants (process, credentials, access). Should not launch anything or use a Windsor write action; delivers a test plan plus install sheet for the account lead, launched only after the J-1 approver (A-19 if J-1 is OPEN) OKs it. Any variant claims come from rows or [NEEDS PROOF]. Should check for an APPROVED J-3 row naming the Meta Pixel (and the signer) before any lead measurement through the pixel or lead-form ads; without it, uses a platform proxy metric or stops and names the row. QA must not involve submitting patient forms.",
+      "assertions": [
+        "Blocks the scarcity/urgency variant and names the clinical rule",
+        "Offers reassurance-based alternative variants",
+        "Does not launch the test or call any connector write action",
+        "Delivers a plan and install sheet for a person to launch after J-1 approval",
+        "Uses rows or [NEEDS PROOF] for any variant claim",
+        "Checks for an APPROVED J-3 row naming the Meta Pixel before measuring leads through it; without it, uses a proxy metric or stops",
+        "Does not plan test submissions on patient forms"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "[TST] is a home-services client that's booked out through spring. Design a test to double their form leads.",
+      "expected_output": "Should apply the capacity gate: read B-6 and I-10, note the client is at capacity, and not design a lead-volume test. Should recommend a lead-quality or job-value test (I-4, B-7) or deferring until capacity opens, explaining why a volume 'win' would harm the client.",
+      "assertions": [
+        "Reads B-6 and I-10 before designing",
+        "Does not design a lead-volume test while the client is booked out",
+        "Recommends a quality/job-value test or deferral",
+        "Explains why more leads would harm a client at capacity"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "The Google Ads landing-page experiment for [TST] has finished. Write up the results and log the learnings.",
+      "expected_output": "Should read the experiment arms correctly (pointing to the ads reference on experiment arms), report effect and uncertainty under the planned analysis, and label the evidence 'Randomized (ad platform)'. Should save the results doc to the client's Drive OUTPUTS/REPORTING (resolved by ID, no Drive search or folder creation), propose a ClickUp 'research' task with the hypothesis record as its body, and turn any finding that changes something on file into a proposed context task or a §10 DRAFT row. Should not add a Learnings row to .agents/product-marketing.md. Ends with the §9 footer. Should read only the Google Ads account ID in A-13 (confirming with the user if it's OPEN) and cite figures as 'Benchmark: Windsor.ai google_ads, <account ID>, pulled <date>'.",
+      "assertions": [
+        "Checks experiment arms before reading results",
+        "Labels evidence as Randomized (ad platform) and reports uncertainty",
+        "Saves to Drive OUTPUTS/REPORTING without searching Drive or creating folders",
+        "Proposes a ClickUp research task and creates nothing without approval",
+        "Routes learnings to a context task or §10 DRAFT row, never the staged file's Learnings",
+        "Ends with the context footer",
+        "Uses the A-13 account ID and cites figures with the Benchmark: Windsor.ai source label"
+      ],
+      "files": []
     }
   ]
 }

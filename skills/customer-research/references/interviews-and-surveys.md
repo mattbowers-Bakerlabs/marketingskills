@@ -7,6 +7,24 @@ Three primary-research pillars, best used together:
 2. **Surveys** — broad, quantified, benchmarkable (this file)
 3. **Online sleuthing** — Sales Safari and watering-hole mining (see `references/source-guides.md`)
 
+<!-- BML:START bml-client-run -->
+## BML Client Work
+
+For BML client work, `SKILL.md` (Mode 3, BML block) decides who runs the research: by default the client, from a kit BML prepares. Nothing in this file is sent or paid by BML or Claude; a named person (the account lead or the client) sends invites and books calls, and recording follows that block's approval. Adjust the playbook below as follows.
+
+- **Recording and consent:** the invite says the call is recorded and why, and the participant agrees at the start of the call before recording begins (all-party consent; follow J-3). The client's approval doesn't stand in for the participant's. "Don't talk about customer research" means don't make it feel like a formal study — never hide the recording or the purpose. Clinical: only through the practice's patient-consent process.
+- **Recruiting:** the client supplies the shortlist. Prefer recently completed jobs or visits, higher job value (B-7), repeat or referral customers, quick deciders, and a few lost quotes if the client can share them. Keep "who else should we talk to?".
+- **Incentives:** the client decides the amount and pays it. BML never promises or pays one.
+- **Outreach email:** the invite is copy the client sends, so write it in the client's voice, as a draft for the approver (J-1). Replace the template's amount with `<incentive set by client>`; leave a Gmail draft unaddressed or addressed to the client contact only.
+- **Instead of the PMF survey** (for one-off or occasional purchases), a post-job or post-visit survey the client sends, 3–5 open questions:
+  - What nearly stopped you from going ahead? (→ D-6)
+  - Why did you choose us over `<alternative>`? (→ E-5, E-1)
+  - How did you first hear about us? (→ B-9 signal)
+  - What would you tell a neighbor or friend about us?
+  - What could we have done better? (→ G-7)
+- **Local 5-why example** (placeholders): "Why did you pick `<competitor>`?" → "They called back first." → "Why did that matter?" → "We had `<urgent problem>` and needed someone `<this week>`." → root: response time (I-3), not price.
+<!-- BML:END bml-client-run -->
+
 ---
 
 ## The First Rule of Customer Research

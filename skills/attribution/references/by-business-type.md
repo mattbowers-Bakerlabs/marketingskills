@@ -52,3 +52,31 @@ Many modern SaaS businesses are both: self-serve signups *and* a sales-assisted 
 - Use the **B2B approach for the sales-assisted funnel** (CRM as truth, position-based, pipeline-stage attribution, self-reported at demo).
 - **Alias identities across the two** so a self-serve signup who later becomes a sales-assisted expansion keeps one journey (email↔UUID alias at signup — see `first-party-tracking.md`).
 - Report them **separately.** Blending a $50 self-serve signup and a $50k enterprise deal into one "attribution" number hides both stories.
+
+<!-- BML:START bml-local-services -->
+---
+
+## Local services (BML clients)
+
+The default for Baker Labs client work: home services and construction, clinical practices, professional services, multi-location brands. The SaaS, DTC and PLG playbooks above apply to non-client work only.
+
+**Shape of the problem:** the conversion is a **call, booking or form** (BW-12); the outcome is a **signed job or kept appointment**, closed offline days or weeks later by the client's own staff (I-3, I-4). Volume is tens of leads a month, not thousands. A large share of demand arrives through Google Business Profile, referrals and branded search, much of it by phone — so web analytics sees the smallest part of the journey. Budgets (B-10) are too small, and service areas (B-8) usually too compact, for MMM or geo-holdouts.
+
+### The local playbook
+
+1. **Source of truth = the client's record of signed jobs** (the system in A-15, or their job log), read from an export the user provides; else call tracking + forms as a *lead* count. Use the ladder in SKILL.md §5 (BML block) and name the rung. BML is read-only on client systems.
+2. **Separate leads from jobs.** Report each lead source on its own — GA4 `generate_lead` by `lead_type` (`form` | `call` | `booking`) and `click_to_call` / `click_directions`, Google Ads and Meta conversions, GBP calls / directions / website clicks (A-6), call-tracking answered calls — never summed. Then the lead → signed-job step from I-4 or the client export. Leads are never reported as customers.
+3. **Model: last-non-direct (GA4: *Paid and organic last click*), plus the "how did you hear" question.** In Google Ads and GA4, data-driven ≈ last-click at this volume; report last-click and say so. Don't recommend a model change as a lever.
+4. **GBP is a channel.** Calls and direction requests from Maps never reach the site. Read them from Windsor.ai and report them beside Ads and organic, not inside "direct".
+5. **Self-reported carries more weight than usual.** Referrals (L-8), directories (L-11), signage and word of mouth are invisible otherwise. Ask at the form, on the phone (I-3) and at signing; options from B-9, I-1, L-8, L-11.
+6. **Value.** Cost per signed job = spend ÷ signed jobs attributed to the channel. Revenue per channel only from B-7 × the client's job counts, if both are usable; otherwise `[NEEDS PROOF: B-7]`. Never estimate a job value.
+7. **Incrementality, scaled down.** No MMM. Geo-holdouts only for multi-location clients with genuinely separate markets. Read **natural pauses** (booked out per B-6, seasonal shutdown per I-10, a lapsed card) as evidence, with seasonality caveats. A deliberate on/off test changes spend: write it as a proposal for the approver (J-1; A-19 if J-1 is OPEN) with capacity and season noted; a person runs it.
+
+**Vocabulary for local clients:** CAC → cost per signed job · pipeline → leads → estimates/consults → signed jobs · MRR / ARR / LTV → B-7 average job value and LTV · demo / signup → call, booking, form · account rollup → household or property (not needed in most reports).
+
+**Segments (context-rules.md §7):** clinical — apply context-rules.md §7: aggregate counts by source only, no patient-level exports, no identity stitching (never, even with sign-off), and the §7 gated items (ad-platform tags, advanced matching, Google Signals, `user_id`, session-recording and heatmap tools and the rest of the list) only behind a J-3 row naming the item and the person. Multi-location — one readout section per location, parent-brand totals only as sums of separately reconciled locations.
+
+**The local trap to name:** treating the platform's "conversions" as customers. `<n>` Google Ads conversions might be `<n>` calls, some under 30 seconds, some existing customers, a few signed jobs. Anchor on the client's signed-job count and work backwards.
+
+**Placeholder journey (illustration only — never a client's data):** `<GBP listing view>` → `<branded search>` → `<call from GBP>` → `<estimate visit>` → `<signed job, value from B-7>`. Last-click credits branded search or GBP; the "how did you hear" answer might say `<referral from neighbor>`. The gap is the insight.
+<!-- BML:END bml-local-services -->
