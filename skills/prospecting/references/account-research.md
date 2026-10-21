@@ -1,5 +1,9 @@
 # Account Research for Outreach
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md)): "Who owns it" names a person only where their organization publishes them (§7); no personal LinkedIn posts or profiles as sources. "Angle" maps to E-3/E-7/D-1, and "Proof to use" cites a G row or `[NEEDS PROOF: <row ID>]`. "Don't mention" also lists J-4 and F-13. Product reviews are themes only, with no reviewer names.
+<!-- BML:END note -->
+
 Research before outreach has one job: find a true, specific reason this account should care right now, and the person who owns that problem. Dossiers on companies you compete with belong to the competitor-profiling skill.
 
 ## How much research each tier gets

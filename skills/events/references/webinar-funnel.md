@@ -1,5 +1,9 @@
 # The Webinar Funnel — Registration → Show-Up → Live-to-Close → Nurture
 
+<!-- BML:START note -->
+> **BML:** Webinars fit only where rows show an online audience (professional services, B2B, I-6 list); local formats are in [bml-local-events.md](bml-local-events.md) §3. The funnel ranges are B2B benchmarks, never client targets. Registration pages and reminder sends are publish and send checkpoints; registrant data stays in the client's tools. Offers come from D-5 / D-7 / D-11 only. Clinical (context-rules §7): no urgency, scarcity or outcome-promise framing in the offer, no patient health information on the registration form, and tracking on the page is a compliance question for a person. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 The webinar is the flagship hosted format because it's the whole event arc in miniature, repeatable monthly, and every stage is measurable. Work the four stages in order — each stage's conversion rate is a separate lever with separate fixes.
 
 **The funnel at a glance** (typical B2B ranges — directional benchmarks, not targets; your own trend line is the real baseline):

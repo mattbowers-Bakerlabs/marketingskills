@@ -1,5 +1,9 @@
 # Site Launch QA
 
+<!-- BML:START note -->
+> **BML note.** For a BML client, run this with [`bml-local-launch.md`](bml-local-launch.md) §8 and [`../../../bml/context-rules.md`](../../../bml/context-rules.md). Agents check and report; a person does every step that changes the live site or an account: publishing (Wix included), DNS and TTL, redirects, tag and consent changes, sitemap submission. Live form tests are run by the web person with labeled test data after telling the client, never with real personal data. The platforms named below are examples, not recommendations; on Wix, rollback is Site History. Clinical: tags and forms on patient-facing pages are a compliance question for a person. The domain/registrar owner is on A-13. The conversion-tracking setup lives in this fork's `analytics` skill. First-two-weeks checks are a scheduled task (`bml-local-launch.md` §15), read-only. Save the QA to `OUTPUTS/WEBSITE` by router folder ID, or ask if none resolves (§16).
+<!-- BML:END note -->
+
 The checks to run before and right after a website goes live: a new site, a redesign, a platform migration, or a big new section. Product launches fail quietly when the site underneath them breaks, and most of these failures are invisible from the homepage.
 
 Run it in three passes: before the switch, at the switch, and in the first two weeks after.

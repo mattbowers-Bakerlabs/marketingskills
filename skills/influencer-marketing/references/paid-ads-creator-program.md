@@ -1,5 +1,9 @@
 # Performance-Paid Creator Programs for Paid Ads
 
+<!-- BML:START note -->
+> **BML:** off by default for BML clients. Consider it only when paid social is in scope, spend can support creator commissions, and B-6 can take the leads; plan it through `ads` and `ad-creative`. Wispr Flow's figures (7%, minimums, bonuses, ad counts) are never a client's terms. Don't mine Instagram following, follower or commenter lists, and don't send DM batches: outreach is drafted for a person. For a local service, "creators who use the product" means real customers, which needs G-5 and J-6 permission. Clinical: the clinical rules in ref §2 also apply; never look for patients. See [`bml-creator-partnerships.md`](bml-creator-partnerships.md) §2, §6, §7.
+<!-- BML:END note -->
+
 A creator program where creators make ads for your paid accounts and get paid on how those ads perform. It differs from the volume UGC program in [ugc-creator-program.md](ugc-creator-program.md): there, creators post organically from brand-affiliated accounts; here, every video is a paid-ad candidate, and the creator's audience size doesn't matter.
 
 **Source case.** Wispr Flow's head of content and head of performance marketing described their program publicly in October 2026. They launch 500–700 creator ads a month and grew their Meta account from about 100 ads to over 3,500 in nine months. They grew from 5 to 50 active creators in four months, and some of their best creators have about a thousand followers. Figures below are theirs; treat them as one program's settings, not benchmarks.

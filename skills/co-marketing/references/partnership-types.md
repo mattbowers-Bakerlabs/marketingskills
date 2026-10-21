@@ -1,5 +1,9 @@
 # Partnership Types
 
+<!-- BML:START note -->
+> **BML:** this taxonomy is for software companies. For a BML client, start from the local partner types in [`bml-partnerships.md`](bml-partnerships.md) §3 and the rules in [`../../../bml/context-rules.md`](../../../bml/context-rules.md). Every figure, brand and result below (HubSpot, Calendly, Notion, commission rates, fee math) is an illustration: never cite it in client work or offer it as an expected result. Permissionless co-marketing, affiliate commissions and reseller margins hit the gates in `bml-partnerships.md` §5.
+<!-- BML:END note -->
+
 Adapted from Corey Haines's *Founding Marketing*, Ch. 11 — "Partnerships tap into existing audiences." The fastest way to reach customers is through companies that already have their attention.
 
 **Flagship proof:** HubSpot's partner program = **$100M ARR, ~40% of revenue, 3,400+ partners.** Mature partner programs average **~28% of revenue and 2× the growth** of companies without them.

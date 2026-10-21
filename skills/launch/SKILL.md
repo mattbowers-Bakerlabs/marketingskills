@@ -2,7 +2,7 @@
 name: launch
 description: "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'site launch,' 'go live,' 'pre-launch QA,' 'launch checklist,' 'GTM plan,' 'we're about to ship,' 'changelog,' 'release notes,' or 'what did we ship this week.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas. For the offer being launched (bonuses, guarantees, scarcity, naming), see offers."
 metadata:
-  version: 2.2.0
+  version: 2.2.0-bml.1
 ---
 
 # Launch Strategy
@@ -13,6 +13,18 @@ You are an expert in SaaS product launches and feature announcements. Your goal 
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, it runs in a client's Claude Project, or the staged file starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read [`../../bml/context-rules.md`](../../bml/context-rules.md) first, then [`references/bml-local-launch.md`](references/bml-local-launch.md). They override this skill's SaaS defaults.
+- **Client check.** If the staged file is missing or names another client, run `product-marketing` in Load mode first. Never edit the staged file or page 13.
+- **Scope gate.** Map each workstream (site, GBP and listings, social, email, paid, PR, events) to its page 00 service; plan only what is retained and list the rest as client-owned (ref §1).
+- **Launch types.** Site go-live, new location, new service or offer (D-11), seasonal promotion, new provider, rebrand (ref §3). Product Hunt, waitlists, beta phases and changelogs apply only to SaaS clients or BML's own launches (ref §11).
+- **Readiness.** Don't launch what the client can't staff (B-6, I-10) or answer (I-3). Ref §4 replaces the SLC gate for local launches.
+- **Rows before questions; claims from rows.** Upstream case studies and figures are illustrations, never client facts. Missing facts become `[NEEDS PROOF: <row ID>]`. A request that needs a guardrail violation stops and names the row.
+- **Checkpoint.** Anything that goes live (site publish, DNS, GBP edits, posts, emails, press releases, listings, spend, live form tests) is drafted and stops for the user's approval in this conversation; then a person does it (ref §14). Never publish through the Wix connector, touch DNS or the registrar, post, send or submit. J-1 approves client-facing work.
+- **Recurring checks** (launch-day monitoring, first-two-weeks checks) are scheduled tasks, not in-session loops (ref §15).
+- **Outputs.** Launch plans to `OUTPUTS/STRATEGY`, site QA to `OUTPUTS/WEBSITE`, by router folder ID; ClickUp `project` and `website` records drafted for a person; context footer (ref §16). No credentials anywhere.
+<!-- BML:END bml-mode -->
 
 ---
 
@@ -31,6 +43,10 @@ A strong launch isn't about a single moment. It's about:
 ## The ORB Framework
 
 Structure your launch marketing across three channel types. Everything should ultimately lead back to owned channels.
+
+<!-- BML:START orb -->
+> **BML:** For local clients, translate the channels with [ref §5](references/bml-local-launch.md) (owned: website, email list, past customers; rented: GBP, social, category platforms; borrowed: referral partners, local media and community, suppliers). The Superhuman, Notion and TRMNL figures are illustrations; never cite them in client work. Gifting, sponsorships, affiliate payouts and tools like SparkToro, Listen Notes or Introw mean spend or new accounts: approved account and checkpoint only. Collaboration pitches are drafts (ref §14).
+<!-- BML:END orb -->
 
 ### Owned Channels
 You own the channel (though not the audience). Direct access without algorithms or platform rules.
@@ -106,6 +122,10 @@ Borrowed channels give instant credibility, but only work if you convert borrowe
 
 Run this **before** the phased mechanics. Products don't market themselves—but a product that isn't ready won't market either. The launch mechanics only pay off if what you're launching is worth launching.
 
+<!-- BML:START readiness -->
+> **BML:** SLC is a product test. For a local launch, run the readiness gate in [ref §4](references/bml-local-launch.md) instead: capacity, season, lead handling, offer terms, tracking, approver, assets. A launch that fails capacity is postponed or resized, not pushed.
+<!-- BML:END readiness -->
+
 Two failure modes kill launches from opposite ends:
 
 - **Stealth Mode** — launching too late. "Procrastination in a fancy suit." You keep polishing in private, waiting for the product to be perfect. It never ships, and nobody learns you exist.
@@ -133,6 +153,10 @@ Pass the gate, then run the phases below.
 ## Five-Phase Launch Approach
 
 Launching isn't a one-day event. It's a phased process that builds momentum.
+
+<!-- BML:START phases -->
+> **BML:** These phases (beta, waitlist, self-serve signups, "start charging") apply to SaaS clients and BML's own products. Local launches use the timeline in [ref §6](references/bml-local-launch.md). In BML mode every "announce", "post" and "email" step below is a draft for approval.
+<!-- BML:END phases -->
 
 ### Phase 1: Internal Launch
 Gather initial feedback and iron out major issues before going public.
@@ -211,6 +235,10 @@ Open the floodgates.
 
 Product Hunt can be powerful for reaching early adopters, but it's not magic—it requires preparation.
 
+<!-- BML:START product-hunt -->
+> **BML:** Only for a SaaS client or a BML product, and only if page 00 covers it ([ref §11](references/bml-local-launch.md)). The listing, comments and supporter outreach are publishing and sending: drafted for approval, done by a person. Case-study rankings are not results to promise.
+<!-- BML:END product-hunt -->
+
 ### Pros
 - Exposure to tech-savvy early adopter audience
 - Credibility bump (especially if Product of the Day)
@@ -263,6 +291,10 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 ## Post-Launch Product Marketing
 
 Your launch isn't over when the announcement goes live. Now comes adoption and retention work.
+
+<!-- BML:START post-launch -->
+> **BML:** Local equivalents are in [ref §6–§7](references/bml-local-launch.md): review requests through the client's own process (I-5; no incentives or gating), GBP updates, pages for the new service or location. Following up with people who engaged is the client's team's job (I-3); agents never contact leads or commenters. Comparison pages follow J-4.
+<!-- BML:END post-launch -->
 
 ### Immediate Post-Launch Actions
 
@@ -326,9 +358,17 @@ Even small changelog updates remind customers your product is evolving. This bui
 **Turn shipped code into announcements:**
 If you can read the product repo, generate the week's changelog, announcement drafts, and pages-to-update list straight from merged PRs. See [references/shipped-changes.md](references/shipped-changes.md).
 
+<!-- BML:START shipped -->
+> **BML:** Repo-to-changelog is for BML's own products or a SaaS client that granted BML read access (see that reference's note). For client websites, use the "what just became wrong" check in [ref §7](references/bml-local-launch.md).
+<!-- BML:END shipped -->
+
 ---
 
 ## Launch Checklist
+
+<!-- BML:START checklist -->
+> **BML:** For local launches, use the launch-type checklist in [ref §3](references/bml-local-launch.md) and the §6 timeline instead of the waitlist and Product Hunt items. Every Launch Day item that publishes or sends is done by a person after the §14 checkpoint. "Monitor for issues" is a scheduled task (§15).
+<!-- BML:END checklist -->
 
 ### Pre-Launch
 - [ ] Landing page with clear value proposition
@@ -365,6 +405,10 @@ If you can read the product repo, generate the week's changelog, announcement dr
 ---
 
 ## Task-Specific Questions
+
+<!-- BML:START questions -->
+> **BML:** Answer these from rows first ([ref §2](references/bml-local-launch.md)): D-11, I-6, A-8, I-1, I-2, I-10, B-6. Ask only for what the record lacks, and stage new facts as `DRAFT` rows (§16). Skip question 6 for local clients (§11).
+<!-- BML:END questions -->
 
 1. What are you launching? (New product, major feature, minor update)
 2. What's your current audience size and engagement?

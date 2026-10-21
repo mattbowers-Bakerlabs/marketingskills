@@ -1,5 +1,9 @@
 # Event Portfolio Strategy — Which Events, Why, and the Economics
 
+<!-- BML:START note -->
+> **BML:** The case figures here (cybersecurity ACV, "3 conferences ~70%", Drift, the 6-city roadshow, "+40%", "85% higher close rate", "$500 of pizza") and the cost table are B2B SaaS illustrations, never client facts, targets or budget lines. For a BML client use the fit check and local formats in [bml-local-events.md](bml-local-events.md) §3–4, costs from organizer quotes or B-10, and the ROI math in §5. "Mine the attendee list" is replaced by §7: the agent never handles attendee lists. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 The layer that sits *above* role and tactics. Events are the most expensive, riskiest, hardest-to-measure channel you can run — so the leverage is in **selection and portfolio design**, not execution. The single most common failure is treating "events" as one channel: attend two bad conferences, get few leads, and write the whole channel off — the same mistake as running Google Ads once, seeing poor results, and concluding all paid media is broken. **Each event is its own ecosystem.** Judge them individually.
 
 ## Is in-person even necessary? (segment fit first)

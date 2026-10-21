@@ -2,7 +2,7 @@
 name: influencer-marketing
 description: "When the user wants to run influencer, creator, or ambassador partnerships to promote their product — finding and vetting partners, structuring deals, briefing creators, disclosure compliance, and measuring ROI. Also use when the user mentions 'influencer marketing,' 'creator partnerships,' 'sponsorships,' 'YouTube sponsorships,' 'podcast sponsorships,' 'newsletter sponsorship,' 'newsletter ad,' 'sponsor a newsletter,' 'brand ambassador,' 'ambassador program,' 'creator program,' 'UGC creators,' 'tech UGC,' 'UGC creator program,' 'creator network,' 'B2B influencers,' 'thought leader ads,' 'gifting,' 'product seeding,' 'whitelisting creator content,' 'Telegram channel ads,' 'buy a post in a Telegram channel,' 'how much to pay an influencer,' or 'FTC disclosure.' For affiliate/referral payout mechanics, see referrals. For community-led advocacy, see community-marketing. For turning creator content into paid ads, see ad-creative."
 metadata:
-  version: 1.4.0
+  version: 1.4.0-bml.1
 ---
 
 # Influencer & Creator Marketing
@@ -16,6 +16,17 @@ You are an expert in influencer, creator, and ambassador marketing across B2C (I
 ## Before Starting
 
 **Check for product marketing context first.** If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or legacy `product-marketing-context.md`), read it before asking questions — the ICP, positioning, and offer anchor every partner-fit decision. Then gather what's missing: goal (awareness / conversions / content / trust), budget and whether it's cash or product, target platform(s), and any brand-safety redlines.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, it runs in a client's Project, or the staged file starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read [`../../bml/context-rules.md`](../../bml/context-rules.md) and [`references/bml-creator-partnerships.md`](references/bml-creator-partnerships.md) first. They win over this skill's defaults.
+- **Client check.** Staged file missing or naming another client → run `product-marketing` Load first. Never edit the staged file or page 13.
+- **Scope and fit.** Scope gate on page 00 (no line clearly covering creator work → stop), then the fit gate (ref §2): capacity B-6, team time I-8, budget B-10, channel evidence I-1/A-8/L-9, guardrails. **Clinical clients:** allowed under the general clinical rules (ref §2): no patient data, never look for or contact patients, no patient-creators without written authorization (G-5/J-6), clinical claims only from approved copy and reviewed by a named provider, no treatment for content unless J-3 permits it.
+- **Rows before questions** (ref §3). Claims, offers, prices and proof only from rows; missing facts → `[NEEDS PROOF: <row ID>]`. A request that needs a guardrail violation stops and names the row.
+- **Local, not SaaS.** Local creators, bloggers and community figures; success = calls, bookings, forms and signed jobs. Upstream rates and program figures are never a client's prices or targets.
+- **People and privacy.** Public professional info only; never scrape follower or commenter lists. J-6 for staff, customer releases for homes and job sites; creator posts are endorsements, never testimonials.
+- **Drafts only.** Outreach, fees, gifting, bookings, agreements, creator posts and whitelisting stop for approval from the user in this conversation (ref §7). Never send, pay, sign, post or handle credentials.
+- **Outputs.** Client Drive folder by router ID, drafted ClickUp record, `DRAFT` row proposals, §9 footer (ref §12).
+<!-- BML:END bml-mode -->
 
 ## The Influencer ↔ Ambassador Spectrum
 
@@ -36,6 +47,10 @@ The further right you go, the more it's about *relationship* than *transaction* 
 **And its paid-ads cousin — the performance-paid creator program:** creators make videos for your ad accounts and earn a share of the spend (or revenue) behind them, usually with a monthly minimum for hitting a video quota. A small, coached cohort (start at 4–5, cap around 40–60) beats hundreds of mercenary creators, because near-identical videos get clustered and suppressed on Meta. See [references/paid-ads-creator-program.md](references/paid-ads-creator-program.md) for rate-setting math, the guaranteed-minimum mechanic, recruiting, briefing, and keeping creators from copying the leaderboard.
 
 **Newsletter sponsorships** buy a placement in someone else's newsletter, with one tracked link per send. Before booking a newsletter again, read what its earlier placements did and skip angles run on that list in the last 30 days. See [references/newsletter-sponsorships.md](references/newsletter-sponsorships.md) for vetting, the past-results table, placement specs, writing to the list, and reporting.
+
+<!-- BML:START bml-programs -->
+> **BML:** the volume UGC program, the paid-ads creator program and Telegram channels are off by default for BML clients; newsletter sponsorships only for local or trade newsletters the rows support (L-9). Each reference carries a BML note; see [`references/bml-creator-partnerships.md`](references/bml-creator-partnerships.md) §4.
+<!-- BML:END bml-programs -->
 
 ## 1. Finding & Vetting Partners
 
@@ -63,9 +78,17 @@ For most brands, a portfolio of **micro + nano** partners out-converts one macro
 - **Brand safety** — scroll their last ~3 months. Controversy, competitor conflicts, or off-brand content that would attach to you.
 - **Authenticity of fit** — have they mentioned your category unprompted? A genuine user is worth several cold partners.
 
+<!-- BML:START bml-vetting -->
+> **BML:** audience fit means audience inside the service area (B-8, L-1). Vet on public profiles, public metrics and media kits only; ask the creator for aggregate audience location instead of inspecting followers. Never scrape or export follower, following or commenter lists. Check brand safety against J-4 and J-7. See ref §6.
+<!-- BML:END bml-vetting -->
+
 ## 2. Outreach
 
 Reach out **1:1 and personally** — reference specific content, why *them*, and what's in it for their audience. A generic form blast to 200 creators converts worse than 20 tailored notes. For writing the outreach itself, use **cold-email** (personalization, deliverability, follow-up cadence). Lead with the offer and the fit; don't bury the ask.
+
+<!-- BML:START bml-outreach -->
+> **BML:** outreach is drafted, never sent. DMs and emails go to the account lead as drafts (Gmail: drafts only); a person sends them, by default from the client's account or a named person at the client. Follow-ups and replies are drafted too. See ref §7.
+<!-- BML:END bml-outreach -->
 
 ## 3. Structuring the Deal
 
@@ -100,6 +123,10 @@ Ask for their **rate card first** — it sets an anchor you respond to rather th
 
 Put it in a simple written agreement: deliverables, timing, usage rights, exclusivity, disclosure obligation (below), payment terms, and a kill/rework clause.
 
+<!-- BML:START bml-deal -->
+> **BML:** the rate table above is a negotiation reference, not a client's price; a fee in a client plan is the creator's quoted rate with source and date or `[NEEDS PROOF: new — <creator> rate card]`, and the total is checked against B-10. For a service business, gifting means giving away a service: that is spend and a material connection, sized against B-6. Fees, gifting, bookings and agreements are drafted for the client to approve and sign; the agent never pays or signs. Clinical: no free or discounted treatment for content unless a J-3 row permits it; flag it as a compliance question for a person. Whitelisting goes through the platform's partnership tools via `ads` / `ad-creative`; never handle credentials. See ref §7–8.
+<!-- BML:END bml-deal -->
+
 ## 4. Disclosure & Compliance (non-negotiable)
 
 Influencer marketing has hard legal requirements — this is the part most brands under-do, and the brand — not just the creator — can be held liable.
@@ -113,6 +140,10 @@ Influencer marketing has hard legal requirements — this is the part most brand
 
 Disclosure done well doesn't hurt performance — audiences expect it, and the FTC has never found "#ad" to tank a genuinely good integration.
 
+<!-- BML:START bml-disclosure -->
+> **BML:** keep all of this. Add the client's J-3 rules (licensing, medical board, professional disclosures) on top of FTC disclosure, and a creator's post never counts as a customer testimonial (G-5). Clinical: no outcome promises, fear or urgency; clinical claims only from approved copy, reviewed by a named provider.
+<!-- BML:END bml-disclosure -->
+
 ## 5. The Creative Brief
 
 Do **not** script the creator word-for-word — they know their audience better than you, and scripted reads convert worst. Provide:
@@ -124,6 +155,10 @@ Do **not** script the creator word-for-word — they know their audience better 
 - **Creative freedom** — explicitly grant it. The integration should live inside their normal content style.
 
 Ground the talking points in real proof (reviews, results) — same grounding discipline as **ad-creative**'s inputs. Never hand a creator a claim you can't back.
+
+<!-- BML:START bml-brief -->
+> **BML:** the "why" and talking points come from E-3/E-7, F rows and G rows (at least one belief and one proof point); the CTA uses 01's required CTA language and fits I-3 lead handling; promo codes only for approved D-5/D-7/D-11 offers. Testimonials verbatim from G-5 with the row ID. Brand redlines = J-2, J-4, H-5, F-13. Who and what may be filmed: B-12, J-6, and the customer's release for any home or job site. See ref §5.
+<!-- BML:END bml-brief -->
 
 ## 6. Measurement & ROI
 
@@ -137,6 +172,10 @@ Influencer marketing suffers from attribution gaps — fix them upfront, before 
 
 Judge the program on **cost per qualified outcome and repeat/retained value**, not reach, likes, or "EMV" (earned media value is a vanity number). One nano creator driving 40 real buyers beats a macro placement with a million muted views.
 
+<!-- BML:START bml-measurement -->
+> **BML:** measure calls, bookings, forms and signed jobs per creator (B-7, I-4), with UTM links, call tracking where A-15 supports it, and booking sources (I-9). A vanity landing page is a site change: brief it via `cro` for a person to publish. "How did you hear about us?" goes into the client's intake (I-3); use aggregate counts only, never lead-level answers. Report results only from the client's numbers; never estimate them. See ref §9.
+<!-- BML:END bml-measurement -->
+
 ## Ambassador Program Design
 
 When you want *sustained* presence rather than one-off posts, design a program (this is the structured, paid/perks version of community-marketing's advocate program):
@@ -149,6 +188,10 @@ When you want *sustained* presence rather than one-off posts, design a program (
 6. **Track and iterate** — attributed traffic/signups per ambassador (codes + links), and double down on the top decile; graduate strong ambassadors to paid partnerships.
 
 For the community-led, unpaid advocate end of this (badges, recognition, community support), hand off to **community-marketing**; for the affiliate payout rails, **referrals**.
+
+<!-- BML:START bml-ambassador -->
+> **BML:** this design is for local creators and community figures. Customers as ambassadors or referrers go to `referrals` or `community-marketing`; clinical patients never. The monthly activation cadence runs as a scheduled task that drafts, not an in-session loop (ref §11). Benefits and commissions are spend: approval first. A private group runs only on a platform the client already uses and owns (not BML's Slack).
+<!-- BML:END bml-ambassador -->
 
 ## Common Mistakes
 
@@ -196,6 +239,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 Dedicated creator-discovery/CRM platforms (e.g., Modash, GRIN, Aspire, Upfluence) and creator-sponsorship marketplaces (e.g., Passionfroot) are the category to reach for at scale; add the specific one to the registry when the user adopts it. For pulling a specific creator's recent posts to vet them, use `social-fetch`; for analyzing their content style, `watch-video`.
 
 For Telegram channels, the vetting options (the public preview with a manual reach check, the admin's built-in statistics, Telegram Ads, analytics catalogs, TGScope) are compared in [references/telegram-channels.md](references/telegram-channels.md#tools).
+
+<!-- BML:START bml-tools -->
+> **BML:** BML's stack first: Windsor.ai (read) for the client's own social, Search Console and GBP results; ClickUp read; Drive by router ID; Gmail drafts. SparkToro, creator CRMs and marketplaces, `social-fetch`, `watch-video` and Telegram tools only if BML or the client has an approved account. No credentials in chat or files. See ref §10.
+<!-- BML:END bml-tools -->
 
 ## Related Skills
 

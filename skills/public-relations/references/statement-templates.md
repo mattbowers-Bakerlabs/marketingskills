@@ -1,5 +1,9 @@
 # Crisis Statement Templates
 
+<!-- BML:START note -->
+**BML clients:** every template here is a draft marked `DRAFT — not for issue`, checked against every page 12 row and F-13, and approved by the J-7 contact and J-1 before a person issues it. The agent never issues one. Brackets are filled only with confirmed facts from people with direct knowledge, never guessed. The customer-harm template never names a customer publicly. Clinical clients don't use it at all, because it refers to one person's experience and so confirms a patient relationship; use the privacy-safe holding line in §8 instead. Account, plan and billing wording is SaaS; translate to the client's service. See [bml-public-relations.md](bml-public-relations.md) §8.
+<!-- BML:END note -->
+
 Adapted from a contribution by @fyscleaning-jpg (PR #381).
 
 Structures for the most common crisis statements. Fill in real specifics. Nothing ships with brackets still in it. For when to use each one, see [crisis-communications.md](crisis-communications.md).

@@ -1,5 +1,9 @@
 # Community Models & Scaling Phases
 
+<!-- BML:START note -->
+> **BML clients:** the cases (GreenPal, Ydata, LiveAgent, Bento, Postaga) and the Notion figures are SaaS illustrations. Never present them as targets, benchmarks or claims in client work. "Founder-Led" means the people on B-12, with J-6 permission. Local groups rarely pass the Systems phase. See `bml-community.md` §3 and `../../../bml/context-rules.md`.
+<!-- BML:END note -->
+
 The named model taxonomy, the flagship benchmark, and how the community-owner role changes as the community grows. Pair this with the goal playbooks and health metrics in `SKILL.md` — this file adds the *shape* of the community, not the tactics.
 
 Source: Corey Haines, *Founding Marketing*, Ch. 12 — "Community connects customers with each other." The thesis: don't just sell software, create a movement. Community is an **audience-first** play — indirect, "deposits in a relationship bank account" — built on **community-led systems** and **recognition/rewards**.

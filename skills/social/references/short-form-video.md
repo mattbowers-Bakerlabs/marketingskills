@@ -1,5 +1,9 @@
 # Short-Form Video: Hooks, Scripts & Strategy
 
+<!-- BML:START note -->
+BML client work: follow [../../../bml/context-rules.md](../../../bml/context-rules.md) and [bml-social.md](bml-social.md) §6–7. Hooks with results ("cost me", "30 days", "3 months ago") take facts from rows only. Clinical: no Warning hooks about health, no controversy, no patient stories without written authorization. AI voices need J-5 and are never presented as a real person. Business accounts use the commercial music library. Frequencies are not targets; agents never schedule (bml-social §11), and recurring batches are scheduled tasks (bml-social §12).
+<!-- BML:END note -->
+
 Detailed reference for creating short-form video content on TikTok, Instagram Reels, and YouTube Shorts.
 
 ---

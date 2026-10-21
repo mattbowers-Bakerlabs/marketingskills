@@ -1,5 +1,9 @@
 # B2B Prospecting Reference
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §5, §8): Apollo, ZoomInfo and Clay are used only with an approved, connected account, and credits need approval in this conversation (§9). Sales Navigator is a person's manual tool; the agent never operates it. For local B2B clients, trigger events are organization-level (new locations, practice openings, commercial permits, public RFPs, L-8/L-9/I-7 rosters). Leave out the `linkedin_url` column and any personal contact fields (§7, §12).
+<!-- BML:END note -->
+
 For when the user sells to non-SaaS B2B — services, agencies, manufacturers, mid-market and enterprise companies, professional services firms.
 
 ---

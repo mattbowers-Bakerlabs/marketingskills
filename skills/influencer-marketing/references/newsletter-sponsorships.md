@@ -1,5 +1,9 @@
 # Newsletter Sponsorships
 
+<!-- BML:START note -->
+> **BML:** for BML clients, only local or trade newsletters the rows support (L-9, I-1, B-9). Read "signups" and "revenue" as calls, bookings and signed jobs from the client's numbers (B-7). Wispr Flow's specs and any prices are one program's, not a client's. Booking a placement is spend and sending copy is a send: draft both for approval. One record per placement goes to the client's Drive folder by router ID, not a local `sponsorships/` path. Marketplaces only with an approved account. See [`bml-creator-partnerships.md`](bml-creator-partnerships.md) §4, §7, §12.
+<!-- BML:END note -->
+
 Buying a placement in someone else's newsletter. For B2B and prosumer products it's often the cleanest creator channel: the writer has already earned the reader's attention, the audience is easy to describe, and every placement can carry its own tracked link.
 
 This reference covers picking newsletters, reading past results before you book again, writing to placement specs, and tracking each send. The deal terms, disclosure rules, and brief elements in this skill's main sections apply here too.

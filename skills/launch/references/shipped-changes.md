@@ -1,5 +1,9 @@
 # From Shipped Code to Marketing
 
+<!-- BML:START note -->
+> **BML note.** Use this only for BML's own products, or a SaaS client whose page 00 covers product marketing and who granted BML read access to the repo; never request or store repo credentials. Local-service client websites have no repo workflow: for site changes, use the "what just became wrong" check in [`bml-local-launch.md`](bml-local-launch.md) §7. "Credit the user who asked" needs that person's written OK; never name a client's customer or patient. A weekly digest is a scheduled task (`bml-local-launch.md` §15), drafts only. Content-backlog items and pages to update are drafted as ClickUp tasks for a person to create. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 Most product updates never get marketed because nobody translates them. The engineers wrote the PR description for each other, and by the time marketing hears about it, the moment has passed. An agent with access to the repo can close that gap every week: read what shipped, decide what's worth telling, and draft it in customer language.
 
 ## Inputs

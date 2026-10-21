@@ -1,5 +1,9 @@
 # Demand-Signal Discovery (Find Your First Customers)
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §5): research only. Use the pain language and patterns for `customer-research` or messaging. Build no outreach list and contact no poster. Consumer or patient posts (Nextdoor, Reddit, health forums) are never a prospect source. The HTML report pattern isn't published anywhere public; findings go to the memo in Drive (§12). last30days, social-fetch and scraping tools are not in BML's stack.
+<!-- BML:END note -->
+
 The other three branches build a list from who *fits* (firmographics, technographics, proximity). This branch builds a list from who is *already showing the pain* — the early-stage motion where you have a product and a hunch but no customer base yet, and you need your first ten real conversations. You are not filtering a database; you are mining recent public discourse for people describing the exact problem you solve, then linking every prospect to the evidence.
 
 Use this branch when the user is pre-product-market-fit, launching something new, or looking for **design partners, beta users, or first customers** rather than a scaled outbound list. It reuses the shared five phases and every compliance guardrail in SKILL.md; what changes is where you look, how you score, and what you ship.

@@ -1,5 +1,9 @@
 # Crisis Communications
 
+<!-- BML:START note -->
+**BML clients:** this playbook informs a person's response; the agent doesn't run it. Read J-7 first and route to the J-7 contact and account lead. The agent never publishes, replies, contacts the affected person or deletes anything. "Status page / in-app" means a website notice, GBP update or phone script drafted for a person. Clinical: never confirm or deny a patient relationship, so no statement or reply refers to a specific person's care, and "contact the customer privately" is the practice's decision, not a draft; any incident involving patient information goes to counsel and the compliance or privacy officer. A jobsite injury is Tier 4. See [bml-public-relations.md](bml-public-relations.md) §8.
+<!-- BML:END note -->
+
 Adapted from a contribution by @fyscleaning-jpg (PR #381).
 
 Reactive PR for when something has gone wrong: a breach, an outage, a viral complaint, an executive controversy. Proactive PR runs on your timeline. In a crisis, the story is already running, and your job is to respond quickly, honestly, and without making it worse.

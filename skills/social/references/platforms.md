@@ -1,5 +1,9 @@
 # Platform-Specific Strategy Guide
 
+<!-- BML:START note -->
+BML client work: follow [../../../bml/context-rules.md](../../../bml/context-rules.md) and the local shortlist in [bml-social.md](bml-social.md) §3 (Facebook, Instagram, Business Profile posts, Nextdoor; LinkedIn for professional services; TikTok, X, Threads and Telegram only when rows show an active account or audience). Frequencies, best times and audience ages below are generic, not targets; use I-8 and Windsor data. UGC needs the creator's written permission; never tag customers or patients. Telegram benchmarks are the contributor's own and paid channel posts are spend.
+<!-- BML:END note -->
+
 Detailed strategies for each major social platform.
 
 One thing holds on every platform below: storytelling and connecting with your audience are always key. Formats, cadences, and algorithm mechanics differ platform to platform, but the better you share your story, the better the posts perform — the platform-specific tactics amplify a story worth telling; they don't substitute for one.

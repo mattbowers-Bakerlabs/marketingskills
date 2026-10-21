@@ -1,5 +1,9 @@
 # Journalist Pitching — Proactive PR Workflow
 
+<!-- BML:START note -->
+**BML clients:** the media list comes from L-9, BML's Local Media Directory (read by page ID only) and the client's trade press, not tech press. Contact data is published professional details only: never guess email patterns, bounce-check, or use Hunter, RocketReach or Muck Rack without an approved account. Store lists in the client's Drive OUTPUTS, not `.agents/`. Example stats and companies in the templates and subject lines ("73%", "Anthropic launches AgentOS") are illustrations, never reused; facts come from rows or `[NEEDS PROOF]`. Customers appear only as G-5 permits, quotes need approval by the person or the account lead on their behalf, exclusives and embargoes need J-1, and every pitch is a Gmail draft to the account lead. The monthly list update is a scheduled task. See [bml-public-relations.md](bml-public-relations.md) §3–§6, §9.
+<!-- BML:END note -->
+
 Building a media list, scoring journalist fit, and crafting pitches that actually get opened. This is a 4–8 week practice, not a one-shot.
 
 ## Contents

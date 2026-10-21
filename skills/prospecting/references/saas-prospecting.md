@@ -1,5 +1,9 @@
 # SaaS Prospecting Reference
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §5): applies only when page 03 says the client sells to software or digital companies. Never in Self mode. Funding, ARR, tech-stack and SDR-hiring signals are not defaults for BML clients. The GitHub CLI and visitor identification are not used.
+<!-- BML:END note -->
+
 For when the user sells SaaS or digital services to other SaaS companies / digital businesses.
 
 ---

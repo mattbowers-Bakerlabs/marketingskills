@@ -1,5 +1,9 @@
 # Listening Sources — Template
 
+<!-- BML:START note -->
+BML client work: the source list is a file in the client's Drive `OUTPUTS/SOCIAL`, not `.agents/listening-sources.md` ([bml-social.md](bml-social.md) §14). Business and organization accounts only, no personal handles; ICP from 03; do-not-engage from J-4, F-13 and J-7. Rules in [../../../bml/context-rules.md](../../../bml/context-rules.md) apply.
+<!-- BML:END note -->
+
 Copy this file to `.agents/listening-sources.md` in your project (or `.claude/listening-sources.md`) and fill in the brackets. Claude reads it when running the [listening workflow](listening.md).
 
 Delete sections you don't use. Keep this short and current — stale sources are worse than no sources.

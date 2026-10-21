@@ -1,5 +1,9 @@
 # X (Twitter) Algorithm Playbook
 
+<!-- BML:START note -->
+BML client work: applies only when I-1 or A-8 shows an active X account ([bml-social.md](bml-social.md) §3). "Be present for the first 30 minutes" is for the person who posts; agents never post or reply. Brand names in the examples are illustrations. Rules in [../../../bml/context-rules.md](../../../bml/context-rules.md) apply.
+<!-- BML:END note -->
+
 How the X "For You" feed ranks posts, based on xAI's open-sourced algorithm ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm), May 2026 release — the Phoenix ranker and Grox content-understanding pipeline), and what to change in your posting practice because of it.
 
 **Sourcing note:** the release publishes the ranking *structure* (which signals are scored and how they combine) but not the weight *values* (`params.rs` is withheld). Rules below are tagged **[verified]** when the mechanism is visible in the code, **[reported]** when the specific number or magnitude comes from secondary analysis of the release. Structure changes slowly; reported numbers age fast — treat them as directionally true.

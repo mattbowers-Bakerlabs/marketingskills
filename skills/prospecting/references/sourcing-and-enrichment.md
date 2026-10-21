@@ -1,5 +1,9 @@
 # Sourcing, Enrichment, and Verification
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §7–8): Sales Navigator is used only by a person, by hand, in their own seat; the agent never operates it (§8). Licensed databases only through an approved, connected account, with credits approved in this conversation (§9). No mobile numbers, so step 4's Tier 1 mobiles don't apply. The bake-off never uses client customer or patient contacts. Enrichment results live only in the list file in Drive. The client runs the suppression check (customers, open deals, opt-outs) in their own systems, and the agent never receives those lists. Apify is not in BML's stack.
+<!-- BML:END note -->
+
 How to get contacts legitimately, fill in missing data without paying twice or trusting bad data, and verify every address before it reaches a sequence.
 
 ## Sourcing without scraping LinkedIn

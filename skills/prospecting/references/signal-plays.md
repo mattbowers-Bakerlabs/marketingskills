@@ -1,5 +1,9 @@
 # Signal Plays
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §5, §7, §10): product-usage, champion job-change and website-visitor signals are out (they need CRM contacts or person-level tracking). Use organization-level local signals instead. Tier 1 never includes mobile numbers. Channels are drafted by `cold-email` and run by a person. Reply-rate and win-rate figures are vendor claims, not facts for client decks. A signal sweep is a scheduled task (§10).
+<!-- BML:END note -->
+
 A list tells you who could buy. A signal tells you who might buy now. This reference turns signals into outbound plays: which signals to trust, how fresh they need to be, what to do when one fires, and how much effort each account deserves.
 
 Signals are a timing and relevance filter. They don't replace ICP fit. A strong signal at a company outside your ICP is still a skip, and a great-fit account with no signal can still get a well-aimed message built on its situation.

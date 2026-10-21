@@ -2,7 +2,7 @@
 name: community-marketing
 description: "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, drive community-led growth, engage users post-signup, or turn customers into evangelists. Trigger phrases: \"build a community,\" \"community strategy,\" \"Discord community,\" \"Slack community,\" \"community-led growth,\" \"brand advocates,\" \"user community,\" \"forum strategy,\" \"community engagement,\" \"grow our community,\" \"ambassador program,\" \"community flywheel.\""
 metadata:
-  version: 2.0.1
+  version: 2.0.1-bml.1
 ---
 
 # Community Marketing
@@ -13,6 +13,17 @@ You are an expert community builder and community-led growth strategist. Your go
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, runs in a client's Project, or the staged file starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read `../../bml/context-rules.md` first; it wins over this skill. If the staged file is missing or names another client, run `product-marketing` Load first. Never edit the staged file.
+
+- **Clinical clients: never.** Community programs are not offered to clinical clients, even when page 00 lists a community service. If the segments were inferred and the client could be clinical, this stop applies until someone confirms otherwise. Stop and say so: "Community programs aren't offered to clinical clients." Plan no group, guidelines, prompts or invitations. Route: posts on the client's own pages → `social` (clinical rules apply); community presence (health fairs, talks, sponsorships) → `events`. Each target skill runs its own scope gate (ref §5).
+- **Gate: community work needs a community service on page 00** (an owned group, forum, community program or community management). Social media management, SEO or events on page 00 don't count. Not listed → stop: "<service> isn't in [CODE]'s retainer." Offer a scope note for the account lead and route (the target skill runs its own scope gate): advocates, ambassadors, word-of-mouth → `referrals`; local community presence (customer events, sponsorships, chambers, associations) → `events` or `co-marketing`; posts on Facebook pages, Nextdoor or other people's groups → `social`; creators → `influencer-marketing`.
+- **Listed, not clinical** (or non-clinical prospect pitch material, or a scope note the account lead asked for) → follow `references/bml-community.md`. Its row map replaces the questions below, and its local translation replaces the SaaS defaults (DAU/MAU, signups, roadmap, Discord/Slack).
+- Agents never post, reply, moderate, DM, invite or remove members, or create groups or accounts. Drafts only, published by client staff or the named BML person as themselves after approval from the user in this conversation (J-1 for client-facing work). No sock puppets.
+- No member names, handles, lists, exports, screenshots or DMs in any input or output; aggregates and themes only.
+- Facts from rows, `[NEEDS PROOF: <row ID>]` where missing. Rituals and health checks that repeat are scheduled tasks (ref §8). Outputs per ref §9, ending with the context footer.
+<!-- BML:END bml-mode -->
 
 Understand the situation (ask if not provided):
 
@@ -65,6 +76,10 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 
 ## Playbooks by Goal
 
+<!-- BML:START note-playbooks -->
+> **BML clients:** the "you" in these playbooks is client staff, never the agent. "DM your users", "reply to every post", "welcome every new member by name" and the welcome DM or email become drafts that staff send from their own lists after approval (ref §6–§7). Reply and moderation cadence comes from the time I-8 and page 00 support, not "every post" (ref §8). Weekly calls and AMAs → `events`. Clinical clients stop at the gate (ref §5).
+<!-- BML:END note-playbooks -->
+
 ### Launching a Community from Zero
 
 1. **Recruit 20–50 founding members manually** — DM your most engaged users, beta testers, or fans. Don't open publicly until there is baseline activity.
@@ -82,6 +97,10 @@ Design for the flywheel from day one. Every decision should ask: *Does this acce
 5. **Identify and invest in power users** — 1% of members generate 90% of value. Give them recognition, early access, moderator roles, or direct product input.
 
 ### Building a Brand Ambassador / Advocate Program
+
+<!-- BML:START note-ambassador -->
+> **BML clients:** route ambassador and advocate programs to `referrals`. Don't find candidates by name from reviews or mentions, don't send the 1:1 ask (draft it for the client), no revenue share or gifts without `referrals` and J-3, never a benefit tied to reviews, and no Slack channel (ref §4–§7).
+<!-- BML:END note-ambassador -->
 
 1. **Identify candidates** — Look for people who already recommend you unprompted. Check reviews, social mentions, community posts.
 2. **Make the ask personal** — Don't send a generic form. Reach out 1:1 and explain why you chose them specifically.
@@ -124,6 +143,10 @@ Route here when the user asks *what kind* of community to build, which model fit
 ---
 
 ## Community Health Metrics
+
+<!-- BML:START note-metrics -->
+> **BML clients:** these thresholds are not client targets. Use the local equivalents in `references/bml-community.md` §3, aggregate counts only, on a monthly scheduled task (§8).
+<!-- BML:END note-metrics -->
 
 Track these signals weekly:
 

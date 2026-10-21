@@ -1,5 +1,9 @@
 # Prospecting Data Sources
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §8): defaults are Places search, web fetch of an individual business site and Semrush read. Every paid tool here is "only if BML or the client has an approved, connected account", and its credits need approval. Visitor identification (RB2B, Warmly, Vector, Ploy) is not used. Accuracy and pricing figures are vendor claims: don't quote them to clients as facts.
+<!-- BML:END note -->
+
 Tool selection guide for prospecting across all three branches.
 
 ---

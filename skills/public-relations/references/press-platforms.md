@@ -1,5 +1,9 @@
 # Press Request Platforms — Inbound PR
 
+<!-- BML:START note -->
+**BML clients:** use these platforms only if BML or the client has an approved account (paid tiers are spend), and only for G-11 people on their listed topics. Responses are Gmail drafts to the account lead; the named person approves their attribution, and the person or the account lead on their behalf approves the quote. Example credentials and stats ("47 onboarding flows", "41%", "Series B SaaS") are never reused; use rows or `[NEEDS PROOF]`. The ROI table is not a promise to the client. Daily triage is a scheduled task. See [bml-public-relations.md](bml-public-relations.md) §3, §4, §9.
+<!-- BML:END note -->
+
 Journalists posting "I need a source for X" — you respond, sometimes you get quoted, sometimes you don't. The cheapest PR play available, but only if you treat it seriously.
 
 ## Contents

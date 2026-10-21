@@ -1,5 +1,9 @@
 # Demo Script Templates
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). For local clients these become consultation or estimate walkthroughs (§3 maps each script). Clinical consult scripts make no outcome promises and give no medical advice (§5). Case-study lines use G rows only. "Send a calendar invite" and "send recap email" are for the client's staff; agents never send.
+<!-- BML:END note -->
+
 Scene-by-scene templates for different call types, with timing, talk tracks, and interaction guidance.
 
 ## Discovery Call Script

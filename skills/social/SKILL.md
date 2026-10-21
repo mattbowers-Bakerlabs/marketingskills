@@ -2,7 +2,7 @@
 name: social
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' 'create a reel,' 'social listening,' 'brand mentions,' 'competitor monitoring,' 'top posts to comment on,' 'find people asking for,' 'carousel,' 'slide-by-slide,' or 'document post.' Use this for social content, repurposing, scheduling, video scripts, and listening. Posts avoid AI tells like 'it's not X, it's Y' reveals and broetry. For broader content strategy, see content-strategy. For paid ads, see ad-creative. For earned media, see public-relations."
 metadata:
-  version: 2.4.0
+  version: 2.4.0-bml.1
 ---
 
 # Social Content
@@ -15,6 +15,18 @@ Whatever the platform, storytelling and connecting with your audience come first
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, it runs in a client's Project, or the staged file starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read [../../bml/context-rules.md](../../bml/context-rules.md) and [references/bml-social.md](references/bml-social.md) first. They override this skill's defaults.
+- Staged file missing or naming another client → run `product-marketing` Load first. Never edit the staged file or page 13; never log Learnings.
+- **Scope gate.** Find Social on page 00. `Active — <qualifier>` permits only what it names: "topic calendar only" means no captions, hooks, hashtags, CTAs, creative, reply drafts, posting days or times. Say what's excluded. Ladder in ref §1.
+- **Rows before questions.** Answer the questions below from rows (ref §2); ask only for real gaps. Platforms and cadence come from I-1, A-8, I-8 and B-12, not the tables below (local shortlist, ref §3). Never promote past B-6 capacity or I-10 season; promotions only from D-11.
+- **Claims.** Hooks, examples and "be specific" never supply client facts: use `[NEEDS PROOF: <row ID>]`. Check page 12, F-13 and H-5 at any status; a request that needs a violation stops and names the row. Clinical: no patient stories without written authorization, no fear or urgency.
+- **Never post, schedule, comment, reply, DM or boost**, even with approval. Windsor.ai is read-only here: never call any of its write actions (`execute_action`: Instagram, Business Profile posts, reviews, listings, ad boosts). Drafts only; a person publishes after the client approver (J-1) signs off. Boosting is paid: hand to `ads`/`ad-creative` with a spend checkpoint.
+- **Privacy.** No names, handles or profiles of private individuals, reviewer names or patient details in any list, sample or file. No scraping tools or logged-in browser sessions. No credentials in chat or files.
+- **Recurring routines** (weekly review, daily triage, engagement) become scheduled tasks that draft only the rungs in scope (ref §12).
+- **Outputs** to Drive `OUTPUTS/SOCIAL` by router ID, a drafted `social` ClickUp record and the context footer (ref §14).
+<!-- BML:END bml-mode -->
 
 Gather this context (ask if not provided):
 
@@ -61,6 +73,10 @@ Gather this context (ask if not provided):
 ## Content Pillars Framework
 
 Build your content around 3-5 pillars that align with your expertise and audience interests.
+
+<!-- BML:START pillars -->
+BML: build pillars from D-1/D-2 services, F beliefs, G proof, D-6 doubts and I-10 season, not the founder example below; the promotional share follows D-11 and B-6 (ref §4).
+<!-- BML:END pillars -->
 
 ### Example for a SaaS Founder
 
@@ -232,6 +248,10 @@ Extract "content atoms" — self-contained moments from any long-form content th
 
 ### Daily Engagement Routine (30 min)
 
+<!-- BML:START engagement -->
+BML: agents never comment, reply, share or DM. Draft replies for the social specialist or client; no DMs to people who haven't contacted the business; clinical replies never confirm someone is a patient (ref §8).
+<!-- BML:END engagement -->
+
 1. Respond to all comments on your posts (5 min)
 2. Comment on 5-10 posts from target accounts (15 min)
 3. Share/repost with added insight (5 min)
@@ -322,6 +342,10 @@ Extract "content atoms" — self-contained moments from any long-form content th
 
 ### Publishing From Your Agent
 
+<!-- BML:START publishing -->
+BML: skip this section. Agents never create, queue or schedule posts in any tool, Windsor.ai included. Deliver copy and calendar as drafts; a person schedules after J-1 approval (ref §11).
+<!-- BML:END publishing -->
+
 Everything above produces drafts and a calendar — actually getting posts onto
 accounts still needs a scheduling tool. If the user has one with an MCP server
 or API, you can execute the plan directly instead of handing them copy-paste
@@ -345,6 +369,10 @@ work:
 
 Instead of guessing, analyze what's working for top creators in your niche:
 
+<!-- BML:START reverse -->
+BML: business accounts only (L-4 competitors, category leaders), by manual review of a small public sample. No scraping, no individuals, never another BML client's accounts or data. Patterns, not copies (ref §8).
+<!-- BML:END reverse -->
+
 1. **Find creators** — 10-20 accounts with high engagement
 2. **Collect data** — 500+ posts for analysis
 3. **Analyze patterns** — Hooks, formats, CTAs that work
@@ -359,6 +387,10 @@ Instead of guessing, analyze what's working for top creators in your niche:
 ## Short-Form Video (TikTok, Reels, Shorts)
 
 Short-form video is the highest-reach format on every major platform. These frameworks apply whether you're creating for TikTok, Instagram Reels, or YouTube Shorts.
+
+<!-- BML:START video -->
+BML: on camera only people on B-12 with J-6 consent; no AI people or voices presented as staff or customers (J-5); clinical: no "Agitate" step, no patient stories or transformations without written authorization. Business accounts use the commercial music library (ref §6–7).
+<!-- BML:END video -->
 
 ### Platform Specs
 

@@ -1,5 +1,9 @@
 # Directory List — Full Reference
 
+<!-- BML:START note -->
+> **BML work:** this is the SaaS-mode catalog. For local clients use [`bml-local-citations.md`](bml-local-citations.md) §4; Tier 9 and the home, legal and health parts of Tier 13 are long-tail only, after the priority platforms are clean. DR, traffic and prices here are planning assumptions: never quote them to a client. Check DR with Semrush; Ahrefs or Moz only if BML has an approved account. Not for BML clients: Tier 8 blogs and profiles made for links (Houzz excepted: it is a §4 platform), Tier 10 forum profiles, Tier 12 bookmarking. Tier 11 press releases go to `public-relations`; Tier 6 outreach goes to `link-building` if the library has it, otherwise to the account lead. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 Canonical list of directories organized by tier. DR values are approximate and drift over time — verify via Ahrefs or Moz before building a plan around them.
 
 **Column legend:**

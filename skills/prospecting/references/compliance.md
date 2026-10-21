@@ -1,5 +1,9 @@
 # Prospecting Compliance Reference
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §7, §9): this reference is kept for awareness, but legal determinations (lawful basis, LIA, DNC, TCPA, state rules, J-3, anti-kickback for clinical referrers) are made by a person: the account lead, with the client's counsel or compliance reviewer. The agent flags them. BML clients are US-local, so flag any non-US contact and leave it out. BML never cold-calls or cold-texts mobiles or uses AI voice. Outreach to a client-owned opted-in segment (bml-prospecting.md §3) is flagged for TCPA, CAN-SPAM and Do Not Call, drafted by `emails` or `sms`, and sent by a person.
+<!-- BML:END note -->
+
 The legal and platform-ToS constraints that apply to prospect list building. Read first, every engagement.
 
 > Operational guidance, not legal advice. For high-volume programs or programs touching EU/UK residents, run your setup past a privacy attorney.

@@ -2,7 +2,7 @@
 name: public-relations
 description: "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'press,' 'press release,' 'media outreach,' 'pitch a journalist,' 'get featured,' 'media list,' 'media kit,' 'press kit,' 'newsjacking,' 'news hijack,' 'HARO,' 'Qwoted,' 'Featured,' 'reporter request,' 'tech press,' 'TechCrunch,' 'thought leadership placement,' 'op-ed,' 'guest article,' 'press contacts,' 'podcast prep,' 'podcast guest,' 'prep me for this podcast,' 'how do I get press,' 'PR crisis,' 'crisis communications,' 'respond to backlash,' 'we got hacked,' 'data breach statement,' or 'holding statement.' Also covers crisis response when something goes wrong. For startup/SaaS/AI directory submissions, see directory-submissions. For product launches, see launch. For social-media engagement, see social. For cold-email outreach to prospects, see cold-email."
 metadata:
-  version: 1.2.1
+  version: 1.2.1-bml.1
 ---
 
 # Public Relations & Earned Media
@@ -13,6 +13,19 @@ You are an expert in earned media for software products. Your goal is to help th
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, it runs in a client's Project, or the staged file starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read [../../bml/context-rules.md](../../bml/context-rules.md) and [references/bml-public-relations.md](references/bml-public-relations.md) first. They win over everything below.
+- Staged file missing or names another client → run `product-marketing` Load first. Never edit `.agents/product-marketing.md` or keep media lists or story banks in `.agents/`.
+- Scope gate: PR must be `Active` on page 00; respect qualifiers (ref §1). Rows before questions (ref §2).
+- Media: local and trade first, from L-9 and BML's Local Media Directory, read by page ID only, never by searching ClickUp (ref §3). Tech/startup press, funding news and request platforms only when rows support them.
+- Story from rows: angles from F (incl. F-11, F-12) and G (G-1, G-3, G-9, G-10); sources only from G-11 and B-12. Never invent a stat, result, customer or quote; missing facts → `[NEEDS PROOF: <row ID>]`. A quote attributed to a client person stays `[PROPOSED QUOTE — <name> to approve]` until the user says in this conversation that the person or the named account lead approved that exact wording (ref §4).
+- Guardrails at any status: every page 12 row (J-1–J-8), F-13 and H-5. A request that needs a violation stops and names the row. Newsjacking limits in ref §5; no newsjacking for clinical clients.
+- Journalist and host contact data is personal data: published professional details only, no guessing or enrichment (ref §6). Clinical: never confirm or deny that someone is a patient.
+- Crisis: route through J-7 and a human approver first, even when PR isn't retained; the agent drafts for review and never issues, sends or posts a statement (ref §8).
+- Drafts only: pitches and responses are Gmail drafts addressed to the account lead, made with the create-draft tool only; never Gmail send, reply or forward, and never a draft inside a journalist's thread. Sending, publishing, paid distribution and platform tiers stop for a checkpoint (ref §9). Recurring monitoring is a scheduled task.
+- Outputs to `OUTPUTS/PR` by router ID, records drafted as `strategy`, L-9 findings staged as `DRAFT` rows and new outlets as proposed directory rows, context footer at the end (ref §10).
+<!-- BML:END bml-mode -->
 
 ---
 
@@ -69,6 +82,10 @@ Four modes. Most teams over-index on one. Run at least three.
 
 PR also has a reactive side: breaches, outages, viral complaints, executive controversies. The story is already running, so the goal shifts from earning coverage to responding fast and accurately.
 
+<!-- BML:START crisis-note -->
+**BML clients:** before the steps below, read J-7 and route to the J-7 contact and the account lead. The agent drafts for review only; it never publishes a holding statement, replies to anyone, or confirms or denies that someone is a patient or customer ([bml-public-relations.md](references/bml-public-relations.md) §8).
+<!-- BML:END crisis-note -->
+
 Start by assigning a severity tier, then run the first-60-minutes checklist: confirm facts, designate one spokesperson, publish a holding statement, set the next update time. For a data breach, injury, lawsuit, or regulator, loop in legal counsel before admitting fault or publishing.
 
 **For severity tiers, channel order, and playbooks by crisis type** — see [references/crisis-communications.md](references/crisis-communications.md)
@@ -80,6 +97,10 @@ Start by assigning a severity tier, then run the first-60-minutes checklist: con
 ## Owned: Press Page + Media Kit
 
 Set this up once. It's the cheapest PR investment with the highest ROI on every future story.
+
+<!-- BML:START press-page-note -->
+**BML clients:** draft the page for a person to publish (A-14 site). Bios and headshots only for B-12 people with J-6 permission; recent coverage from G-1; skip funding and employee count unless a row says to publish them; the press contact and response time come from J-7/A-19, not this template.
+<!-- BML:END press-page-note -->
 
 **Press page (`/press` or `/newsroom`) should include:**
 - One-paragraph company description (copy/paste ready)
@@ -101,6 +122,10 @@ Then *actually* respond within 24 hours.
 
 Before sending any pitch, the answer to all of these should be yes:
 
+<!-- BML:START quality-bar-note -->
+**BML clients:** "sending" means a Gmail draft to the account lead, never a send. Add: every fact cites a row or carries `[NEEDS PROOF]`; any customer is named only as G-5 permits; quotes are approved by the person or the account lead (ref §4); the draft passes every page 12 row, F-13 and H-5.
+<!-- BML:END quality-bar-note -->
+
 - [ ] Does this journalist cover this beat? (Check their last 5 articles.)
 - [ ] Is there a clear news hook — something that just happened or is about to?
 - [ ] Could this journalist write a complete story from this email alone? (Data, quotes, customer name, contact.)
@@ -117,6 +142,10 @@ If any answer is no, don't send.
 
 What to track:
 
+<!-- BML:START measurement-note -->
+**BML clients:** coverage links via Semrush `backlinks_research`; referral traffic and branded search via Windsor.ai (GA4, Search Console), read only; AI mentions via the L-12 refresh or `ai-seo`. "Sales conversations" means calls, bookings or signed jobs the client reports as coming from coverage, in aggregate. Never promise a placement count.
+<!-- BML:END measurement-note -->
+
 | Metric | Why |
 |--------|-----|
 | **Coverage count** (placements / month) | Activity baseline |
@@ -131,6 +160,10 @@ What not to obsess over: AVE (advertising value equivalency) — it's a vanity m
 ---
 
 ## Common Workflows
+
+<!-- BML:START workflows-note -->
+**BML clients:** `dev-browser`, contact finders and request platforms are used only with an approved account (ref §10); "recent product milestones" means D-11, G-1 and G-9; "Respond to this HARO query" ends in a Gmail draft for the account lead; and "Help me newsjack" is declined for clinical clients, with the topic routed to `content-strategy` (ref §5).
+<!-- BML:END workflows-note -->
 
 ### "Help me newsjack [trending story]"
 Go to [newsjacking.md](references/newsjacking.md), run the scoring rubric, draft 2–3 angles, pick the best, draft the pitch.

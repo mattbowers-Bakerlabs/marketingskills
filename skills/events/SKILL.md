@@ -2,7 +2,7 @@
 name: events
 description: "When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, workshops, virtual summits, or user conferences. Also use when the user mentions 'event marketing,' 'field marketing,' 'run a webinar,' 'webinar funnel,' 'show-up rate,' 'should we sponsor,' 'sponsor a conference,' 'trade show booth,' 'booth strategy,' 'event ROI,' 'badge scans,' 'event follow-up,' 'speaking slot,' 'CFP,' 'conference talk,' 'host a dinner,' 'user conference,' or 'virtual summit.' Covers all four roles: hosting, sponsoring/exhibiting, speaking, and attending. For product launch moments, see launch. For the partnership side of joint webinars, see co-marketing. For ongoing community programs, see community-marketing. For podcast appearances, see public-relations. For the email sequences themselves, see emails."
 metadata:
-  version: 1.0.0
+  version: 1.0.0-bml.1
 ---
 
 # Event Marketing
@@ -13,6 +13,18 @@ You are an expert in event-driven marketing — using webinars, conferences, din
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START bml-mode -->
+**BML client work** (the request names a BML client, it runs in a client's Project, or the staged file starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read [`../../bml/context-rules.md`](../../bml/context-rules.md) first, then [`references/bml-local-events.md`](references/bml-local-events.md). Those rules win over anything below.
+- **Client check.** If the staged file is missing or names another client, run `product-marketing` in Load mode first. Never edit `.agents/product-marketing.md` or page 13, and never carry another client's events, results or contacts into this one.
+- **Scope gate.** Find the service on page 00 by name (events, field marketing, community, sponsorship); don't infer it from a broader line. Respect qualifiers such as "planning only"; stop if it isn't retained.
+- **Referral sources and giveaways.** Referral-source events (clinical CE/CME seminars and lunch-and-learns included) are planned like any hosted event. Meals, gifts, tickets, raffles or prize drawings, per-referral rewards or anything else of value for referral sources are flagged to a person under J-3, and CE/CME credit is never claimed unless a row names the accreditation (ref §6); the skill doesn't decide them.
+- **Rows before questions.** The four questions below map to rows (I-7 events ahead, I-8 team time, I-10 seasons, B-6 capacity, B-10 budget, L-8/L-9 local ecosystem). Ask only for what the rows don't hold. Formats and roles are translated for local service businesses in ref §3.
+- **Claims and ROI.** Client facts, past event results, job values and close rates come only from rows (B-7, I-4, I-2). Missing inputs are `[NEEDS PROOF: <row>]`; never fill them with the benchmarks or case figures in this skill. Conversions are calls, bookings, estimates and signed jobs.
+- **Spend, send, publish: checkpoint.** Sponsorship commitments, booth or ticket registrations, deposits, print orders and paid promotion are spend; invitations and follow-ups are sends (drafts only; sequences go to `emails` / `cold-email` / `sms`); event listings, registration pages and posts are publishing. Each stops for the user's approval in this conversation, naming exactly what will happen. Client-facing pieces note the J-1 approver.
+- **Personal data.** Never receive, read, build or upload attendee lists, badge scans, sign-in sheets or registrant exports; they stay in the client's own tools. Clinical: never patient data, ever. Event photos need J-6 releases.
+- **Outputs.** Deliverables go to the client's Drive `OUTPUTS/EVENTS` by router ID (ask if none resolves), with ClickUp records drafted for a person and the context footer. Recurring event calendars become drafted records plus an optional scheduled task (ref §11), never an in-session loop.
+<!-- BML:END bml-mode -->
 
 Then establish, in one batch:
 
@@ -41,6 +53,10 @@ Before roles and tactics: events are the most expensive, riskiest, hardest-to-me
 - **Bigger isn't better.** Mega-conferences mean more noise, higher cost, and audience dilution (students, press, vendors, tourists). Niche/regional events (50–200 attendees) often deliver more qualified leads per dollar.
 - **Three types, three risk profiles:** **Owned** (max control/max risk — roadshows, summits, user conferences), **Trade shows** (someone else's arena — 120 days of prep beats the 4 days on the floor), **Community** (compound interest — small regular gatherings that spawn more, measured by the "Saturday Test").
 
+<!-- BML:START note-portfolio -->
+> **BML:** For local service clients, in-person presence (home shows, open houses, community and chamber events, referral-source seminars) is often the core event motion, so the high-ACV "is in-person necessary?" gate doesn't apply. Use the fit check and local formats in ref §3–4, and the two sponsorship classes in ref §5.
+<!-- BML:END note-portfolio -->
+
 ## The Universal Arc: 20% Event, 80% Before-and-After
 
 The event itself is the smallest part of event marketing. Every format follows the same arc, and most failures are arc failures, not event failures:
@@ -59,6 +75,10 @@ The event itself is the smallest part of event marketing. Every format follows t
 - **The 24–48 hour window.** Follow up while the conversation is still warm, referencing what was actually discussed. Every day of delay roughly halves response rates (directional, not a law — but the decay is real and fast).
 - Tier the follow-up: hot conversations get a personal note + concrete next step; warm get a relevant asset tied to their stated problem; scans-with-no-conversation get one light touch or nothing — don't burn your domain on people who don't remember you.
 - Route to systems: CRM with event source tagging (→ **revops**), nurture for the not-nows (→ **emails**).
+
+<!-- BML:START note-arc -->
+> **BML:** Here and in Attending, "target lists" are organizations by type (L-8, L-9), not dossiers on named people; named contacts are ones the client already holds in its own tools. Outreach and follow-up are drafts with merge fields that the client sends from its own system; the agent never handles the list or writes to the client's CRM (ref §7, §10).
+<!-- BML:END note-arc -->
 
 ## Hosting: Choose the Format for the Job
 
@@ -95,6 +115,10 @@ Events produce your highest-proof content — capture it deliberately:
 - Slice the recording: clips (→ **video**), a recap post per session (→ **content-strategy**), pull-quotes for social (→ **social**), proof points for sales (→ **sales-enablement**).
 - Photograph/collect social proof: testimonials captured at the event are the most natural you'll ever get.
 
+<!-- BML:START note-content -->
+> **BML:** Recording and photos need the venue's permission and J-6 releases (written parental release for any identifiable minor). Testimonials captured at events become usable only once added to G-5 with the permission it records; clinical needs written patient authorization. "Numbers out loud" means numbers from G-2 or `[NEEDS PROOF]`. Speakers are people on B-12 / G-11 (ref §8).
+<!-- BML:END note-content -->
+
 ## Measurement: Pipeline, Not Applause
 
 | Metric tier | Examples | Verdict |
@@ -106,6 +130,10 @@ Events produce your highest-proof content — capture it deliberately:
 - Compare cost-per-qualified-meeting against your other channels (ads, outbound) — that's the go/no-go math, worked through in [sponsorship-roi.md](references/sponsorship-roi.md).
 - Events are multi-touch by nature: use source tagging + self-reported attribution ("heard us at X") and influence windows, and never claim last-click credit for a deal the event merely touched (→ **attribution**).
 - Judge a recurring event program on a 2–3 event trend, not one instance — the first run of anything underperforms its steady state.
+
+<!-- BML:START note-measure -->
+> **BML:** For local clients the tiers become: vanity = foot traffic, sign-ups, raffle entries; real = qualified conversations, estimates or consults booked; decisive = signed jobs and cost per signed job, valued with B-7 and I-4. Track by source with A-15 call tracking or booking tools and a "how did you hear about us" answer the client records (ref §5).
+<!-- BML:END note-measure -->
 
 ## Common Mistakes
 

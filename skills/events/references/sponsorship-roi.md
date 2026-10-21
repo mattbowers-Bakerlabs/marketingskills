@@ -1,5 +1,9 @@
 # Sponsorship & Exhibiting — Evaluate, Negotiate, Work the Floor, Follow Up
 
+<!-- BML:START note -->
+> **BML:** For a BML client, name the sponsorship class first (lead-gen or community, [bml-local-events.md](bml-local-events.md) §5) and use the local math there: inputs from B-7, B-5, I-4 and past results, or `[NEEDS PROOF]`. The "10–20%" and "90 days" figures are B2B illustrations, not inputs. The agent never negotiates, commits or registers (spend checkpoint, §10), never receives attendee lists or badge scans (§7), and side-event invitations are drafts sent by the client. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 Sponsorships are the most expensive way to do event marketing and the easiest to waste. The discipline: treat every sponsorship as a paid-acquisition channel with a cost-per-qualified-meeting, and make it beat your alternatives or don't buy it.
 
 ## Should We Sponsor? (the evaluation)

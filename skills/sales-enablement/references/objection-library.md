@@ -1,5 +1,9 @@
 # Objection Library
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). These are B2B SaaS objections. For a client, start from D-6, I-4 and G-7; proof only from rows. Talk tracks with `[$ amount]` cost-of-delay math are never used for clinical clients; otherwise the amount is a fill-in from the customer's own figures, never estimated. "Customers like [name] switched" only from G-5. Competitor names in spoken lines follow J-4 (§4).
+<!-- BML:END note -->
+
 Common B2B SaaS objections with response frameworks. Organized by category for quick reference.
 
 ## Quick-Reference Table

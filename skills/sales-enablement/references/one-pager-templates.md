@@ -1,5 +1,9 @@
 # One-Pager Templates
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). The "Name, Title, Company" quotes and metric callouts are slots: fill them only verbatim from G-5 and G-2, attributed as G-5 permits, or leave `[NEEDS PROOF]`. Post-meeting recaps are templates with fill-in fields; the agent never receives the customer's details (§9). CTA per 01; contact is the client's I-3 line. Champion and "who else uses it" sections apply to B2B clients only.
+<!-- BML:END note -->
+
 Templates for different one-pager use cases, with layout guidance and copy prompts.
 
 ## Product Overview One-Pager

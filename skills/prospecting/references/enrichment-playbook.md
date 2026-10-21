@@ -1,5 +1,9 @@
 # Waterfall Enrichment and Cache Reuse
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md) §7–9): the agent never reads or writes a client CRM, so "existing verified CRM fields" come only from a list the client exports themselves. Run waterfalls only on an approved, connected account, within a credit cap the user approves in this conversation, and never for mobile numbers or personal emails. Keep no cache outside the list file in Drive, and never reuse one client's lookups for another.
+<!-- BML:END note -->
+
 Load this when a prospect list needs multiple data providers, repeated lookups, or a credit budget. Keep the prospecting skill's ICP, source lineage, contact verification, and compliance rules. This is a workflow design, not a new API or a promise of coverage.
 
 ## Define the Success Condition Before Calling Providers

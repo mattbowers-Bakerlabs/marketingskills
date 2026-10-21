@@ -1,5 +1,9 @@
 # Carousel Frameworks
 
+<!-- BML:START note -->
+BML client work: follow [../../../bml/context-rules.md](../../../bml/context-rules.md) and [bml-social.md](bml-social.md) §5–7. The SaaS examples and their figures are illustrations; never reuse them. Problem-Proof receipts and Hack List stats come from G-2/G-3 or stay `[NEEDS PROOF]`; screenshots never show customer data. Rant Callout must pass F-13 and J-4 (clinical: don't use it). Demo Walkthrough becomes a D-3 process walkthrough with G-6 photos. "Comment X and I'll send" DM triggers are out.
+<!-- BML:END note -->
+
 Five slide-by-slide narrative architectures for carousels — Instagram carousels and LinkedIn document posts. Each framework is a different *reason to keep swiping*; picking the right one for the content matters more than polishing individual slides.
 
 A carousel is not a blog post chopped into squares. It's a swipe-through with two jobs per slide: deliver one idea, and make the next swipe irresistible. These frameworks encode structures that show up repeatedly in high-performing carousels; treat them as starting structures to adapt, not rigid formulas — and expect to validate against your own analytics.

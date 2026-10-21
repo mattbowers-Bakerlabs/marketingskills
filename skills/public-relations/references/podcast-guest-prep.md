@@ -1,5 +1,9 @@
 # Podcast Guest Prep
 
+<!-- BML:START note -->
+**BML clients:** never offer to save answers into the product-marketing context doc; stage story-bank answers as `DRAFT` rows (B-2, G-3, G-11); a stated opinion is not an F row, it goes to "Gaps to ask about". The user may be BML staff prepping the guest, not the guest. Pull the story bank from rows first. Guests come only from G-11/B-12, and their "pocket" numbers only from rows. Host profiles keep to professional, public information. Clinical guests make no outcome claims beyond J-2/J-3. Save the brief to the client's Drive OUTPUTS. See [bml-public-relations.md](bml-public-relations.md) §2, §4, §6, §10.
+<!-- BML:END note -->
+
 Build a prep brief before the user appears on a podcast as a guest. The goal: walk in knowing what's top of mind for the show, how it has evolved, who the hosts are, and which of the user's stories map onto what the show cares about *right now*.
 
 **Why prep is worth real effort:** podcast guesting isn't just audience reach. Episodes get transcribed, show notes get published, and both get crawled and cited by AI assistants — when someone asks ChatGPT about your category, the stories you told on a podcast two years ago are part of what it draws on. A good appearance is earned media that compounds in AI answers for years (see the `ai-seo` skill). The stories you tell — and the concrete numbers in them — become the citable record on your brand. Prep accordingly.

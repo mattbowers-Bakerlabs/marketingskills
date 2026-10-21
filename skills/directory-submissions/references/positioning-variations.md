@@ -1,5 +1,9 @@
 # Positioning Variations Library
 
+<!-- BML:START note -->
+> **BML work:** fill every bracket from rows only (claims from rows). "Use real numbers", "Trusted by", "reducing [metric] by [percentage]" and pricing become `[NEEDS PROOF: <row ID>]` when the record lacks the fact. Competitor-alternative framing must clear J-4. For local listings, the description may vary by platform but the name, address, phone, hours and categories never do (see [`bml-local-citations.md`](bml-local-citations.md) §6). Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 Directory audiences respond to different framings. Never copy-paste the same description everywhere — AI engines penalize duplicate content, and each directory type rewards a different opener.
 
 Use this library to generate per-tier variants. Swap `[product]`, `[category]`, `[competitors]`, `[use-case]`, and `[audience]` with the real values.

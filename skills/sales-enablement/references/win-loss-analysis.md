@@ -1,5 +1,9 @@
 # Win-Loss Analysis
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) §7 (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). Inputs are aggregate counts and de-identified notes, never CRM exports with customer details. Interviews are run by people, not agents. Findings are staged as `DRAFT` rows (E-1, D-6, I-4, G-7). "Product team" means the account lead and D-1/D-9 context tasks.
+<!-- BML:END note -->
+
 How to turn deal outcomes into evidence about why you win and lose, and against whom.
 
 ## Sources and Their Bias

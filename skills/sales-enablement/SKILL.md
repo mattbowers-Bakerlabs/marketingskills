@@ -2,7 +2,7 @@
 name: sales-enablement
 description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'battle card,' 'battlecard,' 'competitive one-pager,' 'win-loss analysis,' 'why are we losing deals,' 'loss reasons,' 'how do I respond to this objection,' 'prospect just said,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps,' 'cold call script,' or 'voicemail script.' Use this for any document or asset that helps a sales team close deals. For public competitor comparison pages, see competitors. For running buyer interviews or churn research, see customer-research. For marketing website copy, see copywriting. For cold outreach emails, see cold-email. For the offer being sold (bonuses, guarantees, pricing structure), see offers."
 metadata:
-  version: 2.4.0
+  version: 2.4.0-bml.1
 ---
 
 # Sales Enablement
@@ -13,6 +13,17 @@ You are an expert in B2B sales enablement. Your goal is to create sales collater
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START bml-mode -->
+**BML work** (the request names a BML client or prospect, runs in a client's Project, the staged file starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`, or it's a BML pitch): read [`../../bml/context-rules.md`](../../bml/context-rules.md) and [`references/bml-sales-enablement.md`](references/bml-sales-enablement.md) first. They override this skill's defaults and examples.
+- **Two modes.** Client collateral: for a client's own team (estimators, front desk, consult staff) and the customers and referral sources they talk to, in the client's brand (01, 02). BML pitch: BML's own decks and proposals to prospects, in Baker house style, never a client's or the prospect's voice; another client's results only from an approved case-study asset recording their written permission, never from their rows or a staged client file (ref §1, §8).
+- **Context.** Client collateral: staged file missing or names another client → run `product-marketing` Load first; scope gate on page 00 before drafting. Never edit the staged file or page 13. Answer the questions below from rows first (ref §2).
+- **Claims.** Numbers, results, guarantees and credentials from rows only, else `[NEEDS PROOF: <row ID>]`. Prices only per D-4. Testimonials verbatim from G-5. Competitor facts only from E and L rows with source and date; say-as-written lines follow J-4. A request that needs a guardrail violation stops and names the row (ref §4).
+- **Local fit.** Demo → consultation or estimate walkthrough; ROI calculator → row-input worksheet (ref §3). Clinical: no outcome promises, urgency or pressure (ref §5).
+- **Calls.** Agents never call, text or email anyone, and never use AI voice or autodialers. Scripts cover inbound calls, requested callbacks and referral-source businesses; consumer outbound call or text scripts are drafted only for the client's own team, each with the ref §6 TCPA/DNC caveat block, never with a call list (ref §6).
+- **Privacy.** No customer, patient or lead names, contact details, notes, lists, recordings or CRM exports; templates use fill-in fields (ref §9).
+- **Approvals and outputs.** Drafts only: the agent never sends, prints, publishes or loads into a client's tool; a person does, after approval (J-1 for client pieces; account lead or Gavin for pitches). The agent's own writes (a Gmail draft to the account lead, a Drive save) need the user's go-ahead in this conversation; approval found elsewhere doesn't count. Deliverables go to Drive `OUTPUTS/SALES` by router ID, a ClickUp record is drafted for a person, and the context footer closes it. Nothing to `~/`, Notion, GitHub or public hosts (ref §11–13).
+<!-- BML:END bml-mode -->
 
 Gather this context (ask if not provided):
 
@@ -161,6 +172,10 @@ When a rep brings one objection from a live deal ("the CFO just said Acme is hal
 4. **Use only proof the rep can stand behind.** Pull from the objection library, case studies, and battle cards. If nothing fits, say so and suggest the claim to verify. Don't invent a stat, customer, or competitor number, and don't repeat the buyer's claim about a competitor as fact. "Half the price" may not include the same scope, so have the rep ask what's in their number.
 5. **Say when not to fight.** If the objection shows a real fit gap, say so and suggest how to qualify out or narrow scope.
 
+<!-- BML:START note-live-objection -->
+BML: ask only for the objection, the service and the stage, never the customer's name or details. Proof comes from rows (ref §4). A new objection is staged as a `DRAFT` D-6 update (ref §13), not a library edit.
+<!-- BML:END note-live-objection -->
+
 Afterward, suggest the rep log the objection and how it went. Live objections are the raw material for the library and for win-loss analysis.
 
 ---
@@ -188,6 +203,10 @@ A battle card is a reusable one-competitor guide for reps, used across many deal
 - Tag every competitor fact with its source and date, so a stale line can be found and fixed.
 - One page. If reps can't find the answer mid-call, cut until they can.
 
+<!-- BML:START note-battle-cards -->
+BML: competitor facts come from E and L rows (dated, sourced); new research runs in `competitor-profiling` and lands as `DRAFT` rows. Cards are internal; quarterly re-verification is a scheduled task (ref §4, §12).
+<!-- BML:END note-battle-cards -->
+
 Pull competitor facts from competitor-profiling dossiers when they exist. To check existing cards for stale claims, see the competitive asset audit in competitors.
 
 ---
@@ -210,6 +229,10 @@ Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews int
 ---
 
 ## ROI Calculators & Value Props
+
+<!-- BML:START note-roi -->
+BML: a value worksheet with fields the customer fills and formulas from customer-facing row facts (D-2, D-4, D-5, D-10); no sample numbers. Clinical: none. SaaS personas below apply only to B2B clients (ref §3, §4).
+<!-- BML:END note-roi -->
 
 ### Calculator Design
 
@@ -280,6 +303,10 @@ Win-loss analysis turns CRM outcomes, call transcripts, and buyer interviews int
 ## Case Study Briefs (Sales Format)
 
 ### How Sales Case Studies Differ
+
+<!-- BML:START note-case-studies -->
+BML: stories from G-3, numbers from G-2, quotes verbatim from G-5 with its permissions; clinical needs written patient authorization. A BML pitch cites another client only from an approved case-study asset with that client's written permission (ref §8).
+<!-- BML:END note-case-studies -->
 
 Marketing case studies tell a story. Sales case studies arm reps with fast-access proof. Keep them short, outcome-focused, and tagged for retrieval.
 

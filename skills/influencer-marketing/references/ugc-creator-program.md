@@ -1,5 +1,9 @@
 # Volume UGC Creator Programs ("Tech UGC")
 
+<!-- BML:START note -->
+> **BML:** off by default for BML clients. It means creating and running brand-affiliated social accounts and posting several times a day; agents never create accounts, warm them or post, and the program needs a full-time owner at the client (I-8). If a client wants it, it is a separately scoped, client-run program. Figures (CPMs, $500/week, 12M downloads) are vendor-supplied and never client targets. Clinical: the clinical rules in ref §2 also apply. The compliance rewrite below is a Keep. See [`bml-creator-partnerships.md`](bml-creator-partnerships.md) §2, §4, §7.
+<!-- BML:END note -->
+
 A scaled version of the paid-influencer model where **content volume, not any creator's audience, is the asset**: an in-house network of creators posting native short-form from dedicated brand-affiliated accounts, at test volume. 10 creators posting 3×/day ≈ 900 organic tests in a 30-day campaign — against ~30 for a brand account posting daily. The economics claim from the program this is distilled from: ~$3.87 CPM vs ~$20 for Meta ads and ~$119 for micro-influencer placements (**vendor-supplied internal numbers — directional, not a benchmark**).
 
 Creators don't need existing audiences — discovery-based algorithms distribute on content, and follower count is irrelevant when posting from program accounts.

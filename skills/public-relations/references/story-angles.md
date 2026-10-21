@@ -1,5 +1,9 @@
 # Story Angles — What Earns Press
 
+<!-- BML:START note -->
+**BML clients:** angles come from rows: Founding Story from B-2 (no revenue transparency unless a row allows it), David vs Goliath from E-1/E-2/E-3 (naming the Goliath in public copy follows J-4), Have an Enemy from APPROVED or PROVISIONAL F rows only, never F-13. Data stories use G-10 only, aggregated and non-personal. The exemplars (Pieter Levels, Superhuman, HEY, Stripe) are teaching examples, never client material. Relationship-building on social is done by a person, not the agent. See [bml-public-relations.md](bml-public-relations.md) §2–§4.
+<!-- BML:END note -->
+
 Distilled from Corey Haines's *Founding Marketing*, ch. 5. Chase press for the **compound effect** — authority, journalist relationships, AI-citation surface — not the traffic bump. The bump fades in a day; the backlinks, the relationships, and the citable record don't.
 
 **The story is not your product.** Journalists write about trends, data, conflict, and humans. Your product is the evidence, never the headline. If the pitch is "we built a thing," there's no story. If the pitch is "here's a shift happening and we're proof of it," there is.

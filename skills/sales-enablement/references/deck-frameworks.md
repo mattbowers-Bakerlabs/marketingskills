@@ -1,5 +1,9 @@
 # Sales Deck Frameworks
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). Every stat, metric, logo, award, ROI figure and price comes from rows (G-1, G-2, G-8, D-4) or is `[NEEDS PROOF]`. "Cost of the problem" and "create urgency" slides are gated for clinical (§5). Slide 5 shows the client's process (D-3), not a product. BML pitch decks: Baker house style and §8.
+<!-- BML:END note -->
+
 Detailed slide-by-slide guidance for building sales decks that tell a story and close deals.
 
 ## The Storytelling Arc

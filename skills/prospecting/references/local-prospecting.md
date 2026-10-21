@@ -1,5 +1,9 @@
 # Local SMB Prospecting Reference
 
+<!-- BML:START note -->
+**BML mode** ([bml-prospecting.md](bml-prospecting.md)): fits Self mode (website status maps to BML's web and Wix work) and local B2B targets in Client mode. Use the Places search tool, one business at a time. Don't copy ratings, review text or reviewer names into the list ("reviews active, checked <date>"). Owner names come only from the business's own site; skip names found only on LinkedIn. Nothing goes to a CRM, and outreach that names a gap is drafted by `cold-email`.
+<!-- BML:END note -->
+
 For when the user sells to local small businesses — shops, gyms, restaurants, salons, clinics, professional services, contractors, real estate, fitness studios, dental practices.
 
 Adapted from and generalized beyond the local-client-prospector pattern (browser-assisted discovery + website status classification + proximity scoring).

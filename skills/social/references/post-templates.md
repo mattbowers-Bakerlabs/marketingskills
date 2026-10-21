@@ -1,5 +1,9 @@
 # Post Format Templates
 
+<!-- BML:START note -->
+BML client work: follow [../../../bml/context-rules.md](../../../bml/context-rules.md) and [bml-social.md](bml-social.md) §5. Templates are written for a founder's first person; use them only for people on B-12 or G-11, otherwise the brand voice. Every bracket that needs a result, number, person or story is filled from rows or left as `[NEEDS PROOF: <row ID>]`. Closers like "Am I wrong?" and "Which resonates most?" are engagement bait under SKILL.md's No AI Tells; don't use them.
+<!-- BML:END note -->
+
 Ready-to-use templates for different platforms and content types.
 
 ## Contents

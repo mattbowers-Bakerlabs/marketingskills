@@ -1,5 +1,9 @@
 # Cold Call Scripts
 
+<!-- BML:START note -->
+BML: see [`bml-sales-enablement.md`](bml-sales-enablement.md) §6 (rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md)). Agents never call, text or leave voicemails, and never use AI voice. Use this structure for referral-source business calls and requested callbacks. A consumer outbound call or text script is drafted only for the client's own team, with the §6 caveat block (TCPA, Do Not Call, calling hours, consent, opt-out, state laws) at its top, and never with a call list. The names in the examples are illustrations. Call recordings never come to the agent; weekly call reviews are a scheduled task or the client's own routine.
+<!-- BML:END note -->
+
 Scripts for the first 30 seconds of a cold call, voicemails, and the pushback that comes right after the opener. Internalize the structure and say it in your own words. Prospects can hear reading.
 
 For where calls fit in a multichannel cadence (timing, attempts, which tiers get calls) and the rules on Do Not Call lists and AI voice, see the cold-email skill's multichannel cadence reference and the prospecting skill's compliance reference.

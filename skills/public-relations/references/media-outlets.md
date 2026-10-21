@@ -1,5 +1,9 @@
 # Media Outlets — Where to Pitch
 
+<!-- BML:START note -->
+**BML clients:** this list is tech and SaaS press and names real outlets and people. Don't copy it into client work. Build the client's list from L-9 and BML's Local Media Directory for the market, read by page ID only (local papers, business journals, TV and radio, community newsletters, local podcasts, chambers, associations) and the client's own trade press, verifying each outlet and person on the day with a source and date. Named outlets live on the Ops Manual directory page, never in this skill; new ones are staged as proposed directory rows, never written to ClickUp. Wires and paid placements are spend and need a checkpoint. Maintenance cadences run as scheduled tasks. See [bml-public-relations.md](bml-public-relations.md) §3, §6, §9.
+<!-- BML:END note -->
+
 A curated, opinionated list of *where* to pitch for software/SaaS PR. This is the media-outlet slice of resources like submit.co — the journalist-driven half. For startup/SaaS/AI directories (Product Hunt, BetaList, Futurepedia, etc.), use the separate `directory-submissions` skill — different intent, different audience.
 
 ## How to use this list

@@ -1,5 +1,9 @@
 # Reverse Engineering Viral Content
 
+<!-- BML:START note -->
+BML client work: follow [bml-social.md](bml-social.md) §8. No scraping tools (Apify, PhantomBuster) or people-research tools; business accounts only, small manual samples, never another BML client's accounts. The "$47,329" style specifics, broetry and "hands shaking" examples conflict with SKILL.md's No AI Tells and with [../../../bml/context-rules.md](../../../bml/context-rules.md) §4; don't model them. DM-trigger conversions are out.
+<!-- BML:END note -->
+
 Instead of guessing what works, systematically analyze top-performing content in your niche and extract proven patterns.
 
 ## Contents

@@ -1,5 +1,9 @@
 # Speaking — Get Booked, Design the Talk, Compound the Recording
 
+<!-- BML:START note -->
+> **BML:** Speakers are people on B-12 / G-11, on F-11 topics, never F-13 positions. The title formula's number ("cut CAC 40%") must come from G-2 or stay `[NEEDS PROOF: G-2]`. CFPs and speaker applications are drafts; submitting is a checkpoint. Question-askers are followed up by the client from its own tools; the agent never holds their details. Clinical talks: claims reviewed by a named provider, CE/CME per [bml-local-events.md](bml-local-events.md) §6. Rules: [`../../../bml/context-rules.md`](../../../bml/context-rules.md).
+<!-- BML:END note -->
+
 Speaking is the highest-leverage event role per dollar: stage time confers borrowed authority no booth can buy, and the recording compounds for years — including in AI answers. Treat it as three separate jobs: getting booked, designing a talk that lands, and harvesting the asset.
 
 ## Getting Booked (CFPs and pitches)
