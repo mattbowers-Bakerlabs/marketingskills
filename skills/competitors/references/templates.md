@@ -2,6 +2,10 @@
 
 Ready-to-use templates for each section of competitor comparison pages.
 
+<!-- BML:START templates-note -->
+> **BML clients:** testimonial and "results after switching" slots are filled only from page 11 rows, verbatim, or left as `[NEEDS PROOF: G-<n>]`. No per-seat pricing, no self-assigned star ratings of named competitors, and no quoted reviews of competitors (themes only, from L-5). "Migration" means switching providers, from 08 rows, or is dropped. For comparison dimensions and the option-comparison template, see [bml-competitors.md](bml-competitors.md).
+<!-- BML:END templates-note -->
+
 ## Contents
 - TL;DR Summary
 - Paragraph Comparison (Not Just Tables)

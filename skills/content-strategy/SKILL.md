@@ -2,7 +2,7 @@
 name: content-strategy
 description: When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," "content marketing," "content roadmap," "what content should I create," "blog topics," "content pillars," or "I don't know what to write." Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social.
 metadata:
-  version: 2.1.4
+  version: 2.1.4-bml.1
 ---
 
 # Content Strategy
@@ -13,6 +13,10 @@ You are a content strategist. Your goal is to help plan content that drives traf
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-content-strategy.md](references/bml-content-strategy.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Read order: router → staged page 13 → current Monthly Context Brief → source pages only if needed. Read page 13's **Learnings** if present (a missing section is normal) and don't re-propose topics it records as tried or rejected; a finding worth keeping becomes a drafted `context` task.
+<!-- BML:END context -->
 
 Gather this context (ask if not provided):
 
@@ -36,6 +40,15 @@ Gather this context (ask if not provided):
 ### 4. Competitive Landscape
 - Who are your main competitors?
 - What content gaps exist in your market?
+
+<!-- BML:START client-planning -->
+### For a BML client
+The questions above are already answered by rows. Don't ask them. Before planning, in [references/bml-content-strategy.md](references/bml-content-strategy.md):
+1. **Scope** (§2): planning is in scope for any retained client. Read page 00's Blog content and SEO lines, respect qualifiers like `planning only` or `<n> posts/month`, and open the plan with a note naming the retained services it covers and that producing anything outside them needs a scope change.
+2. **Row map** (§3): take each answer from page 13 and its cited rows. Ask only for blocking gaps.
+3. **Season** (§6): time topics ahead of I-10 and L-3 peaks. Capacity (B-6) is noted as context, never used to drop topics.
+4. **Sources** (§5): L rows and Semrush first, Search Console/GA4 via Windsor.ai for what already works.
+<!-- BML:END client-planning -->
 
 ---
 
@@ -242,6 +255,10 @@ If user provides keyword exports (Ahrefs, SEMrush, GSC), analyze for:
 Output as prioritized table:
 | Keyword | Volume | Difficulty | Buyer Stage | Content Type | Priority |
 
+<!-- BML:START keyword-source -->
+For BML work, don't wait for an export: Semrush is the keyword source (`keyword_research`, `organic_research` for competitor gaps), with Search Console via Windsor.ai for queries the site already earns. Ahrefs and similar tools only if the client uses them. Local terms have small volumes: rank them by intent and fit to priority services (D-1), not raw volume.
+<!-- BML:END keyword-source -->
+
 ### 2. Call Transcripts
 
 If user provides sales or customer call transcripts, extract:
@@ -412,6 +429,13 @@ For each recommended piece:
 ### 3. Topic Cluster Map
 Visual or structured representation of how content interconnects.
 
+<!-- BML:START output -->
+### 4. Editorial Calendar
+Month-by-month list: working title, pillar, target term, service or product, and publish window. For a BML client, also the priority service (D-1) and the rows each topic rests on (L/F/G IDs or `[NEEDS PROOF: <row ID>]`).
+
+**For a BML client** the plan is an agency artifact: Baker house style, no client voice/style pages. Open it with the scope note, save it to the client's Drive OUTPUTS/BLOG or OUTPUTS/SEO, end with the context footer and draft (don't create) the ClickUp record. See [references/bml-content-strategy.md](references/bml-content-strategy.md) §10. Plan refreshes on a cadence run as scheduled tasks.
+<!-- BML:END output -->
+
 ---
 
 ## Task-Specific Questions
@@ -428,6 +452,9 @@ Visual or structured representation of how content interconnects.
 
 - **[Content Distribution Spine](references/content-distribution.md)**: Create Once Distribute Twice, ORB as a funnel, the ownership paradox, platform half-lives, the Content Distribution Flywheel, and the per-flagship atomization checklist
 - **[Headless CMS Guide](references/headless-cms.md)**: CMS selection, content modeling for marketing, editorial workflows, platform comparison (Sanity, Contentful, Strapi)
+<!-- BML:START references-link -->
+- **[BML client planning](references/bml-content-strategy.md)**: scope note, row map, local sources, seasonality, segment checks, output and footer for Baker Labs clients
+<!-- BML:END references-link -->
 
 ---
 

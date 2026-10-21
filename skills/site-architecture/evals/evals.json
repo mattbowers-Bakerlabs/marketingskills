@@ -108,6 +108,60 @@
         "Includes launch-day checks and post-launch Search Console monitoring"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Plan the site structure for [ABC]'s Wix site rebuild. They're a remodeler. Page 13 lists <service-1>, <service-2> and <service-3> as services, but B-6 says they're booked out on <service-3> until spring.",
+      "expected_output": "Reads bml/context-rules.md and the BML reference after the staged page 13. Checks page 00 for a Website service before planning and takes the platform (Wix) from page 00 §8. Uses the home-services template: services, projects (only with J-6 releases, no AI images), service area from B-8/L-1, reviews from G rows without reviewer names, about with license details per J-3, contact. <service-3> still gets its own page and normal nav placement like the other page 08 services; B-6 may be noted as context but does not remove or demote it. Header CTA uses page 01's required CTA wording, with click-to-call on mobile. Plans URLs Wix can produce. Delivers ASCII tree, Mermaid, URL map, nav spec and linking plan, saved to OUTPUTS/WEBSITE. Publishes nothing and ends with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and runs the scope gate",
+        "Uses a home-services hierarchy, not SaaS Features/Pricing/Integrations",
+        "Plans a page with normal nav placement for every page 08 service, including the booked-out one (capacity noted as context only, never a gate)",
+        "Uses page 01 CTA language instead of a trial or signup CTA",
+        "Gates the projects section on J-6 releases",
+        "Targets OUTPUTS/WEBSITE and does not publish to Wix",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "[XYZ] is a dental group with <n> offices. Restructure their site so each office ranks locally.",
+      "expected_output": "Applies both the clinical and multi-location segment rules. Proposes a /locations hub with one page per staffed office with a GBP, each holding only its own NAP, hours, providers and reviews, with no mixing across offices. Brand-level services link to the offices that offer them. /locations/<city>/<service> appears only where offering or demand differs. Providers pages carry credentials per J-3. Patient stories are gated on G-5/J-6. Booking and form pages are flagged for compliance review, with no pixels proposed. Page names avoid urgency, fear or outcome-promise framing. Uses Semrush and Search Console via Windsor.ai for inventory. Facts missing from the record are marked [NEEDS PROOF: <row>].",
+      "assertions": [
+        "Applies both clinical and multi-location rules",
+        "One location page per staffed office tied to its GBP",
+        "Never mixes one office's providers, hours or reviews into another's page",
+        "Flags booking/form tracking for compliance review instead of adding pixels",
+        "Avoids urgency or outcome-promise page names",
+        "Uses NEEDS PROOF for missing facts instead of inventing them"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "[ABC]'s owner wants to leave Wix for an AI website builder and asked us how to do it without losing rankings. Their page 00 says 'Website — Active — planning only'.",
+      "expected_output": "Respects the planning-only qualifier: delivers a plan, not an implementation, and says what the qualifier excludes. Reasons through the platforms reference's questions and gives a neutral shortlist of two or three options (the current Wix site considered, not treated as the default), saying what would tip the choice; any platform change is a recommendation decided by a person with the client approver (J-1). If a Verified Partner (◆) tool is named, it includes the disclosure and an alternative. The migration plan uses BML tools: the Wix page list read-only, Semrush Site Audit, and Search Console/GA4 via Windsor.ai, not Screaming Frog. It includes a one-to-one 301 map for a person to apply. Post-launch monitoring is proposed as a scheduled task needing approval, not an in-session loop.",
+      "assertions": [
+        "Honors the 'planning only' qualifier",
+        "Gives a neutral two-or-three platform shortlist without treating Wix or any tool as the default",
+        "Uses Semrush/Windsor/Wix read-only rather than assuming other crawlers",
+        "Delivers the redirect map as old-to-new pairs for a person to apply, naming the approver, with no implementation or launch checklist",
+        "Proposes monitoring as a scheduled task requiring approval"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "For [XYZ], add a 'vs' page for each of their top competitors and a service page for all <n> towns in their county.",
+      "expected_output": "Checks page 12 first. If a guardrail row (at any status, including DRAFT) blocks naming competitors, it stops on the comparison pages and names the row. Otherwise it hands comparison pages to the competitors skill. For towns, it applies the location rules: town pages only for B-8/L-1 core towns with local proof, the rest covered by one service-area page, and no near-duplicate doorway pages. It hands any large page set to programmatic-seo with the hub and URL pattern planned here. It doesn't invent local proof.",
+      "assertions": [
+        "Checks page 12 before planning competitor pages and names a blocking row if present",
+        "Does not plan near-duplicate town pages for every town",
+        "Limits town pages to core towns with local proof",
+        "Hands the page set to programmatic-seo and comparison pages to competitors"
+      ],
+      "files": []
     }
   ]
 }

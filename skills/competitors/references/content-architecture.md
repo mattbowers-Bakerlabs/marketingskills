@@ -2,6 +2,10 @@
 
 How to structure and maintain competitor data for scalable comparison pages.
 
+<!-- BML:START local-data -->
+> **BML clients:** use the local data template in [bml-competitors.md](bml-competitors.md), not the SaaS template below. Keep one file per competitor per client in that client's Drive OUTPUTS/SEO, never in a project-root folder like `competitor_data/` and never shared across clients. The Notion example below is an illustration and never a source. No competitor columns in the site footer of a local client; option-comparison pages link from the relevant service page instead (see site-architecture).
+<!-- BML:END local-data -->
+
 ## Contents
 - Centralized Competitor Data
 - Competitor Data Template

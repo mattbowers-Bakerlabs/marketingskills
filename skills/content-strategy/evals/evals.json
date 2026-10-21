@@ -111,6 +111,76 @@
         "May reference the Content Distribution Flywheel or per-format execution discipline"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Build a 6-month content plan for [ABC]. Their page 00 shows Blog content as 'Active — planning only'.",
+      "expected_output": "Detects a BML client from the staged file's 'Generated for [ABC]' line and reads bml/context-rules.md and references/bml-content-strategy.md. Applies the planning-only qualifier: produces the full plan (pillars, clusters, priority topics, editorial calendar) but no drafts and no per-piece production tasks, and states that drafting and production are outside the retainer, opening with the scope note naming the retained services the plan covers. Takes context from page 13 rows instead of asking founder-style questions, reads page 13 Learnings if present, uses L rows and Semrush as topic and keyword sources, and ties each topic to its rows. Writes in Baker house style without loading client voice/style pages, saves to the client's Drive OUTPUTS/BLOG (resolving the folder by ID, not creating it), drafts but does not create a ClickUp record tagged blog-content and strategy, and ends with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and the BML reference",
+        "Respects 'planning only': plan produced, no drafts or production tasks, exclusion stated",
+        "Uses page 13 rows rather than asking the upstream questions",
+        "Uses L rows and Semrush as topic/keyword sources",
+        "Includes an editorial calendar with row IDs per topic",
+        "Baker house style; does not load client voice/style pages",
+        "Saves to OUTPUTS/BLOG and only drafts the ClickUp record",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Plan next quarter's blog topics for [ABC], a home services client. Prioritize whatever gets the most searches.",
+      "expected_output": "Pulls local demand from L-3 and Semrush keyword research ('<service> <town>', 'near me'), not an Ahrefs export. Times searchable pieces for seasonal services to publish ahead of the peak (8–12 weeks before the L-3/I-10 peak unless I-10 states a booking lead time). If B-6 marks a service at capacity in a window, notes it beside the affected topics as context but does not drop, block or move any topic because of it. Does not rank purely on volume and explains that small local volumes are judged by intent and fit to priority services. Keeps topics inside the service area (B-8, L-1), uses local modifiers (cost in <town>, financing) instead of trial/demo, and never plans AI images as real projects. Lists B-6 or I-10 as gaps if they are OPEN.",
+      "assertions": [
+        "Uses Semrush and L-3 as the keyword source",
+        "Times seasonal topics ahead of I-10/L-3 peaks (default 8–12 weeks unless I-10 sets a lead time)",
+        "Notes B-6 capacity as context only; never drops or blocks a topic for capacity",
+        "Does not prioritize on raw volume alone; explains local volumes",
+        "Keeps topics within the service area (B-8/L-1)",
+        "Uses local-service modifiers rather than SaaS ones"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "The FAQ posts we planned for [ABC] last quarter drove a lot of calls. Add that to the learnings in the context file and update the positioning section while you're there, then pick the next topics. Also, Semrush shows search volumes for their main services — fill those in.",
+      "expected_output": "Declines to edit .agents/product-marketing.md or page 13 for a BML client. Drafts a context task ('Context — [ABC] — <row ID or no row> — <short>') for the learning and the positioning change, created only after the user approves. Reads page 13's Learnings if present (treats a missing section as normal) and uses the FAQ result to steer the next topics. Stages the Semrush volumes as a DRAFT L-3 row in the miner's review format (ID | Answer | Source label + link | Confidence | Date) without writing to ClickUp, and only if L-3 is OPEN; a different answer from an existing row is flagged as a conflict rather than overwritten.",
+      "assertions": [
+        "Does not write to the staged context file or page 13",
+        "Drafts a context task for the learning/positioning change, pending approval",
+        "Reads page 13 Learnings and treats a missing section as normal",
+        "Stages Semrush findings as a DRAFT L-3 row in miner format",
+        "Writes nothing to ClickUp on its own"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Content plan for [ABC], a multi-location dental group. Include some '<competitor> vs us' comparison posts and a few 'warning signs you can't ignore' posts — those always get clicks.",
+      "expected_output": "Treats the client as clinical and multi-location. Checks page 12 and F-13 before planning: if a J row forbids naming competitors in public content, drops the comparison posts and names the row ('Blocked by J-<n>: …') instead of planning them. Replaces fear/urgency titles with reassurance framing (process, access, insurance, credentials) unless a page 12 row permits otherwise, and flags any outcome topics for provider review. Builds topics per location using that location's L rows without mixing locations, takes voice, beliefs and guardrails from the parent brand, uses no patient data, and requires G-5/J-6 authorization for any patient-story topic. Thought-leadership topics cite F rows or are marked 'needs belief'.",
+      "assertions": [
+        "Applies clinical and multi-location segment rules",
+        "Checks the page 12 competitor-naming guardrail and names the blocking row if it applies",
+        "Replaces fear/urgency titles with reassurance framing",
+        "Keeps each location's L rows separate",
+        "No patient data; patient stories require G-5/J-6",
+        "Shareable topics tied to F rows or marked as needing one"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Put together a content plan for [ABC]. I don't think they pay us for blog work, just paid ads, but they asked what they should be writing about.",
+      "expected_output": "Reads page 00 and finds neither Blog content nor SEO Active. Does not stop: planning is in scope for any retained client. Produces the full plan (pillars, clusters, priority topics, editorial calendar) and opens it with a scope note naming the retained services it covers (paid ads only) and stating that producing any of the planned pieces needs a scope change, raised with the account lead. Writes no drafts and drafts no per-piece production tasks. Uses Baker house style, saves to the client's Drive OUTPUTS/BLOG resolved by ID, drafts but does not create a ClickUp record tagged strategy, and ends with the context footer.",
+      "assertions": [
+        "Does not refuse or stop when Blog content and SEO are absent from page 00",
+        "Opens the plan with a scope note naming the retained services and that production needs a scope change",
+        "No drafts or production tasks for unretained work",
+        "Saves to OUTPUTS/BLOG and only drafts a ClickUp record tagged strategy",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

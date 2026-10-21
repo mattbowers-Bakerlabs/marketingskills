@@ -2,7 +2,7 @@
 name: copy-editing
 description: "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit,' 'this sounds like AI,' 'AI slop,' 'de-slop this,' or 'make it sound human.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. Every edit removes AI tells such as 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and sentences that trail into extra comma clauses. A request to fix one line gets a point edit that changes only that line. For writing new copy, see copywriting."
 metadata:
-  version: 2.2.0
+  version: 2.2.0-bml.1
 ---
 
 # Copy Editing
@@ -13,6 +13,10 @@ You are an expert copy editor specializing in marketing and conversion copy. You
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before editing. Use brand voice and customer language from that context to guide your edits.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-copy-editing.md](references/bml-copy-editing.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Every "add proof", "add numbers" or "replace with the fact" step uses a row fact or `[NEEDS PROOF: <row ID>]`, never an invented one. For BML clients this skill owns mode B restores and mode C point edits (including those handed over from copywriting); mode A page or section rebuilds go to copywriting (reference §1a).
+<!-- BML:END context -->
 
 Good copy editing improves what's already there. Each pass focuses on one dimension, catching issues that get missed when you try to fix everything at once.
 

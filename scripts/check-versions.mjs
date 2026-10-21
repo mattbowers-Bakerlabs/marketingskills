@@ -28,12 +28,15 @@ const read = (p) => readFileSync(resolve(ROOT, p), "utf8");
 const git = (...args) => execFileSync("git", args, { cwd: ROOT, encoding: "utf8" });
 
 const frontmatter = (text) => text.replace(/\r\n/g, "\n").match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
-const skillVersion = (text) => frontmatter(text).match(/^metadata:\s*\n(?:[ \t]+.*\n)*?[ \t]+version:\s*["']?([\d.]+)/m)?.[1];
+// BML: versions may carry a fork suffix, <upstream>-bml.<n> (Baker Labs fork).
+const skillVersion = (text) => frontmatter(text).match(/^metadata:\s*\n(?:[ \t]+.*\n)*?[ \t]+version:\s*["']?(\d+\.\d+\.\d+(?:-bml\.\d+)?)/m)?.[1];
 const repoVersion = (json) => JSON.parse(json).version;
 const marketVersion = (json) => JSON.parse(json).metadata?.version;
 const newer = (a, b) => {
-  const [x, y] = [a, b].map((v) => v.split(".").map(Number));
-  for (let i = 0; i < 3; i++) if (x[i] !== y[i]) return x[i] > y[i];
+  // BML: compare x.y.z first, then the -bml.<n> suffix (none counts as 0).
+  const parse = (v) => { const [core, bml] = v.split("-bml."); return [...core.split(".").map(Number), Number(bml ?? 0)]; };
+  const [x, y] = [a, b].map(parse);
+  for (let i = 0; i < 4; i++) if (x[i] !== y[i]) return x[i] > y[i];
   return false;
 };
 
@@ -44,7 +47,7 @@ const skills = readdirSync(resolve(ROOT, "skills"), { withFileTypes: true })
 // VERSIONS.md table <-> SKILL.md metadata
 const versionsMd = read("VERSIONS.md").replace(/\r\n/g, "\n");
 const table = Object.fromEntries(
-  [...versionsMd.matchAll(/^\|\s*([a-z0-9-]+)\s*\|\s*(\d+\.\d+\.\d+)\s*\|/gm)].map((m) => [m[1], m[2]])
+  [...versionsMd.matchAll(/^\|\s*([a-z0-9-]+)\s*\|\s*(\d+\.\d+\.\d+(?:-bml\.\d+)?)\s*\|/gm)].map((m) => [m[1], m[2]])
 );
 
 for (const name of skills) {
@@ -66,7 +69,7 @@ if (existsSync(codexPath)) {
   const codex = repoVersion(readFileSync(codexPath, "utf8"));
   if (codex !== plugin) errors.push(`.codex-plugin/plugin.json is ${codex} but plugin.json is ${plugin}`);
 }
-const latestHeading = versionsMd.match(/^### (\d+\.\d+\.\d+)(\s|$)/m)?.[1];
+const latestHeading = versionsMd.match(/^### (\d+\.\d+\.\d+(?:-bml\.\d+)?)(\s|$)/m)?.[1];
 if (latestHeading !== plugin) errors.push(`VERSIONS.md: newest changelog block is ${latestHeading ?? "missing"}, but repo version is ${plugin}`);
 
 // Preserve relative paths when walking bundled reference subdirectories.

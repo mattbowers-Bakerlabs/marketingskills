@@ -2,7 +2,7 @@
 name: programmatic-seo
 description: When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," "integration pages," "building many pages for SEO," "pSEO," "generate 100 pages," "data-driven pages," "templated landing pages," or "which CMS for pSEO." Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.
 metadata:
-  version: 2.1.0
+  version: 2.1.0-bml.1
 ---
 
 # Programmatic SEO
@@ -13,6 +13,10 @@ You are an expert in programmatic SEO—building SEO-optimized pages at scale us
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-programmatic-seo.md](references/bml-programmatic-seo.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Read order: router → staged page 13 → Monthly Context Brief → source pages only for a cited row; if the staged file is missing or names a different client, run `product-marketing` in Load mode first. A proposed learning becomes a `context` task (context-rules §8).
+<!-- BML:END context -->
 
 Before designing a programmatic SEO strategy, understand:
 
@@ -30,6 +34,16 @@ Before designing a programmatic SEO strategy, understand:
    - Who ranks for these terms now?
    - What do their pages look like?
    - Can you realistically compete?
+
+<!-- BML:START bml-setup -->
+**BML clients: before planning any page set**, follow [references/bml-programmatic-seo.md](references/bml-programmatic-seo.md):
+- **Scope gate** (context-rules §3): the work must be `Active` under **SEO** on page 00. Website alone doesn't authorize it (Website covers technical site changes). A qualifier such as "planning only" limits the output to the plan and template, with no page-data build.
+- **Answer the questions above from the record**, not the user: services (D-1), audience (03), conversion and lead handling (01 CTA, I-3), service area (B-8, L-1), demand (L-3), current platform (page 00 §8). Ask only about gaps.
+- **Page types:** BML sets are usually service × location, service-area pages and a service-area hub. The SaaS playbooks below apply only when page 00 and the rows support them.
+- **Every page-data field cites a row ID.** No invented local facts. Pages that fail the doorway test are merged into the hub or not built.
+- **Multi-location:** never mix one location's proof, hours, providers or phone number into another location's page.
+- **Nothing is published or imported by the agent.** The client approver (J-1) signs off before a person publishes.
+<!-- BML:END bml-setup -->
 
 ---
 
@@ -163,6 +177,10 @@ You can layer multiple playbooks (e.g., "Best coworking spaces in San Diego").
 
 Check that the platform can hold the page count, refresh the data, render server-side HTML, branch on data for conditional sections, and control indexation per page. Prefer the existing site's CMS if it can; otherwise serve the set on a subpath of the main domain. Options and tradeoffs: [references/implementation-platforms.md](references/implementation-platforms.md).
 
+<!-- BML:START bml-platform -->
+**BML clients:** plan for the platform the client uses or chooses (page 00 §8 records the current one); no platform is the BML default, and the options here apply as written. If the site is or will be on Wix (CMS collection + dynamic item pages), the Wix notes in [references/bml-programmatic-seo.md](references/bml-programmatic-seo.md) are information for that case. The agent never publishes or imports on any platform.
+<!-- BML:END bml-platform -->
+
 ---
 
 ## Quality Checks
@@ -220,6 +238,16 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 - Title/meta templates
 - Content outline
 - Schema markup
+
+<!-- BML:START bml-output -->
+**BML clients:**
+- **Strategy document**: an agency artifact in Baker house style (don't load 01/02). Save to the client's Drive `OUTPUTS/SEO` as `<CODE>_pSEO_Plan_YY.MM.DD`.
+- **Page template and page-data sheet** (CSV, one row per page, a source row ID per field): a client deliverable in client voice (01) and style (02). Save to `OUTPUTS/WEBSITE`.
+- Resolve folders by ID. If no folder fits, stop and report; never create one.
+- Draft the ClickUp record (tag `seo`, status `internal review`) and create it only after the user approves.
+- Note the client approver (J-1).
+- End the plan and the template spec with the context footer (context-rules §9). Never add it to the CSV, and keep `[NEEDS PROOF]` and other flags out of its content fields.
+<!-- BML:END bml-output -->
 
 ---
 

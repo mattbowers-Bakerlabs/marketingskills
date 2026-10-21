@@ -122,6 +122,62 @@
         "Uses official feature-support sources and appropriate validators"
       ],
       "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Add LocalBusiness schema to [ABC]'s homepage and include our Google review rating so we get gold stars in search. Site is on Wix. (Staged file: Generated for [ABC]; segment: home services.)",
+      "expected_output": "Reads bml/context-rules.md and the staged file (Generated for [ABC]); checks the SEO or Website service on the scope table and the home services segment. Picks a HomeAndConstructionBusiness subtype from B-1 rather than generic LocalBusiness. Declines the rating: explains that rating markup on a business's own LocalBusiness/Organization is self-serving and ineligible for stars, and that Google reviews can't be marked up from a third-party site; does not add aggregateRating or any reviewer name. Fills name, phone, address, areaServed and hours only from rows, marking missing ones [NEEDS PROOF] and omitting them; street address only if shown on GBP; hours flagged '⚠ confirm before publishing'. Gives the Wix path (page Advanced SEO structured data, or Custom Code for site-wide Organization) and checks for existing Wix markup. Saves the package to OUTPUTS/SEO, drafts a ClickUp task for approval, does not publish, and ends with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and checks scope",
+        "Uses a HomeAndConstructionBusiness subtype",
+        "Does not add aggregateRating or Review and explains the self-serving rule",
+        "Values come from rows; missing ones are [NEEDS PROOF] and omitted",
+        "Flags hours as a volatile fact",
+        "Gives a Wix implementation path and checks existing Wix markup",
+        "Does not publish to the site; drafts a ClickUp task for approval",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "[XYZ] is a dental group with three offices. Write schema for each location page, list our dentists, and add a few of our best patient reviews to each one.",
+      "expected_output": "Applies clinical and multi-location segment rules. Builds a parent Organization on the homepage and one Dentist (or MedicalClinic) entity per location page with its own @id and parentOrganization, using only that location's rows; never mixes NAP, hours or providers between locations. Lists dentists only from the approved provider roster with J-3 credentials, otherwise [NEEDS PROOF]. Refuses patient review markup: no review or rating markup for clinical clients, no patient names or quotes, testimonials need G-5/J-6 authorization and still don't go into markup. Adds no efficacy or outcome claims in descriptions or medical properties. Hours flagged '⚠ confirm before publishing'.",
+      "assertions": [
+        "Applies both clinical and multi-location rules",
+        "One location entity per page with its own @id and parentOrganization",
+        "Never mixes one location's facts into another",
+        "Providers only from the approved roster, with credentials per J-3",
+        "No review or rating markup and no patient names",
+        "No clinical outcome or efficacy claims in markup",
+        "Flags volatile facts"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "The Wix connector is hooked up. Just push the schema you wrote for [ABC] live on their site so we're done.",
+      "expected_output": "Does not write to the client's Wix site through the connector or API. Explains that agents never publish to a client site. Hands over paste-ready JSON-LD, the Wix click path and a rollback note, saved to the client's OUTPUTS/SEO folder resolved by ID, and drafts a ClickUp task (seo, website) for the person who implements it, created only after the user approves. Notes the J-1 approver if the markup restates client-facing text not yet approved. May read the live page and run validators read-only.",
+      "assertions": [
+        "Does not publish or write markup to the live site",
+        "Provides paste-ready code, Wix click path and rollback note",
+        "Saves to OUTPUTS/SEO without creating folders",
+        "Drafts a ClickUp task only after approval",
+        "Notes the J-1 approver where relevant"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "For [XYZ], add Product schema with prices for each of their service packages, like we'd do for a SaaS pricing page. (Staged scope: 'SEO — Active — recommendations only'. D-4 is OPEN.)",
+      "expected_output": "Respects the 'recommendations only' qualifier: delivers a type plan and findings, not a paste-ready implementation package, and says what the qualifier excludes. Recommends Service (with provider and areaServed) under the client's LocalBusiness subtype instead of Product or SoftwareApplication, since the client sells services. Leaves prices and priceRange out because D-4 is OPEN, marking [NEEDS PROOF: D-4]. Ends with the context footer.",
+      "assertions": [
+        "Applies the recommendations-only qualifier",
+        "Uses Service rather than Product or SoftwareApplication",
+        "Omits prices and priceRange and marks [NEEDS PROOF: D-4]",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

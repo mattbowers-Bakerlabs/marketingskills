@@ -2,7 +2,7 @@
 name: link-building
 description: "When the user wants to earn backlinks or third-party mentions that lift rankings and AI citations. Also use when the user mentions 'link building,' 'linkbuilding,' 'backlinks,' 'get more backlinks,' 'link prospecting,' 'link gap,' 'competitor backlinks,' 'unlinked mentions,' 'link reclamation,' 'broken link building,' 'resource pages,' 'guest posting,' 'get into best-of lists,' 'listicle outreach,' 'domain rating,' 'referring domains,' 'anchor text,' or 'is this link vendor safe.' Use this whenever rankings stall on authority or someone wants off-site mentions that AI engines cite. Never recommend buying links that pass ranking credit: paid or exchanged placements get rel=sponsored or nofollow. For press coverage and journalist requests, see public-relations. For directories, see directory-submissions. For reviews, see referrals. For Reddit and communities, see community-marketing. For on-site AI citation work, see ai-seo."
 metadata:
-  version: 1.0.1
+  version: 1.0.1-bml.1
 ---
 
 # Link Building
@@ -18,6 +18,10 @@ Every placement is judged on two outcomes:
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-link-building.md](references/bml-link-building.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Read order: router → staged page 13 → current Monthly Context Brief → source rows only if needed; never browse Drive or search ClickUp broadly, and if the staged file is missing or names another client, run **product-marketing** in Load mode first. Read page 13's Learnings if present (a missing one is normal); proposed learnings are drafted as `context` tasks (context-rules §8) and created only after the user approves.
+<!-- BML:END context -->
+
 Gather this context (ask if not provided):
 
 1. **Target pages.** Which pages need to rank or be cited? Links go to pages, and a homepage link rarely moves a commercial page.
@@ -27,6 +31,17 @@ Gather this context (ask if not provided):
 5. **Resources.** Hours per week, budget, and whether there's someone to do outreach.
 6. **Tools.** Ahrefs, Semrush, DataForSEO, Moz, or none. See the tools section below.
 7. **History.** Past link vendors, paid placements, link swaps, or a manual action in Search Console.
+
+<!-- BML:START inputs -->
+**For a BML client, don't ask what the record already answers:**
+
+1. **Scope gate first.** Link building is part of the `SEO` service line on page 00; there is no separate link-building line. `SEO — Active` → full plan, prospects and outreach drafts (cold and relationship-based), as part of the SEO strategy. `SEO — Active — <qualifier>` → do only what it permits and say what's excluded (e.g. "audit only" = gap, citation audit, lost-link redirect list, unlinked-mention list, no drafts; "planning only" = plan, no drafts). No `SEO — Active` → stop: "SEO isn't in [CODE]'s retainer," and offer a scope note for the account lead. An `INTAKE DRAFT` staged file has no page 00: treat it as planning only, marked "from public research". Details are in the BML reference.
+2. **Target pages and queries:** priority services (D-1) in the service area (B-8, L-1), with capacity and season (B-6, I-10) noted as context, never a gate; local demand from L-3.
+3. **Current position:** pull it (Semrush organic and position tracking; Search Console via Windsor), and name who outranks from L-4. Don't ask.
+4. **Assets and relationships:** proof (G rows), referral ecosystem (L-8), local media and community (L-9), category platforms (L-11), AI-recommended businesses (L-12). Missing facts become `[NEEDS PROOF: <row>]`, never guesses.
+5. **Tools:** Semrush, plus Search Console, GA4 and Google Business Profile via Windsor (see the BML reference). Don't ask which tool they use.
+6. **History:** ask the account lead to check the client's Search Console Manual Actions page (not available through Windsor) and any past link vendors.
+<!-- BML:END inputs -->
 
 ---
 
@@ -80,6 +95,10 @@ Start at the top. The first four are the highest-yield work for most sites and n
 
 Playbooks for each tactic, including how to find targets and what to send, are in [references/tactics.md](references/tactics.md).
 
+<!-- BML:START local-tactics -->
+**Local service businesses (most BML clients):** run the local tactic table in [references/bml-link-building.md](references/bml-link-building.md) before the table above. It covers citation consistency with the Google Business Profile, chambers and associations, supplier/manufacturer dealer and installer pages, referral partners, local sponsorships, local news, and local "best of" lists. SaaS rows (integration marketplaces, "free account" evaluations, G2/Capterra) apply only when page 13 says the client sells software. Reviews are not link work for BML: note them for the account lead as a reputation item, never quote reviewers. For AI-citation targets, start from L-12 (re-run prompts only if L-12 is OPEN or older than 90 days). Apply the segment rules there (clinical, home services, multi-location) to every case study, photo and pitch.
+<!-- BML:END local-tactics -->
+
 ### Choosing targets for AI citations
 
 For AI visibility, the best target is a page an engine already cites when someone asks your category's question. Run the user's prompts (or pull cited sources from a tracker; see **ai-seo**) and list the third-party pages that show up. Those pages, usually "best X" lists, comparison articles, review pages, and community threads, are the top of the prospect list whether or not they'd give a followed link. Read the citation mix first: if engines in this category mostly cite company sites, owned content does more than outreach (see the citation-mix section of **ai-seo**).
@@ -96,6 +115,10 @@ Find prospects with the tactic's search method, then qualify each one before wri
 Outreach is short, specific, and about their page: what you noticed, why your resource helps their readers, one ask. Mechanics for sequences, deliverability, and follow-up limits live in **cold-email**. Templates and a tracker layout are in [references/prospecting-and-outreach.md](references/prospecting-and-outreach.md).
 
 Draft outreach for the user to approve and send. Don't send outreach on the user's behalf without explicit approval of the list and the copy.
+
+<!-- BML:START outreach -->
+**BML: drafts only, never sent by an agent.** Approval does not change this. Save outreach as Gmail drafts in the BML mailbox (create draft only; never send, reply or forward), or in a Drive doc when the client sends from their own address (see the BML reference). A named person sends only after J-1 approval. Subject prefix `[CODE] Link outreach —` (internal; the sender strips it). Each batch names the client's approver (J-1) and the BML sender in a batch summary saved with the tracker, never inside a draft's body. Outreach is client-facing: write in the client's voice (01), take every fact, figure or quote from rows (otherwise `[NEEDS PROOF: <row>]`), check against page 12 and F-13 (competitor naming per J-4), and end the batch summary (not the drafts) with the context footer. Never post, comment, submit forms or sign up on third-party sites. A follow-up is a second draft dated +7 days, not a scheduled send; sending limits and opt-outs belong to the person who sends.
+<!-- BML:END outreach -->
 
 ## Step 5: Stay Inside the Rules
 
@@ -134,7 +157,15 @@ Report placements by target page. A total link count hides where the links went:
 
 Link building works as a weekly habit more than a campaign. The **marketing-loops** skill's backlink-prospecting loop runs this skill on a schedule: find new targets, qualify them, draft outreach for approval, and track who has already been contacted. Its brand-mention loop sends unlinked mentions here for reclamation.
 
+<!-- BML:START measure-loop -->
+**BML measurement and cadence.** Referring domains per target URL from Semrush (backlinks), monthly. Rankings from Semrush position tracking (if the client has a project) or Search Console via Windsor (page × query); the Search Console Links report is UI only. Referral visits and conversions (calls, forms, bookings, signed jobs per I-3 and rows) from GA4 via Windsor. Map-pack presence from the Google Business Profile connector (read only) and the L-4 refresh. A recurring run is a **scheduled task** the account lead approves, never an in-session loop. Each run re-checks the page 00 scope gate, reads the client's tracker, adds prospects and drafts, and stops for review. It never sends, edits listings or writes ClickUp rows.
+<!-- BML:END measure-loop -->
+
 ## Tools
+
+<!-- BML:START tools -->
+**BML:** Semrush is the only SEO data tool (backlinks, organic, position tracking, site audit). Search Console, GA4 and Google Business Profile come through Windsor, read only. Use web search and search operators for prospects and unlinked mentions, and the site's own contact page for contacts. Ahrefs, DataForSEO, Moz, Exa, Firecrawl, Hunter and managed placement vendors in the table below are not BML defaults: use one only if page 00 §8 lists it as the client's own. Any paid vendor or placement is a spend decision for the account lead and client approver (J-1).
+<!-- BML:END tools -->
 
 | Need | Tools |
 |---|---|
@@ -155,6 +186,10 @@ For a link building plan, deliver:
 5. **Outreach drafts:** for approval, one per tactic at minimum
 6. **Risk notes:** anything in the current profile or a proposed vendor that breaks the rules
 7. **Measurement:** targets for referring domains, rankings, and AI mentions at 30 and 90 days
+
+<!-- BML:START output -->
+**BML output.** The plan is an agency artifact: Baker house style (Ops Manual `02: Baker Style Guide`); don't load the client's 01/02 for it. Outreach drafts are client deliverables: client voice. Measurement targets start from a dated Semrush/Windsor baseline and are ranges labeled as BML estimates, not promises. Save to the client's Drive `OUTPUTS/SEO` folder (resolve by ID from the router; never search Drive or create folders; if none fits, stop and report) as `<CODE>_Link_Plan_YY.MM.DD`, with the tracker as `<CODE>_Link_Tracker`. Draft one ClickUp task (tag `seo`, status `internal review`) for the user to approve before it's created. Save `<CODE>_Link_Review_YY.MM.DD.md` alongside it with DRAFT rows for any OPEN L-8, L-9, L-11 or L-12 answers found (context-rules §10), plus fix-now listing problems. End with the context footer (context-rules §9).
+<!-- BML:END output -->
 
 ## Related Skills
 

@@ -125,6 +125,82 @@
         "Gives a short reason for the change"
       ],
       "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Tighten up the hero and proof section on [ABC]'s <service> page before it goes to the client:\n\nHeadline: Beautiful kitchens, built right\nSubhead: We've helped thousands of homeowners create the kitchen of their dreams, on time and on budget.\nProof: 'Best contractor we've ever used!' - Happy customer\nCTA: Get your free trial consultation today. Limited spots this month!",
+      "expected_output": "Detects a BML client and reads bml/context-rules.md and references/bml-copy-editing.md. Checks the staged context file is Generated for [ABC] and does not modify it. Checks that Blog content is Active on page 00 (Website alone does not authorize copy edits). Runs the sweeps with voice from page 13 (page 01): never-use words and required CTA language. Replaces 'thousands of homeowners' and 'on time and on budget' with row facts or [NEEDS PROOF: <row ID>] and invents no figures. Replaces the composed testimonial with a verbatim page 11 quote and its row ID, or [NEEDS PROOF: G-…]. Swaps the SaaS 'free trial' framing for an offering only if a D row supports it. Removes or flags 'Limited spots this month' unless a row supports it, and checks it against B-6/I-10 as an accuracy check. Checks page 12 guardrails at any status. Ends with the context-rules §9 footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and the bml-copy-editing reference",
+        "Does not edit .agents/product-marketing.md or page 13",
+        "Scope gate uses the page 00 Blog content line, not Website",
+        "Uses page 01 voice via page 13 (never-use words, required CTA language)",
+        "Replaces unsupported claims with row facts or [NEEDS PROOF: <row ID>] and invents no numbers",
+        "Does not compose or tidy a testimonial; uses a verbatim page 11 quote with row ID or flags the gap",
+        "Replaces SaaS risk reducers with a row-supported local-service equivalent or flags the gap",
+        "Checks page 12 guardrails",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Refresh [XYZ]'s 2-year-old blog post 'How much does a <service> cost in <town>?' Rankings dropped. Do the SERP gap thing and update the stats.",
+      "expected_output": "Scope gate on the page 00 Blog content line (SEO supplies the gap data but does not by itself authorize the rewrite). Runs the gap analysis with Semrush for the query and organic competitors, takes local competitors from L-4 and the page's own queries from Search Console via Windsor.ai, and assumes no other SEO tools. Builds the gap grid as an internal artifact (competitor names allowed there) and presents the grid and an outline marked Keep/Revise/New before rewriting. Prices are updated only where D-4 allows publishing them, with no estimated or web-sourced client prices. Outdated client figures with no newer row become [NEEDS PROOF: <row>]. Proof or data gaps that competitors cover are logged as [NEEDS PROOF], not filled. Market stats only from L rows or a dated, named source. Uncovered angle drawn from an F row. Does not promise rankings. The handoff is for a human publisher and nothing is published. Saves to OUTPUTS/BLOG (folder resolved by ID, none created), drafts the ClickUp task for approval and ends with the footer.",
+      "assertions": [
+        "Scope gate requires Blog content Active; SEO alone does not authorize the rewrite",
+        "Uses Semrush (and Windsor Search Console / L-4) for the gap analysis, no unowned SEO tools",
+        "Presents gap grid and outline for approval before rewriting",
+        "Does not add stats, prices, results or testimonials that aren't in rows",
+        "Uses [NEEDS PROOF: <row>] for outdated client figures and proof gaps",
+        "Any market statistic cites source and date and doesn't imply client results",
+        "Does not promise a ranking or traffic outcome",
+        "Does not publish; hands off to a human and saves to OUTPUTS/BLOG",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "The client at [ABC] rewrote our About page draft. Here's ours and here's theirs. Clean theirs up and update their context so we don't make the same mistakes. (Ours says 'family-owned since <year>' and uses 'affordable'; theirs says 'third-generation craftsmen', drops 'affordable', and adds 'the area's #1 rated remodeler'.)",
+      "expected_output": "Follows context-rules §8: diffs the two versions, lists each change with the row it touches and a category (e.g. 'affordable' removed → tone/H-5; 'third-generation' → accuracy/A-row; '#1 rated' → claim/G-row), and drafts one context task per change named 'Context — [ABC] — <row ID> — <short>' with before/after and the client's words, to be created only after the user approves. Does not edit rows, page 13 or the staged file, and adds no Learnings entry. Edits the client's version, keeping their voice within page 01's hard rules. Flags '#1 rated' with [NEEDS PROOF: G-…] and ⚠ confirm before publishing rather than accepting it. Ends with the footer.",
+      "assertions": [
+        "Lists each meaningful change with the row it touches and a category",
+        "Drafts context tasks in the §8 naming format and waits for approval before creating them",
+        "Does not edit page 13, rows, the staged context file, or a Learnings ledger",
+        "Keeps the client's wording where it passes claims and guardrail checks",
+        "Flags the unsourced '#1 rated' claim with [NEEDS PROOF] instead of accepting it",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Just fix the CTA line on [XYZ]'s new-patient page, leave everything else. CTA: 'Don't wait until it's too late. Only <n> appointments left this week, book now!' (The page body further down also says 'guaranteed pain relief'.)",
+      "expected_output": "Point edit (mode C) for a clinical client. Rewrites only the CTA using page 01's required CTA language and the client's booking/call conversion, removing the fear and scarcity framing (clinical segment rule; no 'appointments left' claim unless a row supports it) in favor of reassurance and access (hours, booking, insurance per rows). Checks page 12 guardrails at any status, including DRAFT. Does not edit the body, but reports 'guaranteed pain relief' in one line as a clinical outcome claim that needs approved copy and provider review, naming the guardrail row. Returns only the changed line with a reason and the full context-rules §9 footer.",
+      "assertions": [
+        "Changes only the CTA line",
+        "Removes fear, urgency and scarcity framing per clinical segment rules",
+        "Uses required CTA language and a booking/call conversion",
+        "Invents no availability or outcome claims",
+        "Reports the body's outcome guarantee in one line naming the row, without rewriting it",
+        "Ends with the full context-rules §9 footer (no short form for point edits)"
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "copywriting sent this over: [ABC]'s owner wrote a rough draft of their <service> page intro and wants it turned into finished copy. Keep it sounding like them.\n\n'we been doing <service> in <town> a long time, we do it right and we dont cut corners. call us we'll come out and look, best prices around.'",
+      "expected_output": "Treats this as mode B (restore a rough draft), which copy-editing owns for BML clients. Reads bml/context-rules.md and references/bml-copy-editing.md, checks Blog content is Active on page 00. Runs the full sweeps keeping the owner's argument and words within page 01's hard rules (H-5, required CTA language). 'a long time' becomes a row fact (e.g. years in business) or [NEEDS PROOF: <row ID>]; 'best prices around' is removed or flagged against J-4/D-4 and page 12 at any status, never asserted. 'we'll come out and look' becomes a free estimate only if a D row supports it. Reports distinctiveness as informational (does not inject a belief). Does not hand the work back to copywriting or rebuild from scratch. Saves to OUTPUTS/WEBSITE, drafts the ClickUp task for approval and ends with the full context footer.",
+      "assertions": [
+        "Handles it as mode B in copy-editing rather than rebuilding or handing back to copywriting",
+        "Keeps the owner's argument and wording within page 01 hard rules",
+        "Uses row facts or [NEEDS PROOF: <row ID>] for 'a long time' and invents no figures",
+        "Does not assert 'best prices around'; checks it against guardrails and J-4/D-4",
+        "Reports distinctiveness without injecting a belief or proof",
+        "Ends with the full context footer"
+      ],
+      "files": []
     }
   ]
 }

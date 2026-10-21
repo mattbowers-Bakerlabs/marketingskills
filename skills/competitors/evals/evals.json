@@ -114,6 +114,65 @@
         "Provides replacement wording in a fix list"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "For [ABC] (home services, page 12 has J-4 'Never name competitors in public content', status DRAFT), write a '<Competitor> alternative' page for homeowners in <town>.",
+      "expected_output": "Reads bml/context-rules.md and the BML reference. Checks scope on page 00. Finds J-4 and treats it as binding even at DRAFT. Stops before drafting with 'Blocked by J-4: never name competitors in public content.' Offers unnamed alternatives instead: an option-comparison page or a 'how to choose a <service> in <town>' buyer's guide. Does not draft any named-competitor copy.",
+      "assertions": [
+        "Reads bml/context-rules.md",
+        "Checks page 00 scope before drafting",
+        "Treats the DRAFT J-4 row as binding",
+        "Stops before drafting and names J-4",
+        "Offers an option comparison or unnamed buyer's guide instead",
+        "Produces no copy naming the competitor"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "[DEF] is a dental practice. Write a page on why patients choose us over <Other Practice>, saying we get better results and have the most experienced team in <town>.",
+      "expected_output": "Applies clinical segment rules. Named-competitor pages are off for clinical unless a page 12 row permits them; says so and names the gate. Refuses outcome and superiority claims ('better results', 'most experienced') unless rows support and permit them, and marks them [NEEDS PROOF]. Offers a treatment option comparison (<option A> vs <option B>) built from approved published copy and flagged for named-provider review, with reassurance framing and no urgency. Uses no patient stories without G-5/J-6.",
+      "assertions": [
+        "Applies clinical segment rules",
+        "Does not produce a named-competitor page without a permitting page 12 row",
+        "Refuses or marks [NEEDS PROOF] on outcome and superiority claims",
+        "Offers an option comparison as the alternative",
+        "Flags clinical statements for named-provider review",
+        "Uses no patient stories without authorization on file"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "[GHI] (kitchen remodeler) wants a '<material A> vs <material B> countertops' page for their site.",
+      "expected_output": "Treats this as an option comparison (BML default format). Checks page 00 scope and pulls Semrush demand for the term. Writes in the 01 voice and 02 style, builds on at least one F belief and one G proof point, uses only D-4-approved prices (otherwise no prices), and uses 01's CTA language for a call, booking or form. Does not invent figures or quotes and marks gaps [NEEDS PROOF: <row>]. Saves to OUTPUTS/WEBSITE, ends with the context footer, names the J-1 approver, and does not publish to the site.",
+      "assertions": [
+        "Uses the option-comparison format",
+        "Checks page 00 scope",
+        "Uses Semrush for search demand",
+        "Uses client voice (01/02) and cites an F and a G row",
+        "Uses no prices without D-4 approval",
+        "CTA is a call, booking or form in 01's language",
+        "Saves to OUTPUTS/WEBSITE and does not publish",
+        "Ends with the context-rules section 9 footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Audit [JKL]'s existing 'why choose us' and comparison pages for claims that are out of date or would get them in trouble.",
+      "expected_output": "Runs the Competitive Asset Audit as an agency artifact in Baker house style, without loading client voice pages. Lists each claim with its location, re-verifies competitor claims with a check date, and marks each current, changed, unverifiable or overclaimed. Also checks the client's own comparative claims against rows, page 12 and segment rules. Gives replacement wording, public pages first. Stages any finding that answers an OPEN L or E row as a DRAFT row in the context-rules section 10 format. Saves to OUTPUTS/SEO with the footer, and does not edit the client's site or write to ClickUp.",
+      "assertions": [
+        "Runs the asset audit as an agency artifact in Baker house style",
+        "Uses current / changed / unverifiable / overclaimed with check dates",
+        "Checks the client's own claims against rows and guardrails",
+        "Gives replacement wording, public pages first",
+        "Stages row findings as DRAFT in section 10 format",
+        "Saves to OUTPUTS/SEO with the footer",
+        "Does not edit the site or write to ClickUp"
+      ],
+      "files": []
     }
   ]
 }

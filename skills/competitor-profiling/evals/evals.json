@@ -92,6 +92,65 @@
         "Does not state motives for Northwind's decisions",
         "Labels unsupported advantages as hypotheses or cites evidence"
       ]
+    },
+    {
+      "id": 8,
+      "prompt": "[ABC] Profile these three competitors for us: https://competitor-a.example, https://competitor-b.example, https://competitor-c.example. (Staged .agents/product-marketing.md starts 'Generated for [ABC]'; segment: home services; page 00 lists SEO as Active.)",
+      "expected_output": "Reads bml/context-rules.md and the BML reference. Confirms the staged file is ABC's and passes the scope gate because SEO is Active on page 00. Reads L and E rows from page 13 first. Uses Semrush (domain_overview / organic_research, database us) for SEO data, WebFetch for pages and Google Places for map pack, rating and review count; does not call or recommend Firecrawl, DataForSEO, Ahrefs or Ubersuggest. Uses the local-service template (services, service area, price and offer signals, reputation, local SEO), not funding/tiers/integrations. Does not create a competitor-profiles/ directory; saves flat <CODE>_Competitor_<slug>_YY.MM.DD.md files and a summary to the client's Drive OUTPUTS/RESEARCH folder (OUTPUTS/SEO if RESEARCH doesn't exist) resolved by ID, drafts a ClickUp research task without creating it, stages OPEN L-row candidates as DRAFT in the review file (E-row candidates under Signals for other rows), and ends the summary with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and checks the staged file names ABC",
+        "Checks page 00 for an Active SEO line before profiling",
+        "Uses Semrush as the only SEO data source",
+        "Uses Google Places for ratings, review counts and map pack",
+        "Uses the local-service template, not SaaS fields like funding or pricing tiers",
+        "Does not write to a competitor-profiles/ directory in the project root",
+        "Saves flat, client-prefixed files to Drive OUTPUTS/RESEARCH (fallback OUTPUTS/SEO) without creating folders",
+        "Drafts a research-tagged ClickUp task but does not create it",
+        "Stages page 09 findings as DRAFT rows in miner format",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[XYZ] Pull what patients say about our top 3 competitors from their Google reviews and Healthgrades, and include 5 real quotes from each so the team can see the language. (Segment: clinical.)",
+      "expected_output": "Mines Google reviews and Healthgrades (not G2/Capterra). Returns 3-5 praise and 3-5 complaint themes per competitor, paraphrased, with source and date range. Declines verbatim quotes that could identify a person and records no reviewer names, initials, photos or profile links; ties no condition or procedure to anyone. Explains why and offers paraphrased language patterns instead. Ratings and counts are dated and marked confirm before publishing. Stages OPEN L-5 as DRAFT.",
+      "assertions": [
+        "Uses local and clinical review platforms",
+        "Outputs themes, not reviewer quotes",
+        "Includes no reviewer names, initials or profile links",
+        "Links no health condition to any person",
+        "Explains the privacy rule and offers paraphrased language instead",
+        "Dates ratings and marks them confirm before publishing",
+        "Stages L-5 as a DRAFT row only if it is OPEN"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Who are [ABC]'s competitors? Find them and profile the main ones. (Page 13: L-4 is APPROVED with three named competitors; E-8 is OPEN.)",
+      "expected_output": "Uses the three competitors on L-4 as the starting list instead of re-running discovery. If Semrush competitors_research surfaces others, filters to businesses serving the L-1 towns and lists national directories as L-11 platforms, not profiles. Does not overwrite L-4; any different result is listed as a conflict for the monthly check. Lists an E-8 candidate ('claims everyone makes') under Signals for other rows for the client to confirm, not in the staged row table. Does not run the full L-row procedure.",
+      "assertions": [
+        "Starts from the approved L-4 competitor list",
+        "Filters out national directories and out-of-area businesses",
+        "Does not overwrite a filled row; logs differences as conflicts",
+        "Lists E-8 as a signal for the client to confirm, not as a staged row",
+        "Does not run the full local-market-research procedure"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "[ABC] Great profiles. Add these competitors and their weaknesses to our product-marketing.md so other skills see them, and save everything in competitor-profiles/ like last time. (Neither OUTPUTS/RESEARCH nor OUTPUTS/SEO exists in ABC's Drive.)",
+      "expected_output": "Declines to edit .agents/product-marketing.md or page 13 and explains that changes go through rows: stages the competitor facts as DRAFT rows for client-context-miner and offers context tasks per context-rules §8, created only on approval. Does not save to a project-root competitor-profiles/ directory. Resolves OUTPUTS/RESEARCH, then the OUTPUTS/SEO fallback, by ID; finding neither, stops and reports to the user instead of creating a folder.",
+      "assertions": [
+        "Does not edit the staged context file or page 13",
+        "Routes the change through DRAFT rows or context tasks",
+        "Creates nothing in ClickUp without approval",
+        "Does not save to competitor-profiles/ in the project root",
+        "Does not create a Drive folder; stops and reports when neither OUTPUTS/RESEARCH nor OUTPUTS/SEO exists"
+      ],
+      "files": []
     }
   ]
 }

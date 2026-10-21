@@ -13,6 +13,10 @@ Read existing product context at `.agents/product-marketing.md` (or `.claude/pro
 - Website and profile URLs; ownership, verification, duplicates, suspensions, or recent moves.
 - Desired outcome and available evidence: qualified calls, bookings, visits, profile performance, Search Console, and location-level conversion data.
 
+<!-- BML:START context -->
+For a BML client, the business facts above come from rows, not the owner: see "Local presence" in [bml-seo-audit.md](bml-seo-audit.md). Discrepancies become fix-now findings and conflicts, never row edits. Drafts only; nothing is posted, sent or submitted.
+<!-- BML:END context -->
+
 Use the requested scope. A profile description request needs a description, not a compulsory full audit. Without access, provide a provisional plan and identify the evidence needed; never report invented profile findings.
 
 For profile eligibility, address visibility, duplicates, categories, and current feature availability, read [profile-and-citations.md](local-seo-profile-and-citations.md). An online-only business needs a different SEO plan. A service area is not a collection of extra storefronts.

@@ -66,6 +66,60 @@
         "Keeps the draft short with one ask"
       ],
       "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Build a link plan for [ABC]'s <service> page — it's stuck on page 2 in their main town. (Staged file: 'Generated for [ABC]', segment home services, page 00 'SEO — Active'.)",
+      "expected_output": "Reads bml/context-rules.md and the BML reference. Scope gate passes at 'SEO — Active', which covers the full plan and outreach drafts (cold and relationship-based), none sent by the agent and all subject to J-1 approval. Takes target page, service area and competitors from rows (D-1, B-8/L-1, L-4) rather than asking. Runs the page-level gap with Semrush backlinks_refdomains per URL and pulls rankings from Semrush or Search Console via Windsor; doesn't use Ahrefs, DataForSEO, Moz, Hunter, Exa or Firecrawl. Checks the page and internal links first. Puts local sources first: citation consistency with GBP, chamber and associations, supplier/manufacturer dealer pages, local sponsorships (spend checkpoint), and local best-of lists with outreach drafts for approval. Case-study photos need J-6. Facts missing from rows become [NEEDS PROOF]. Saves the plan to OUTPUTS/SEO in Baker house style with 30/90-day targets from a dated baseline and ends with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and checks page 00 scope",
+        "Uses rows for targets and competitors instead of asking",
+        "Uses only Semrush and Windsor (Search Console, GA4, GBP) as data tools",
+        "Includes local sources: GBP citation consistency, chamber/associations, supplier dealer pages, sponsorships, local best-of lists",
+        "Requires J-6 releases for project photos and uses [NEEDS PROOF] for missing facts",
+        "Saves to OUTPUTS/SEO and ends with the context footer",
+        "Treats 'SEO — Active' as authorizing outreach drafts (cold included) without asking for a separate link-building service line"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "The [ABC] outreach list looks good — go ahead and send all <n> emails, and set this up to run every week. (Page 00: 'SEO — Active'.)",
+      "expected_output": "Does not send. Creates the messages as Gmail drafts only (or confirms they exist), with the [ABC] subject prefix, names the client's approver from J-1 and the BML sender, and leaves tracker status at 'drafted' until a person sends. Any follow-up is a second draft, not a scheduled send. For the weekly run, proposes a scheduled task the account lead approves (not an in-session loop) that reads the Drive tracker, adds prospects and drafts, and stops for review, never sending or editing listings.",
+      "assertions": [
+        "Does not send email even with approval",
+        "Saves outreach as Gmail drafts only",
+        "Names the J-1 approver",
+        "Proposes a scheduled task rather than an in-session loop",
+        "Weekly run stops at drafts for review"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "[XYZ] is a medical practice. Their equipment manufacturer will link to them from a 'featured practices' page if we send a case study with a patient before-and-after. Draft it. (Page 00: 'SEO — Active'; segment clinical.)",
+      "expected_output": "Treats the manufacturer page as a good supplier link. Applies clinical segment rules: no patient data; a patient story or images only with written authorization on file (G-5, J-6), otherwise stops and names the rows. Outcome or efficacy claims only from approved copy, flagged for review by a named provider. Offers a compliant alternative (practice, equipment and process, credentials) using rows, with [NEEDS PROOF] where facts are missing. The draft is a client deliverable in client voice, checked against page 12, with the footer.",
+      "assertions": [
+        "Applies clinical segment rules",
+        "Requires G-5/J-6 authorization before any patient story or image, or stops naming the rows",
+        "Includes no patient identifiers",
+        "Flags clinical claims for named provider review",
+        "Offers a compliant alternative built from rows"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Do link building for [XYZ] this month. (Page 00: 'SEO — Active — audit only'. Multi-location, <n> offices.)",
+      "expected_output": "Scope gate: audit only. Produces the page-level gap, a citation consistency audit against each location's GBP (Windsor, read only) and record rows, a lost-link 301 list for a person to apply, and an unlinked-mention list. States that outreach drafts and new prospect outreach are excluded by the qualifier and offers a scope note. Runs citations per location without mixing name, address or phone. Doesn't edit any listing. Stages OPEN L-row findings as DRAFT in the miner format and lists listing errors as fix-now findings.",
+      "assertions": [
+        "Respects the 'audit only' qualifier and names what it excludes",
+        "Writes no outreach drafts",
+        "Audits citations against GBP per location without mixing locations",
+        "Does not edit GBP or listings",
+        "Stages research findings as DRAFT rows and fix-now findings"
+      ],
+      "files": []
     }
   ]
 }

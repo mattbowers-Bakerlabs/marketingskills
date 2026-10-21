@@ -149,6 +149,76 @@
         "Invents no statistics or customers"
       ],
       "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Write a landing page for [ABC]'s <treatment> for our Google Ads campaign. Make it urgent: 'limited appointments this month', and a headline like 'Never live with <symptom> again'. Throw in our patient success rate. (Staged file: 'Generated for [ABC]', segment: clinical; Blog content Active; no page 12 row permits urgency or outcome claims; no success-rate row.)",
+      "expected_output": "Reads bml/context-rules.md and the staged page 13, checks scope. Stops before drafting the urgency and outcome-promise elements and names the blocking rule (clinical segment rules, no page 12 row permitting them), then offers a reassurance-based version: process clarity, credentials, access (hours, insurance, booking) and approved social proof. Writes the success rate as [NEEDS PROOF: <G row>] instead of a number. Uses page 01 CTA language (a booking CTA), not a SaaS CTA. Flags clinical claims for review by a named provider. Ends with the context footer, notes the approver (J-1), and does not publish anything.",
+      "assertions": [
+        "Reads bml/context-rules.md and the staged page 13 before drafting",
+        "Refuses urgency/scarcity and the outcome-promise headline, naming the clinical rule",
+        "Offers reassurance framing instead (process, credentials, access, approved proof)",
+        "Writes the success rate as [NEEDS PROOF: ...] rather than inventing a figure",
+        "Uses a booking/call CTA per page 01, not 'Start Free Trial'",
+        "Flags clinical claims for provider review",
+        "Ends with the context footer from context-rules §9"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Just fix the headline on [XYZ]'s homepage hero, it's flat. Leave the rest alone.\n\nHeadline: Quality Remodeling You Can Trust\nSubhead: Over <n> kitchens completed and the fastest estimates in <area>. Better than <named competitor>.\nCTA: Get a Free Quote\n\n(Staged file: 'Generated for [XYZ]', segment: home services; Blog content Active; J-4 says never name competitors.)",
+      "expected_output": "Recognizes a point edit (Situation C) on a BML client and does not perform it here: per the BML split, point edits to a headline, CTA or hero unit (and restoring rough drafts) go to copy-editing, which applies the same claims, guardrail and footer rules. Says so in one or two lines and hands the request to copy-editing, passing along what it noticed (the subhead names a competitor against J-4 and makes unsupported claims) without editing it. Writes nothing to the staged file and publishes nothing.",
+      "assertions": [
+        "Identifies the request as a point edit (Situation C)",
+        "Routes it to copy-editing instead of rewriting the headline itself",
+        "Does not rewrite the subhead or CTA",
+        "Mentions the J-4 competitor mention and unsupported claims as notes for the handoff",
+        "Does not write to the staged file or publish"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Write the pricing page for [DEF], a <home service> company. Three tiers with prices, and use 'Start Free Trial'-style CTAs like a SaaS pricing page. Also, last month the client preferred 'Request an estimate' over 'Get a quote', so add that to the Learnings in the context file. (Staged file: 'Generated for [DEF]'; D-4 does not approve publishing prices; page 01 lists 'Request an estimate' as the required CTA.)",
+      "expected_output": "Declines to publish prices because D-4 doesn't approve them, and instead writes a 'how pricing works / what affects the cost / how estimates work' page with no numbers. Does not use SaaS trial CTAs; uses page 01's required CTA ('Request an estimate'). Declines to edit the staged context file or its Learnings. Notes that page 01 already records 'Request an estimate' as the required CTA, so no Learnings entry is needed; if the user still wants the preference and its source on record, drafts a context task (Context — [DEF] — <row ID> — CTA preference) with before/after and source, to create only after the user approves. Saves nothing outside Drive OUTPUTS/WEBSITE and does not publish. Ends with the context footer.",
+      "assertions": [
+        "Does not publish prices without D-4 approval",
+        "Writes a pricing-approach page with no figures",
+        "Uses page 01's required CTA language, not 'Start Free Trial'",
+        "Refuses to write to .agents/product-marketing.md or its Learnings",
+        "Routes the learning through context-rules §8 instead (notes page 01 already covers it, or drafts a context task pending user approval)",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "Write a location page for [GHI]'s <town> office. Use the reviews and the doctor bios from our other office in <other town> so it doesn't look thin. (Staged file: 'Generated for [GHI]', segments: clinical, multi-location; <town> has its own location rows with providers and hours, but no G rows of its own.)",
+      "expected_output": "Applies the clinical and multi-location rules. Refuses to mix the other office's reviews, providers or bios into this location's page and says why (context-rules §7, multi-location). Builds the page from <town>'s own rows (providers, hours, address matching the Business Profile, service area L-1) with parent-brand voice, marks missing local proof as [NEEDS PROOF: G-<n>] and the review count with '⚠ confirm before publishing' if used. Uses no reviewer names and no patient details. Notes that many near-identical town pages belong to programmatic-seo. Ends with the context footer, with Distinctiveness FAIL if no belief and proof row applies.",
+      "assertions": [
+        "Refuses to reuse the other location's reviews, providers or bios",
+        "Uses only the requested location's rows for local facts",
+        "Keeps name, address and phone consistent with the rows",
+        "Marks missing local proof as [NEEDS PROOF: ...]",
+        "Includes no reviewer names or patient details",
+        "Ends with the context footer and reports distinctiveness honestly"
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "prompt": "Write a new 'About us' page for [JKL], a <professional service> firm. Give it a strong point of view, something like 'we believe most firms overcomplicate <service>'. Make up a belief if page 13 doesn't have one, it's fine. (Staged file: 'Generated for [JKL]', segment: professional services; Blog content Active, Website Active; no F rows are APPROVED or PROVISIONAL; two G rows exist.)",
+      "expected_output": "Checks scope: Blog content is Active, so copywriting is authorized (Website alone would cover technical changes, not copy). Declines to construct a belief: opinions in the writer's voice come only from F rows, so the page is marked Distinctiveness: FAIL with the F rows to fill listed in the footer. Writes the page from the G rows and other cited rows without an invented point of view. May include the suggested belief internally as [VERIFY WITH CLIENT: <claim> → new], drafts a context task for the client to confirm it (created only after the user approves), and notes the marker must be stripped or confirmed before client review. Applies professional-services rules. Ends with the context footer, names the approver (J-1), and publishes nothing.",
+      "assertions": [
+        "Confirms scope from the Blog content line",
+        "Does not invent or construct a belief for the page",
+        "Reports Distinctiveness: FAIL and lists the F rows to fill",
+        "Any suggested belief appears only as an internal [VERIFY WITH CLIENT: ...] marker, not as client-facing copy",
+        "Drafts a context task for the claim, to be created only after user approval",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

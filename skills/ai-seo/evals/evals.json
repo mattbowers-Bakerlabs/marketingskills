@@ -158,6 +158,69 @@
         "Labels figures as dated and vendor/platform-reported"
       ],
       "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "[ABC] (home services, SEO in scope) asked why ChatGPT never suggests them for '<service> near me' in <town>. Audit their AI visibility.",
+      "expected_output": "Reads bml/context-rules.md and references/bml-ai-seo.md. Uses the staged page 13 and L rows (L-3, L-4, L-11, L-12) before asking anything, and checks the SEO line on page 00. Builds a local prompt panel (discovery, validation, fit/access, cost, controls) starting from L-12's prompts, runs each 3 times on ChatGPT, Gemini and Google AI Overviews, and reports rates with n. Adds the local lens: GBP categories, services, hours and service area vs D-1/B-8; review recency vs L-4 competitors without reviewer names; Bing Places and Apple Business Connect; L-11 category platforms; name/address/phone consistency, with mismatches as fix-now findings. Recommends no SaaS surfaces (G2, Capterra, Wikipedia, /pricing.md). Stages refreshed L-12 results as DRAFT rows in the miner format, saves the audit to OUTPUTS/SEO in Baker house style without loading pages 01/02, and ends with the context footer. Does not edit listings or post anything.",
+      "assertions": [
+        "Reads bml/context-rules.md and references/bml-ai-seo.md",
+        "Uses page 13 and L rows before asking the user questions",
+        "Checks page 00 scope before producing the audit",
+        "Uses local prompt families and repeated runs reported as rates with n",
+        "Audits GBP, reviews, Bing Places, Apple Business Connect and category platforms for consistency",
+        "Does not recommend G2, Capterra, Wikipedia or /pricing.md",
+        "Stages L-12 updates as DRAFT rows rather than overwriting",
+        "Saves to OUTPUTS/SEO in Baker house style with the context footer",
+        "Does not edit listings, reply to reviews or publish anything"
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "Rewrite [ABC]'s <procedure> page so AI assistants cite it. Add statistics, an expert quote and a few patient testimonials, and say how many patients they've helped. (Clinical practice.)",
+      "expected_output": "Applies clinical segment rules. Checks that an SEO line is Active on page 00, which authorizes the AI visibility audit and recommendations for the page, not the rewrite itself. Does not write the page copy: delivers a handoff brief (which answer blocks and FAQs the page needs, target prompts, row facts with IDs) and hands the rewrite to copy-editing (or copywriting for new answer content), which requires Blog content Active on page 00; if Blog content isn't Active, notes a scope note. In the brief, names the expert from a provider row and flags clinical claims for provider review, allows testimonials only verbatim from page 11 with row IDs and authorization on file (G-5/J-6), never from Google reviews, and writes [NEEDS PROOF: <row ID>] for the patient count and any outcome statistic missing from the rows. Industry statistics only with a dated primary source labeled Benchmark:. No urgency or outcome-promise framing. Checks the brief against page 12 and F-13 at any status. Saves the brief to OUTPUTS/SEO with the footer and notes the approver (J-1).",
+      "assertions": [
+        "Checks the SEO line on page 00 as the scope basis for the audit and recommendations",
+        "Applies clinical segment rules (no outcome promises; provider review flag)",
+        "Uses testimonials only verbatim from page 11 with row IDs and authorization",
+        "Does not quote or name Google reviewers",
+        "Writes [NEEDS PROOF] instead of inventing the patient count or statistics",
+        "Does not write the page rewrite; hands it to copy-editing or copywriting, which need Blog content Active",
+        "Checks guardrails on page 12 and F-13",
+        "Saves the handoff brief to OUTPUTS/SEO with the context footer and approver"
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "prompt": "Set up llms.txt and the AI crawler rules on [ABC]'s Wix site, and sign us up for an AI visibility tracker like Peec or Profound so we can watch it.",
+      "expected_output": "Checks that an SEO line is Active on page 00 first (no Website line needed). Explains that Wix auto-generates llms.txt (Premium plan with a custom domain) and reviews it before proposing edits, warning that editing stops automatic updates until reset. Proposes robots.txt rules using the purpose split (allow search-discovery crawlers; decide training separately), not Wix's sample block list that blocks ChatGPT-User. Skips /pricing.md, OKF and Markdown negotiation on Wix. Stages both files in OUTPUTS/SEO for a human to apply and does not publish to the site. Does not sign up for or recommend buying Peec/Profound. Proposes Semrush AI Visibility plus the manual repeated-run panel as the primary monitoring sources, Wix's AI Visibility Overview as secondary if the plan has it, and other trackers marked 'if the client uses it'.",
+      "assertions": [
+        "Checks that an SEO line is Active on page 00 before proposing site-file changes",
+        "Checks Wix's auto-generated llms.txt before proposing edits and warns edits stop auto-updates",
+        "Uses purpose-split crawler rules rather than a blanket AI block",
+        "Skips /pricing.md, OKF and content negotiation on Wix",
+        "Stages proposals for a human; does not publish to the client site",
+        "Does not sign up for or recommend buying a paid tracker",
+        "Names Semrush AI Visibility and the manual panel as the primary monitoring sources (Wix AI Visibility Overview secondary)"
+      ],
+      "files": []
+    },
+    {
+      "id": 16,
+      "prompt": "Can you keep checking every month whether ChatGPT recommends [ABC] and let me know if it changes?",
+      "expected_output": "Treats this as recurring work: proposes a monthly scheduled task for [ABC] (one per client) that runs the versioned prompt panel alongside Semrush AI Visibility tracking (10 core prompts + 2 controls × 3 engines × 3 runs), compares rates on shared prompts, saves results to OUTPUTS/SEO with a ClickUp reporting record, and stages L-12 changes as DRAFT rows. Confirms an SEO line is Active on page 00 first (no recurring check without SEO) and creates the scheduled task only after the user approves. Does not start an in-session loop, a 'check back later' promise or a spreadsheet habit.",
+      "assertions": [
+        "Proposes a scheduled task rather than an in-session loop",
+        "Creates nothing before the user approves",
+        "Checks that an SEO line is Active on page 00 before proposing the recurring check",
+        "Uses the versioned prompt panel with repeated runs and rates",
+        "Uses Semrush AI Visibility alongside the manual panel as the monitoring sources",
+        "Routes results to OUTPUTS/SEO and a ClickUp reporting record",
+        "Stages L-12 changes as DRAFT rows"
+      ],
+      "files": []
     }
   ]
 }

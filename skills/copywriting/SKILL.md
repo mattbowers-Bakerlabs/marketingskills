@@ -2,7 +2,7 @@
 name: copywriting
 description: When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "hero section copy," "this copy is weak," "this sounds like AI," "AI slop," "make it sound human," or "help me describe my product." Drafts never use AI tells like "it's not X, it's Y" reveals, "no X, no Y, no Z" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers. Claims must be supportable, and a declined claim names the evidence that would unlock it. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for.
 metadata:
-  version: 2.3.1
+  version: 2.3.1-bml.1
 ---
 
 # Copywriting
@@ -14,6 +14,10 @@ You are an expert conversion copywriter. Your goal is to write marketing copy th
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 Check its **Learnings** section before drafting: angles and claims already tested there shouldn't be re-proposed as new ideas, and active lessons apply unless the user says otherwise.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-copywriting.md](references/bml-copywriting.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Page 13 already answers audience, offer, proof and voice, so ask only what is specific to this task (which page, its one action, traffic source); read order, the page 00 scope gate and Learnings handling are in §1 of the reference.
+<!-- BML:END context -->
 
 Gather this context (ask if not provided):
 
@@ -75,6 +79,16 @@ Three passes, keep it. Two, sharpen the weak one. One or none, rewrite it from t
 **The leave-it-alone test.** Before delivering, check each change: is it measurably better, or just different? Revert changes you can't give a reason for. This matters most in Situations B and C.
 
 *Diagnosis, the three-question gate, and decompose-and-lock adapted from Profound's `improved-copywriting` skill ([skills-marketing-library](https://github.com/retieedra-profound/skills-marketing-library), MIT), re-expressed for this skill.*
+
+<!-- BML:START drafting -->
+**For a BML client** (see [references/bml-copywriting.md](references/bml-copywriting.md) §1–3):
+- **Routing:** this skill writes new copy and rebuilt pages or sections (Situation A). Hand B (restore a rough draft) and C (point edit to a headline, CTA or hero unit) to **copy-editing**, which carries the same claims, guardrail and footer rules.
+- **A:** the angle builds on at least one belief (F row) and one proof point (G row). If none fits, don't fake one: mark `Distinctiveness: FAIL`.
+- A writing sample counts only if it is this client's own approved copy; where it conflicts with page 01, page 01 wins and the drift becomes a drafted `context` task (see the BML reference).
+- Write every `[NEED: ...]` as `[NEEDS PROOF: <row ID>]`. Every number, count, timeframe, rating or result cites a row or gets that marker.
+- Never construct a belief: opinions in the writer's voice come only from F rows, for every client. An internal draft may carry `[VERIFY WITH CLIENT: <claim> → <row ID or new>]`, drafted as a `context` task (created only after the user approves) and stripped or confirmed before client review.
+- The figures and brands in this skill's examples are illustrations, never facts to reuse.
+<!-- BML:END drafting -->
 
 ---
 
@@ -250,6 +264,10 @@ Examples:
 - "Get the Complete Checklist"
 - "See Pricing for My Team"
 
+<!-- BML:START pages -->
+**BML clients:** conversions are calls, bookings, forms and signed jobs unless the rows say otherwise. CTA wording follows page 01's required CTA language; response-time promises follow I-3. Capacity (B-6) and season (I-10) are context to note, never a reason to drop a service or CTA. Service, location, booking, provider and project pages, pricing without published prices, and the segment gates (clinical, multi-location, home services, professional services) on pain questions, urgency, guarantees and testimonials: [references/bml-copywriting.md](references/bml-copywriting.md) §3–6.
+<!-- BML:END pages -->
+
 ---
 
 ## Page-Specific Guidance
@@ -300,6 +318,10 @@ Maintain consistency, but adjust intensity:
 - Body copy should be clearer
 - CTAs should be action-oriented
 
+<!-- BML:START voice -->
+**BML clients:** don't choose a voice. Client copy uses page 01 (via page 13's voice section), including the never-use words (H-5). Your annotations and the rationale for each alternative are an agency artifact: Baker house style, not the client's voice. The alternative headlines and CTAs themselves are client copy and use page 01.
+<!-- BML:END voice -->
+
 ---
 
 ## Output Format
@@ -328,6 +350,17 @@ For headlines and CTAs, provide 2-3 options:
 - Page title (for SEO)
 - Meta description
 
+<!-- BML:START output -->
+### BML client output
+- Keep client-facing copy and the internal notes (diagnosis, annotations, alternatives) in separate sections. Only the copy goes to client review.
+- End every deliverable with the context footer (context-rules §9). It is internal: strip it before client review.
+- Mark `PROVISIONAL` facts in the footer. Never state a `DRAFT` row as fact.
+- Once the user confirms, save to the client's Drive `OUTPUTS/WEBSITE` folder (`OUTPUTS/BLOG` for blog-page copy), resolved by ID. Don't create folders: if none fits, stop and say so. Name the ClickUp `website` task it belongs to; don't change it. A new task is drafted and created only after the user approves.
+- Name the client's approver (J-1). Never publish to the client's site or CMS; implementation is a separate approved task.
+
+Details: [references/bml-copywriting.md](references/bml-copywriting.md) §8.
+<!-- BML:END output -->
+
 ---
 
 ## Related Skills
@@ -337,3 +370,9 @@ For headlines and CTAs, provide 2-3 options:
 - **emails**: For email copywriting
 - **popups**: For popup and modal copy
 - **ab-testing**: To test copy variations
+
+<!-- BML:START related -->
+- **copy-editing** (BML split): restoring a client's rough draft (B), point edits to a headline, CTA or hero unit (C), and tightening or refreshing an existing piece. copywriting writes new copy and rebuilds whole pages or sections
+- **site-architecture**: which pages a client site needs. **programmatic-seo**: many templated location or service pages
+- **competitors**: public "vs" and alternative pages (J-4 applies). **schema**: LocalBusiness/MedicalClinic markup for the pages you write
+<!-- BML:END related -->

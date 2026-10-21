@@ -93,7 +93,7 @@ A client deliverable builds on **at least one belief** (F row, `APPROVED` or `PR
 - If the record has no usable belief or proof for the topic, don't fake one. Mark the footer `Distinctiveness: FAIL — not client-ready` and list the rows to fill.
 - Agency artifacts (reports, plans, decks) skip this check.
 
-Also check capacity and lead handling: don't push a service the client can't take on (B-6), promise response times beyond I-3, or duplicate something the brief shows as recently published.
+Also check capacity and lead handling: note capacity and season (B-6, I-10) as context beside the affected service and flag it in the footer, but never drop or block a service for them; don't promise response times beyond I-3, or duplicate something the brief shows as recently published.
 
 ## 7. Segment rules
 
@@ -117,7 +117,7 @@ The staged file lists the client's segments; a client can have more than one (a 
 
 - Show license details where J-3 requires them.
 - Project photos only with a release on file (J-6). Never present AI images as real projects.
-- Respect service area (B-8, L-1) and seasonal capacity (B-6, I-10).
+- Respect service area (B-8, L-1). Note seasonal capacity (B-6, I-10) as context, never a gate.
 
 **Professional services and real estate**
 

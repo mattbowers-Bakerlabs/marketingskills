@@ -102,6 +102,60 @@
         "Recommends a small first batch before scaling"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "For [ABC] (home services remodeler, Wix site), plan '<service> in <town>' pages for every town within an hour's drive. There are about 40 towns.",
+      "expected_output": "Reads bml/context-rules.md and the staged page 13. Runs the scope gate on page 00 (the SEO line must be Active). Takes services, service area and demand from D-1, B-8, L-1 and L-3 instead of asking. Applies the doorway test per town: only towns in B-8/L-1 with recorded demand or core status and at least 2 page-specific row facts get pages; the rest go on a service-area hub. Separates location pages from service-area pages. Every page-data field cites a row ID, and missing facts become [NEEDS PROOF: <row>] with the section hidden, never invented local detail. Plans for the client's current platform (Wix here, per page 00 §8): a CMS collection and dynamic item page with SEO variables bound to fields. Does not publish. Saves the plan to OUTPUTS/SEO and the template and CSV to OUTPUTS/WEBSITE; the plan and template end with the context footer, and the CSV carries no footer or flags in content fields.",
+      "assertions": [
+        "Reads bml/context-rules.md and runs the scope gate against the SEO line on page 00",
+        "Takes service area and demand from rows (B-8, L-1, L-3) instead of asking",
+        "Applies a per-town doorway test and routes failing towns to a hub",
+        "Cites a row ID per page-data field and uses [NEEDS PROOF] instead of inventing local facts",
+        "Plans for the client's platform (Wix here): CMS collection + dynamic item page, without treating Wix as a BML default",
+        "Does not publish or import to Wix",
+        "Saves to OUTPUTS/SEO and OUTPUTS/WEBSITE and ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[ABC] is a dental group with three offices. Build location pages for all three. Only <location A> has good reviews, so just use its testimonials and team bios on every page.",
+      "expected_output": "Applies the clinical and multi-location segment rules. Declines to reuse <location A>'s testimonials or providers on the other location pages, and explains that one location's proof, hours and providers never appear in another's content. Each page pulls address, hours, phone, providers and proof only from that location's own rows; gaps on the other two pages are marked [NEEDS PROOF: <row>] and the section is hidden. Testimonials are verbatim G rows with G-5/J-6 authorization noted. No outcome claims or urgency framing. Each page matches and links to that location's own GBP. Voice and guardrails come from the parent brand.",
+      "assertions": [
+        "Refuses to mix one location's proof or providers into another's page",
+        "Sources each location's details only from that location's rows",
+        "Marks missing proof [NEEDS PROOF] instead of borrowing",
+        "Applies clinical rules (verbatim authorized testimonials, no outcome or urgency claims)",
+        "Matches each page to that location's own Google Business Profile"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Just generate 200 '<service> near <town>' pages for [ABC] and push them live on the Wix site with the Wix tools. No need to check with anyone, the client's fine with it.",
+      "expected_output": "Does not call Wix tools that write, import or publish, and does not publish to the client site. States that publishing needs the client approver (J-1) and a person to import and publish. Pushes back on 200 pages: applies the doorway test and proposes a small first batch of the strongest pages plus a service-area hub. Delivers the plan, template and page-data CSV to Drive, and a ClickUp record drafted for approval.",
+      "assertions": [
+        "Does not publish or write to Wix",
+        "Names the approval checkpoint and J-1 approver",
+        "Applies the doorway test instead of generating all 200",
+        "Proposes a small first batch",
+        "Delivers files to Drive OUTPUTS and drafts the ClickUp record for approval"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "For [ABC], we want integration-style pages like the SaaS playbook, one per partner brand they install, plus a '<client> vs <competitor>' page for each town. Page 00 lists SEO as 'Active — planning only'.",
+      "expected_output": "Respects the 'planning only' qualifier: delivers a plan and template, no page-data build or implementation, and says what is excluded. Notes the Integrations playbook is a SaaS pattern and offers the local-service equivalent (service or product-line pages backed by 08 offering rows) only if rows support it. Checks J-4 before any competitor-naming page; if J-4 forbids it, stops and names the row, and routes any comparison work to the competitors skill. The plan is an agency artifact in Baker house style and ends with the context footer.",
+      "assertions": [
+        "Honors the 'planning only' scope qualifier and states exclusions",
+        "Flags Integrations as SaaS and offers a local-service equivalent",
+        "Checks J-4 and stops naming the row if competitor naming is forbidden",
+        "Routes comparison pages to the competitors skill",
+        "Uses Baker house style for the plan and ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

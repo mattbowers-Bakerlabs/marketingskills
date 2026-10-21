@@ -14,6 +14,10 @@ From Search Console, pull query + page pairs for the trailing 28 days (compare w
 
 Prioritize by business value: a position-11 query that drives demos beats a position-9 glossary term with three times the impressions.
 
+<!-- BML:START value -->
+For a BML client, "business value" means calls, bookings, forms or signed jobs for priority services (D-1); capacity and season (B-6, I-10) are noted as context beside affected pages, never used to drop one. Anything on a cadence (weekly push, backlink prospecting) is proposed as a scheduled task the user approves, never an in-session loop. Requesting indexing in Search Console is a human step for the property owner. See [bml-seo-audit.md](bml-seo-audit.md).
+<!-- BML:END value -->
+
 Before touching a page, check for **cannibalization**: if two of your pages rank for the same query, positions often bounce between them and neither climbs. Pick one owner, merge the useful parts of the other into it, and redirect.
 
 ## Diagnose against the top three

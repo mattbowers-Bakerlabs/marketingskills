@@ -2,7 +2,7 @@
 name: schema
 description: When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," "breadcrumb schema," "Google rich results," "knowledge panel," "star ratings in search," or "add structured data." Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.
 metadata:
-  version: 2.0.2
+  version: 2.0.2-bml.1
 ---
 
 # Schema Markup
@@ -14,6 +14,10 @@ You are an expert in structured data and schema markup. Your goal is to implemen
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-schema.md](references/bml-schema.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. For client work, the placeholder templates in `bml-schema.md` replace the sample values in `schema-examples.md`, which must never be copied into client markup.
+<!-- BML:END context -->
+
 Before implementing schema, understand:
 
 1. **Page Type** - What kind of page? What's the primary content? What rich results are possible?
@@ -21,6 +25,19 @@ Before implementing schema, understand:
 2. **Current State** - Any existing schema? Errors in implementation? Which rich results already appearing?
 
 3. **Goals** - Which rich results are you targeting? What's the business value?
+
+<!-- BML:START bml-workflow -->
+### For BML clients
+
+Full procedure in [references/bml-schema.md](references/bml-schema.md). In short:
+
+1. **Scope:** either an `SEO` or a `Website` service `Active` in the staged scope table (`context-rules.md` §3) authorizes schema work; neither → stop. "Recommendations only" → type plan and findings, no paste-ready package. `INTAKE DRAFT` staged file → type plan for internal or pitch use only, no paste-ready markup.
+2. **Segments and platform:** take segments and the site platform (page 00 §8) from the staged file; ask only if missing. Apply the segment rules.
+3. **Every value from rows:** name, phone, address, hours, service area, services, providers, prices and profile links come from page 13 or cited rows *and* must appear on the approved page (URLs and the logo come from the live site). Missing → `[NEEDS PROOF: <row ID>]` and leave the property out. Page, rows or GBP disagree → don't pick one: leave the property out, list it under Fix-now and report it as a conflict for the monthly check.
+4. **Types:** use the BML type picker (LocalBusiness subtype + `Service`), not SoftwareApplication or Product, unless a row says the client sells software or goods.
+5. **Never:** self-serving `aggregateRating`/`Review`, reviewer or patient names, prices without D-4, call-tracking numbers, hours not from a dated row ≤90 days old (usable hours still carry "⚠ confirm before publishing"), any write through a connector (Wix, Windsor.ai GBP).
+6. **Text inside markup** restates approved page copy; it is checked against page 12, F-13 and H-5 like any public copy. The implementation guide around it is an agency artifact in Baker house style.
+<!-- BML:END bml-workflow -->
 
 ---
 
@@ -150,6 +167,15 @@ You can combine multiple schema types on one page using `@graph`:
 - Theme modifications
 - Custom fields to structured data
 
+<!-- BML:START wix-implementation -->
+### Wix (most BML client sites)
+- Check what Wix already outputs first (view source or Rich Results Test on the live URL); Wix apps add their own markup for some page types. Don't add a second entity of the same type.
+- Per-page markup: Page SEO settings → Advanced SEO → Structured data markup (paste JSON-LD without `<script>` tags).
+- Repeating page types and dynamic (CMS) pages: SEO Settings → page type → structured data presets with variables.
+- Site-wide Organization/WebSite only: Settings → Custom Code (head). Never put location-specific markup there.
+- Agents don't apply markup to a client site. Deliver paste-ready code and the click path; a person implements. Details: [references/bml-schema.md](references/bml-schema.md#wix).
+<!-- BML:END wix-implementation -->
+
 ---
 
 ## Output Format
@@ -170,6 +196,15 @@ You can combine multiple schema types on one page using `@graph`:
 - [ ] Required-field errors resolved; recommended-field warnings reviewed
 - [ ] Matches page content
 - [ ] All required properties included
+
+<!-- BML:START output -->
+### BML client deliverable
+- **Package:** JSON-LD per page, a sources table (property → row ID or `[NEEDS PROOF]`), Wix click path, validation results, rollback note (what to delete to revert), and a Fix-now list (NAP mismatches, duplicate entities).
+- **Save to** the client's Drive `OUTPUTS/SEO` folder, resolved by ID from the router; never search Drive. If it can't be resolved, stop and report. Never create folders or keep the package only in a local path.
+- **ClickUp:** draft one task (tags `seo`, `website`) for the person who implements it; create it only after the user approves. Status `internal review`; markup that restates client-facing text not yet approved also goes to the J-1 approver.
+- **Footer:** end with the `context-rules.md` §9 footer; `Distinctiveness: n/a — technical markup`.
+- **Recurring checks** (hours drift, markup errors after site edits) are a scheduled task, never an in-session loop.
+<!-- BML:END output -->
 
 ---
 

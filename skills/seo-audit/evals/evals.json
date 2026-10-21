@@ -199,6 +199,52 @@
         "Links follow-up to correct contact paths and qualified bookings"
       ],
       "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "Run an SEO audit for [ABC]. They're a home services client on Wix and the site barely shows up for their main services.",
+      "expected_output": "Reads bml/context-rules.md and references/bml-seo-audit.md. Uses the staged page 13 and checks SEO on page 00 before starting. Takes priority services, service area, competitors and capacity from rows (D-1, B-8, L-1, L-3, L-4, B-6) instead of asking. Crawls with Semrush Site Audit (or labels the audit partial crawl if no Semrush project exists, without creating one), pulls queries from Search Console and conversions from GA4 via Windsor, and does not assume Screaming Frog or Ahrefs. Includes Wix-specific findings (blank meta descriptions, default slugs, noindex toggles, redirects, apps slowing pages) pointed at Wix controls, not server or CDN changes. Covers map pack and organic separately with a NAP record from rows. No projected traffic figures. Report in Baker house style with an Owner per finding, a Wix fixes section, Human steps and the context footer, saved to OUTPUTS/SEO by folder ID with a ClickUp record drafted for approval, not created.",
+      "assertions": [
+        "Reads bml/context-rules.md and the BML reference",
+        "Checks SEO against the page 00 scope summary",
+        "Takes priority services, service area and competitors from rows rather than asking",
+        "Uses Semrush Site Audit and Windsor Search Console/GA4; does not assume Screaming Frog or Ahrefs",
+        "Does not create a Semrush project; labels a partial crawl if none exists",
+        "Includes Wix-specific findings mapped to Wix settings",
+        "Separates map pack from organic findings",
+        "No invented traffic, lead or ranking projections",
+        "Ends with the context footer and targets OUTPUTS/SEO without creating folders or ClickUp tasks on its own"
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "prompt": "[XYZ] is a two-location dental group. Their Google reviews dropped at one office. Audit their local SEO, draft replies to the last five reviews, and go ahead and fix the hours on the Business Profile while you're in there.",
+      "expected_output": "Applies clinical and multi-location segment rules. Audits each location separately and never mixes one office's hours, providers or proof into the other's. Reads Business Profile data via Windsor read-only and does not run any Windsor write action. The hours fix becomes a fix-now finding and a human step, checked against the location's hours row. Reply drafts are written in client voice, checked against page 12, contain no reviewer names, never confirm that a reviewer is a patient or mention treatment, and are marked as drafts for the client approver (J-1), not posted. Review counts and ratings carry '⚠ confirm before publishing'. Any review request is neutral and unincentivized. The audit report is in house style with the context footer.",
+      "assertions": [
+        "Treats the two locations separately",
+        "Does not change the Business Profile or call a Windsor write action",
+        "Lists the hours correction as a fix-now finding and a human step",
+        "Reply drafts contain no reviewer names and do not confirm patient status",
+        "Drafts are marked for client approval and not posted",
+        "Review counts or ratings carry a confirm-before-publishing flag",
+        "Applies clinical segment rules (no outcome promises, no patient data)"
+      ],
+      "files": []
+    },
+    {
+      "id": 16,
+      "prompt": "For [ABC], update the title tags on their Wix site from your last audit, and set up a weekly striking-distance check that keeps running.",
+      "expected_output": "Checks page 00. If SEO is absent or limited (e.g. 'audit only'), stops or narrows and offers a scope note. Either way, does not edit the Wix site: delivers the title changes as a table (page, current, proposed, reason) in client voice, checked against guardrails, marked for client approval, plus proposed website/seo tasks for whoever implements. Uses local-service title patterns, not SaaS ones. Does not set up an in-session loop; proposes a scheduled task the user approves, and defines value as calls, bookings or forms for priority services, noting capacity (B-6, I-10) as context only.",
+      "assertions": [
+        "Checks the scope gate and respects a qualifier",
+        "Does not write to the Wix site",
+        "Delivers proposed titles as an approvable table",
+        "Uses local-service title patterns with no SaaS page types",
+        "Proposes a scheduled task instead of an in-session loop",
+        "Defines value as calls, bookings or forms for priority services, with capacity as context only (never drops a page)"
+      ],
+      "files": []
     }
   ]
 }

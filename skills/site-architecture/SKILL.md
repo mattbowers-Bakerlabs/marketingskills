@@ -2,7 +2,7 @@
 name: site-architecture
 description: When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL structure," "breadcrumbs," "internal linking strategy," "website planning," "what pages do I need," "how should I organize my site," "site navigation," "which website builder should I use," "migrate my website," or "add a blog to my existing site." Use this whenever someone is planning what pages a website should have, how they connect, and where to build them. NOT for XML sitemaps (that's technical SEO — see seo-audit). For SEO audits, see seo-audit. For structured data, see schema.
 metadata:
-  version: 2.1.0
+  version: 2.1.0-bml.1
 ---
 
 # Site Architecture
@@ -13,6 +13,10 @@ You are an information architecture expert. Your goal is to help plan website st
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**Baker Labs (BML) client work:** if the work is for a BML client (a client code like `[ABC]`, a client name, a client's Claude Project, or a staged file whose first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`), read `../../bml/context-rules.md` first, then [references/bml-site-architecture.md](references/bml-site-architecture.md). Those rules win over this skill's defaults and examples. Never edit `.agents/product-marketing.md` or page 13, and never add Learnings, changelog lines or version bumps to it. Before planning, run the scope gate (context-rules §3: a Website or SEO line on page 00; an `INTAKE DRAFT` has no page 00, so skip it and treat the plan as internal or pitch material) and note the current platform from page 00 §8 (a starting point, not the default). Answer the questions below from page 13 and the rows it cites first (03 audiences, 04 journey, 08 D-1 services, B-6 capacity as context only, B-8 and L-1 service area, locations from 07), ask only about gaps, and mark missing facts `[NEEDS PROOF: <row ID>]`.
+<!-- BML:END context -->
 
 Gather this context (ask if not provided):
 
@@ -54,6 +58,10 @@ Gather this context (ask if not provided):
 | Small business | 1-2 levels | Home, Services, About, Contact | `/services/name` |
 
 **For full page hierarchy templates**: See [references/site-type-templates.md](references/site-type-templates.md)
+
+<!-- BML:START templates -->
+**BML clients:** start from the local templates in [references/bml-site-architecture.md](references/bml-site-architecture.md) (home services, clinical, professional services, multi-location) and its location and platform rules. The SaaS, docs and e-commerce examples in this skill and its references show format only; don't carry Features, Integrations, Docs, Pricing, `/compare/` pages or trial/signup CTAs into a client sitemap unless B-1 says the client sells software.
+<!-- BML:END templates -->
 
 ---
 
@@ -334,6 +342,17 @@ Mermaid diagram showing page relationships and navigation zones. Use `graph TD` 
 - Cross-section link opportunities
 - Orphan page audit (if restructuring)
 - Recommended links per key page
+
+<!-- BML:START output -->
+### BML clients: checks, location and handoff
+
+- **Before delivering:** page names, nav and CTA labels pass page 12, F-13, H-5 and segment rules (context-rules §5, §7) at any status including DRAFT; the header CTA uses page 01's required CTA language (call, booking, form or estimate, with click-to-call on mobile), never a trial or signup CTA; no comparison section if a page 12 row blocks naming competitors (stop and name the row); every page 08 service gets a page (capacity and season never remove one).
+- **Style:** the plan is an agency artifact: Baker house style (Ops Manual `02: Baker Style Guide`), no client voice or style pages (01/02) except 01's CTA and naming rows for labels; distinctiveness n/a.
+- **Nothing goes live from here.** Redirects, nav changes, new pages and sitemap submission are a checklist for a person; name the client's approver (J-1). Never call a site builder's (e.g. Wix) write, publish or deploy tools. Post-launch monitoring is a scheduled task proposed for approval, not an in-session loop.
+- **Save** to the client's Drive `OUTPUTS/WEBSITE` folder, resolved by ID from the router (never search Drive, never create a folder; if none fits, stop and report). Draft a ClickUp task tagged `website` (status `internal review`) and create it only after the user approves.
+- **Write-back:** facts found during inventory that answer an `OPEN` row (services, towns, locations) go in a "Proposed rows" table in context-rules §10 format, as `DRAFT`. Never write them to ClickUp yourself.
+- End with the context footer (context-rules §9).
+<!-- BML:END output -->
 
 ---
 
