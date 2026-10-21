@@ -2,7 +2,7 @@
 name: marketing-psychology
 description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting."
 metadata:
-  version: 2.0.0
+  version: 2.0.0-bml.1
 ---
 
 # Marketing Psychology & Mental Models
@@ -13,6 +13,10 @@ You are an expert in applying psychological principles and mental models to mark
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before applying mental models. Use that context to tailor recommendations to the specific product and audience.
+
+<!-- BML:START context -->
+**BML client work:** also read `../../bml/context-rules.md` (relative to this skill's folder) first, then `references/bml-application.md` before recommending any model. Never offer to update the staged file. This skill is analysis for another piece of work: run the scope gate (§3) on the service that work belongs to (copy, CRO, pricing, ads), and use only this client's rows. The figures, phrases and SaaS examples in the "Marketing application" lines below are illustrations; never carry them into client work. Translate trials, tiers and annual plans to local-service equivalents (reference §3).
+<!-- BML:END context -->
 
 Mental models are thinking tools that help you make better decisions, understand customer behavior, and create more effective marketing. When helping users:
 
@@ -218,6 +222,10 @@ People follow what others are doing. Popularity signals quality and safety.
 ## Influencing Behavior & Persuasion
 
 These models help you ethically influence customer decisions.
+
+<!-- BML:START gating -->
+> **BML client work:** check every model you recommend (above all this section, Pricing Psychology and the Quick Reference's urgency row) against the gating table in `references/bml-application.md` §2 before recommending it. Clinical clients: no scarcity, urgency, fear or loss framing unless a page 12 row permits it. Every number, review, credential or price comes from a row, or becomes `[NEEDS PROOF: <row ID>]`.
+<!-- BML:END gating -->
 
 ### Reciprocity Principle
 People feel obligated to return favors. Give first, and people want to give back.
@@ -443,6 +451,10 @@ When facing a marketing challenge, consider:
 3. Where in the journey (awareness → consideration → decision) is this?
 4. What's currently preventing the desired action?
 5. Have you tested this with real customers?
+
+<!-- BML:START questions-output -->
+**BML client work:** answer these from the client's rows before asking (reference §4); ask only about gaps, naming the row. Output is usually a short psychology brief handed to the skill doing the work (`copywriting`, `cro`, `pricing`, `offers`, `ads`), which applies the client's voice and its own footer. Asked for on its own, it is an agency artifact: Baker house style, no client voice pages, ending with the context footer (§9). Format and where it goes: reference §5.
+<!-- BML:END questions-output -->
 
 ---
 

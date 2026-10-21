@@ -1,5 +1,9 @@
 # AARRR Framework — Primer for Plan Sequencing
 
+<!-- BML:START bml-note -->
+> For BML client work, the stages mean found → lead → booked → repeat/referral → signed job (`bml-local-service-planning.md` Part 5). The decision rules still apply in those terms: no leads → Acquisition; leads but few booked → Activation; booked but few signed → Revenue; one-time customers who never return or refer → Retention and Referral.
+<!-- BML:END bml-note -->
+
 AARRR (Dave McClure's "pirate metrics") is the spine of every plan produced by this skill. This doc is the primer + the decision rules for when each stage gets prioritized.
 
 ## The five stages

@@ -1,5 +1,9 @@
 # Client Types — Variations by Business Model
 
+<!-- BML:START bml-note -->
+> For BML client work, use the local-service AARRR in `bml-local-service-planning.md` Part 5 and the segment rules in `bml/context-rules.md` §7 (repo root). Use an archetype below only for a client line of business that matches it.
+<!-- BML:END bml-note -->
+
 The 13-section plan structure stays consistent across client types. What changes is the **content emphasis** within each section. This doc names the dominant patterns by client archetype.
 
 ## Archetype 1 — B2B SaaS

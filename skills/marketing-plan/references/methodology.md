@@ -1,5 +1,9 @@
 # Methodology — How a Marketing Plan Gets Made
 
+<!-- BML:START bml-note -->
+> For BML client work, `bml-local-service-planning.md` Part 1 replaces Steps 1.1–1.6 (`~/` folder, `materials/`, `progress.md`, tool pulls, intake interview, scoring, `research.md`), the file saves in 2.1, 2.2 (items 4–5) and 3.1 (`sections/*.md`, `progress.md`, Notion anchors), and 3.3–3.5 (Notion, GitHub, local finalize). Don't browse Drive or ask for a `materials/` drop; read in the Part 1, Step 2 order. The Phase 2 section order and the Step 3.2 checks still apply, plus Part 1, Step 6. Steps 2.4 and 3.2's voice check: the plan is written in Baker house style; the client's voice rules apply only to sample copy or CTA language the plan quotes. In 2.3, Section 12 status moves on Part 4 triggers, not funding timing. Funding, investor and beta questions don't apply.
+<!-- BML:END bml-note -->
+
 The three-phase workflow that produces a comprehensive marketing plan. SKILL.md is the orchestration layer; this is the operational detail.
 
 ## Phase 1 — INIT (research + intake)

@@ -1,5 +1,9 @@
 # Measurement Framework — KPIs, North Stars, Cadence
 
+<!-- BML:START bml-note -->
+> For BML client work, the north star, leading indicators and data sources come from `bml-local-service-planning.md` Part 9. KPI targets start from a cited baseline row (A-1…A-12, I-4); with no baseline, the target is "establish baseline". Kill criteria and guardrail metrics still apply; the example thresholds below are illustrations, not benchmarks.
+<!-- BML:END bml-note -->
+
 Every plan needs a measurement section that tells the team how to know if the plan is working. This doc is the source for Section 13's measurement subsection.
 
 **Related docs:**

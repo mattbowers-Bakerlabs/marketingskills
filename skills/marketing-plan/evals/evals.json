@@ -135,6 +135,67 @@
         "States acquisition timing and revenue-retention assumptions"
       ],
       "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Build a 12-month marketing plan for [ABC]. They're a home-services client — the account lead wants it for the next monthly session. The owner also keeps asking how big their market is.",
+      "expected_output": "Should detect BML client work and check .agents/product-marketing.md for 'Generated for [ABC]' (run product-marketing Load if missing or for another client), then read the rules file. Should apply the scope gate: confirm page 00 has at least one Active service (any Active service authorizes a plan) before drafting. Should read page 13 and the Monthly Context Brief before asking anything, and ask only about gap rows by ID (e.g. B-10, I-4), never about funding, burn or investors. Should frame AARRR as found → lead → booked → repeat/referral → signed job, size the plan to B-10 budget, I-8 team time and B-6/I-10 capacity and seasonality, and use Windsor.ai and Semrush (read-only) rather than Ahrefs/Stripe/GA4 MCPs. Every client fact cites a row; missing facts become [NEEDS PROOF: <row>]. Each move shows its retainer status. Written in Baker house style, not the client's voice, ending with the context footer with 'Distinctiveness: n/a for agency artifacts'. Should not write to ~/marketing-plans, Notion or GitHub; saves to the session outputs folder and offers to save to the client's Drive strategy folder and a ClickUp strategy task only on approval. For the market-size question, should not produce TAM/SAM/SOM or a market dollar figure: should answer from the local-market rows (L-1 market definition, L-2 demographics, L-3 local search demand, L-4–L-7 competitors and CPCs) with their sources and dates, recommend bml/local-market-research.md (via client-context-miner Backfill) if those rows are OPEN or stale, and keep any derived estimate as a range with stated, cited inputs or [NEEDS PROOF: <row>].",
+      "assertions": [
+        "Checks the staged context file belongs to [ABC] and reads the rules file",
+        "Applies the page 00 scope gate (any Active service) before drafting",
+        "Reads page 13 and the Monthly Context Brief before asking; asks only about gap rows by ID",
+        "Does not ask about funding rounds, burn, runway or investors",
+        "Maps AARRR to a local-service funnel (lead → booked → signed job)",
+        "Sizes moves to B-10 budget, I-8 team time and B-6/I-10 capacity and seasonality",
+        "Uses Windsor.ai and Semrush read-only, not Ahrefs/Stripe/GA4 MCPs",
+        "Cites row IDs for client facts and uses [NEEDS PROOF: <row>] for missing ones",
+        "Ends with the context footer showing Distinctiveness n/a",
+        "Does not save to ~/marketing-plans, Notion or GitHub; Drive/ClickUp writes only on approval",
+        "Answers market size from L rows (L-1–L-3, L-4–L-7) rather than TAM/SAM/SOM, routing OPEN or stale L rows to local-market-research, with no invented market figure"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "/marketing-plan [ABC] — pick up where we left off on their plan",
+      "expected_output": "Should not look for ~/marketing-plans/abc/progress.md. Should find the client's ClickUp task tagged 'strategy' named 'Marketing Plan — [ABC] — v<N>' via the router or a filtered query of the client's Master Task List (no workspace-wide search), read the progress block in its description, and fetch the working file from Drive by the ID listed there (no Drive browsing). Should resume at the next unapproved section. If the phase is 'finalized', should ask whether to revise as v<N+1>, start a new plan, or re-open a section. If no task exists, should say so and offer to start fresh rather than guessing. Should not update the task or Drive file without the user's approval.",
+      "assertions": [
+        "Does not read or create ~/marketing-plans paths",
+        "Locates the ClickUp strategy task by router or filtered task query, not broad search",
+        "Fetches the working file by Drive ID rather than browsing Drive",
+        "Resumes from the next unapproved section",
+        "Asks before revising a finalized plan",
+        "Does not write to ClickUp or Drive without approval"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Draft the marketing plan for [XYZ], a multi-location dental group. Lean into urgency offers like 'only 5 new-patient slots left this month', and show what unlocks when they raise their next round. Half the budget answers I'm giving you now: they spend about <n> a month, split across Google Ads and print.",
+      "expected_output": "Should apply both the clinical and multi-location segment rules. Should decline scarcity/urgency framing for a clinical client unless a page 12 row permits it, naming the rule, and offer reassurance-based alternatives (access, process clarity, credentials, approved social proof). Should replace funding-round unlocks with budget, capacity, season and tracking triggers. Should treat the budget answer as a DRAFT row (B-10), flag it in the plan, stage it in the review format and not write it to ClickUp. Should keep each location's proof, hours and providers separate. Because sections rest on a DRAFT row, should mark the plan 'Internal draft — not for client' and not move it to client review. Should flag tracking pixels and lead forms on patient pages for a person instead of recommending them.",
+      "assertions": [
+        "Blocks or drops urgency/scarcity framing for the clinical client and names the rule",
+        "Offers reassurance-based alternatives",
+        "Replaces funding-round unlocks with budget/capacity/season triggers",
+        "Treats the in-session budget answer as DRAFT (B-10), flags it and stages it for review without writing to ClickUp",
+        "Keeps location-specific proof, hours and providers separate",
+        "Marks the plan internal-only while any section rests on a DRAFT row",
+        "Flags pixels/forms on patient pages for human review instead of adding them"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Make a full marketing plan for [DEF] including a paid ads program. Their page 00 shows 'SEO — Active' and 'Strategy — Active — planning only'; no paid media line.",
+      "expected_output": "Should pass the scope gate because page 00 has an Active service (any Active service authorizes a plan), noting the 'planning only' qualifier means BML plans but doesn't own execution. Should include paid moves only as 'No — scope note' items: owner client or TBD, never BML, listed together in Section 13 as internal upsell opportunities for the account lead (move, the BML service that would cover it, supporting rows), removed before the plan reaches the client. Should mark SEO moves 'Yes' and assign BML roles as owners. Should not invent paid budgets or CPLs; uses A-9/L-7 rows or [NEEDS PROOF]. Section 12 should take fit tags and local versions from marketing-ideas' bml-local-service-fit.md, list applicable ideas by their existing numbers plus relevant BML-<n> local plays, and give a skip list grouped by reason (e.g. SaaS-only, not recommended) rather than one row per skipped idea.",
+      "assertions": [
+        "Passes the scope gate on an Active page 00 service and explains the 'planning only' qualifier",
+        "Marks paid moves 'No — scope note' with a non-BML owner",
+        "Lists out-of-scope moves together in Section 13 as internal upsell opportunities for the account lead, stripped before client delivery",
+        "Does not invent paid budgets or CPLs",
+        "Uses existing marketing-ideas numbers and BML-<n> plays with tags from the marketing-ideas fit file, plus a grouped skip list"
+      ],
+      "files": []
     }
   ]
 }

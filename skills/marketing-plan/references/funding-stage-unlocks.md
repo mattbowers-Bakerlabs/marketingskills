@@ -1,5 +1,9 @@
 # Funding-Stage Capability Unlocks
 
+<!-- BML:START bml-note -->
+> **Not used for BML clients.** Local-service clients don't raise rounds; Section 10's unlocks are keyed to budget, capacity, season, tracking, retainer and launch triggers in `bml-local-service-planning.md` Part 4. Never ask a BML client about rounds, burn or investors, and never apply the dollar ranges below.
+<!-- BML:END bml-note -->
+
 Every marketing plan must include explicit "what changes when funding closes / when budget unlocks" reasoning. This makes the plan investor-friendly and operationally honest.
 
 This doc defines the standard tiers. Use them as anchors, adjust for client category and unit economics.

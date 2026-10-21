@@ -12,6 +12,92 @@ Two rules that apply to every entry:
 
 Loops are grouped by function. Naming follows the "The X loop" convention.
 
+<!-- BML:START bml-fit -->
+## BML fit (read first for BML clients)
+
+Which loops apply to BML's local-service clients. **Use** = fits as written with BML sources. **Adapt** = use the BML note. **If** = only when the condition holds. **No** = assumes a SaaS product, B2B outbound or a software vendor; offer the equivalent. **No by default** = a person may enable it for one client. Every loop also needs its service `Active` on page 00, and all BML blocks in `SKILL.md`, `loop-state.md` and `loop-guardrails.md` apply. Upstream `outputs/`, `inputs/`, `retros/` and other local paths become the Drive folders named here.
+
+| Loop | BML | Data source (read-only) | Output folder | BML note |
+|---|---|---|---|---|
+| keyword-gap | Use | Windsor.ai `searchconsole`; Semrush | OUTPUTS/SEO | Local-modified terms (service + town, L-3) |
+| ranking-drop watch | Use | Semrush position tracking; `searchconsole` | OUTPUTS/SEO | Include map-pack positions (L-4) |
+| striking-distance push | If SEO | `searchconsole`; Semrush | OUTPUTS/SEO | Local terms (L-3); edits staged, never published; title/meta changes need the J-1 approver |
+| AI-answer check | Adapt, if SEO | Semrush AI visibility if available; else a person runs the prompt panel | OUTPUTS/SEO | Monthly. Local buyer prompts ("best <service> in <town>"); findings → DRAFT A-10 / L-12 rows; outreach staged |
+| AI-answer accuracy audit | Adapt, if SEO | Same as AI-answer check | OUTPUTS/SEO | Quarterly. Checks hours, services, service area, licensing against page 13; fixes staged for site/GBP/listings; prices only per D-4 |
+| agent-default check | No | — | — | For software vendors chosen by coding agents |
+| content-decay | If SEO/Blog | `googleanalytics4`; `searchconsole` | OUTPUTS/BLOG | Monthly |
+| internal-linking | Adapt | Site crawl (Semrush site audit) | OUTPUTS/WEBSITE | Edits staged; never published to the site |
+| programmatic-SEO quality | If | Semrush site audit; `searchconsole` | OUTPUTS/SEO | Only if the site has service-area/location page sets |
+| content-repurposing | If Social | Published client content | OUTPUTS/SOCIAL | Drafts only; no scheduling-queue posting |
+| niche-outlier | No by default | — | — | Needs social search/listening BML doesn't have; a person can enable it if Social is Active |
+| content-calendar refill | If Blog | ClickUp tasks (read); Semrush | OUTPUTS/BLOG | Respect I-10 seasonality |
+| weekly ads-check | If Paid Ads | `google_ads`, `facebook`; `googleanalytics4` | OUTPUTS/PAID-ADS | BML's weekly paid loop: ad-fatigue runs as its creative-fatigue step. Targets from page 13 Paid Ads / A-9, B-10; none on file → INVESTIGATE + `[NEEDS PROOF: A-9]`. CRM compared only if connected, read-only. Readout is internal; monthly-reporting owns the client deck |
+| ad-fatigue | If Paid Ads | `google_ads`, `facebook` | OUTPUTS/PAID-ADS | Weekly, as a step of weekly ads-check; recommend, never shift budget |
+| daily-creative-drop | No | — | — | Batch volume and local `inputs/` corpus don't fit; use monthly-creative-retro |
+| monthly-creative-retro | If Paid Ads | `google_ads`, `facebook` | OUTPUTS/PAID-ADS | Replaces platform CLIs and `retros/` |
+| paid-search query-mining | If Paid Ads | `google_ads` | OUTPUTS/PAID-ADS | Out-of-area terms (B-8) → negatives |
+| retargeting-hygiene | If Paid Ads | `google_ads`, `facebook` | OUTPUTS/PAID-ADS | Clinical: flag pixels/audiences for a person (rules §7) |
+| landing-page regression | Use | `googleanalytics4`; call tracking if connected (A-15) | OUTPUTS/WEBSITE | Calls, forms, bookings; never edit the site |
+| newsjacking | No by default | — | — | Clinical: never |
+| social-listening | No by default | — | — | No listening tool in BML's stack |
+| community-engagement | No by default | — | — | Local groups are posted to by a person, if at all |
+| competitor-watch | Use | Competitor sites (L-4, L-6); Semrush | OUTPUTS/SEO | Changes land as DRAFT L-6/E-8 rows |
+| backlink-prospecting | Adapt | Semrush backlinks | OUTPUTS/SEO | Local links: chambers, associations, sponsors (L-8, L-9); outreach drafted only |
+| directory-submission | Adapt | Listings audit (A-11, A-16, L-11) | OUTPUTS/SEO | Local citations and NAP fixes, not startup directories |
+| partner-pipeline | Adapt | L-8 referral ecosystem | OUTPUTS/REPORTING | Referral partners, not integrations |
+| creator-scouting | No by default | — | — | Influencer outreach is rare for BML segments; never for clinical |
+| signal-sweep | No | — | — | B2B outbound (see `outbound-operator.md` BML note) |
+| reply-triage | No | — | — | Sends, suppresses and writes CRM stages |
+| cold-domain health | No | — | — | No cold-sending infrastructure |
+| sequence-retro | No | — | — | No outbound sequences |
+| onboarding drop-off | No | — | — | Use landing-page regression |
+| signup-funnel-leak | Adapt | `googleanalytics4`; booking tool if connected (I-9) | OUTPUTS/WEBSITE | Becomes the quote/booking/form funnel |
+| lead-capture-asset | If | `googleanalytics4` | OUTPUTS/WEBSITE | Only if the client runs a lead magnet or quote tool |
+| feature-adoption | No | — | — | — |
+| churn-signal | No | — | — | No account-level product data; see re-engagement |
+| lifecycle-email-refresh | If Email | Email platform if connected (A-15, I-6) | OUTPUTS/EMAIL | Rewrites staged; never edit live flows |
+| re-engagement | If Email | Email platform if connected | OUTPUTS/EMAIL | Past-customer reactivation; no CRM writes; drafts only |
+| email-deliverability | If Email | Email platform if connected | OUTPUTS/EMAIL | — |
+| voice-of-customer | Adapt | Review themes (`google_my_business`); Fireflies transcripts | OUTPUTS/REPORTING | Themes only; findings become DRAFT rows (rules §10) |
+| trial-conversion | No | — | — | — |
+| PQL / upgrade-intent | No | — | — | — |
+| pricing-page-experiment | No | — | — | Prices are client decisions (D-4) |
+| paywall-optimization | No | — | — | — |
+| expansion / upsell | No | — | — | Upsells (D-8) are the client's sales work |
+| failed-payment / dunning | No | — | — | — |
+| referral-nudge | No by default | — | — | Referral asks are the client's process (I-5) |
+| review-and-UGC-harvest | Adapt | `google_my_business`; A-16 platforms | OUTPUTS/REPORTING | Reuse only with consent on file (G-5, J-6); no reviewer names |
+| review-site-management | Use | `google_my_business`; A-16 platforms | OUTPUTS/REPORTING | GBP first; responses drafted for the J-1 approver, never posted |
+| case-study-sourcing | Adapt | Fireflies; ClickUp (read) | OUTPUTS/REPORTING | The client contacts its customers, not BML |
+| weekly-marketing-review | Adapt | Windsor.ai (GA4, Ads, GSC, GBP, Meta) | OUTPUTS/REPORTING | Lead review: calls, forms, bookings vs. last period and last year; no AARRR, no client deck |
+| experiment-backlog | No by default | — | — | Local traffic rarely supports tests |
+| analytics-anomaly | Adapt | Windsor.ai | OUTPUTS/REPORTING | Weekly, not daily |
+| brand-mention / reputation | Adapt | Reviews; web search | OUTPUTS/REPORTING | Weekly; crisis → J-7 contacts |
+| tracking-QA | Use | `googleanalytics4`; tag checks; call tracking if connected | OUTPUTS/REPORTING | A-12; escalate a broken lead event at once |
+| claim-drift | Adapt, if Website or SEO | Page 13 and its source rows (read); client site, GBP, listings, live ads | OUTPUTS/WEBSITE | Trigger: page 13 regenerated or a D-1, D-4, B-8, J-3 row changed, not product deploys. Corrections staged; prices and licensing to a person |
+| campaign-postmortem | Use | Windsor.ai; ClickUp (read) | OUTPUTS/REPORTING | Step 4 lessons → proposed `context` tasks, not Learnings rows (`loop-state.md` BML blocks) |
+| launch-reaction | No by default | — | — | Needs listening tools; a client promo (D-11) is reviewed in the lead review |
+| local-market refresh (below) | Use | `bml/local-market-research.md` (repo root) | OUTPUTS/REPORTING | BML-only loop |
+
+**Operators:** SEO operator = Adapt, draft mode only (BML note in `seo-operator.md`). Outbound operator = No (BML note in `outbound-operator.md`).
+
+"If Email", "If Paid Ads" and similar mean the service is `Active` on page 00 *and* the platform is connected. A platform the client uses but BML can't read is a gap to report, not a reason to ask for credentials.
+
+### The local-market refresh loop (BML)
+- **Check cadence**: Quarterly
+- **Acts when**: Any of L-3, L-4, L-5, L-7 is older than 90 days.
+- **Purpose**: Keep the client's local market rows current for targeting and planning.
+- **Skills used**: `bml/local-market-research.md` (procedure), `competitor-profiling`
+- **Loop body**:
+  1. Read the dates on L-3, L-4, L-5, L-7 in page 13 or page 09.
+  2. Re-run those rows per the procedure; multi-location clients per location.
+  3. Compare with the rows on file.
+- **Self-check**: Same terms, towns and database as last time? A change in method isn't a change in market.
+- **State / idempotency**: Last refresh date per row; never re-stage an update still awaiting review.
+- **Stop / bail-out**: Rows fresh → skip. Source returns nothing → `—`, never an estimate.
+- **Output**: A review file in OUTPUTS/REPORTING with updates staged as DRAFT, both versions and dates shown (procedure "Rules"). Nothing written to ClickUp.
+<!-- BML:END bml-fit -->
+
 ---
 
 ## SEO & Content

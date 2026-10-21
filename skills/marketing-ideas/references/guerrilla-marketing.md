@@ -7,6 +7,15 @@ Two operating principles govern everything below:
 - **Think in stories, not campaigns.** People don't share your funnel. They share a story worth retelling. Design the moment so the person who receives it wants to tell someone else.
 - **Test small before going big.** A guerrilla idea is a hypothesis. Prove it on a handful of targets before you spend real money scaling it.
 
+<!-- BML:START guerrilla-bml -->
+> **For BML clients:**
+> - **Clinical clients:** stunts, guerrilla, humor and shock tactics are off by default (context-rules §7). Use one only if a page 12 row permits it; otherwise offer a reassurance-led alternative (community presence, approved proof, access).
+> - **Every client:** check F-13 and J-2 to J-4 before proposing anything provocative. Never target or name a competitor (as WePay and Xero did) unless J-4 allows it.
+> - **Case library:** these are public stories about other companies, for internal inspiration only. Never put their figures (spend, customers, revenue, viewers) into a client deliverable or present them as an expected result.
+> - **ROI math:** the package-cost numbers below are B2B software figures. For a local client, weigh cost per piece against average job value (B-7) and capacity (B-6); if B-7 is `OPEN`, write `[NEEDS PROOF: B-7]`.
+> - **Local versions:** neighbor postcards or door hangers around an active job, a branded thank-you left after a job, a sponsor moment at a community event (L-9). Client-run unless a service in scope covers it. Never use customer or patient details on mailers.
+<!-- BML:END guerrilla-bml -->
+
 ---
 
 ## Direct Mail: The 3-Rule Framework

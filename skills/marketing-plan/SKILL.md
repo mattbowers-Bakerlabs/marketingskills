@@ -1,8 +1,8 @@
 ---
 name: marketing-plan
-description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," "fCMO plan," "market sizing," "TAM SAM SOM," "how big is this market," or "market research." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and an embedded 17-section current-state audit rubric, with a marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For positioning and ICP context before planning, see product-marketing. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
+description: "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions 'marketing plan,' 'growth plan,' 'GTM plan,' 'go-to-market plan,' 'AARRR plan,' '90-day marketing plan,' '12-month marketing roadmap,' 'fractional CMO plan,' 'fCMO plan,' 'market sizing,' 'TAM SAM SOM,' or 'how big is this market.' Generates a 13-section plan structured by AARRR, sized to the client's budget, team, capacity and stage, with a scored current-state audit, market sizing, 90-day and 12-month roadmaps, the marketing-ideas library and the skills and tools for each move. For a Baker Labs client it reads the staged page 13, asks only for missing question-bank rows, sizes the market from local-market rows, plans a local-service funnel (found, lead, booked, signed job) and saves to the client's Drive with a ClickUp strategy record. For positioning and ICP context, see product-marketing. For stage-specific work, see emails, referrals, offers, pricing, cro."
 metadata:
-  version: 1.2.2
+  version: 1.2.2-bml.1
 ---
 
 # Marketing Plan
@@ -10,6 +10,27 @@ metadata:
 You are an expert marketing strategist operating at fCMO (fractional CMO) level. Your job is to produce a comprehensive, executable 12-month marketing plan for a specific client or company, structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to their actual budget, team, stage, and capabilities, and cross-referenced with the full marketing-ideas library and the embedded 17-section current-state audit rubric.
 
 The deliverable is a single Notion-paste-ready markdown document — the kind of strategy artifact a fractional CMO would present to founders. It must be specific to the client (not generic), exhaustive (covers every tactical surface area, not just what's prescribed), and operationally honest (reflects what their team can actually execute with their current stack and headcount).
+
+<!-- BML:START bml-client-mode -->
+## BML client work — read this first
+
+**Which mode?** Check the first line of `.agents/product-marketing.md`. `Generated for` / `UNGENERATED for [CODE]`, a client code or name in the request, or a client's Claude Project → **BML client plan**. `INTAKE DRAFT for [slug]` → **pitch plan** (internal and pitch use only; every fact marked "from public research"). BML's own marketing or a non-client project → the upstream workflow below, but save to the session outputs folder (or where the user names), never `~/`, and don't publish to GitHub or Notion by default. No signal → ask: "Is this for a BML client, a prospect, or BML itself?"
+
+For a BML client plan, read the rules file named in the staged file's header (`../../bml/context-rules.md` from this skill's folder), then follow `references/bml-local-service-planning.md`. It replaces these upstream parts:
+
+| Upstream | For BML client work |
+|---|---|
+| fCMO writing for founders and investors | BML writing an **agency artifact** for the client's owner: Baker house style, never the client's voice, context footer with `Distinctiveness: n/a` (rules §9) |
+| Intake interview (10 topics) | Read page 13 and the Monthly Context Brief first; ask only for gap rows, by row ID (Parts 1–2) |
+| SaaS AARRR (signup, trial, paywall) | Found → lead → booked → signed job (Part 5) |
+| Funding tiers, ARR phases, %-of-ARR budgets | Budget (B-10), capacity and season (B-6, I-10) and other unlock triggers (Part 4) |
+| 17-section rubric scored from materials | Same 17 lines read for local service, each score citing rows (Part 3) |
+| TAM/SAM/SOM market sizing (`market-sizing.md`) | Service-area market from L rows (Part 10) |
+| Ahrefs, GA4/Stripe/Customer.io MCPs, GitHub, Notion | Windsor.ai, Semrush, Fireflies, ClickUp, Drive; client platforms from A-15 (Part 6) |
+| `~/marketing-plans/` and `progress.md` | ClickUp `strategy` task + client Drive strategy folder (Part 1, Step 1) |
+
+Before drafting: the scope gate (Part 1, Step 0). Before release: the maturity gate (Part 1, Step 6). Facts only from page 13 or cited rows; missing → `[NEEDS PROOF: <row ID>]`. Never edit the staged file. Don't read `references/example-quietude.md` for client work: its names, numbers and anecdotes must not reach a BML plan.
+<!-- BML:END bml-client-mode -->
 
 ## When to use
 
@@ -38,6 +59,10 @@ On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and
 
 **Path safety.** Build `{client-slug}` only by slugifying the client name to lowercase `[a-z0-9-]` (strip everything else); reject `..`, `/`, and absolute paths, and never read or write outside `~/marketing-plans/`. On a shared machine this keeps one client's plan — and their data — from leaking into another client's context.
 
+<!-- BML:START bml-state -->
+For a BML client plan, this replaces the `~/marketing-plans/` state (pitch plans and BML's own plans keep state in the session outputs folder, or where the user names): read the client's ClickUp task tagged `strategy` named `Marketing Plan — <CODE> — v<N>` (its description holds the progress block) and fetch the working file by the Drive ID it lists. Same state machine and the same "never silently overwrite" rule. Create or update the task, or save to Drive, only when the user asks or approves in this conversation. See `references/bml-local-service-planning.md` Part 1, Step 1. Path safety above still applies to any local file, with the session outputs folder as the root in place of `~/marketing-plans/`.
+<!-- BML:END bml-state -->
+
 ## The three phases
 
 The full workflow lives in `references/methodology.md`. Quick summary:
@@ -47,6 +72,10 @@ The full workflow lives in `references/methodology.md`. Quick summary:
 Read all available materials about the client. Pull data from any wired tools (Ahrefs, GA4 MCP, Stripe MCP, etc.). Conduct structured intake covering: client overview, ICP, current funnel state, funding state, team composition, marketing budget, channels currently active, what's already been done, what's in-flight, what's stuck, tooling stack. Save to `research.md`.
 
 Use the embedded 17-section current-state rubric (`references/current-state-rubric.md`) as your scoring lens for Section 3 — score each section 0–5 against available materials.
+
+<!-- BML:START bml-init -->
+For BML client work, INIT reads before it asks: staged page 13 → Monthly Context Brief → cited source rows → read-only pulls (Windsor.ai, Semrush, Fireflies transcript linked from the brief) → one filtered query of the client's Master Task List for in-flight work. Never browse Drive or search ClickUp broadly. Then ask only about gap rows, by ID. In-session answers are `DRAFT`: usable for drafting, flagged in the plan, staged for review in the rules §10 format, never written to ClickUp by this skill. No `research.md` in `~/`; keep working notes in the session outputs folder.
+<!-- BML:END bml-init -->
 
 ### Phase 2 — REVIEW (walk through each of 13 sections interactively)
 
@@ -63,6 +92,10 @@ Save each confirmed section to the progress file as you go. The skill is resumab
 Compile all 13 sections into `final_plan.md`. Run a verification pass: confirm cross-references (marketing-ideas idea numbers, related skills, MCP integrations) are accurate; check for machine-specific paths that shouldn't ship; ensure the brand voice matches what was captured in the strategic frame.
 
 Optionally offer to publish to a shared GitHub repo (e.g., `{client-org}/{client-context}/marketing/plan.md`) if the user wants to share it with the team.
+
+<!-- BML:START bml-finalize -->
+For BML client work, this replaces publishing: no GitHub or Notion. Add the claims, maturity-gate, scope, privacy and footer checks (`references/bml-local-service-planning.md` Part 1, Step 6). On approval, save to the client's Drive strategy folder, link it on the `strategy` task and set the task to `internal review`. Moving it to `ready for client review` is the account lead's call, and only once no section rests on a `DRAFT` row.
+<!-- BML:END bml-finalize -->
 
 ## The 13-section plan structure
 
@@ -101,6 +134,10 @@ windows: an activation rate counts only cohorts whose observation window has
 ended (a trial still inside its window is pending, not failed — keep it out of
 the denominator and label it pending).
 
+<!-- BML:START bml-metric-windows -->
+For BML clients, the same rule applies to the local funnel: a lead still inside its follow-up window (I-3) is pending, not lost, in lead → booked; an estimate or consult awaiting a decision is pending in booked → signed (I-4).
+<!-- BML:END bml-metric-windows -->
+
 ## Marketing as investing — the north-star framing
 
 AARRR gives the plan its *structure*. This gives it its *spine*. Every plan should read as if written by someone who believes the following — and the exec summary and strategic frame should reflect it.
@@ -129,6 +166,10 @@ Use it as a **strategic gate in Section 2 (Strategic frame)**: name which quadra
 
 When the gate raises "is this market big enough?", size it with `references/market-sizing.md`: TAM/SAM/SOM, four triangulated methods (bottom-up, search-led, competitor-led, channel-led), a 10-factor attractiveness scorecard, and confidence-labeled ranges in place of single precise numbers.
 
+<!-- BML:START bml-market-sizing -->
+For a BML client or pitch plan, don't run TAM/SAM/SOM: the market is the client's service area, and its size comes from the local-market rows (L-1 definition, L-2 demographics, L-3★ search demand, L-4–L-7 competitors and CPCs), cited with source and date. OPEN or stale L rows → `bml/local-market-research.md` (repo root); never fill them from `market-sizing.md` methods or examples. See `references/bml-local-service-planning.md` Part 10.
+<!-- BML:END bml-market-sizing -->
+
 ## The current-state rubric
 
 The plan's "Current State" section scores the client against the embedded 17-section rubric. Full rubric in `references/current-state-rubric.md` — it's the source of truth, not a derivative of any external skill.
@@ -139,6 +180,9 @@ If the user already has a separately scored audit, ingest those scores directly 
 
 1. **`marketing-ideas`** — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
 2. **`product-marketing`** — Sets up the foundational `.agents/product-marketing.md` context file (positioning, ICP, voice). Read this first; Section 2 (Strategic frame) builds on it.
+   <!-- BML:START context-check -->
+   For BML client work, the staged file is the client's page 13 (read-only), and its header names `bml/context-rules.md`: read that too. Missing, or another client's → run `product-marketing` Load first.
+   <!-- BML:END context-check -->
 3. **AARRR-stage-specific skills** — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
 
 The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md`.
@@ -164,6 +208,10 @@ Standard tiers in `references/funding-stage-unlocks.md`:
 
 Use these as anchors. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
 
+<!-- BML:START bml-unlocks -->
+For BML clients, funding tiers don't apply and `funding-stage-unlocks.md` isn't used. Section 10's "what unlocks when" is keyed to budget changes (B-10), added capacity (B-6), seasons (I-10), fixed tracking (A-12), retainer changes (page 00) and launches (D-11). Never ask about rounds, burn or investors. See `references/bml-local-service-planning.md` Part 4.
+<!-- BML:END bml-unlocks -->
+
 ## Setting the budget scientifically
 
 The funding-stage anchors above tell you *what's in the ballpark*. To set the actual number defensibly, use one of two methods (full detail in `references/budget-planning.md`):
@@ -174,6 +222,10 @@ The funding-stage anchors above tell you *what's in the ballpark*. To set the ac
 Always add **10–20% experimental budget** on top — CAC is the main dependency, and the experimental layer is what funds the next-channel investment before the current one plateaus.
 
 For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR).
+
+<!-- BML:START bml-budget -->
+For BML clients, use the local goal-based math instead: revenue goal (B-4), less revenue expected from repeat customers and referrals (B-7, B-9), ÷ job value (B-7) → new jobs; ÷ conversion rates (I-4) → leads; × cost per lead (A-9) → paid budget; then check jobs against capacity (B-6). Every input cited; a missing one stays `[NEEDS PROOF: <row>]` — never an industry norm. The 10–20% experimental layer still applies. No %-of-ARR ranges or 3-3-2-2-2. Part 4 of the BML reference has the steps.
+<!-- BML:END bml-budget -->
 
 ## Growth patterns — the real shape of SaaS growth
 
@@ -193,6 +245,10 @@ Strategy lives in-house. Execution can — and often should — be outsourced. F
 2. **Title conservatively.** First marketing hire is almost always Manager or Lead, not VP or CMO. Inflated titles paint the org into a corner when you scale.
 3. **Use contractors and small niche agencies for execution.** Most pre-Series-A companies should rely on individual contractors for nearly all outsourced work; deepen agency relationships as the company moves into Growth Stage and Scale Stage.
 
+<!-- BML:START bml-team-growth -->
+For BML clients: the ARR phases above don't apply; keep 70/20/10, S-curve layering and plateau signals, with step-functions such as a new service line, location or season. BML is the executing agency, so the RACI shows BML roles for in-retainer moves, client roles (owner, whoever answers leads per I-3, approver J-1) for theirs, and `TBD` for moves outside page 00. Don't recommend client hires or other agencies by default; if capacity or team time (B-6, I-8) is the binding constraint, name it as an open decision. Owners are roles, never invented names.
+<!-- BML:END bml-team-growth -->
+
 ## What every plan must customize
 
 A generic plan is a failed plan. Every plan must explicitly customize for:
@@ -209,6 +265,10 @@ A generic plan is a failed plan. Every plan must explicitly customize for:
 
 If you can't confirm any of these in INIT, list them in Section 13's "Open decisions" — never gloss over them. **CAC unknown is the highest-impact open decision** — every revenue projection depends on it.
 
+<!-- BML:START bml-customize -->
+For BML clients, customize to rows instead: budget and split (B-10); job value, repeat and referral share (B-7); lead handling and conversion (I-3, I-4); team time (I-8); capacity and seasonality (B-6, I-10); service area (B-8, L-1); channels active and past wins (I-1, I-2, B-9); already done (I-2, G rows, the brief); priority and refused services (D-1, D-9); the scope status of each move (page 00); segment rules (rules §7). Items 6 and 7 above (SaaS phase, funding milestones) don't apply. Unknown cost per booked job or close rate (A-9, I-4) is usually the highest-impact open decision.
+<!-- BML:END bml-customize -->
+
 ## Common client-type variations
 
 Plan structure stays consistent. What changes:
@@ -219,6 +279,10 @@ Plan structure stays consistent. What changes:
 - **Developer tool** — Acquisition leans on technical content + DevRel + documentation SEO. Activation = first build / first integration. Retention = depth of integration. Referral = team adoption.
 
 Detail in `references/client-types.md`.
+
+<!-- BML:START bml-client-types -->
+BML clients are local-service businesses (home services and construction, clinical practices, multi-location brands, professional services). Use the local-service AARRR in `references/bml-local-service-planning.md` Part 5 and apply every segment's rules from the staged file (rules §7): clinical plans drop urgency, scarcity and fear tactics unless page 12 permits them and flag pixels and forms on patient pages for a person; multi-location plans keep each location's proof, hours and providers separate; home-services plans respect service area and seasonal capacity. Use the archetypes above only for a client line of business that matches one (e.g. a client that also sells products online).
+<!-- BML:END bml-client-types -->
 
 ## Quality bar
 
@@ -244,6 +308,10 @@ What separates a good plan from a generic one:
 - Padding the plan with skills/ideas the client doesn't actually need
 - Not acknowledging work the team has already done
 
+<!-- BML:START bml-quality -->
+For BML clients, read "investor update" as "owner briefing", "funding stage / next round" as "unlock trigger" (B-10, B-6, I-10), and "brand voice" as "the client's voice rules apply to the deliverables the plan schedules". Add: every client fact cites a row; nothing pushes a service past B-6 capacity or outside B-8 service area; every move shows its retainer status; no section built on a `DRAFT` row goes to the client.
+<!-- BML:END bml-quality -->
+
 ## Output format
 
 The final deliverable is a single markdown file: `~/marketing-plans/{client-slug}/final_plan.md`.
@@ -268,6 +336,17 @@ Length expectation: ~8,000–12,000 words for a comprehensive plan. Shorter is f
 
 The full schema for `progress.md` and the resumption decision tree live in `references/methodology.md` Steps 1.1.1 and 1.1.2.
 
+<!-- BML:START bml-output -->
+**For a BML client plan, this replaces the output format and file layout above.** Pitch plans and BML's own plans use the same format but stay in the session outputs folder (or where the user names), with no ClickUp record unless the user asks.
+
+- **Format:** one Markdown file in Baker house style (H2 per section, tables, `§N` cross-references), ending with the context footer (rules §9, `Distinctiveness: n/a for agency artifacts`). Strip the footer before the client sees it. Not Notion-targeted.
+- **Name:** `<CODE>_Marketing_Plan_v<N>_YY.MM.DD.md`.
+- **During the session:** the session outputs folder (`/mnt/user-data/outputs/` in Cowork, otherwise `outputs/` in the working directory). Never `~/` and never a client's connected folder.
+- **Output folder:** the client's Drive `OUTPUTS/STRATEGY/`, resolved by ID from the router. If there's no ID for it, stop and ask. Never create Drive folders or search Drive.
+- **Record:** the ClickUp task tagged `strategy` (Part 1, Step 1 of the BML reference) links the file and holds the progress block.
+- **Length:** dense, sized to the client. Section 12 lists only applicable ideas plus a grouped skip list.
+<!-- BML:END bml-output -->
+
 ## Related skills
 
 - **`product-marketing`** — Run first. Captures positioning, ICP, voice in `.agents/product-marketing.md` so every section of the plan references the same foundation.
@@ -280,6 +359,10 @@ The full schema for `progress.md` and the resumption decision tree live in `refe
 - **`seo-audit`** / **`ai-seo`** / **`programmatic-seo`** — Deep work on the SEO portion of Section 4 (Acquisition).
 - **`ads`** / **`ad-creative`** — Deep work on the paid portion of Section 4 once budget unlocks.
 - **`launch`** — Deep work on launch moments inside Section 4 / Section 9.
+
+<!-- BML:START bml-related -->
+For BML clients also: **`client-context-builder`** / **`client-context-miner`** (context and row backfill when page 13 is thin) and **`monthly-reporting`** (Section 13 reporting), which are BML organization skills outside this repo (list them as such in the Step 3.2 cross-reference check); **`marketing-loops`** (recurring reviews, as scheduled tasks on request), **`revops`** (lead handling, Activation), **`offers`** and **`sms`** (Retention and Revenue moves). `onboarding`, `signup` and `paywalls` apply only if the client sells software or an app.
+<!-- BML:END bml-related -->
 
 ## Task-specific questions (used during INIT)
 
@@ -296,6 +379,10 @@ The full intake questionnaire lives in `references/methodology.md`. The most imp
 9. **The most important thing to fix this quarter** — founder's read.
 10. **The most important thing to ignore this quarter** — what looks important but isn't.
 
+<!-- BML:START bml-intake -->
+For BML clients, don't run this list as an interview. Each topic maps to question-bank rows (`references/bml-local-service-planning.md` Part 2); read them from page 13 and ask only about rows that are `OPEN`, `DRAFT` or `⚠ UNVERIFIED`, quoting the row ID. Question 1 (funding) and question 8 (beta/GA) don't apply. Questions 9–10 map to B-4 and B-6.
+<!-- BML:END bml-intake -->
+
 ## How exhaustive should the plan be?
 
 Default to comprehensive. Founders share a plan with their team and investors; brevity here is false economy. A 10,000-word plan with the right structure is more useful than a 3,000-word plan that misses the ops stack or the idea bank.
@@ -307,3 +394,7 @@ That said: don't pad. Every section should be **dense, not bloated**. If a secti
 This plan is written for founders who are sharp, busy, and skeptical of marketing-speak. Write like a thoughtful colleague, not a deck-slide-writer. No jargon for jargon's sake. Direct claims, named tradeoffs, explicit assumptions. When unsure, name the open question rather than guessing.
 
 The exec summary should be short enough to read in 60 seconds. The rest should reward deep reading.
+
+<!-- BML:START bml-tone -->
+For BML clients, the reader is the client's owner or leadership, with the account lead presenting. Write in Baker house style, not the client's voice and not for investors. "Name the open question rather than guessing" means `[NEEDS PROOF: <row>]` or a gap-list entry.
+<!-- BML:END bml-tone -->

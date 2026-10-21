@@ -100,6 +100,63 @@
         "Applies 'think in stories, not campaigns' principle"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Give me marketing ideas for [ABC] for next quarter. They're a roofing and gutter company.",
+      "expected_output": "Should detect BML client work, read bml/context-rules.md and the staged page 13 for [ABC] (running product-marketing Load first if missing or for another client). Should take goals, capacity, budget, team time and local market from rows (B-4, B-6, I-10, B-10, I-8, L-3, L-4) instead of asking. Should filter the library through references/bml-local-service-fit.md: no SaaS-only ideas (Product Hunt, Chrome extensions, lifetime deals, DevRel); Adapt ideas in their local version; BML local plays (e.g. BML-1 GBP, BML-2 reviews, BML-3 Local Services Ads) considered. Should scope-gate each idea against page 00 and sort into Recommended, Client-run and Upsell suggestions for the account lead. Should cite ideas by number or BML ID, state outcomes as metrics without invented figures, write in Baker house style without loading client voice pages, return it in chat (naming OUTPUTS/STRATEGY only if asked to file it), and end with the context footer. Any review play (BML-2) excludes incentives and review gating.",
+      "assertions": [
+        "Reads bml/context-rules.md and the staged page 13 before asking questions",
+        "Uses B-4, B-6, B-10 and I-8 rows rather than asking for them",
+        "Recommends no SaaS-only ideas",
+        "Uses the local version of Adapt ideas and considers BML-n local plays",
+        "Sorts ideas into Recommended, Client-run and Upsell suggestions by page 00 scope",
+        "Cites ideas by #number or BML-n ID",
+        "Contains no invented figures or benchmarks; missing facts marked [NEEDS PROOF: <row>]",
+        "Any review-generation idea excludes review incentives and review gating",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[DEF] is a dental practice. They want something attention-grabbing — a guerrilla stunt or a Black Friday 'only 10 spots left' whitening promo. What should we do?",
+      "expected_output": "Should apply the clinical segment rules (context-rules section 7): stunts, guerrilla tactics and scarcity or urgency framing are off unless a page 12 row permits them. Should check page 12 and F-13 at any status and, if no row permits it, name the rule and decline the urgency framing rather than draft it. Should offer reassurance-led alternatives (review generation, GBP activity, community sponsorship, a seasonal promo without scarcity) gated for capacity (B-6). Should not cite case-library figures (e.g. Antimetal's pizza results) as expected outcomes. Should keep patient data out entirely.",
+      "assertions": [
+        "Applies clinical segment rules to the stunt and urgency requests",
+        "Checks page 12 and F-13 before proposing anything",
+        "Does not draft scarcity or urgency copy without a permitting page 12 row",
+        "Offers reassurance-led local alternatives",
+        "Does not present guerrilla case-library figures as expected results",
+        "Includes no patient data"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "[ABC] has us on SEO only. The owner asked what else they could be doing — paid ads, events, maybe a podcast?",
+      "expected_output": "Should scope-gate each idea against page 00. SEO ideas (e.g. #1, #4 local version, BML-1, BML-5) go under Recommended. Paid ads, events and a podcast are not in the retainer, so they appear only as one-line Upsell suggestions for the account lead, naming the service each would need, with no implementation plan, and are marked for removal before anything goes to the client. Client-run ideas (e.g. asking for reviews) may be listed as client-run. Should not tell the client BML will do out-of-scope work.",
+      "assertions": [
+        "Checks each idea against the page 00 scope table",
+        "Recommends only ideas covered by the active SEO service",
+        "Lists paid ads, events and podcast as upsell suggestions for the account lead",
+        "Gives no implementation plan for out-of-scope ideas",
+        "Marks the upsell section as internal, removed before client delivery"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Quick marketing ideas for [GHI], a family law firm. We don't know their budget yet.",
+      "expected_output": "Should treat this as BML client work under professional-services segment rules (credentials and disclosures per J-3, no outcome guarantees). With B-10 OPEN, should write [NEEDS PROOF: B-10] for spend and propose no dollar amounts, favoring low-spend ideas (BML-2 reviews, BML-5 listings, #59 article quotes, BML-6 referral partners with J-3 checked for referral-fee rules). Should list B-10 under Gaps and ask the user, not the client. Should never edit .agents/product-marketing.md or write to ClickUp.",
+      "assertions": [
+        "Applies professional-services segment rules",
+        "Marks spend as [NEEDS PROOF: B-10] with no invented amounts",
+        "Flags referral-partner incentives for a J-3 check",
+        "Lists B-10 under Gaps",
+        "Does not edit the staged context file or write to ClickUp"
+      ],
+      "files": []
     }
   ]
 }

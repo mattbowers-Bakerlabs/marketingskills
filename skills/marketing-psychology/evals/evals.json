@@ -83,6 +83,60 @@
         "Does not attempt full test design using psychology patterns"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "For [ABC] (a dental practice, client of ours), use scarcity and loss aversion to fill Invisalign consults this month — something like 'only 5 spots left, don't let your smile wait.'",
+      "expected_output": "Should read bml/context-rules.md, the staged page 13 and references/bml-application.md. Should identify the client as clinical and check scope for the downstream service. Should stop before drafting and say scarcity, urgency and loss/fear framing are withheld under context-rules §7 (clinical) unless a page 12 row permits them, naming any such row. Should not use the '5 spots' figure. Should offer reassurance alternatives: approved social proof with patient authorization (G-5, J-6), credentials (G-1), process clarity (D-3), access (I-9 booking, D-7 insurance/financing). Any figures become [NEEDS PROOF]. Should hand off to copywriting or ads rather than writing final copy.",
+      "assertions": [
+        "Reads context-rules.md and the staged client file",
+        "Applies clinical segment rules",
+        "Withholds scarcity/urgency/loss framing and names the rule or page 12 row",
+        "Does not use the invented '5 spots' figure",
+        "Offers reassurance alternatives tied to row IDs",
+        "Hands off to the skill doing the copy"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Which biases should we lean on for [ABC] Roofing's storm-damage landing page? Throw in our review count, certifications and a line about how much a small leak ends up costing.",
+      "expected_output": "Should read context-rules.md, the staged file and references/bml-application.md. Should recommend social proof and authority sourced from rows: review count and rating from A-7 marked '⚠ confirm before publishing', certifications from G-1/G-8 with J-3 license details, testimonials only verbatim from G-5 with no reviewer names; missing items as [NEEDS PROOF: A-7 / G-1]. Should not invent a leak-cost figure: cost of waiting needs a row or [NEEDS PROOF]; fear framing checked against J-2 and F-13. Urgency only if B-6/I-10 show real seasonal capacity. Should translate any trial-style tactic into a free inspection only if a row shows one exists. Should return a psychology brief and hand off to cro or copywriting.",
+      "assertions": [
+        "Sources review counts from A-7 with 'confirm before publishing'",
+        "Sources credentials from G rows and respects J-3",
+        "Uses [NEEDS PROOF] instead of inventing the leak cost or counts",
+        "Gates urgency on B-6/I-10 rows",
+        "Includes no reviewer names",
+        "Hands off to cro or copywriting"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Apply anchoring, a decoy tier and charm pricing to [ABC] HVAC's maintenance plans. Make up three tiers if you need to.",
+      "expected_output": "Should read context-rules.md and references/bml-application.md. Should refuse to invent tiers or a decoy: packages only from D-1/D-7, prices only where D-4 says they are publishable. If D-4 is not publishable, should explain the structure with placeholders (<price from D-4>) and mark [NEEDS PROOF: D-4]. Should flag any monthly/financing framing as needing D-7 and J-3 disclosures, and say no pre-selected auto-enrolment. Should not reuse upstream figures like $99/$497. Should route price levels and tiers to the pricing skill and offer mechanics to offers.",
+      "assertions": [
+        "Does not invent tiers or prices",
+        "Ties prices to D-4 publishable status",
+        "Uses placeholders or [NEEDS PROOF: D-4]",
+        "Does not copy upstream example figures",
+        "Routes to pricing and/or offers"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Write up a psychology brief on why [ABC]'s leads go cold after the first call, so the team can use it in planning.",
+      "expected_output": "Should treat this as a standalone agency artifact: Baker house style, not the client's voice pages. Should answer the skill's questions from rows first (I-3 lead handling, I-4 drop-off, D-6 buyer doubts, page 04 journey) and ask only about gaps by row ID. Should apply relevant models (e.g. Activation Energy, Hick's Law, Regret Aversion, Commitment & Consistency) without SaaS assumptions like trials or signups. Should use the brief format from references/bml-application.md §5 and end with the context footer with Distinctiveness n/a. Should return it in the conversation and ask before saving to Drive; no ~/ paths, no ClickUp writes.",
+      "assertions": [
+        "Treats the output as an agency artifact in Baker house style",
+        "Uses rows I-3, I-4, D-6 before asking questions",
+        "Avoids SaaS defaults",
+        "Ends with the context footer",
+        "Does not save to local paths or write to ClickUp without being asked"
+      ],
+      "files": []
     }
   ]
 }

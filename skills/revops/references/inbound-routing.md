@@ -2,6 +2,10 @@
 
 Load this when enrichment changes the next step after a demo/contact form or routes a sales-assist signup. Use the existing routing rules for territory, account ownership, and rep availability; this playbook covers missing data and execution timing.
 
+<!-- BML:START inbound-routing -->
+**For BML client work:** B2B pipeline mode only, and only when A-15 shows the client already enriches form submissions with a provider they use. In Lead handling mode, `bml-lead-handling.md` §6 governs routing; don't add enrichment of consumer leads (a personal email is normal there, not missing data). BML makes no CRM changes, builds no workflow and runs no replay fixtures, shadow runs or pilots: the branch table, fallback and validation plan are recommendations for the client's team or vendor (`bml-lead-handling.md` §9), and any test submission is made by a person with the client's knowledge. Response expectations shown to a lead come from I-3.
+<!-- BML:END inbound-routing -->
+
 ## Keep Submission and Routing Separate
 
 Accept and record a valid submission before depending on a third-party lookup. Preserve submitted values and attribution. Enrichment failure must not erase a lead, create a false rejection, or block an otherwise valid account signup.

@@ -1,5 +1,16 @@
 # The SEO Operator
 
+<!-- BML:START bml-seo-operator -->
+> **BML client work: draft mode only.** This file assumes a SaaS owner, repo access and an agent that ships. For a BML client, these replace the matching parts below (all BML blocks in `SKILL.md`, `loop-state.md` and `loop-guardrails.md` still apply):
+> - **Scope:** SEO `Active` on page 00 at setup and every run. Staged site changes stay within what that entry and its qualifier cover; anything beyond it (new templates, a redesign) is a scope note for the account lead. A qualifier like "reporting only" means the weekly report and nothing else.
+> - **Ship mode is always "stage for approval."** No PRs, merges, deploys or edits through Wix or any site connector. "The output is changes to the site", "ship the top item" and "the first run ends with real changes" become: each run ends with ready-to-apply change sets in `OUTPUTS/SEO` or `OUTPUTS/WEBSITE`, applied by a person after the J-1 approver signs off. The first run is a dry run that records the baseline. Skip the repo steps (first run 1, lint/build).
+> - **Settings:** conversion = calls, bookings, forms or signed jobs (I-3); competitors from E-1, E-2, L-4; data from Windsor.ai (`searchconsole`, `googleanalytics4`) and Semrush.
+> - **Memory:** no `.agents/seo/`. The query map, queue and prompt panel live in the Drive loop file (`loop-state.md` BML block); snapshots and reports go to the client folders by ID. There is no `claims.md`: page 13 and the rows it cites are the claims source (never "learn the product from the code").
+> - **Cadence:** "every run" items run weekly, as one Claude scheduled task (`SKILL.md` BML scheduling block).
+> - **Writing gate:** "real numbers, the owner's opinions" means F and G rows; missing ones become `[NEEDS PROOF: <row ID>]` (`bml/context-rules.md` at the repo root, §4, §6). Comparison pages check J-4 first. Social posts only if Social is `Active`, as drafts. A free-tool idea is a recommendation for the account lead, not work.
+> - **Weekly report:** `OUTPUTS/REPORTING`, Baker house style, context footer (§9).
+<!-- BML:END bml-seo-operator -->
+
 A recipe for handing an agent the whole SEO job for one site, run from the site's own repo on a schedule. It doesn't add new mechanics. It bundles the SEO loops from the catalog, gives them one shared memory, and sets the rules that keep an always-on agent useful instead of busy.
 
 Use it when the user wants SEO run for them rather than advice about SEO, and the agent can work in the repo that builds the marketing site. If the site lives in a hosted builder with no repo access, run the same loops in draft mode and hand the changes to a human.

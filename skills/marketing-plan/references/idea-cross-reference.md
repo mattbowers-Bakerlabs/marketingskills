@@ -1,5 +1,9 @@
 # Idea Cross-Reference — 139 Marketing Ideas Mapped to AARRR
 
+<!-- BML:START bml-note -->
+> For BML client work, keep this numbering exactly (it matches `marketing-ideas`; never renumber). Filter with `bml-local-service-planning.md` Part 7. The client notes in Step 4 show the form of a note only.
+<!-- BML:END bml-note -->
+
 The `marketing-ideas` skill catalogs 139 proven marketing tactics. This doc is the source-of-truth mapping: every idea assigned to a primary AARRR stage, with notes for when it's typically active and what category constraints apply.
 
 The plan's Section 12 ("Tactical idea bank") uses this mapping as the base, then layers client-specific filters: brand voice rules might skip some ideas; funding stage might shift Q-status; client category might rule out others.

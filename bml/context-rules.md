@@ -61,6 +61,8 @@ Before producing anything, find the service on page 00 (summarized at the top of
 - `Active — <qualifier>` → produce only what the qualifier permits, and say what it excludes
 - absent or anything else → stop: "<service> isn't in [CODE]'s retainer." Offer a scope note for the account lead instead
 
+Internal analysis is the exception: plans, idea shortlists and council sessions may cover work outside the retainer, as long as it is listed separately as **upsell opportunities for the account lead**, never assigned to BML, and removed before anything reaches the client. A marketing plan is part of every retainer: any `Active` service authorizes one.
+
 ## 4. Claims
 
 **Facts about the client come only from page 13 or the rows it cites.** Not from the skill's examples, industry norms or plausible guesses.
@@ -72,6 +74,7 @@ Also:
 - Quotes and testimonials come verbatim from page 11 with their row ID. Never compose, merge or tidy one.
 - Prices only where the row says the client approved publishing them (D-4).
 - Review counts, ratings, and anything in the staged file's "Volatile facts" block carry "⚠ confirm before publishing".
+- **Genuine constraints, for every client.** Scarcity, deadlines, limited spots, "was" prices, anchor or decoy tiers and countdowns appear only when a row shows they are real (B-6, I-10, D-4, D-7, D-11). Never invent a package to make another look better. Never recommend pre-checked consent or auto-enrolment.
 - Local market rows (L-*) are BML research: use them for targeting, topics and planning. A market statistic in public copy cites its source and date, and never implies the client's own results.
 
 ## 5. Guardrails

@@ -1,5 +1,9 @@
 # Market Sizing
 
+<!-- BML:START bml-note -->
+> For BML client and pitch plans, don't run TAM/SAM/SOM: size the service-area market from the L rows as in `bml-local-service-planning.md` Part 10, and fill OPEN or stale L rows with `bml/local-market-research.md` (repo root). The presentation rule and confidence labels below still apply. The mini-examples are an invented SaaS product: never reuse their figures, rates or methods' outputs.
+<!-- BML:END bml-note -->
+
 Adapted from a contribution by @imMamdouhaboammar (PR #418).
 
 Use this reference when the market-quality gate raises the question "is this market big enough to plan around?" or when the user asks directly how big a market is. The goal is a defensible range that supports a decision (enter, narrow, validate, or avoid). A precise-looking number with no visible math does more harm than an honest range.

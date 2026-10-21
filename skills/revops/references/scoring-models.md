@@ -2,6 +2,10 @@
 
 Detailed scoring templates, example models by business type, and calibration guidance.
 
+<!-- BML:START scoring-models -->
+**For BML client work:** local-service clients use the qualification screen and priority tiers in `bml-lead-handling.md` §4, not points. In B2B pipeline mode, the example models, ACV bands and thresholds below are illustrative only; calibrate from the client's own won and lost jobs, and score only fields the client already collects. The cohort and holdout steps below need record-level data: specify them for the client's team to run on their own records and work from the aggregate results they share. If the eligible cohort is too small to evaluate, say the result is inconclusive and use the `bml-lead-handling.md` §4 screen with agreed criteria instead of points. Never score on health, age or other sensitive attributes.
+<!-- BML:END scoring-models -->
+
 ## Explicit Scoring Template (Fit)
 
 ### Company Attributes

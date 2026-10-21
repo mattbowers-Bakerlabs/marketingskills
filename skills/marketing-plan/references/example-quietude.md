@@ -1,5 +1,9 @@
 # Example — Quietude Marketing Plan v1
 
+<!-- BML:START bml-note -->
+> **Do not read or copy for BML client work.** This is an upstream example of a venture-funded app and hardware startup. Its names, figures, quotes and anecdotes are illustrative and must never appear in a BML plan, even as placeholders. Use `plan-template.md` and `bml-local-service-planning.md` instead. Kept unchanged for upstream merges.
+<!-- BML:END bml-note -->
+
 **This is the canonical reference example for the `/marketing-plan` skill.** It's based on a real fCMO engagement for a hybrid hardware-and-software wellness platform. **Names, domains, and identifying details have been changed** — the client is called "Quietude" here, and the team members have been renamed (Alex / Sam / Casey / Devon). The funnel numbers, budget, and structural lessons preserve the shape of the original engagement so the example retains its teaching value.
 
 Use this as the "what good looks like" reference when drafting a new plan. The structure, tone, depth, and operational specificity are the bar to clear.

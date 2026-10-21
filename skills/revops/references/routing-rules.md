@@ -2,6 +2,10 @@
 
 Decision trees, platform-specific configurations, territory routing, ABM routing, and speed-to-lead benchmarks.
 
+<!-- BML:START routing-rules -->
+**For BML client work:** use the routing tree in `bml-lead-handling.md` §6 (service area, location, service line, capacity, fallback). The HubSpot and Salesforce setups below are vocabulary for the client's vendor; BML never configures a client's CRM. Territory tables are examples, not the client's territories. The speed-to-lead figures are an older industry study: cite source and year if used, never present them as the client's results or a forecast, and set response times from I-3.
+<!-- BML:END routing-rules -->
+
 ## Routing Decision Tree
 
 Use this template to map your routing logic:

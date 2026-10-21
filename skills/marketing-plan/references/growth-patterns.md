@@ -1,5 +1,9 @@
 # Growth Patterns — The Real Shape of SaaS Growth
 
+<!-- BML:START bml-note -->
+> For BML client work, the ARR phases and the 3-3-2-2-2 path don't apply. 70/20/10, S-curve layering, plateau signals and linear vs. step-function growth do; step-functions are things like a new service line, a new location or a season (`bml-local-service-planning.md` Part 4).
+<!-- BML:END bml-note -->
+
 The 12-month outlook in every plan (Section 10) describes a trajectory. This doc names the shape of that trajectory honestly — what real SaaS growth looks like, when to expect plateaus, and how to plan for the next leg of growth before the current one stalls.
 
 Excerpted and adapted from *Founding Marketing* by Corey Haines.

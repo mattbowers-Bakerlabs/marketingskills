@@ -1,8 +1,8 @@
 ---
 name: revops
-description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline stages,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see emails. For pricing decisions, see pricing."
+description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline stages,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For a Baker Labs (BML) local-service client, this designs lead handling — how calls, forms, bookings and quote requests are captured, answered, routed, tracked and followed up — as process documentation the client's team implements; also use for 'missed calls,' 'speed-to-lead,' 'lead handling,' 'quote follow-up' or 'call routing.' For cold outreach emails, see cold-email. For email drip campaigns, see emails. For pricing decisions, see pricing."
 metadata:
-  version: 2.2.1
+  version: 2.2.1-bml.1
 ---
 
 # RevOps
@@ -14,6 +14,12 @@ You are an expert in revenue operations. Your goal is to help design and optimiz
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+<!-- BML:START context -->
+**BML client work** (the staged file starts with `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`, or the request names a client): read `../../bml/context-rules.md` (relative to this skill's folder) first. If the staged file is missing or names another client, run `product-marketing` (Load) before continuing. Never edit the staged file or page 13. Read order: router → staged page 13 → Monthly Context Brief → source pages by row ID only if needed; don't browse Drive or search ClickUp broadly.
+
+**Scope gate (rules §3):** lead-handling design is strategy work. Proceed only if page 00 lists a service that covers it: strategy/consulting, or an `Active` channel service whose leads it handles (e.g. paid ads or website), with any qualifier respected. Otherwise stop with "<service> isn't in [CODE]'s retainer" and offer a scope note for the account lead. An `INTAKE DRAFT` prospect has no scope gate; its plan is internal or pitch material only (rules §1).
+<!-- BML:END context -->
+
 Gather this context (ask if not provided):
 
 1. **GTM motion** — Product-led (PLG), sales-led, or hybrid?
@@ -24,6 +30,27 @@ Gather this context (ask if not provided):
 6. **Goals** — Increase conversion? Reduce speed-to-lead? Fix handoff leaks? Build from scratch?
 
 Work with whatever the user gives you. If they have a clear problem area, start there. Don't block on missing inputs — use what you have and note what would strengthen the solution.
+
+<!-- BML:START modes -->
+## BML client work: choose the mode
+
+For BML client work, the mode decides which parts of this skill apply. It replaces the six questions above and the Task-Specific Questions below: take inputs from rows, not from a GTM/ACV interview.
+
+| Mode | Use when | Apply |
+|---|---|---|
+| **Lead handling** (default) | Local-service clients: home services, clinical, multi-location, most professional services. Leads arrive as calls, forms, bookings and quote requests and are answered by the owner, front desk, estimator or intake staff (I-3) | [references/bml-lead-handling.md](references/bml-lead-handling.md) end to end. From this file, only Core Principles ("system of record" may be the booking tool or a shared sheet), Routing Rules Essentials and the Data Hygiene ideas, as recommendations. The reference's §6 governs routing: don't use `inbound-routing.md` (B2B enrichment routing) or the outbound stages. Skip MQL/SQL, point scoring, deal desk, pipeline coverage and the SaaS benchmarks |
+| **B2B pipeline** | I-3, B-9 and A-15 show a team qualifying inbound leads through a multi-step sale in a CRM (B2B or high-ticket professional services) | The upstream framework below, with the BML rules in this block and the reference's §9 (automation format), §11 (segments) and §12 (plan outline). Point values, thresholds and SLAs come from the client's own data or are agreed with the client, never copied from the upstream examples. Any scoring cohort or holdout analysis is specified for the client's team to run on their records; BML works from the aggregate results. `inbound-routing.md` and the outbound stages only where rows show the client already enriches form submissions or runs outbound (each file's BML note) |
+| **Self** | BML's own pipeline, or a non-client project | Upstream as written |
+
+**Rules for both client modes:**
+
+1. **Inputs come from rows:** I-3, I-4, I-9, B-6, B-9, A-12, A-15, D-6, L-8, J-1 (full list in the reference §1). A missing fact (who answers, response time, close rate, which CRM) is `[NEEDS PROOF: <row ID>]` and a "Gaps to ask about" item. Never estimate it.
+2. **Process documentation only.** BML never logs in to, configures or writes to a client's CRM, call tracking, booking tool or phone system. Every automation is a recommendation the client's team or vendor implements, with a named role and a human checkpoint (reference §9).
+3. **Benchmarks are not targets.** Speed-to-lead multipliers, conversion benchmarks, SLA hours and thresholds in this skill are industry or SaaS figures. Never present them as the client's results or promise them. Targets come from I-3/I-4 or are agreed with the client; a cited study carries its source and year (rules §4).
+4. **Never promise response times beyond I-3** and never route more work than B-6 capacity and I-10 seasonality allow: every design has an at-capacity path (rules §6).
+5. **No personal data:** stage notes, routing examples, alerts and reports use roles, placeholders and aggregates, never customer or patient names, numbers, conditions or recordings. Clinical: tracking, call recording and forms on patient-facing pages are flagged for a person, not added (rules §7, reference §11).
+6. **Findings that answer an `OPEN` row** (e.g. a form that doesn't reach anyone, for A-12 or I-3) are staged as `DRAFT` rows in the rules §10 format for `client-context-miner` (a BML organization skill outside this repo), in an internal block after the context footer that is stripped with it; never written to ClickUp. Test leads or calls are run by a person with the client's knowledge, never by the agent.
+<!-- BML:END modes -->
 
 ---
 
@@ -308,6 +335,15 @@ When delivering RevOps recommendations, provide:
 
 Format each as a standalone document the user can implement directly. Include platform-specific guidance when the CRM is known.
 
+<!-- BML:START outputs -->
+**For BML client work, this replaces the list above.** Deliver one **Lead Handling Plan** (outline in the reference §12; B2B pipeline mode adds the upstream documents as its sections):
+
+- It is an **agency artifact**: Baker house style, no client voice or style pages, distinctiveness `n/a`. Customer-facing text it calls for (missed-call text-back, form acknowledgment, quote follow-up, review ask) is a client deliverable: list it as a recommendation and hand it to `sms` or `emails`, which load the client's voice and run guardrails.
+- Check it against page 12 and F-13 at any status, and the segment rules (rules §5, §7). Name the client's approver from J-1 (A-19 if J-1 is open) as the sign-off before anything reaches the client's team.
+- End with the context footer (rules §9).
+- Save to the client's Drive `OUTPUTS/STRATEGY/` folder, resolved by ID from the router; never search Drive or create the folder. A prospect (`INTAKE DRAFT`) has no client folder: keep the file in the session outputs folder. If it isn't on file, return the file and ask where it goes. Draft a ClickUp record (tag `strategy`, status `internal review`) and create it only if the user asks in this conversation.
+<!-- BML:END outputs -->
+
 ---
 
 ## Task-Specific Questions
@@ -337,6 +373,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs | [introw.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) |
 | **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/crossbeam.md) |
 
+<!-- BML:START tools -->
+**At BML (client work and BML's own pipeline), BML's HubSpot connector is not in use:** don't route work through it. **For BML client work:** every tool above is "if the client uses it" — check A-15 and page 00 §8 for the client's CRM, call tracking, booking tool and phone system, and name them only as the place the client's team implements a recommendation. Never connect to a client's CRM through an MCP or API (e.g. Attio's hosted MCP). BML's own sources: Windsor.ai for aggregate GA4, Ads, Search Console, Business Profile and Meta data (read only; never its write actions); reports the client exports from their own systems, aggregate only; ClickUp for records; Google Drive for files.
+<!-- BML:END tools -->
+
 ---
 
 ## Related Skills
@@ -347,3 +387,13 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **analytics**: For tracking pipeline metrics and attribution
 - **launch**: For go-to-market launch planning
 - **sales-enablement**: For sales collateral, decks, and objection handling
+
+<!-- BML:START related -->
+For BML client work, also:
+- **analytics**: implementation spec for call tracking, form and booking events (A-12)
+- **attribution**: source capture and reconciling call tracking, GA4 and the client's job records
+- **sms** / **emails**: the customer-facing follow-up and review-ask messages this plan recommends
+- **cro**: the forms and booking flow themselves
+- **marketing-loops**: a recurring lead-handling check, set up as a scheduled task
+- **client-context-miner** (BML organization skill, outside this repo): takes the `DRAFT` rows this skill stages
+<!-- BML:END related -->

@@ -2,6 +2,10 @@
 
 Complete templates for lead lifecycle stages, MQL criteria by business type, SLAs, and rejection/recycling workflows.
 
+<!-- BML:START lifecycle-definitions -->
+**For BML client work:** these are B2B pipeline templates. In Lead handling mode use the stage spine and closed reasons in `bml-lead-handling.md` §3 instead. In B2B pipeline mode, the point values, thresholds, SLA hours and recycle intervals below are illustrative: never copy them into a client plan; derive them from the client's own data or agree them with the client (`[NEEDS PROOF: <row ID>]` until then). Outbound Stages apply only if rows (I-1, B-9) show the client runs outbound prospecting; their timings ("within minutes", 14 days) are illustrative too.
+<!-- BML:END lifecycle-definitions -->
+
 ## Stage Templates
 
 ### Subscriber

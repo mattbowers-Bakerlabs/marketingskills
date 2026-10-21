@@ -24,6 +24,21 @@ Before you start, sanity-check that this *should* be a loop at all (see "When NO
 - **Output**: <where results go — a file, a PR, a staged draft, a notification, a report>
 ```
 
+<!-- BML:START bml-template-fields -->
+**BML client loops add these fields** above the nine parts (they become the loop file's header; see `loop-state.md`):
+
+```markdown
+- **Client**: [CODE] (one client only)
+- **Service (page 00)**: <service> — <Active / qualifier>
+- **Data sources**: <Windsor.ai connector slugs / Semrush reports / other, read-only>
+- **Writes approved at setup**: <Drive loop file + output folder IDs; ClickUp comment on task <id> or "none"; Gmail drafts or "none">
+- **Scheduled task**: <task ID>, <cron with CRON_TZ>
+- **Status**: active
+```
+
+Use placeholders in every BML loop definition. Real thresholds come from the client's own baseline, read on the first (dry) run.
+<!-- BML:END bml-template-fields -->
+
 ---
 
 ## Fill-in prompts (answer these, in order)
@@ -60,6 +75,27 @@ Say you sell a freemium API tool and want to stop losing signups who never make 
 - **Output**: A staged activation email per qualifying user + a daily count of new activations.
 ```
 
+<!-- BML:START bml-example -->
+**BML version (local-service client, placeholders only):**
+
+```markdown
+### The GBP review-response loop
+- **Client**: [CODE] · **Service**: Local/GBP — Active · **Data sources**: Windsor.ai `google_my_business` (read)
+- **Check cadence**: Weekly
+- **Acts when**: A review newer than the cursor has no owner response.
+- **Purpose**: Every review gets a timely, on-voice response drafted for the client's approver.
+- **Skills used**: `copywriting`, `social`
+- **Loop body**:
+  1. Pull reviews since the cursor.
+  2. Draft a response per unanswered review in the client's voice (page 01), checked against page 12.
+  3. Route negative or sensitive reviews to the account lead with the draft marked "escalate".
+- **Self-check**: Is the review already answered on the platform? Does any draft repeat a claim not on page 13?
+- **State / idempotency**: Cursor = newest review date; handled = review IDs drafted (no names, no text).
+- **Stop / bail-out**: Connector error → log "not read this run" and stop. Never post a reply. Clinical client and the review mentions care → escalate, no draft.
+- **Output**: One digest in OUTPUTS/REPORTING with drafts, approver (J-1) and the context footer.
+```
+<!-- BML:END bml-example -->
+
 Notice what makes it safe: the **self-check** guards against a tracking bug emailing active users, the **state** stops it re-nagging, and the **stop** caps attempts and hands off instead of looping forever.
 
 ---
@@ -75,5 +111,12 @@ Before you schedule a new loop, confirm:
 - [ ] State prevents double-acting and re-nagging the same people.
 - [ ] There's an error path (stale data → report "stale," don't fabricate movement) and a manual off switch.
 - [ ] For scheduling mechanics, see the "Scheduling a loop" section in `SKILL.md`.
+<!-- BML:START bml-ship-checklist -->
+- [ ] (BML) One client; service `Active` on page 00; scope gate re-checked every run.
+- [ ] (BML) No Tier 2 action anywhere in the body, whatever was authorized (`loop-guardrails.md` BML block).
+- [ ] (BML) Loop file and output folders resolved by ID in Drive; nothing in local files.
+- [ ] (BML) The scheduled task's prompt stands alone (SKILL.md, BML scheduling block) and the kill switch is in the loop file.
+- [ ] (BML) First run is a dry run: record the baseline, act on nothing.
+<!-- BML:END bml-ship-checklist -->
 
 Once it runs, give it a few cycles and ask the "is this a vanity loop?" question: if nobody acts on the output, delete it.

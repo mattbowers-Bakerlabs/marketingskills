@@ -1,5 +1,9 @@
 # Team and Agency Model — Hire for Strategy, Outsource Execution
 
+<!-- BML:START bml-note -->
+> For BML client work, BML is the executing agency: use the team model in `bml-local-service-planning.md` Part 9. Don't recommend client hires or other agencies by default.
+<!-- BML:END bml-note -->
+
 The marketing operations stack (Section 11 of every plan) describes *what* gets done. This doc describes *who does it* — the operating principle, the org shape, the first hire, the agency model, and how it evolves as the company scales.
 
 Excerpted and adapted from *Founding Marketing* by Corey Haines.

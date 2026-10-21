@@ -1,5 +1,9 @@
 # The Outbound Operator
 
+<!-- BML:START bml-outbound-operator -->
+> **Not for BML client work.** BML agents never send email, post, or write to a client's CRM, and cold outreach to homeowners or patients doesn't fit BML's segments (never for clinical). Don't set this operator up, or any of its loops (signal-sweep, reply-triage, cold-domain health, sequence-retro), for a client. Offer instead: referral-partner outreach through the `partner-pipeline` loop (L-8), drafted only, with Gmail drafts only if approved at setup and a person sending; or one-off outreach copy through `cold-email` if the service is `Active` on page 00. For BML's own new-business outreach, the "agent alone" rows in the approval table don't apply either: agents write Gmail drafts only and a person sends every message.
+<!-- BML:END bml-outbound-operator -->
+
 A recipe for handing an agent day-to-day outbound for one business: finding accounts as signals fire, staging outreach, triaging replies, protecting sending infrastructure, and reporting what works. Like the SEO operator, it bundles catalog loops under one shared memory and one set of rules.
 
 The agent does the volume work. People make the calls an agent shouldn't: Tier 1 messages, positive replies until the agent has proven itself, and anything that changes offers, prices, or who gets contacted.

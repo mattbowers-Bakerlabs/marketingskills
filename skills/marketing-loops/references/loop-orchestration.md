@@ -35,6 +35,19 @@ Avoid duplicate ownership: when two loops could act on the same signal, one owns
 
 Add a loop only when the loops before it are running and earning their keep. Each stage assumes the previous one is solid.
 
+<!-- BML:START bml-rollout -->
+**For BML clients, use this order instead** (Stages 1, 2 and 4 below assume a SaaS product). Per client, and only for services `Active` on page 00:
+
+0. **Trust the data:** `tracking-QA` (forms, calls, bookings firing; A-12) and the lead-review version of `weekly-marketing-review` (see the catalog's BML fit table).
+1. **Protect local presence:** `review-site-management` (GBP and A-16 platforms) and `ranking-drop watch` (local terms, map pack).
+2. **Retained channels:** `paid-search query-mining` / `ad-fatigue` if Paid Ads is active; `keyword-gap` / `content-decay` if SEO or Blog is active.
+3. **Market and learning:** `competitor-watch`, the quarterly local-market refresh, `campaign-postmortem`.
+
+The monthly client report belongs to `monthly-reporting`, not a loop. Loops feed it findings. Pilot on one client before rolling a loop out to others, and set each client up separately (one loop, one client).
+
+The SEO operator (draft mode) comes only after the Stage 2 SEO loops have earned their keep; the outbound operator isn't used for clients. Lessons that should change future work become proposed `context` tasks, not Learnings rows (`loop-state.md` BML blocks).
+<!-- BML:END bml-rollout -->
+
 **Stage 0 — Foundation (trust the data + see the board).**
 `tracking-QA`, `weekly-marketing-review`.
 You cannot run any loop responsibly on untrustworthy data or without a full-funnel pulse. This is non-negotiable and comes first.

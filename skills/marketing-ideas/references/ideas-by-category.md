@@ -2,6 +2,10 @@
 
 Complete list of proven marketing approaches organized by category.
 
+<!-- BML:START numbering -->
+> **BML:** numbers 1–139 are referenced by `marketing-plan`; never renumber or insert ideas here. For BML clients, read each idea through [bml-local-service-fit.md](bml-local-service-fit.md) (fit tag, local version, gates); BML's own plays live there as `BML-<n>`. Descriptions below are written for software products.
+<!-- BML:END numbering -->
+
 ## Contents
 - Content & SEO (1-10)
 - Competitor & Comparison (11-13)

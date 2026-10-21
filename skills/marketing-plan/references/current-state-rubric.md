@@ -1,5 +1,9 @@
 # Current State Rubric — 17-Section Scoring Lens
 
+<!-- BML:START bml-note -->
+> For BML client work, read each line as mapped in `bml-local-service-planning.md` Part 3, cite the rows behind every score, and score `—` where there's no evidence. A "prior scored audit" is the client's benchmark rows (A-1…A-12) or a `client-context-miner` Backfill review.
+<!-- BML:END bml-note -->
+
 This 17-section rubric is the source of truth for Section 3 ("Current State") of every marketing plan. Score each section 0–5 from available materials, then write a 2–4 sentence "shape interpretation" that names where strengths and gaps cluster.
 
 ## How to score

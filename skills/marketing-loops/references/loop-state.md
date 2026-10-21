@@ -13,6 +13,27 @@ Persist each loop's state in a file under `.agents/loops/` — the same `.agents
 
 If your scheduler or platform provides its own dedupe/cursor storage, use that instead — the point is durable state, not the specific file. Never keep state only in memory; a loop that forgets on restart will repeat itself.
 
+<!-- BML:START bml-state -->
+### For BML client loops (replaces `.agents/loops/` above)
+
+Local files and the session's working directory are gone by the next scheduled run. Each client loop keeps **one loop file** in Google Drive, in the client's `OUTPUTS/REPORTING` folder (resolved by ID at setup; never search Drive, never create folders):
+
+`<CODE>_Loop_<loop-name>.md`, with these sections:
+
+1. **Header:** client code, loop name, service (page 00), `Status: active | paused`, scheduled task ID, kill-switch steps, output folder IDs, setup date, who approved setup and which writes they approved.
+2. **Definition:** the nine anatomy parts as approved at setup.
+3. **State:** the JSON block below, adapted to the loop.
+4. **Run log:** one line per run, newest first. Keep the last 26 runs; older lines move to a dated archive file in the same folder.
+
+Each run reads the loop file first and rewrites it last. If the file can't be read, the run stops and reports it: never rebuild state from memory or start over on its own.
+
+**Optional ClickUp record.** If the user approves it at setup, create one ClickUp task in the client's space (tag `reporting`, named `Loop — <CODE> — <loop-name>`) linking the loop file, and let each run add one comment with its run-log line. That approval covers comments on that one task only. Without it, the loop writes nothing to ClickUp.
+
+**BML's own loops** (not for a client) keep the same loop file in a BML Drive folder the user names by ID, never in `.agents/loops/` or the session.
+
+**Keys, not people.** Dedupe and cooldown keys are platform object IDs (review ID, ad ID, keyword, URL), never names, emails, phone numbers or review text. Clinical clients: nothing that could identify a patient, in state, logs or digests (rules §7).
+<!-- BML:END bml-state -->
+
 ## What to store
 
 A state file holds whatever the loop needs to not repeat itself:
@@ -86,3 +107,7 @@ Example run-log line with decisions:
 ```
 
 The run log stays the full record. The Learnings table holds the short list of lessons that should shape the next piece of work.
+
+<!-- BML:START bml-session-end -->
+**For BML client loops:** decisions and open items go in the loop file's run log and State (BML block under "Where state lives"). A proposed learning never goes into `.agents/product-marketing.md` or page 13: list it in the run digest as a proposed `context` task (`product-marketing` Load, Step 7; rules §8), and a person creates it after approval in a live conversation. A scheduled run never creates it. Log lines carry only numbers read this run; the figures in the example above are illustrative, not benchmarks.
+<!-- BML:END bml-session-end -->

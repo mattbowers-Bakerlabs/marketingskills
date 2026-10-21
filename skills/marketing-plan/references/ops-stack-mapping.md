@@ -1,5 +1,9 @@
 # Marketing Operations Stack — Skills + MCPs per AARRR Stage
 
+<!-- BML:START bml-note -->
+> For BML client work, `bml-local-service-planning.md` Part 6 replaces the MCP/API tables, the capability-unlocks-by-funding table and the concrete-example section. The example quotes and figures below are upstream illustrations: never reuse them. Skills marked here that aren't in this library (`typefully`, `copycraft`, `website-copy`, `marketing-website-design`) are not listed in a BML plan.
+<!-- BML:END bml-note -->
+
 This doc maps every marketing-skill and every relevant MCP/API integration to the AARRR stage(s) it primarily serves. It's the source for Section 11 of every plan.
 
 > **Note on scope.** Skills below live in this `marketingskills` repo. A few references point to optional tools from adjacent Claude Code marketplaces (e.g., `vercel:agent-browser`, `compound-engineering:diagram-maker`) — substitute equivalents if not installed. When a plan references a skill or tool that isn't available, fall back to the underlying tactic and call it out in Section 13's open decisions.

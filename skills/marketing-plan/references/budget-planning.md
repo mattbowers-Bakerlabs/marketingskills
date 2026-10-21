@@ -1,5 +1,9 @@
 # Budget Planning — Scientific Methods for Setting the Marketing Budget
 
+<!-- BML:START bml-note -->
+> For BML client work, use the local goal-based math in `bml-local-service-planning.md` Part 4. Blended cost (include BML's retainer and the client's staff time, not just ad spend) still applies. %-of-ARR ranges, ARR formulas and the 3-3-2-2-2 rule don't. Its one carried principle: net out revenue the existing base already brings before sizing acquisition (Part 4 does this with repeat and referral revenue). The dollar figures, customer counts and retention rates below (e.g. the 85% assumption) are worked illustrations: never put them in a plan.
+<!-- BML:END bml-note -->
+
 The problem with most SaaS marketing budgets is that they're pulled out of thin air — a number that hopefully doesn't constrain growth too much, but doesn't anchor in customer-acquisition economics either. The result: when someone asks "why this number?" there's no answer.
 
 Two scientific methods solve this. Use one (not both) in Section 8 (Revenue) and Section 10 (12-month outlook) of every plan.

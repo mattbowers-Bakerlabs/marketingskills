@@ -2,6 +2,10 @@
 
 Platform-specific workflow recipes for HubSpot, Salesforce, scheduling tools, and cross-tool automation.
 
+<!-- BML:START automation-playbooks -->
+**For BML client work:** these recipes are vocabulary for the client's team or vendor, presented in the recommendation format in `bml-lead-handling.md` §9; BML never builds them. Slack channels, CS tools, enrichment and retargeting steps are "if the client uses it" (A-15). Any step that messages customers needs J-1 approval of the wording. Clinical clients: no patient details in alerts, digests or channel posts, and no syncing leads to ad audiences without a compliance decision by a person (context-rules §7).
+<!-- BML:END automation-playbooks -->
+
 ## HubSpot Workflow Recipes
 
 ### 1. MQL Alert and Assignment

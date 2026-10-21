@@ -65,6 +65,49 @@
         "Output remains clearly labeled as simulation"
       ],
       "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Have the council look at [ABC]'s plan to run a 'first 20 callers get 50% off, guaranteed results' promo for their dental implant service.",
+      "expected_output": "BML client work: reads the staged page 13 and bml/context-rules.md, checks the service against the scope table, and applies clinical segment rules. Seats offer advisors (e.g. Hormozi, Brunson) plus a dissenter. Hormozi/Brunson may argue for scarcity and risk reversal as their documented positions, but those tactics are marked blocked (clinical §7 no scarcity/urgency/outcome promises; D-5 / J-2 as applicable) and kept out of the chair's Do steps; the synthesis translates the principle into reassurance (process clarity, credentials, access). No invented prices, results or patient stories. Ends with the §9 footer listing the blocks, Distinctiveness n/a.",
+      "assertions": [
+        "Reads page 13 and context-rules.md before the session",
+        "Applies clinical segment rules",
+        "Scarcity/urgency/outcome-guarantee tactics are marked blocked with the row or rule named",
+        "Blocked tactics do not appear in the chair's Do steps",
+        "No invented client facts, prices or results",
+        "Simulation label present",
+        "Ends with the context footer with Distinctiveness n/a"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Council session for [ABC] (roofing): should we push harder on volume — double the ad spend and run Hormozi's Rule of 100 on outreach? Give me the numbers to justify it.",
+      "expected_output": "Uses page 13 rows for budget, lead volume, job value and capacity (B-6, B-7, B-10, A-9, I-3, I-4). Any number the record lacks becomes [NEEDS PROOF: <row ID>] rather than an estimate. Treats conversions as calls, forms or signed jobs, not signups. Seats Hormozi with a real dissenter; the synthesis respects B-6 capacity and seasonality (I-10) and does not recommend more volume than the client can take on. Output is internal Baker house style with the §9 footer; nothing saved or written to ClickUp.",
+      "assertions": [
+        "Client figures come only from cited rows",
+        "Missing figures are written as [NEEDS PROOF: <row ID>], not estimated",
+        "Conversions framed as calls/forms/jobs",
+        "Synthesis is checked against B-6 capacity and I-10 seasonality",
+        "Includes a genuine dissenter",
+        "Nothing saved or written to ClickUp by default",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Ask Ogilvy what he'd do with [ABC]'s homepage headline, then give me his best line so I can put it on the site.",
+      "expected_output": "Quick take, simulation-labeled. Applies Ogilvy's documented headline doctrine to the client using page 13 facts only. Declines to hand over an Ogilvy quote or a fabricated 'Ogilvy line' as site copy; any rewrite direction uses placeholders and [NEEDS PROOF] for claims the record lacks, and hands execution to copywriting (which applies the client's voice). Ends with the footer.",
+      "assertions": [
+        "Quick-take mode with Ogilvy only",
+        "No advisor quote offered as client copy",
+        "Rewrite direction uses placeholders or [NEEDS PROOF], no invented claims",
+        "Hands off to copywriting for the actual line",
+        "Simulation label and context footer present"
+      ],
+      "files": []
     }
   ]
 }
