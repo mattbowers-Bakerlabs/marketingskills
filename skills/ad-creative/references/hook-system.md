@@ -67,6 +67,10 @@ A menu of proven opening structures. Cycle through them like the static template
 
 The last five are one family: **contrast**. People understand a thing by comparing it with something else, so a hook that sets up two states, two options, or two groups gives the viewer a question to stay for. That is also why AI copy leans on "it's not X, it's Y." The difference is that a good contrast hook compares two things the audience actually weighs, while the AI tell negates a claim nobody made (see the copywriting skill's AI-tells reference). Contrast hooks work best for educational content and decisions; for impulse products, lead with proof or POV instead.
 
+<!-- BML:START hooks -->
+> **BML clients.** Bold-claim, contrast, declaration and proof-first hooks need their fact on a row (G-2, G-3, D-2) or `[NEEDS PROOF: <row ID>]`; the dollar figures and brand names in the examples above are illustrative. A hook that names a competitor or another product (False assumption, Choice, Us vs. them) needs J-4 clearance and a person's review before it runs. Confession hooks are never written as a real customer's words. For clinical clients, curiosity gaps that imply a hidden health risk count as fear framing and are out, and contrast hooks make no health or outcome claims ([bml-creative-rules.md](bml-creative-rules.md) §2, §4).
+<!-- BML:END hooks -->
+
 ---
 
 ## The Diagnostic Funnel

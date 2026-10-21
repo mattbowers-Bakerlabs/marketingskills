@@ -2,6 +2,10 @@
 
 How to write effective prompts for AI image generation models (Gemini/Nano Banana, Flux, Ideogram, DALL-E, Midjourney).
 
+<!-- BML:START reference-note -->
+**BML clients:** the examples below are SaaS illustrations, not templates. Before using them, apply BML client work in `SKILL.md`: approved assets first, the client's page 02 style, and no prompt that depicts a real or identifiable person or passes as the client's own staff, customers, patients, projects or before/afters. Photorealistic style keywords make an image look like a photo; they never make it one, so never caption or deliver it as real. No client names, prices or claims go into a prompt unless they come from the client's rows.
+<!-- BML:END reference-note -->
+
 ---
 
 ## Prompt Structure
@@ -202,6 +206,10 @@ When you need multiple images with consistent style (e.g., a blog series or soci
 5. **Batch generate** variations with the same style, different subjects
 6. **Post-process** — add text overlays, logos, crop to platform sizes
 
+<!-- BML:START batch-note -->
+**BML clients:** "save the exact prompt" means the set's spec sheet in the client's Drive folder (BML client work §7), not a local file. Style references come from that client's approved assets only.
+<!-- BML:END batch-note -->
+
 ---
 
 ## Aspect Ratios Quick Reference
@@ -226,4 +234,7 @@ When you need multiple images with consistent style (e.g., a blog series or soci
 - **Use references over long prompts** — Flux multi-reference produces more consistent results with fewer retries
 - **Batch similar requests** — generate all blog headers in one session with the same style
 - **Cache and reuse** — abstract backgrounds, patterns, and textures can be reused across multiple images
+<!-- BML:START reuse-note -->
+- **BML clients:** reuse within one client only; never carry another client's backgrounds, references or prompts across.
+<!-- BML:END reuse-note -->
 - **Post-process instead of re-generate** — crop, overlay text, and adjust color in code rather than generating new images

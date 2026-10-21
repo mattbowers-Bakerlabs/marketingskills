@@ -1,5 +1,9 @@
 # Short-Form Vertical Video — Production Spec & Creator Formats
 
+<!-- BML:START format-gate -->
+> **BML clients.** Part 1 (the spec) applies as written. Before using a Part 2 format, check its gate in [bml-creative-rules.md](bml-creative-rules.md) §4: real customers only with a G-5 quote and a J-6 release; staged or recreated versions use presenters, never actors describing a customer experience they didn't have, and carry a "Dramatization" label; Authority needs a real credentialed person from G-1; reactions to someone else's post need written rights and J-4 clearance. Clinical clients: no staged or dramatized scenes, no patient stories without written authorization and no actor as a patient.
+<!-- BML:END format-gate -->
+
 The platform-craft layer beneath any 9:16 video for TikTok, Reels, or Shorts — the constraints that decide whether a good idea survives contact with the feed — plus a tiered library of creator/UGC and founder formats that consistently perform for growth and paid.
 
 Part 1 (the spec) applies to **every** vertical video this skill produces — the iMessage reveals in [imessage-video-ads.md](imessage-video-ads.md), the motion ads in [motion-video-ads.md](motion-video-ads.md), and the creator formats below. Part 2 is the format library.

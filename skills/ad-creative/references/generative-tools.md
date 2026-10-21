@@ -1,5 +1,9 @@
 # Generative AI Tools for Ad Creative
 
+<!-- BML:START tool-defaults -->
+> **BML clients.** The tools below are options only "if BML or the client has an approved account", not defaults. Before generating, check approved `asset` records, then G-6 and A-17; generate only for a named gap. J-5 permits AI media only at `APPROVED` or `PROVISIONAL` (otherwise internal previews only). AI people are generic and unidentifiable, never the client's customers, patients, staff or owner; clinical clients get no photorealistic AI people. Never present generated projects, before/afters or results as real, and never make testimonial or talking-head "customer" videos with any generator. Clone a voice or build a digital twin only with written consent on J-6 and the person named on B-12. Clinical clients: no voice clones or digital twins at all, consented ones included. Local tools (such as Voicebox) are tools too: same approval rule. Rendering a paid generation waits for a human checkpoint in the conversation. Don't send client photos of people, unreleased offers or clinical material to an unapproved tool; never paste API keys into chat or write them into files ([bml-creative-rules.md](bml-creative-rules.md) §5).
+<!-- BML:END tool-defaults -->
+
 Reference for using AI image generators, video generators, and code-based video tools to produce ad visuals at scale.
 
 ---

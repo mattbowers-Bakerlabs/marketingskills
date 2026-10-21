@@ -2,6 +2,10 @@
 
 How to write effective prompts for AI video generation models (Veo, Runway, Kling, Pika).
 
+<!-- BML:START prompting-note -->
+> **BML:** The example prompts below are SaaS and office scenes with generated people. For a client: (1) check approved `asset` records and the G-6 library before generating anything; (2) never prompt for a scene that will be shown as the client's own project, premises, team, customers or results, or that depicts a recognisable real person; (3) generated people are generic, unidentifiable extras, never presented as staff, providers, patients or customers, and clinical clients get no photorealistic AI people at all; (4) J-5 governs AI footage and disclosure (at `OPEN`/`DRAFT`, photorealistic output is internal preview only); (5) each paid generation run waits for the user's go. See SKILL.md, BML client work §2–3 and §7. Pricing and model specs here are upstream's and may be out of date.
+<!-- BML:END prompting-note -->
+
 ---
 
 ## Prompt Structure

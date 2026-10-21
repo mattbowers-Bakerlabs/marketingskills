@@ -1,5 +1,9 @@
 # Google Search Playbook (B2B)
 
+<!-- BML:START bml-note -->
+> **BML client work:** the method fits (intent ladder, independent budgets, Presence targeting, match-type gates, bidding by volume). The examples and benchmarks are B2B software: replace them with the client's services (D-1) and L-3/L-7 research. The vendor PMax-overlap study is industry research, never a statement about the client's account: size overlap from the client's own reports. The "universal junk" negatives are not universal: "cheap", "free", "training", "course" or "jobs" can be real intent for some clients (E-10, D-1). Build negatives from D-9, out-of-area towns and the search-terms report ([bml-paid-media.md](bml-paid-media.md) §8). "Pipeline" means booked calls, appointments and signed jobs (I-3, I-4).
+<!-- BML:END bml-note -->
+
 Intent-first operating rules for Google Ads: where to spend first, how to structure the account, when to loosen match types, and how to keep smart bidding pointed at revenue instead of junk form-fills. For RSA generation mechanics, see [rsa-output-spec.md](rsa-output-spec.md).
 
 ## Contents

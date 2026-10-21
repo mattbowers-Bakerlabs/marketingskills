@@ -1,5 +1,9 @@
 # ABM Playbook (Paid)
 
+<!-- BML:START bml-note -->
+> **BML client work:** run the go/no-go first; it fails for nearly every local service client. Consider ABM only for professional-services or commercial B2B clients whose rows support it. Contact and company lists, CRM exports and enrichment or identity-graph tools involve personal data: the agent never handles them, and uploads are made by the client or BML's paid lead with the client's written OK ([bml-paid-media.md](bml-paid-media.md) §7). **Account pages** publish to the client's site: draft the page brief (via `cro`) for a person to build and publish; the personalization, CMS-sync and AI site tools named below are used only if BML or the client has an approved account, and account facts are public ones only, never enrichment data. Slack is not in use at BML; route lead alerts to the client's own process (I-3). Thresholds and CPMs are practitioner figures, not client benchmarks.
+<!-- BML:END bml-note -->
+
 Account-based marketing with ads: targeting named accounts on LinkedIn and Meta, accelerating open pipeline, and stitching channels together. ABM ads are a *pipeline influence* motion, not a lead-gen motion — measure accordingly.
 
 ## Contents

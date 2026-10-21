@@ -1,5 +1,9 @@
 # Platform Setup Checklists
 
+<!-- BML:START bml-note -->
+> **BML client work:** billing, payment methods and account ownership belong to the client; agents never handle credentials or payment details. For local clients, also check: call assets and call conversion tracking (default on), location targeting set to Presence across B-8/L-1, Google Business Profile linked, Local Services Ads eligibility, ad schedule against I-3 answering hours. Customer-list uploads follow [bml-paid-media.md](bml-paid-media.md) §7. Meta special ad categories include financing offers (D-7). Launch itself spends: it stops for approval (§10).
+<!-- BML:END bml-note -->
+
 Complete setup checklists for major ad platforms.
 
 ## Contents

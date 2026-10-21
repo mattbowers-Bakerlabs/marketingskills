@@ -1,5 +1,9 @@
 # Motion-Style Video Ads (Faceless, Fully Generated)
 
+<!-- BML:START synthetic-media -->
+> **BML clients.** Fully generated video needs J-5 to allow AI-assisted creative at `APPROVED` or `PROVISIONAL` (otherwise an internal preview only), the platform's AI label where required, and a human checkpoint before any paid render. Clinical clients: no photorealistic AI people, digital twins or voice clones, consented ones included. Resolve the brand slots from page 02 and A-17, not by guessing. Synthetic characters must never read as the client's customers, patients, staff or work. Check for approved `asset` records first and generate only for a named gap ([bml-creative-rules.md](bml-creative-rules.md) §5).
+<!-- BML:END synthetic-media -->
+
 > Format popularized by Borja ([@borjafat](https://x.com/borjafat)) and the open `super-video-maker` motion-collage recipe by [Bomx](https://github.com/Bomx/super-video-maker-skill); this guide is an original re-expression of the method, extended with a multi-style library and production lessons from building and shipping it end-to-end.
 
 Produce a 15–45s faceless video ad or explainer from nothing but a concept: a styled

@@ -5,7 +5,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
 | ab-testing | 2.0.2 | 2026-10-12 |
-| ad-creative | 2.12.1 | 2026-10-15 |
+| ad-creative | 2.12.1-bml.1 | 2026-10-21 |
 | ai-seo | 2.10.1 | 2026-10-19 |
 | analytics | 2.2.1 | 2026-10-19 |
 | aso | 2.0.2 | 2026-10-08 |
@@ -26,7 +26,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | emails | 2.1.4 | 2026-10-15 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.3 | 2026-10-15 |
-| image | 2.0.2 | 2026-10-02 |
+| image | 2.0.2-bml.1 | 2026-10-21 |
 | influencer-marketing | 1.4.0 | 2026-10-15 |
 | launch | 2.2.0 | 2026-10-07 |
 | lead-magnets | 2.1.0 | 2026-10-08 |
@@ -38,7 +38,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.2 | 2026-10-12 |
 | onboarding | 2.0.2 | 2026-10-12 |
-| ads | 2.6.2 | 2026-10-19 |
+| ads | 2.6.2-bml.1 | 2026-10-21 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.4 | 2026-10-12 |
@@ -55,9 +55,59 @@ Current versions of all skills. Agents can compare against local versions to che
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
 | social | 2.4.0 | 2026-10-14 |
-| video | 2.2.1 | 2026-10-02 |
+| video | 2.2.1-bml.1 | 2026-10-21 |
 
 ## Recent Changes
+
+### 2.13.0-bml.2 (2026-10-21) — Baker Labs fork
+
+Paid and Creative section. BML text sits between `<!-- BML:START … -->` / `<!-- BML:END … -->` markers; outside the markers, upstream text is unchanged except `metadata.version` and, in ads, Scaling discipline moved verbatim to a reference file. Each skill points to `bml/context-rules.md` for BML client work. The skills share these rules:
+- check approved `asset` records and the G-6 / A-17 libraries before generating anything new
+- AI-generated people are generic and unidentifiable only, never shown as staff, customers or patients; clinical clients get no photorealistic AI people, digital twins or voice clones, even with consent
+- a page 12 row that rules out AI people or imagery wins
+- J-5 permission counts only at APPROVED or PROVISIONAL
+- testimonials are verbatim from G-5 only, and dramatized formats are labelled
+- claims come from rows, using `[NEEDS PROOF]` where a fact is missing
+- agents never run Windsor.ai write actions, publish or post; a person applies every approved change
+- outputs go to the client's Drive folders by ID, with ClickUp records drafted for a person to create
+- recurring work runs as a scheduled task
+- every deliverable ends with the context footer
+- page 13 is the only Learnings source, and nothing is written to it
+
+Skill changes:
+- **ads** (2.6.2 → 2.6.2-bml.1): a short `bml-mode` block and a new `references/bml-paid-media.md` covering:
+  - scope gate and row map
+  - a local-service platform shortlist: Search with Presence targeting, Local Services Ads, Microsoft, Meta local radius, PMax after Search, LinkedIn only for B2B
+  - conversions as calls, bookings, forms and signed jobs, with budgets capped by capacity and seasonality
+  - clinical and home-services paid rules, and privacy for customer lists and lead data
+  - the `ads`/`ad-creative` copy boundary, approvals, and recurring checks as scheduled tasks
+
+  Also: "Scaling discipline" moves verbatim to `references/scaling-discipline.md`. Every reference has a marked note, including the new operating-check, reading-google-ads-data and meta-andromeda-playbook references. The conversion-tracking pointer now goes to the `conversion-tracking` skill. BML evals 16–19.
+- **ad-creative** (2.12.1 → 2.12.1-bml.1): a rules pointer and a 7-step BML mode, with the detail and an override map in the new `references/bml-creative-rules.md`. Marked gates cover:
+  - fake-UI reveals: non-clinical only, J-1 sign-off, "Dramatization" label
+  - staged UGC, creator and authority formats
+  - generative tools: approved accounts only, J-5 and J-6
+  - awareness headlines and contrast hooks
+  - static templates, the review page (Drive only, never public hosting, `likes` left out) and the roadmap (monthly slate and retro)
+
+  BML evals 21–24.
+- **image** (2.0.2 → 2.0.2-bml.1):
+  - routes paid ad images to `ad-creative`, and separates client style (page 02) from Baker house style
+  - words inside an image follow the same claim, price, offer and CTA rows as copy
+  - Figma connector by default; other generators only with an approved account, and a model's deprecation status checked first
+  - Google Business Profile, listing and service-area placements
+  - a checkpoint before any paid generation, and no publishing
+  - outputs to the router-mapped folder with a spec sheet
+
+  BML evals 7–10.
+- **video** (2.2.1 → 2.2.1-bml.1): a `client-work` block with:
+  - a people and synthetic-media table covering B-12, J-5, J-6 and G-5; avatars, twins and clones are gated and none are allowed for clinical clients
+  - script claims from rows, and local-service equivalents for the SaaS demo defaults
+  - plans by default; a paid render needs approval first, and nothing is ever posted
+  - paid video goes to the PAID-ADS and Ad-Creative folders; organic video goes to the router-mapped folder
+
+  The new product-demo-recording reference is limited to software products and keeps personal data off screen. BML evals 9–13.
+- **aso**: reviewed, marked Not for BML in the Skills Registry, no change.
 
 ### 2.13.0-bml.1 (2026-10-21) — Baker Labs fork
 

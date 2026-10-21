@@ -1,5 +1,9 @@
 # Ad Copy Templates Reference
 
+<!-- BML:START bml-note -->
+> **BML client work:** the formulas fit; the examples don't. The SaaS examples, statistics ("75%", "5,000+ teams") and the attributed quote are illustrations: never copy them or their numbers into client work. Every number, rating or quote comes from a row or becomes `[NEEDS PROOF: <row ID>]`; testimonials are verbatim from G-5. CTAs follow page 01's required CTA language (not "Start Free Trial" or "Book a Demo" unless that is the client's CTA). Urgency CTAs only for a real, approved D-11 promotion, and never for clinical clients. Problem-Agitate-Solve's "agitate" step is gated for clinical clients (`context-rules.md` §7).
+<!-- BML:END bml-note -->
+
 Detailed formulas and templates for writing high-converting ad copy.
 
 ## Contents

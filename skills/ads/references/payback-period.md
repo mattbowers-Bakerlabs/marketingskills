@@ -1,5 +1,9 @@
 # Payback Period Budgeting
 
+<!-- BML:START bml-note -->
+> **BML client work:** this gate is built for subscription software (ARPU, plans, churn, trials). Most BML clients sell one-off jobs: use the maximum-CPA math in [bml-paid-media.md](bml-paid-media.md) §4 (B-7 job value × I-4 close rate × B-5 margin) instead. Payback and cohort recovery apply only to recurring-revenue clients (memberships, maintenance plans, recall-based practices), with every input (ARPU, gross margin from B-5, retention) from a row or the client's own reports, or marked `[NEEDS PROOF: <row ID>]` / `MISSING`. The $300 / $9 / $99 / $999 figures, the 80% and 20% margins and the cohort examples are illustrations; never reuse them.
+<!-- BML:END bml-note -->
+
 The gate before every channel decision: **can I afford this channel?** Advertising has to be **deterministic** — $1 in, more than $1 out, on a clock you can name. Payback Period is how you set the clock.
 
 ## Kill LTV:CAC first

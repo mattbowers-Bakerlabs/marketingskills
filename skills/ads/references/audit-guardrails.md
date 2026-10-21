@@ -1,5 +1,9 @@
 # Account Audits, Scoring & Recommendation Guardrails
 
+<!-- BML:START bml-note -->
+> **BML client work:** these rules hold. Additions: the "comparable peer cohort" in the benchmark ladder is never another BML client's account data. The live-account rule covers Windsor.ai: agents never run its write actions; draft first, approval from BML's paid lead (and the client's approver, J-1, for spend or message changes), and a person applies the change, per [bml-paid-media.md](bml-paid-media.md) §10. In the facts / hypotheses / missing data ending, unavailable account data is `MISSING` and a missing client fact is `[NEEDS PROOF: <row ID>]`; both also go in the context footer. Benchmarks found during an audit that answer an `OPEN` row (A-9, A-12, L-7) are staged as `DRAFT` rows, not edited into the client record.
+<!-- BML:END bml-note -->
+
 Load this before auditing a live ad account, grading account health, quoting benchmarks, or recommending changes to a running campaign. It exists to prevent the classic AI-audit failure mode: **confidently grading things you never saw, and turning folklore heuristics into verdicts.**
 
 ## Audit scoring semantics

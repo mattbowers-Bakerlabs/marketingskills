@@ -1,5 +1,9 @@
 # Modern Meta Playbook (Andromeda Era)
 
+<!-- BML:START bml-note -->
+> **BML client work:** read with [bml-paid-media.md](bml-paid-media.md) §3, §6 and §8. "Target broadly (just the country)" means the B-8/L-1 service area for a local client, never wider. Identity-trigger keywords never assert or imply the viewer's health condition or other personal attributes (§6), and the "462 leads", Wispr Flow and similar figures are one advertiser's numbers, not benchmarks or client facts. Creative volume, AI variants and native formats are `ad-creative` work (§8 boundary), under the assets-before-generation, likeness, J-5 and "Dramatization" rules; no native or fake-UI formats for clinical clients. No burner accounts or posting; running an organic post as an ad is spend and publishing (§10) and needs J-6. Creator ads need J-6 permissions (and `influencer-marketing`); clinical: no digital twins or voice clones. For a local client the "quality event" is a qualified call, booking or signed job (§4). Launches, zombie campaigns and graduation steps are drafted changes a person applies after approval. **No lessons file:** page 13's Learnings section (and I-2) is the only record of what was tested; a new lesson becomes a drafted `context` task (`context-rules.md` §1, §8), and a creative retro is a scheduled task (§11).
+<!-- BML:END bml-note -->
+
 Meta launched the **Andromeda** algorithm in 2025, which fundamentally changed Meta ads. The old playbook (interest stacking, polished video creative, single-winner scaling) underperforms. The new playbook:
 
 ## Creative volume is the constraint (statics > polished video)

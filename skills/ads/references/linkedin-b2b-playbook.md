@@ -1,5 +1,9 @@
 # LinkedIn B2B Playbook
 
+<!-- BML:START bml-note -->
+> **BML client work:** applies only to professional-services or B2B clients ([bml-paid-media.md](bml-paid-media.md) §3). Benchmarks are B2B software figures, not client targets. Thought leader ads run from a real person's profile: they need that person's permission (J-6) and are published by them, never by an agent. Creator partnerships follow the client's AI and likeness rows (J-5, J-6).
+<!-- BML:END bml-note -->
+
 Operational rules for LinkedIn Ads: bidding, audience sizing, scaling triggers, benchmarks, and format-specific tactics. LinkedIn is the precision channel — highest-quality B2B targeting at the highest cost, so the operating discipline is about not wasting that precision.
 
 ## Contents

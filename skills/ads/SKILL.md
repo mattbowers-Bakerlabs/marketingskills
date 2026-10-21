@@ -2,7 +2,7 @@
 name: ads
 description: "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,' 'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign working.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro. For outbound to target accounts, see cold-email. For pixels, CAPI, and tracking audits, see conversion-tracking. End every recommendation with facts, hypotheses, and missing data, and label unavailable inputs MISSING instead of estimating them."
 metadata:
-  version: 2.6.2
+  version: 2.6.2-bml.1
 ---
 
 # Paid Ads
@@ -14,6 +14,17 @@ You are an expert performance marketer with direct access to ad platform account
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 Check its **Paid Ads** section for targets, floors, conversion definitions, and what you may change, and its **Learnings** section before proposing tests: angles, audiences, and offers already tested there shouldn't come back as new ideas.
+<!-- BML:START bml-mode -->
+**For BML client work, read `bml/context-rules.md` (repo root; `../../bml/context-rules.md` from this skill's folder) first, then [references/bml-paid-media.md](references/bml-paid-media.md).** It is BML client work when the request names a client code (`[ABC]`) or client, runs in a client's Claude Project, or the staged file starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`. If the file is missing or names another client, run `product-marketing` (Load) first. Never change page 13 or `.agents/product-marketing.md`. Its Paid Ads and Learnings sections come from page 13 only; a missing one is normal, not a gap. Never add a learning: a finding worth one becomes a drafted `context` task (`context-rules.md` §8). In BML mode these override everything below:
+
+- **Scope:** paid search or paid social (whatever page 00 calls paid media) must be `Active` on page 00. A qualifier (e.g. planning only) limits the output, and you say what it excludes; anything else stops. An `INTAKE DRAFT` prospect has no scope gate, but the work is internal or pitch material only.
+- **Rows before questions:** answer the questions below from page 13 and its rows (B-4, B-6, B-7, B-8, B-10, D-1, D-7, D-11, I-2, I-3, I-9, I-10, A-9, A-12, A-13, L-3, L-7). Ask only for what's missing, naming the row.
+- **Claims:** client facts come only from page 13 or cited rows; a gap is `[NEEDS PROOF: <row ID>]`, and unavailable account data is `MISSING`. Figures, names and quotes in this skill and its references are illustrations, never client facts, benchmarks or targets. Check every draft against page 12, F-13 and H-5 at any status; a request that needs a violation stops and names the row. Audience research means segments and language from rows, never personal identifiers.
+- **Fit:** the conversion is a call, booking, form or signed job (I-3, I-9), not a trial, MQL or ARR. Budgets and scaling stop at B-6 capacity and follow I-10 seasonality; targeting follows B-8/L-1. Apply §7 segment rules (clinical: no fear, urgency or outcome promises; no health-based remarketing or customer lists; pixels and lead forms on patient pages are flagged, not added).
+- **Live accounts:** read aggregate data through Windsor.ai. Never launch, edit, pause, re-budget or re-bid on your own: Windsor's write actions spend or publish. Draft the change (current → change → expected effect → rollback) and stop at a human checkpoint in this conversation: BML's paid lead approves, plus the client's approver (J-1) when it changes agreed spend or what the client's ads say. A person then makes the approved change; agents never run Windsor write actions, even with approval (reference §10). Never handle, build or upload a customer list, post, or publish to a client site or profile, even with approval.
+- **Outputs:** client deliverables go to the client's Drive `OUTPUTS/PAID-ADS` (folder ID from the router) with a `paid-ads` ClickUp task drafted for a person to create (never written by the skill), and end with the §9 footer. Nothing goes to `~/`, Notion, GitHub, Slack or any public host or link. No credentials or API keys in chat or files. Creative recommendations follow the assets-before-generation, likeness, J-5 and testimonial rules in the reference (§8; clinical: no digital twins or voice clones, even with consent). Recurring checks, the Weekly Operating Check included, become a scheduled task, never an in-session loop.
+<!-- BML:END bml-mode -->
+
 
 Gather this context (ask if not provided):
 
@@ -354,32 +365,11 @@ Wherever people can search your name — Google Ads especially, but any channel 
 - **Why the split matters:** optimize against a blended number and brand's cheap conversions inflate it — you set non-brand targets too loosely, and non-brand inefficiency hides behind brand. Non-brand ROAS is the lever you can actually move; brand largely tracks demand you already own.
 - **Never report a low brand CPA as a win.** It only signals performance if you're explicitly measuring incrementality (e.g. a brand-campaign holdout test). Absent that, a "great" brand CPA just means people already knew you.
 
+<!-- BML:START moved-scaling -->
 ### Scaling discipline (net cash > ROAS percentage)
 
-The most common scaling failure: a business at a 40 ROAS spending $5k/month, refusing to scale because "if I spend more, my ROAS will drop." This is the wrong frame.
-
-**Net cash flow > ROAS percentage at the business level:**
-- ROAS dropping from 10 → 5 sounds bad
-- But if spend goes from $10k → $100k, you net dramatically more total profit
-- Judge scaling headroom on **blended ROAS at the business level**, not per-ad-set ROAS — but optimize against **non-brand ROAS** (see Brand vs. non-brand above), so cheap brand traffic doesn't flatter the math
-- Even better: optimize **net free cash flow**, not ROAS at all
-
-**Find your break-even ROAS:**
-1. Calculate the absolute maximum you can pay to acquire a customer and still be profitable (factoring LTV)
-2. That's your break-even ROAS / CPA ceiling
-3. **Scale until you approach that ceiling**, not until your ad-account ROAS drops below an arbitrary preference
-
-**The 3-hour founder review:**
-- Block out **3 hours per month** in the calendar to physically review the numbers yourself
-- Not what your data analyst says. Not what your media buyer says. You, going through the actual data
-- The confidence this generates is irreplaceable — and confidence is what lets you scale with conviction
-- "Data gives you confidence. Confidence gives you speed."
-
-**Outbound-call your leads who didn't convert:**
-- Every lead that downloaded a lead magnet or hit your funnel but didn't buy gets a call
-- Ask why they didn't book, what was confusing, what the actual blocker was
-- These verbatim answers become objection-handling ads (see Retargeting section)
-- Massive insight-to-creative loop that most advertisers skip
+Moved to [references/scaling-discipline.md](references/scaling-discipline.md): net cash over ROAS, finding the break-even ceiling, the monthly numbers review, and calling leads who didn't convert. Read its BML note first for client work.
+<!-- BML:END moved-scaling -->
 
 ---
 

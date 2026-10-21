@@ -1,5 +1,9 @@
 # Meta Decision System (B2B)
 
+<!-- BML:START bml-note -->
+> **BML client work:** the decision logic (one anchor number, data gates, never pause without a replacement) fits. For local clients, TCPL comes from the maximum CPA in [bml-paid-media.md](bml-paid-media.md) §4, and "qualified" means a lead the client could serve (in B-8, a service they offer, in their capacity). The work-email requirement is B2B-only; local lead forms ask for phone and a service-area question instead, and clinical clients don't use Meta lead forms without a compliance decision (§6). Seasonality comes from I-10 and L-3, not the Q1/Q4 B2B pattern. The weekly cadence is a scheduled task that drafts changes; kills, launches and scale steps stop for approval (§10–11). Partnership and creator ads need J-6 permissions; clinical testimonials need written patient authorization. Dollar figures are illustrations.
+<!-- BML:END bml-note -->
+
 A quantified kill/keep/scale engine for Meta ads. Every threshold derives from one anchor number, so decisions become arithmetic instead of vibes. Pairs with the strategy-level Meta playbook in SKILL.md (creative-as-targeting, creative volume) — this file is the *operating* layer.
 
 ## Contents

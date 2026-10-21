@@ -4,6 +4,15 @@ Adapted from a contribution by @klepfish (PR #345).
 
 How to record a scripted, repeatable demo of a web app feature (signup, onboarding, a settings flow, a dashboard interaction) by driving the app in headless Chromium with Playwright. The output is an MP4 with a title card, scene subtitles, a visible cursor, and optional TTS narration.
 
+<!-- BML:START demo-recording-note -->
+> **BML:** Most BML clients sell a local service, not software, so this format rarely applies. Use it only when B-1 says the client sells software, for BML's own tools, or to show a public page the client owns (its online booking or quote form, only if I-9 has one). Otherwise use the local-service equivalents in SKILL.md, BML client work §5 (a process walkthrough filmed with real G-6 footage, an FAQ answering D-6). A demo tailored to one prospect follows the personalized-outreach row there.
+> - **No customer or patient data on screen.** Script the flow against a local or staging build the user provides, signed in as a seeded demo account with obviously placeholder data. On a client's live public page, record only what any logged-out visitor sees and never type into or submit its form (that creates a real lead or booking). Never record a production back end, a live CRM or booking system, or real customer, patient or contact records. Check every frame and failure screenshot for names, emails, phone numbers, addresses and records. Reset and seed commands run only against a local database the user confirms (see the production env-var gotcha below). Clinical clients: no patient-portal or records screens at all.
+> - **Facts and brand:** captions are script copy, so claims come from rows or become `[NEEDS PROOF: <row ID>]`, and the CTA comes from page 01 (BML client work §4). Colors and logo come from page 02 and A-17. The fake URL bar shows the client's real public domain, never an invented one; ask if it isn't on file.
+> - **Tools and code:** Node, Playwright and ffmpeg run in the session workspace only. The contributor's scripts are external code: read them before adapting them. Never commit to or push a client's repository; hand the recorder script to the user.
+> - **Narration:** TTS is a synthetic voice, so J-5 must permit it and it's disclosed (BML client work §3). A clone of a real person's voice follows the digital-twin and voice-clone row there (written J-6 consent, B-12, J-5) and is never made for a clinical client. ElevenLabs and OpenAI TTS only with an approved account (§6). Upstream's key rule below stands: a person sets the variable, and a pasted key isn't used.
+> - **Outputs:** the MP4 goes to the user for J-1 approval, then is filed by folder ID per §8 (paid → `ASSETS/Ad-Creative`; website, social or listings → the router's folder for that placement, ask if none). The `.webm`, timings JSON and screenshots are workspace scratch. Never upload, publish or host the video.
+<!-- BML:END demo-recording-note -->
+
 ## When to Use This Format
 
 | Situation | Format |
@@ -174,3 +183,6 @@ Narration reuses the subtitle captions as the script.
 - [ ] Title card works as a thumbnail
 - [ ] Recording-only config reverted
 - [ ] MP4 handed back with a one-line summary of what it shows
+<!-- BML:START demo-delivery-note -->
+- [ ] **BML:** no real customer or patient data in any frame; captions checked against rows and `[NEEDS PROOF]`; synthetic narration listed under Guardrails in the context footer (rules §9); MP4 handed to the user for J-1 approval, never uploaded or published
+<!-- BML:END demo-delivery-note -->

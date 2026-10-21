@@ -41,6 +41,10 @@ Complete character limits, format requirements, and best practices for each ad p
 - 1 social proof + CTA
 - 1 urgency/offer + CTA (if applicable)
 
+<!-- BML:START mix -->
+> **BML clients.** Social-proof headlines need G or A-7 rows (counts carry "⚠ confirm before publishing"), urgency and offer lines need a real D-11 or D-7 entry, and CTA headlines use page 01's required CTA language. Missing fact → `[NEEDS PROOF: <row ID>]`, or leave the slot for another headline type. For local search, a service-area headline uses only places in B-8.
+<!-- BML:END mix -->
+
 ### Performance Max
 
 | Element | Character Limit | Notes |

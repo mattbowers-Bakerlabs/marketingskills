@@ -1,5 +1,9 @@
 # Audience Targeting Reference
 
+<!-- BML:START bml-note -->
+> **BML client work:** customer lists (Customer Match, Meta and LinkedIn contact lists, employee lists) are personal data: the agent never handles them; see [bml-paid-media.md](bml-paid-media.md) §7. Location targeting follows B-8/L-1. Local audiences and searches are smaller than the size guidelines below; that is normal, not a reason to widen beyond the service area. **Clinical:** no remarketing, Customer Match or lookalikes built from health-related pages or patient data. The LinkedIn combinations apply to professional-services and B2B clients only.
+<!-- BML:END bml-note -->
+
 Detailed targeting strategies for each major ad platform.
 
 ## Contents

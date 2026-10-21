@@ -1,5 +1,9 @@
 # B2B Paid Playbook
 
+<!-- BML:START bml-note -->
+> **BML client work:** written for B2B software (ACV, demos, MQL → SQL pipelines). It applies as-is only to professional-services or B2B clients. For local service clients: "deal size" is B-7 job value, "close rate" is I-4, the lead-quality score is done by whoever answers the phone (I-3), and "paid review listings" means L-11 category platforms. The offline conversion loop imports signed jobs only where the client's CRM supports it, set up by the client; agents never write to a client CRM. The dollar examples are illustrations. A "$100 test campaign" still spends: draft it for approval ([bml-paid-media.md](bml-paid-media.md) §10).
+<!-- BML:END bml-note -->
+
 Cross-platform operating rules for B2B paid acquisition — where sales cycles run 2–24 months, in-platform conversions mislead, and lead *quality* matters more than lead cost. Use this alongside the platform playbooks ([Meta decision system](meta-decision-system.md), [LinkedIn](linkedin-b2b-playbook.md), [Google Search](google-search-playbook.md), [ABM](abm-playbook.md)).
 
 ## Contents

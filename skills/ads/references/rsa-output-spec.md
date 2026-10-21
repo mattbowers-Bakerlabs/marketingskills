@@ -1,5 +1,9 @@
 # Google RSA Output Spec
 
+<!-- BML:START bml-note -->
+> **BML client work:** the limits, sidecars, order and self-check all apply. Also: CTAs from page 01, no H-5 words, no claim without a row (`[NEEDS PROOF: <row ID>]` in the headline slot is fine in a draft, excluded from the 30-character check until replaced); callouts and sitelinks use row facts only; final URLs are real client pages. The ≥8 negatives on a new build are a starter list from D-1, D-9 and out-of-area towns, labeled for review; on a live account, negatives come only from the search-terms report. The CFM section covers Brazilian medical practices only: for any clinical client, apply `context-rules.md` §7 and the client's J-3 rows, which are usually stricter. Details: [bml-paid-media.md](bml-paid-media.md) §8.
+<!-- BML:END bml-note -->
+
 When the user requests Google Ads RSAs (Responsive Search Ads), output MUST comply with these platform limits and structural requirements. Do not output any RSA that violates them.
 
 ## Hard limits per RSA (enforce before responding)

@@ -1,5 +1,9 @@
 # The Creative Strategy Loop
 
+<!-- BML:START loop -->
+> **BML clients.** Signals come from Windsor.ai (read-only account performance, aggregates only), the client rows (page 03, G-5, D-6, I-2) and BML research (L-6 competitor messaging, L-7 paid search, Semrush `paid_search_research`), not the CLIs or scraping tools named below. The capacity check counts the client's capacity too: B-6, I-10 and I-8 (team time for shoots and approvals). The roadmap and retro are agency artifacts saved to Drive `OUTPUTS/PAID-ADS`, not beside an `inputs/` folder. The weekly refresh and monthly retro run as scheduled tasks when the user asks, not in-session loops; BML default is a monthly slate and retro tied to the client's monthly session ([bml-creative-rules.md](bml-creative-rules.md) §8–9).
+<!-- BML:END loop -->
+
 Generation (Modes 1–3) answers "make me ads." This reference answers the question that comes first: **which ads are worth making, in what order, at what production cost** — and the retro that turns each month's results into next month's plan. It's the standing operating loop of a creative strategist, run by an agent with a human deciding.
 
 ```

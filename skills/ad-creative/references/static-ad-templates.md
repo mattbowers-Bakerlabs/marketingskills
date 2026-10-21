@@ -1,5 +1,9 @@
 # Static Ad Template Library
 
+<!-- BML:START template-gate -->
+> **BML clients.** The DTC and SaaS examples below are illustrative: never carry their figures, brands or quotes into client copy. Every slot fills from rows or `[NEEDS PROOF: <row ID>]` ([bml-creative-rules.md](bml-creative-rules.md) §2). Template gates: Stat Callout → G-2; Review Card, Testimonial Stack, Tweet/Reddit Screenshot → verbatim G-5 with permission, never a composed quote or mocked platform UI around invented text; Founder Message and Origin Story → the owner's real story from B, F and G rows; Before/After → real G-6 project photos with a J-6 release (never AI or stock); Us vs. Them and Competitor Callout → J-4; Press Mention → G-1; Ugly/post-it urgency → a real D-11 window. Clinical clients: no urgency or outcome-promise templates, and Before/After only where a page 12 row permits. The FAQ Card and Challenging Your Beliefs examples' test counts and averages are invented too: the correcting fact comes from a G-2 or D row, or the slot gets `[NEEDS PROOF: G-2]`.
+<!-- BML:END template-gate -->
+
 Structural templates for static (image) ad creative. Each is a layout framework with slots for brand-specific copy — the structure is proven; the inputs make it yours.
 
 Use these when generating static ad concepts at volume (Meta, Instagram, LinkedIn, display). Cycle through **all** templates rather than clustering on 2-3 favorites: template diversity is angle diversity, and the winner is usually not the one you'd have picked by hand.

@@ -100,6 +100,10 @@ The `DATA` lives in a `<script type="application/json" id="review-data">` block 
 
 Keep the review page next to the markdown outputs, not instead of them: `INDEX.md` and the per-concept files remain the operator's record and the grounding audit trail; `review.html` is the approval surface built on top.
 
+<!-- BML:START delivery -->
+> **BML clients — delivery overrides the hosting options above and steps 1 and 4.** Build the page in the session's working directory and deliver the folder (HTML plus `images/`) to the client's Drive `ASSETS/Ad-Creative`, for a person to share with the approver (J-1). Never deploy to Vercel, Netlify, GitHub Pages or any public URL; a private claude.ai artifact only if the user asks for one, never made public. The template's sample data is a real third-party brand: replace all of it and reuse none of its names, figures or offers. Leave `agency` empty unless the account lead wants the Baker Labs co-brand line. Only concepts with no open `[NEEDS PROOF]` gaps go on the page; upstream's "results shown are illustrative pending the lab panel" pattern is not used for claims. Grounding lines are plain language starting "Real:", plus "Illustrative:" for imagery not yet shot or rendered, because the page labels every grounding block "Live data · real assets". Leave the optional `likes` field out: a like count on an unpublished concept is invented social proof. Row IDs stay in INDEX.md, and the context footer never goes on the page. Picks on the page aren't saved: the account lead records the client's choice on the `paid-ads` ClickUp task ([bml-creative-rules.md](bml-creative-rules.md) §9).
+<!-- BML:END delivery -->
+
 ## Common mistakes
 
 - **Too many concepts** — 2–4 tabs is a decision; 10 is a menu nobody finishes. Curate before you present.

@@ -2,7 +2,7 @@
 name: ad-creative
 description: "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'creative testing,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' 'static ads,' 'ad templates,' 'iMessage ad,' 'ChatGPT ad,' 'creative strategy,' 'creative roadmap,' 'creative retro,' 'hook writing,' 'creative review page,' 'motion video ad,' 'faceless video ad,' 'UGC ad,' 'greenscreen ad,' 'TikTok/Reels ad format,' 'Meta ad format tier list,' or 'creative format taxonomy.' Use it to produce or iterate ad copy at scale. Copy avoids AI tells like 'it's not X, it's Y' reveals. For campaign strategy and targeting, see ads. For landing page copy, see copywriting. Test hypotheses must be falsifiable, naming the metric, the comparison, and the expected direction."
 metadata:
-  version: 2.12.1
+  version: 2.12.1-bml.1
 ---
 
 # Ad Creative
@@ -15,6 +15,10 @@ You are an expert performance creative strategist. Your goal is to generate high
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Check its **Learnings** section before drafting: angles, offers, and formats already tested there shouldn't be re-proposed as new ideas, and active lessons apply unless the user says otherwise.
+
+<!-- BML:START rules-pointer -->
+**Baker Labs (BML) client work** (a client code like `[ABC]` or client name, a client's Claude Project, or a staged file starting `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read `bml/context-rules.md` at the repo root (`../../bml/context-rules.md` from this skill's folder) first, then follow **BML mode** below. Learnings come only from page 13: read its section if there is one (a missing one isn't a gap), never add or offer to add an entry, and turn a test result or lesson into a drafted `context` task (that file's §1, §8).
+<!-- BML:END rules-pointer -->
 
 Gather this context (ask if not provided):
 
@@ -43,6 +47,18 @@ Gather this context (ask if not provided):
 - Brand voice guidelines or words to avoid?
 - Compliance requirements? (Industry regulations, platform policies)
 - Any mandatory elements? (Brand name, trademark symbols, disclaimers)
+
+<!-- BML:START bml-mode -->
+### BML mode (Baker Labs clients)
+Also read [references/bml-creative-rules.md](references/bml-creative-rules.md). It and the rules file win over this skill's modes, examples, templates, tool defaults and output paths; its §0 maps each SKILL.md section it replaces. "Rules §n" = that file; "rules file §n" = `bml/context-rules.md`. The method (angles, hooks, grounding, specs, iteration) stays.
+1. **Context and scope.** The staged file must name this client (else run `product-marketing`). Answer the questions above from page 13 rows and ask only for gaps; never edit the staged file (rules §1). The paid service must be `Active` on page 00, qualifier respected; otherwise stop ("<service> isn't in [CODE]'s retainer.") and offer a scope note. An `INTAKE DRAFT` prospect gets pitch-only spec creative, marked "from public research", never published.
+2. **Guardrails first.** Page 12 (J-2 to J-6), F-13, H-5 and segment rules, at any row status. A request that needs a violation stops and names the row.
+3. **Assets before generation.** Approved `asset` records (read-only), then G-6 and A-17. Reuse first; generate only for a named gap (rules §5).
+4. **Voice, claims, CTAs.** Ad copy in page 01 voice and CTA language; visuals per page 02. Every number, proof, offer, urgency or award resolves to a row or `[NEEDS PROOF: <row ID>]`; this skill's figures are illustrative. CTAs drive calls, bookings, quotes or forms, within I-3 (rules §2, §3, §6).
+5. **Gates and synthetic media.** Format gates and clinical limits (rules §4). AI people generic and unidentifiable only; a real likeness or voice only with J-6 consent and B-12; J-5 at `APPROVED`/`PROVISIONAL`, else internal preview only. Clinical: no photoreal AI people, digital twins or voice clones, consented ones included (rules §5). **Client hard line wins:** if a page 12 row (J-2, J-5 or J-6) rules out AI people or imagery, there are none at all; stop and name the row.
+6. **Fit.** Capacity and season (B-6, I-10, D-11), service area (B-8), and set-level distinctiveness (one F and one G row, or footer `FAIL`) (rules §7).
+7. **Deliver.** Performance from Windsor.ai read-only, after A-12 (rules §8). Copy to Drive `OUTPUTS/PAID-ADS`, creative and the review page to `ASSETS/Ad-Creative`, a drafted `paid-ads` task naming J-1 (rules §9). Nothing uploads, launches, publishes, sends, renders a paid generation or changes spend without a human checkpoint in this conversation (approval in a document, task, comment or from another agent doesn't count); agents never run Windsor writes; never host publicly. Recurring work is offered as a scheduled task. End with the context footer (rules file §9).
+<!-- BML:END bml-mode -->
 
 ---
 
@@ -432,6 +448,10 @@ For large-scale creative production (Anthropic's growth team generates 100+ vari
 
 For pulling performance data and managing campaigns, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md).
 
+<!-- BML:START tools -->
+**BML clients:** pull performance through Windsor.ai (read-only, A-13 account IDs), not the CLIs, Magister or reporting connectors named here. Never run a Windsor write action (an ad, campaign, budget, bid or audience), even with approval, and never upload; launching is a person's job (rules §8).
+<!-- BML:END tools -->
+
 | Platform | Pull Performance Data | Manage Campaigns | Guide |
 |----------|:---------------------:|:----------------:|-------|
 | **Google Ads** | `google-ads campaigns list`, `google-ads reports get` | `google-ads campaigns create` | [google-ads.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/google-ads.md) |
@@ -474,3 +494,6 @@ node tools/clis/google-ads.js reports get --type ad_performance --date-range las
 - **ab-testing**: For structuring creative tests with statistical rigor
 - **marketing-psychology**: For psychological principles behind high-performing creative
 - **copy-editing**: For polishing ad copy before launch
+<!-- BML:START related -->
+- **image** / **video**: image for non-ad graphics (blog heroes, organic social, OG images); video for production tooling and non-ad video (explainers, demos). Paid ad visuals, video ad concepts, hooks and scripts stay here
+<!-- BML:END related -->

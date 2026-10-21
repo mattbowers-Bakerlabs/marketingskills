@@ -1,5 +1,9 @@
 # Awareness-Based Headline Creative
 
+<!-- BML:START awareness -->
+> **BML clients.** The SaaS and DTC examples below are invented: never carry their figures, products or lines into client copy. The evidence sheet is the client record: source IDs are row IDs (G-5 verbatim quotes, page 03 and D-6 language, G-2 or D-2 for claims), and a smaller corpus is reported as a gap, never padded. Documented statistic needs a G-2 or approved D-2 row with its population and period; a market statistic from L rows cites its source and date and never reads as the client's result. Conversation lines follow the gate in [bml-creative-rules.md](bml-creative-rules.md) §4 ("Dramatization" label, no attribution, none for clinical). CTA direction becomes the page 01 CTA (call, book, request a quote), not a trial or demo; palette from page 02 and A-17. "Unless publication is already authorized" never applies: concepts stay drafts until a person publishes them after a human checkpoint in the conversation. Judge tests on the client's qualified conversions from Windsor.ai after A-12, and a lesson becomes a drafted `context` task, not a Learnings entry (§8–9).
+<!-- BML:END awareness -->
+
 Use for text-led static concepts, especially B2B feed ads. These are compact treatments within the existing angle and template workflow; they do not replace audience research, the hook system, or platform specs.
 
 Concept lineage: the maintainer's #404 follow-up to the ivangfalco/ads-skills remix. Re-expressed independently and reconciled with this repo's grounding and AI-tells rules; no source copy or creative assets imported.

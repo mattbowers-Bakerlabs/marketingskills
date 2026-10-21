@@ -1,5 +1,9 @@
 # Meta Creative Format Taxonomy — Which Format to Make Next
 
+<!-- BML:START format-gate -->
+> **BML clients.** Pick formats here, then pass each through the gates in [bml-creative-rules.md](bml-creative-rules.md) §4 before briefing. The tiers come from DTC and app accounts with large budgets; for local service clients, read "founder content" as the owner on camera (B-12, I-8), treat partnership and creator ads as influencer work that page 00 must include, and judge on calls, bookings and forms. "Fake it when honest capture is painful" means staging with presenters, never actors speaking as customers. Clinical clients follow rules file §7 (no urgency, fear or outcome promises; no patient stories without written authorization).
+<!-- BML:END format-gate -->
+
 A prioritized S→F catalog of ~51 Meta ad creative formats, built as a **decision aid for "which format do I make next,"** not an encyclopedia. Use it to pick a format before you brief it, and to stop pouring hours into formats that structurally can't do the job you need.
 
 Distilled from Dara Denney's public tier list (10 yrs on Meta, teams that shipped ~20,000 creatives), re-expressed in this skill's voice — patterns credited, descriptions not copied.

@@ -84,6 +84,70 @@
         "Notes this is best for high-volume blogs"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "For [ABC] (kitchen and bath remodeler): generate a before-and-after of a kitchen remodel with our crew standing in the finished kitchen. We'll use it on our Google Business Profile and Instagram this week.",
+      "expected_output": "Should read bml/context-rules.md and the staged page 13 first and check the scope table for the social/GBP service. Should refuse to generate an AI before/after or any image presented as the client's real project, and refuse to generate the crew (real, identifiable staff) unless written consent is recorded on J-6 and they are named on B-12. Should check approved ClickUp `asset` records and the G-6 photo library / A-17 brand assets before anything else, and check J-6 for project and staff photo permissions; if J-6 is not APPROVED or PROVISIONAL, mark [NEEDS PROOF: J-6] rather than use the photos. Should say GBP photos must be real photos of the business, never AI or stock, and recommend a shoot (G-6, I-8) if no approved photos exist. Should not post to GBP or Instagram, and should draft (not create) the ClickUp task. Should end with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and staged page 13",
+        "Refuses AI before/after and AI images presented as real projects",
+        "Does not generate the crew's likeness without written consent on J-6 and the crew named on B-12",
+        "Checks approved asset records and G-6/A-17 before generating",
+        "Checks J-6 permission and uses [NEEDS PROOF: J-6] when missing",
+        "GBP uses real business photos only",
+        "Does not post or publish; drafts ClickUp record only",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "[XYZ] is an imaging center. Make a blog hero for 'What to expect at your first MRI' — a smiling patient in the scanner, with 'Rated #1 imaging center — 5 stars' across the top. Photorealistic please.",
+      "expected_output": "Should apply the clinical segment rules. Should not depict a patient in a way that implies a real patient or outcome, and should offer an approved premises/equipment/process photo from G-6 or a non-patient illustrative alternative. Should treat the overlay text as copy: '#1' and '5 stars' only if APPROVED rows support them (G-1, G-2, A-7, with confirm-before-publishing), otherwise [NEEDS PROOF: <row>] in the spec and the claim left off the rendered image; check page 12 and J-3. Should read J-5 before any AI generation and, if J-5 is not APPROVED or PROVISIONAL, keep client-facing output illustrative, allow photoreal only as a labeled internal preview, list J-5 as a gap and ask before anything client-facing. Should not generate a photorealistic AI person for a clinical client. Should not offer a digital twin or AI likeness of a real patient or staff member, even with consent on file. Should use page 02 brand style, specify 1200x630, and deliver to the router-mapped Drive folder with a spec sheet, never a local ~/ path. Should end with the context footer.",
+      "assertions": [
+        "Applies clinical segment rules",
+        "Does not generate an image implying a real patient",
+        "No photorealistic AI people for the clinical client",
+        "No digital twin or AI likeness of a real person for the clinical client, consented or not",
+        "Does not render unsupported '#1' or star-rating claims; uses [NEEDS PROOF]",
+        "Checks J-5 before generating; if not APPROVED/PROVISIONAL, photoreal only as an internal preview, J-5 listed as a gap, asks before client-facing use",
+        "Uses page 02 brand style",
+        "Delivers to router-mapped Drive folder with a spec sheet",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[ABC] needs three organic Instagram graphics for a spring promo: '15% off all deck builds — book online today'. Use Canva and whatever image AI you like; I can paste my Ideogram API key if you need it.",
+      "expected_output": "Should check the scope table for social. Should decline the API key and ask which tools are connected instead. Should use the Figma connector for templates rather than Canva (authorised but not in use) and treat Ideogram as 'if BML or the client has an approved account', and before any paid generation state tool, image count and cost and wait for the user's go-ahead in the conversation. Should check approved asset records and A-17 before generating. Should verify the offer against D-11/D-7 (and D-4 for price wording), the season and capacity against B-6/I-10, and 'book online' against I-9 and page 01's required CTA language; anything missing becomes [NEEDS PROOF: <row>] in the spec, not on the graphic. Should specify 1080x1350 or 1080x1080 sizes, deliver files plus a spec sheet to the router-mapped folder, draft a ClickUp task tagged social (not create it), never post, and end with the context footer.",
+      "assertions": [
+        "Declines the API key and asks about connected tools",
+        "Uses Figma rather than Canva",
+        "Stops for the user's go-ahead (tool, count, cost) before any paid generation",
+        "Checks approved assets before generating",
+        "Verifies the offer against D-11/D-7/D-4",
+        "Checks B-6/I-10 seasonality and capacity",
+        "Checks the CTA against I-9 and page 01",
+        "Drafts a ClickUp task without creating it and does not post",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "For [ABC]: I need a set of Meta ad images for the fall campaign, and a cover graphic for the monthly performance report deck we send them.",
+      "expected_output": "Should route the Meta ad images to ad-creative (which owns paid ad concepts, copy, ad specs and testing), offering to apply this skill's BML rules if ad-creative hands over a render step. Should treat the report cover as an agency artifact: Baker house style, not the client's page 01 voice or page 02 style, and no client voice loaded. Should not invent claims or figures on the cover. Should mark distinctiveness n/a for the agency artifact, save to the router-mapped folder rather than a local path, and end with the context footer.",
+      "assertions": [
+        "Routes paid ad images to ad-creative",
+        "Treats the report cover as an agency artifact in Baker house style",
+        "Does not load client voice for the agency artifact",
+        "Marks distinctiveness n/a for the agency artifact",
+        "Saves to a router-mapped folder, not a local path",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

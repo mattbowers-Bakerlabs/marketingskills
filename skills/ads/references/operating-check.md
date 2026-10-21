@@ -1,5 +1,9 @@
 # The Operating Check: Weekly Account Review That Ends in a Decision
 
+<!-- BML:START bml-note -->
+> **BML client work:** the ordered check and the four calls fit. A one-off check in the conversation (including the two hand-run weeks below) reads aggregate data through Windsor.ai; once it recurs it becomes a scheduled task that drafts the call ([bml-paid-media.md](bml-paid-media.md) §11), never an in-session loop. Neither applies a change. Targets for green / amber / red come from page 13 and its rows (B-4, A-9) or are `[NEEDS PROOF: <row ID>]`; an unavailable input is `MISSING`. "Lead quality from the CRM" means aggregate counts the client supplies (I-4, A-15), never lead-level records. FIX and TEST are drafted changes (a TEST spends): BML's paid lead approves, J-1 too for spend or message changes, and a person applies them (§10). The Friday readout is an agency artifact in Baker house style, saved to `OUTPUTS/PAID-ADS`; the §9 footer follows it outside the 200-word count and is stripped before the client sees it. "State between runs" is the previous readout in that folder, never page 13 or the staged context file.
+<!-- BML:END bml-note -->
+
 A recurring account check is only useful if it ends in a call someone can act on. A list of metrics with no decision is reporting theater: everyone reads it, nothing changes, and the problem it hinted at keeps costing money.
 
 Run this check weekly on every account, and daily on accounts with active tests, recent launches, or large daily spend. It takes about 15 minutes once the inputs are pulled. Pair it with [audit-guardrails.md](audit-guardrails.md), which governs what counts as evidence.
