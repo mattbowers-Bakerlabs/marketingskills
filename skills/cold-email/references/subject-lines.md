@@ -1,5 +1,11 @@
 # Subject Line Optimization
 
+<!-- BML:START treat-as -->
+
+**BML:** the principles (short, lowercase, internal-looking, no first name) fit. The percentages are SaaS vendor data: illustrative only. Example subjects are patterns, not copy. For clinical clients, no subject line implying patient outcomes or urgency. Avoid spam triggers even where the client's offer includes one (a D-5 guarantee belongs in the body, worded as the row says).
+
+<!-- BML:END treat-as -->
+
 The subject line determines whether the email gets read. The data is counterintuitive: **short, boring, internal-looking subject lines win decisively.**
 
 ## Length: 2–4 words

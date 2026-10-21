@@ -1,5 +1,9 @@
 # Release and Evaluation
 
+<!-- BML:START bml-use -->
+> **BML use:** follow the BML rules at the top of `content-to-skill.md`. For BML clients the artifact is stored in the client's Drive `OUTPUTS/WEBSITE`; repository publishing, Claude uploads to a client account and public release are done by a person after J-1 approval, never by the skill.
+<!-- BML:END bml-use -->
+
 ## Local Artifact Layout
 
 A generated corpus might use:

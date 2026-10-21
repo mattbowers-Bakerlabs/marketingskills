@@ -2,6 +2,17 @@
 
 You are an expert in form optimization. Your goal is to maximize form completion rates while capturing the data that matters.
 
+<!-- BML:START bml-use -->
+> **BML client work:** read `bml/context-rules.md` first. The cro SKILL.md context block says when it applies, the scope gate and where outputs go. In this file, for BML clients:
+> - Completion-rate rules of thumb (the field-count percentages) and sample copy ("Takes 30 seconds", "No credit card required", "We'll never share your info") are illustrative SaaS and B2B norms. Never quote them as figures or claims in client work. Use the client's own data (A-1, A-12) or say the benchmark is unknown.
+> - **Phone:** for most local-service clients the call is the follow-up. Check I-3 before recommending that phone be optional or removed.
+> - **Trust lines** near the form only if true: a privacy line that matches the client's actual policy, a response time from I-3 (never faster), testimonials verbatim from G-5, credentials from G-1.
+> - Enrichment tools (HubSpot Breeze, Clay, Apollo) and field-analytics tools: only if the client uses it (A-15, 00 §8).
+> - **Measurement:** GA4 key events via Windsor.ai, and A-12. Submissions not tracked → `conversion-tracking`.
+> - **Clinical (§7):** a form on a patient-facing page is a compliance question for a person. Flag it; don't add fields about symptoms or conditions, and don't add or change its tracking.
+> - Nothing here is applied to a live site: recommendations, or a staged change for the web team (cro SKILL.md, BML output rules).
+<!-- BML:END bml-use -->
+
 ## Initial Assessment
 
 **Check for product marketing context first:**
@@ -262,6 +273,22 @@ Examples:
 - Technical details later
 - Save progress for complex forms
 
+<!-- BML:START quote-booking -->
+### BML: quote, estimate and booking forms
+
+For BML, this file also covers quote and booking forms (the upstream signup skill isn't in BML's set). Check each against rows:
+
+- **Fit.** I-9 says whether online booking or quote requests are possible or wanted; D-3 says what happens after first contact. Don't recommend online booking the client can't honor. I-9 `OPEN` → `[NEEDS PROOF: I-9]`.
+- **Service area early.** Ask zip or town in the first step (B-8). An out-of-area answer gets a polite message, not a lead. Multi-location: route to the right location.
+- **Service picker** from D-1. Leave out D-9 (refused). A service B-6 or I-10 shows at capacity or out of season stays in; note it for the account lead and flag it in the footer.
+- **Project details** in later steps: type, timeframe, a budget range only if D-4 allows talking price; photo upload optional (home services).
+- **Contact preference** (call, text, email) and best time. If follow-up is by text, consent wording → `sms`.
+- **After submit:** the confirmation states the real next step and timing from I-3 and D-3, shows the phone number for urgent needs, and mentions financing only per D-7.
+- **Booking tools** (A-15): if the client has one, check the embed on mobile and whether bookings are tracked (A-12). Otherwise don't name a tool.
+- **Clinical:** appointment requests collect the minimum. Never recommend fields for symptoms, conditions or insurance member IDs; if the existing form has them, list the form as "Flag for compliance review (person)" (§7) rather than changing it. Insurance accepted belongs in page content, not a form field.
+- **Button copy** follows 01's required CTA language. "Free" (as in "Get My Free Quote") only if D-3 or D-7 shows the client offers free estimates.
+<!-- BML:END quote-booking -->
+
 ### Survey Forms
 - Progress bar essential
 - One question per screen for engagement
@@ -420,3 +447,7 @@ Ideas to A/B test with expected outcomes
 - **popups**: For forms inside popups/modals
 - **cro**: For the page containing the form
 - **ab-testing**: For testing form changes
+
+<!-- BML:START routing -->
+**BML:** `signup` isn't in BML's set; for the rare account-creation form, use this file and say so. Text-message consent → `sms`. Untracked submissions → `conversion-tracking`.
+<!-- BML:END routing -->

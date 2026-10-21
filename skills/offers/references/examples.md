@@ -1,5 +1,9 @@
 # Worked Examples — Before/After Offers
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. These examples are illustrative, not BML client results. Never copy their figures (prices, "~3x close rate", renewal rates), offer names or guarantee wording into client work, and never quote them as benchmarks. Client facts come from rows; a missing fact is `[NEEDS PROOF: <row>]`. For local-service equivalents, see the formats in bml-service-offers.md.
+<!-- BML:END bml-note -->
+
 Anonymized examples drawn from real engagements. Each shows the weak version, the diagnostic, and the strong version.
 
 ---

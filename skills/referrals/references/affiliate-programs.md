@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** commission ranges, cookie windows, outreach template and tool list below are SaaS and e-commerce defaults. They apply only to a BML client that sells a product online (see SKILL.md BML mode). Professional referrers (physicians, realtors, builders, insurers) are never paid per referral: use [bml-local-referrals.md](bml-local-referrals.md) §2. Tools are "if the client uses it". Outreach is drafted, never sent.
+<!-- BML:END bml-use -->
+
 # Affiliate Program Design
 
 Detailed guidance for building and managing affiliate programs.

@@ -1,5 +1,12 @@
 # Email Types Reference
 
+<!-- BML:START treat-as -->
+**BML clients:** this catalogue and its audit checklist are SaaS lifecycle (trials, plans, billing, usage). For a local-service client, audit against the checklist in [bml-local-service-flows.md](bml-local-service-flows.md). Two items here conflict with BML rules and are overridden:
+- **Ask for Review** (G2, Capterra, app stores) → use the post-job review request in the BML reference: review platforms from A-16, every completed customer asked, no incentives.
+- **NPS → "Promoters: ask for review/referral"** is review gating. For BML clients, never route the review ask by score or sentiment; a feedback survey and a review request stay separate, and the review request goes to everyone or no one.
+Figures in examples ("You saved X hours", "top X%") are illustrative; client numbers come from rows (`bml/context-rules.md` §4).
+<!-- BML:END treat-as -->
+
 A comprehensive guide to lifecycle and campaign emails. Use this as an audit checklist and implementation reference.
 
 ## Contents

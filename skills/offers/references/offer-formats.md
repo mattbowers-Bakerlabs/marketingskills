@@ -1,5 +1,9 @@
 # Offer Formats by Business Type
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. Most BML clients are local service businesses: use the segment formats in bml-service-offers.md before the formats here. Price ranges below (course, coaching, info product, SaaS) are not benchmarks for BML clients. The `pricing` skill linked under Self-serve SaaS isn't used at BML; see **BML: pricing routing** in SKILL.md.
+<!-- BML:END bml-note -->
+
 The right offer format depends on what you sell. The same six components (core, bonuses, guarantee, scarcity, name, price) get assembled differently by business type.
 
 This reference is organized by business type. Find yours, then use the format as a starting point — not a fixed recipe.

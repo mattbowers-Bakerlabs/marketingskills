@@ -1,5 +1,9 @@
 # SMS Compliance Reference
 
+<!-- BML:START bml-use -->
+> **BML clients:** use this as background for the open questions you list, not as a ruling. Never tell a client or account lead that their program, consent or messages are compliant; mark each determination `[COMPLIANCE REVIEW: <topic>]` for a person (SKILL.md, compliance gate). The opt-in, STOP and HELP templates are starting drafts: fill `[Brand]` with the client's legal and trading name from page 13, keep any program details to what rows support, and flag them for review. Clinical clients add HIPAA review on top of everything here, and no message carries a condition, procedure, test or result (`bml-local-service-flows.md` §2). Penalty and settlement figures are agent background, not client copy.
+<!-- BML:END bml-use -->
+
 Comprehensive compliance reference for SMS marketing across major jurisdictions, opt-in copy templates, and STOP/HELP response templates.
 
 > This is operational guidance, not legal advice. For high-volume programs (50K+ subscribers) or any program with non-trivial revenue, run your compliance setup past a TCPA-experienced attorney.

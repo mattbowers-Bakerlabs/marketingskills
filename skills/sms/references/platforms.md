@@ -1,5 +1,9 @@
 # SMS Platform Reference
 
+<!-- BML:START bml-use -->
+> **BML clients:** the client's platform is whatever A-15 or page 00 §8 records; every platform here is "if the client uses it". Prices, tiers and throughput are illustrative upstream figures. Don't quote them to a client; say "confirm current pricing with the vendor". Local service businesses often text from their CRM, field-service, booking or practice-management tool rather than a dedicated SMS platform; the A2P 10DLC checklist at the end applies to those too. Agents never log in to, configure or write to a client's platform.
+<!-- BML:END bml-use -->
+
 Deep-dive on the major SMS marketing platforms — features, pricing, A2P 10DLC support, and integration paths.
 
 > Pricing is approximate and changes regularly. Always confirm at the vendor's site before committing.

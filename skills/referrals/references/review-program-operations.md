@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** read with [bml-local-referrals.md](bml-local-referrals.md) §3. In BML artifacts the reputation queue and quote ledger record platform, date and theme, never a reviewer's name, an identifying quote or a health detail. Reused quotes come verbatim from G-5 by row ID. Nothing is sent or configured without the approvals in §4. BML never writes to a client's CRM.
+<!-- BML:END bml-use -->
+
 # Review Program Operations
 
 Use for a repeatable invitation or reputation-triage program. Start with the smallest useful cohort and the user's existing tools; avoid building a sending system for a one-off request.

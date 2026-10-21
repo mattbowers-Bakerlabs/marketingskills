@@ -1,5 +1,11 @@
 # Cold Email Copywriting Frameworks
 
+<!-- BML:START treat-as -->
+
+**BML: shapes only.** The example emails name real companies, personas, people and results (a CRM tool, a pharma buyer, a VP Sales story, percentage lifts). Never copy a name, figure, quote or story into client work. Fill each shape from the record: value from D and E rows, proof from G rows or `[NEEDS PROOF: <row ID>]`, beliefs from F rows. Star-Story-Solution needs a G-3 story the client approved for use; for clinical clients, no patient stories in cold email. 3C's "we just did this for [another business]" names a customer only with permission, and never a competitor J-4 rules out. Local-service shapes with placeholders: [bml-referral-outreach.md](bml-referral-outreach.md).
+
+<!-- BML:END treat-as -->
+
 Frameworks beat templates — they teach thinking patterns, not copy-paste shortcuts.
 
 ## PAS — Problem, Agitate, Solution (default)

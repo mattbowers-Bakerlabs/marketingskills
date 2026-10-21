@@ -1,5 +1,9 @@
 # SMS Sequence Templates
 
+<!-- BML:START bml-use -->
+> **BML clients:** these are ecommerce templates, illustrative only. Never copy their codes (WELCOME10, SAVE10, COMEBACK15), discount levels, deadlines ("expires tonight", "last 6 hours") or scarcity lines ("selling fast", "limited stock") into client work. Offers come only from D-7 or D-11, and invented urgency is out for every client (clinical: no urgency at all). **Never use Post-Purchase Send 4**: it offers a discount for a review, and BML review requests carry no incentive and no gating. For local-service flows use [bml-local-service-flows.md](bml-local-service-flows.md). The character-count method and the segmentation rules at the end still apply.
+<!-- BML:END bml-use -->
+
 Full copy templates with character counts, timing, and segmentation logic for every major SMS flow.
 
 > Character counts shown assume GSM-7 encoding. Emojis force UCS-2 (70 chars/segment instead of 160). All templates use `[Brand]`, `[FirstName]`, and `[short.link]` as substitution tokens.

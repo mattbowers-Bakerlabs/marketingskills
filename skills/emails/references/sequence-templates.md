@@ -1,5 +1,9 @@
 # Email Sequence Templates
 
+<!-- BML:START treat-as -->
+**BML clients:** these are SaaS templates (signup, trial, activation, upgrade). For local-service clients use [bml-local-service-flows.md](bml-local-service-flows.md). Where a template is still used: "How [Customer] achieved [Result]" and "Real results from real customer" mean a verbatim G-3/G-5 row or `[NEEDS PROOF: G-3]`, never a composed story; "Urgency if appropriate", "Limited time" and "We miss you. Here's something special" need a real offer on D-7/D-11 and are off for clinical clients unless a page 12 row permits them (`bml/context-rules.md` §4, §7).
+<!-- BML:END treat-as -->
+
 Detailed templates for common email sequences.
 
 ## Contents

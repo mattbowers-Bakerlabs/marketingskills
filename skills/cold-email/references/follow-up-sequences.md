@@ -1,5 +1,11 @@
 # Follow-Up Sequences
 
+<!-- BML:START treat-as -->
+
+**BML:** the cadence and angle rotation are fine as defaults. The statistics are SaaS vendor data: illustrative only, never quoted to a client. "Social proof / case study" touches use G rows or `[NEEDS PROOF: G-3]`, never an invented story or a figure like the CTA example below. For clinical clients, the breakup email is a polite close: drop the "loss aversion" and "scarcity through withdrawal" framing (context-rules §7). The 1-2-3 reply format is fine. A "please stop" reply goes on the suppression list.
+
+<!-- BML:END treat-as -->
+
 55% of replies come from follow-ups, not the initial email. Yet 48% of salespeople never follow up even once.
 
 ## How Many: 3–5 Total Emails

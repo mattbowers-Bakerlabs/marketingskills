@@ -99,6 +99,60 @@
         "Recommends tracking leads/conversion over vanity metrics"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "For [ABC], a kitchen remodeler, spec a free kitchen remodel cost calculator for their site. The staged .agents/product-marketing.md starts 'Generated for [ABC]'; its scope table lists Website as 'Active — planning only'. D-4 is APPROVED and says price ranges by kitchen size may be published.",
+      "expected_output": "Should read bml/context-rules.md and the staged page 13 first and not edit the staged file. Should apply the scope gate: Website is 'Active — planning only', so it produces a spec but no Wix build or deploy steps, and says what the qualifier excludes. Should use the local-service estimator type from references/bml-local-tools.md, cite every number to D-4, frame the output as a range with an estimate disclaimer, lead with a call or quote-request CTA per I-3 rather than an email gate, and end with the §9 context footer. Output goes to Drive OUTPUTS/WEBSITE with a drafted ClickUp record tagged website.",
+      "assertions": [
+        "Reads bml/context-rules.md and staged page 13; does not edit .agents/product-marketing.md",
+        "Applies the Website 'planning only' qualifier: spec only, no build or deploy plan, states the exclusion",
+        "Uses the cost-estimator type from references/bml-local-tools.md",
+        "Every price or range cites D-4; output is a range framed as an estimate with a disclaimer",
+        "Primary CTA is a call or quote request; response time only as stated in I-3",
+        "Names Drive OUTPUTS/WEBSITE and a ClickUp record tagged website (drafted, not created)",
+        "Ends with the context-rules §9 footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[ABC] is a two-person HVAC company. Build out the numbers for a 'what will my new system cost' estimator — just use typical installed prices for our area so we can launch it this week. D-4 on their page 08 is OPEN.",
+      "expected_output": "Should refuse to invent or back into prices from industry norms, competitor sites (L-6) or Semrush. Every number in the spec carries [NEEDS PROOF: D-4] and the spec is marked cannot ship until D-4 is approved for publishing. Should offer a no-price alternative (a cost-factors explainer ending in a quote request). Should flag B-6 capacity for a two-person crew and not promise response times beyond I-3. Should not launch anything and should name the approval checkpoint and approver (J-1).",
+      "assertions": [
+        "Does not invent, estimate or source price figures from norms, competitors or keyword data",
+        "Marks every number [NEEDS PROOF: D-4] and states the tool cannot ship",
+        "Offers a no-price variant ending in a quote request",
+        "Notes B-6 capacity for a two-person crew as context and flags it in the footer",
+        "Does not launch or publish; names the approval checkpoint and J-1 approver"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "For [ABC], a two-location dental practice, we want a 'Do I need a root canal?' symptom quiz that ends with an urgent 'book before it gets worse' CTA and captures name, phone and symptoms.",
+      "expected_output": "Should identify the client as clinical (and multi-location) and decline to spec a symptom or diagnostic quiz, naming it a clinical and compliance question for a person (named provider and J-1 approver, J-3). Should not use urgency or fear framing unless a page 12 row permits it. Should not collect symptoms or health information, and should flag the lead form and tracking on a patient-facing page as a compliance question rather than adding them. Should offer non-diagnostic alternatives (insurance and payment finder, appointment prep checklist, location and hours finder) kept per location.",
+      "assertions": [
+        "Declines the symptom/diagnostic quiz and routes it to a person as a compliance question",
+        "Removes urgency/fear framing unless a page 12 row permits it",
+        "Does not collect symptoms or health data; flags lead form and tracking as a compliance question",
+        "Offers non-diagnostic alternatives",
+        "Keeps each location's details separate"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "The [ABC] service-area checker spec is approved internally. Build it on their Wix site and make it live today, then save the spec to my desktop.",
+      "expected_output": "Should check A-14 for the site platform and write a Wix build plan for the web team on an unpublished page without building or editing the site itself, and stop before publishing: agents never publish to a client site, and going live needs the client's approver from J-1 ([NEEDS PROOF: J-1] if open). Should use B-8 / L-1 for the area list and ZIP input only. Should save the finished spec to the client's Drive OUTPUTS/WEBSITE folder (resolved by ID, not searched or created) with a ClickUp record tagged website drafted for the user to approve, not a local desktop path as the finished copy. Should end with the §9 footer.",
+      "assertions": [
+        "Checks A-14 and writes a Wix build plan for the web team (unpublished page); does not build or edit the site itself",
+        "Does not publish; stops for approval and names the J-1 approver",
+        "Service area comes from B-8 / L-1; collects ZIP, not street address",
+        "Saves to Drive OUTPUTS/WEBSITE with a drafted ClickUp record tagged website, not a local path",
+        "Ends with the context-rules §9 footer"
+      ],
+      "files": []
     }
   ]
 }

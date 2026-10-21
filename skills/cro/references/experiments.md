@@ -2,6 +2,16 @@
 
 Comprehensive list of A/B tests and experiments organized by page type.
 
+<!-- BML:START bml-use -->
+> **BML client work:** these ideas are written for SaaS and B2B sites (free trials, demos, plan tiers, G2/Capterra scores, logo bars, "Join 10,000+ teams"). For a BML client (see the cro SKILL.md context block):
+> - Treat them as illustrative. Never copy figures, names or claims from them into client work. Social-proof tests use rows (G-1, G-5, A-7 with "⚠ confirm before publishing") or `[NEEDS PROOF: <row ID>]`.
+> - Local-service ideas to consider first: call vs. quote form as the primary CTA, a sticky mobile call or book bar, service area and hours beside the CTA, the Business Profile rating near the CTA, single- vs. multi-step quote form, a response-time line from I-3, and location pages that match each location's Business Profile.
+> - Pricing tests (tiers, $99 vs. $97, annual toggle) fit only a client with real plan tiers. Price ranges only per D-4.
+> - Urgency or scarcity only when genuine and backed by D-11 (countdowns only to a real dated deadline, never evergreen or resetting; "only <n> left" only if B-6 and a row support it), and never for a clinical client unless a page 12 row permits it (§7). Exit-intent and other popups → `popups`.
+> - Most local-service pages don't have the traffic to split-test. Run the sample-size check in `ab-testing` first. If traffic is too low, say so and recommend a sequential change with a dated before/after read (cro SKILL.md, BML output rules).
+> - Testing, heatmap and chat tools (VWO, Optimizely, Hotjar, chat widgets): only if the client uses it.
+<!-- BML:END bml-use -->
+
 ## Contents
 - Homepage Experiments (Hero Section, Trust & Social Proof, Features & Content, Navigation & UX)
 - Pricing Page Experiments (Price Presentation, Pricing UX, Objection Handling, Trust Signals)

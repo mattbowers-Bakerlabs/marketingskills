@@ -1,5 +1,9 @@
 # Guarantee Design
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. **Never invent a guarantee.** The client's guarantee is D-5, verbatim. Any type below is a recommendation for the client to approve (J-1), never offer copy, until D-5 is updated through a `context` task. Clinical and professional-services clients get no outcome guarantees (context-rules §7); better-than-money-back and comparison guarantees are not proposed for them, and a comparison guarantee that names a competitor needs J-4 clearance. Guarantee and warranty wording is a commitment the client makes: flag it for the client's own review. "Adding any guarantee is almost always a lift" does not apply to BML clients without that approval.
+<!-- BML:END bml-note -->
+
 A guarantee directly raises *perceived likelihood of achievement* (the buyer thinks: "they'll only offer this if they're confident") and lowers *effort & sacrifice* (less emotional risk). It's one of the highest-leverage levers in offer design.
 
 The wrong guarantee hurts more than no guarantee. Pick the type that matches your business model.

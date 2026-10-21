@@ -1,5 +1,14 @@
 # WhatsApp Business Platform Reference
 
+<!-- BML:START bml-use -->
+> **BML clients:** most BML clients text US numbers, where Meta doesn't deliver marketing templates, so SMS stays the channel. WhatsApp is for clients whose page 13 shows customers mostly outside the US, and only on a platform A-15 / 00 §8 records. Never pick a BSP for the client. How to treat this file:
+> - **Examples are illustrative.** Never copy "Acme", codes (WELCOME15, "15% welcome code"), "stock is limited" or the "under 10 minutes" reply time into client work. Offers come from D-7 / D-11, reply times from I-3. Otherwise write `[NEEDS PROOF: <row ID>]`. No invented scarcity for any client.
+> - **Pricing, limits and dates** are Meta facts as of 2026-10, for the agent only. Tell the client to confirm current rates rather than quoting them.
+> - **Categories and opt-in are proposals.** Template category (marketing / utility), consent wording and opt-in capture are flagged `[COMPLIANCE REVIEW: <topic>]` for a person, as in SKILL.md's compliance gate.
+> - **Clinical clients:** same no-PHI rules as SMS (`bml-local-service-flows.md` §2), applied to templates, buttons, list rows and chat replies. Never ask for health information in chat. Whether a messaging platform may be used for patient messages at all is `[COMPLIANCE REVIEW: HIPAA]`, decided by the client's compliance contact.
+> - **Agents never act on the platform.** No sending, template submission, opt-out flagging "in your CRM", or number warm-up. Those steps go into the spec for the client or account lead. Click-to-WhatsApp ads spend money: hand them to `ads`, behind the approval path in SKILL.md's outputs block.
+<!-- BML:END bml-use -->
+
 Adapted from a contribution by @Inflimity (PR #516).
 
 > Platform facts below are **as of 2026-10** and sourced from Meta's developer docs (links in [Sources](#sources)). Meta changes pricing and limits often. Check the pricing page before quoting costs to a client.

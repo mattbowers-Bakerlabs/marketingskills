@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** the programs, reward amounts, benchmarks and worked figures below are illustrative SaaS and consumer examples. Never copy a figure, company name or benchmark into client work. Client facts come only from rows (B-5, B-7 for job value and margin); with no row, write `[NEEDS PROOF: <row ID>]` or "benchmark unknown". The sizing formula may be used with the client's own numbers, after the J-3 reward check in [bml-local-referrals.md](bml-local-referrals.md) §1.
+<!-- BML:END bml-use -->
+
 # Referral Program Examples
 
 Real-world examples of successful referral programs.

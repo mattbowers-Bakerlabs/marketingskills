@@ -1,5 +1,9 @@
 # Email Copy Guidelines
 
+<!-- BML:START treat-as -->
+**BML clients:** the benchmarks under Metrics to Track (open, click, unsubscribe rates) are generic SaaS/ecommerce figures; never present them as a client's target or result. Use the client's own baseline (A rows or platform reports) or write "benchmark unknown"; open rates are also inflated by mail privacy features, so judge sequences on calls, bookings, forms and signed jobs. Merge fields and segments follow the **BML copy rules** in SKILL.md (clinical: first name and practice details only, no PHI, no condition or appointment-type personalisation). "Trial vs. paid" and company-size segments rarely apply; segment by stage (inquiry, open estimate, past customer, member), service (D-1) and town (B-8). "Document learnings" means a `context` task (`bml/context-rules.md` §8), not an edit to the context file.
+<!-- BML:END treat-as -->
+
 ## Contents
 - Structure
 - Formatting

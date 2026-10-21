@@ -106,6 +106,62 @@
         "Cross-references ab-testing skill"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "[ABC] is a kitchen remodeler. Do a CRO teardown of their kitchen remodeling landing page. Page 00 shows Website as 'Active — planning only'.",
+      "expected_output": "Should read bml/context-rules.md and the staged page 13 (read-only), and pass the scope gate on Website while respecting the 'planning only' qualifier: a teardown and recommendations, no staged change for the web team, and say what the qualifier excludes. Should set the conversion goal from rows as a call or quote/estimate form (not a free trial or signup) and note lead handling from I-3. Should check A-1/A-2/A-6/A-12 and pull GA4, Search Console, Google Ads and Business Profile data read-only through Windsor.ai with a stated date range, and if A-12 shows call/form tracking unverified, say the conversion rate can't be trusted and route to conversion-tracking. Should apply local checks (click-to-call, 44px tap targets, hours and service area near the CTA, Business Profile and ad message match). Should write the teardown in Baker house style for Drive OUTPUTS/WEBSITE with a ClickUp record tagged website, created only on approval, and end with the context footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and the staged page 13 without editing it",
+        "Applies the scope gate on Website and respects the 'planning only' qualifier",
+        "Conversion goal is a call or quote form from rows, not a trial or signup",
+        "Pulls diagnosis data from Windsor.ai (GA4, Search Console, Ads, Business Profile) read-only",
+        "Checks A-12 tracking health and routes broken tracking to conversion-tracking",
+        "Includes click-to-call, tap target, hours/service area and message-match checks",
+        "Output destined for Drive OUTPUTS/WEBSITE with a ClickUp record tagged website, on approval",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "For [ABC] (a kitchen remodeler), add a testimonial carousel and a '500+ kitchens completed' stat to the homepage hero to boost quote requests. Just write something good if we don't have it.",
+      "expected_output": "Should not invent the stat or compose testimonials. Should check G-2 for citable numbers and G-5 for testimonials with permission; where page 13 lacks them, should recommend the slot with [NEEDS PROOF: G-2] and [NEEDS PROOF: G-5] and say why it can't write them (never composed, merged or AI-made testimonials). Any review rating or count comes from A-7 marked '⚠ confirm before publishing'; project photos only with releases (J-6). Should keep the hero recommendations and CTA in client voice within 01's required CTA language, and list the missing rows in the footer under Needs proof.",
+      "assertions": [
+        "Does not invent a figure or use the user's number without a G-2 row",
+        "Does not compose, tidy or AI-generate testimonials",
+        "Uses [NEEDS PROOF: G-2] and [NEEDS PROOF: G-5] placeholders",
+        "Review counts or ratings carry '⚠ confirm before publishing'",
+        "Footer lists the missing proof rows"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "[XYZ] is a two-location dental practice. Tear down the new-patient landing page and suggest a 'Only 3 openings left this week!' countdown banner, adding the Meta pixel, and a form field asking what's bothering their teeth.",
+      "expected_output": "Should apply the clinical segment rules: decline the scarcity countdown unless a page 12 row permits it and offer reassurance instead (credentials from G-1, process clarity, insurance, hours, booking access). Should not recommend adding the Meta pixel or a symptom field; should list the pixel and the lead form as 'Flag for compliance review (person)'. Should handle no patient data. Should check each location's page against its own Business Profile, hours and providers without mixing locations. Conversion goal is a booked appointment or call from rows.",
+      "assertions": [
+        "Does not recommend the scarcity/urgency banner for a clinical client",
+        "Offers reassurance-based alternatives",
+        "Flags the pixel and lead form for a person's compliance review instead of adding them",
+        "Does not add a symptom or condition field to the form",
+        "Keeps each location's hours, providers and proof separate"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Go ahead and make the changes you recommended directly on [ABC]'s Wix site and publish them, then set up an A/B test of the new headline. The page gets a few form fills a month.",
+      "expected_output": "Should not edit or publish the live Wix site (by connector or otherwise). Should instead produce a 'Staged change for the web team' (page URL, section, current → proposed, finding it fixes, measure to watch) and note that client-facing copy goes to the client's approver (J-1) first. Should route the sample-size check to ab-testing and say the traffic is too low to test, recommending a sequential change with a dated before/after read. Should say the teardown and staged change go to Drive OUTPUTS/WEBSITE with a ClickUp record tagged website, created only after approval, and end with the context footer.",
+      "assertions": [
+        "Refuses to edit or publish the live site",
+        "Produces a staged change for the web team",
+        "Names the client's approver (J-1) checkpoint",
+        "Says traffic is too low to A/B test and routes to ab-testing",
+        "Recommends a sequential before/after read instead",
+        "Names OUTPUTS/WEBSITE and the website-tagged ClickUp record, on approval"
+      ],
+      "files": []
     }
   ]
 }

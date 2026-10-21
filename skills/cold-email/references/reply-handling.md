@@ -1,5 +1,11 @@
 # Handling Replies
 
+<!-- BML:START treat-as -->
+
+**BML: agents draft, people act.** For BML work this overrides "What an agent can handle": no reply type is "Agent alone", and the 100-reply accuracy threshold never unlocks autonomous sending. The agent may classify replies and draft responses; a person sends them, pauses or resumes sequences, suppresses contacts, sets reminders and books meetings in the client's own tools. "Within minutes" becomes the response time I-3 records, and the handoff names who responds. Logging to the client's CRM is a person's step; agents never write to a client's CRM. In objection replies, never name a competitor that J-4 rules out, and answer "what does it cost?" only from D-4 prices the client approved publishing; otherwise offer a call. A case study sent before a meeting comes from G rows or approved `asset` records. SMS reminders need the recipient's agreement (see the `sms` skill).
+
+<!-- BML:END treat-as -->
+
 The sequence's job ends when someone replies. What happens in the next hour decides whether that reply becomes a meeting. This reference covers classifying replies, responding to each type, speed, booking, and what an agent can handle on its own.
 
 ## Classify every reply

@@ -1,18 +1,53 @@
 ---
 name: referrals
-description: "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' 'affiliate payout,' 'get more reviews,' 'G2 reviews,' 'review campaign,' or 'respond to a bad review.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch."
+description: "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' 'affiliate payout,' 'get more reviews,' 'G2 reviews,' 'review campaign,' 'respond to a bad review,' 'referral partners,' 'referring physicians,' 'review requests,' or 'get more Google reviews.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch."
 metadata:
-  version: 2.2.1
+  version: 2.2.1-bml.1
 ---
 
 # Referral & Affiliate Programs
 
 You are an expert in viral growth and referral marketing. Your goal is to help design and optimize programs that turn customers into growth engines.
 
+<!-- BML:START modes -->
+## BML mode: choose the workflow first
+
+| Situation | Workflow |
+|---|---|
+| BML client work (signals in the context block below) | [references/bml-local-referrals.md](references/bml-local-referrals.md): customer referral programs, professional referrer networks, review programs. Use upstream sections only as the table below allows |
+| BML client whose page 13 shows a product sold online with self-serve purchase (a B2B/product company) | Upstream workflow, plus every rule in the context block |
+| BML's own marketing, or not BML work | Upstream workflow as written |
+
+For BML client work, this overrides these upstream sections:
+
+| Upstream section | For BML clients |
+|---|---|
+| Before Starting (LTV, CAC, shareable product, network effects) | Answer from rows (B-7, B-9, I-5, B-6, A-15). Ask only for gaps; a missing fact is `[NEEDS PROOF: <row ID>]` |
+| Should You Engineer Virality First? | Skip. Local service sits at the limited end; no badges, watermarks or embeds |
+| Referral Program Design, Steps 1–3 | Job-moment triggers, offline share paths and the J-3 legality gate in the BML file §1. Clinical default is a non-incentive program |
+| Typical Findings, program-examples.md, affiliate-programs.md, affiliate-operations.md figures | Illustrative only. Never cite in client work; with no client row, say "benchmark unknown" |
+| Launch Checklist, Email Sequences ("announce", "send reminder emails") | Drafts only. Nothing launches, sends or pays out before the approvals in the BML file §4 (client approver: J-1). Ask messages are drafted by `emails` or `sms` |
+| Affiliate Programs, affiliate-operations.md | Only for the product-company case above, and outreach, terms changes and payouts stay drafts for approval. Professional referrers (L-8) get a relationship program (BML file §2), never per-referral pay |
+| Review Programs | BML file §3: Google Business Profile and A-16 platforms, no gating, no incentives, no composed reviews, no reviewer names |
+| Tool Integrations | Only if the client uses it (A-15, page 00 §8) |
+
+Capacity is context, not a gate: note B-6 and I-10 beside the program and flag them in the footer (BML file §0).
+<!-- BML:END modes -->
+
 ## Before Starting
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**BML client work:** if the request names a BML client (a code like `[ABC]` or a client name), runs in a client's Claude Project, or the staged file starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`, read `bml/context-rules.md` (repo root; `../../bml/context-rules.md` from this skill's folder) before anything else. Never edit `.agents/product-marketing.md` for a client, and never add a learning or changelog line to it (§1, §8).
+
+- **Read order (§1):** router → staged page 13 → current Monthly Context Brief → source rows only for detail behind a cited row. Don't browse Drive or search ClickUp. The questions under "Gather this context" are answered from rows first.
+- **Scope gate (§3):** the page 00 line covering the work: marketing strategy or planning (or a referral/partner program line) for program design; Local SEO, Google Business Profile or reputation management for review programs; Email Marketing or SMS for ask messages. A "planning only" qualifier means the design record only. No line → stop and offer a scope note.
+- **Rules:** claims and `[NEEDS PROOF]` (§4), guardrails at any status incl. J-3 on rewards (§5), distinctiveness, capacity (B-6) and lead handling (I-3) (§6), segment rules (§7), client edits (§8), footer (§9), write-back of research as `DRAFT` rows (§10).
+- **`INTAKE DRAFT`:** internal or pitch material only, marked "from public research". Nothing for launch.
+- **Outputs:** the program design record goes to the session's outputs folder; filed on request to the client's Drive `OUTPUTS/WEBSITE` (resolved by ID, never created), with a ClickUp record tagged `strategy` created only after the user approves. Details: [references/bml-local-referrals.md](references/bml-local-referrals.md) §6.
+<!-- BML:END context -->
 
 Gather this context (ask if not provided):
 
@@ -248,6 +283,10 @@ They get [their reward] too.
 
 Reviews are the other half of customer advocacy. For review-request programs, responding to reviews, reputation triage, and reusing testimonials with permission (G2, Capterra, Trustpilot, Google, app stores), see [references/review-programs.md](references/review-programs.md). Platform rules differ, so check [references/review-platform-rules.md](references/review-platform-rules.md) before proposing incentives or automation.
 
+<!-- BML:START review-programs -->
+**BML clients:** read [references/bml-local-referrals.md](references/bml-local-referrals.md) §3 first. It routes to these three upstream files and overrides them for BML clients: no incentives on any platform, no gating or sends on "existing authorization", no composed reviews, no reviewer names in BML artifacts, clinical replies never confirm a patient, and Google Business Profile plus the A-16 platforms come first.
+<!-- BML:END review-programs -->
+
 ## Task-Specific Questions
 
 1. What type of program (referral, affiliate, or both)?
@@ -273,6 +312,10 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Introw** | Channel partner programs with tiers, deal registration, QBRs | [introw.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) |
 | **PartnerStack** | Enterprise partner and affiliate programs | [partnerstack.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/partnerstack.md) |
 
+<!-- BML:START tools -->
+**BML clients:** every tool above is "if the client uses it" (A-15, page 00 §8); don't assume Stripe or a referral platform. Most local programs need only an intake source question, a code, call tracking if the client has it, and a UTM-tagged page. BML never configures these tools, writes to a client's CRM, or pays rewards (BML file §4–5).
+<!-- BML:END tools -->
+
 ---
 
 ## Related Skills
@@ -281,3 +324,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **emails**: For referral nurture campaigns
 - **marketing-psychology**: For understanding referral motivation
 - **analytics**: For tracking referral attribution
+
+<!-- BML:START related -->
+- **BML clients:** `emails` and `sms` draft referral and review asks and partner updates (SMS consent lives in `sms`); `cro` or `copywriting` for a referral page; `co-marketing` for builder, realtor or designer partners; `offers` for a welcome offer built from D-7; `analytics` for source tracking.
+<!-- BML:END related -->

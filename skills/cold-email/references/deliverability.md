@@ -1,5 +1,11 @@
 # Cold Email Deliverability
 
+<!-- BML:START treat-as -->
+
+**BML: a checklist for whoever sends, never steps for an agent.** Agents don't buy domains or mailboxes, change DNS, warm mailboxes, upload or verify lists, or set pause rules in a sending tool (SKILL.md "BML: nothing sends from an agent"). Put these rules into the sequence spec's compliance checklist instead. Domain, mailbox and tool purchases are spend and need explicit approval. Every mailbox belongs to a real, named person at the sender (from the record); never invent a sender persona, name or photo. The volume math and stop-loss thresholds assume programs of hundreds of sends a day. A local referrer list is often tens of contacts: say the reply-rate stop-loss can't be judged at that size rather than applying it. Tools listed here are examples; use one only if the client uses it (A-15, page 00 §8).
+
+<!-- BML:END treat-as -->
+
 The best cold email does nothing if it lands in spam. Deliverability is set up before the first send and watched every week after. This reference covers the sending setup, the mailbox providers' rules, volume limits, warmup, monitoring, and when to stop.
 
 Numbers here come mostly from sending-infrastructure vendors and mailbox providers' own guidelines. Mailbox providers change enforcement without notice, so treat the volume figures as starting points and let your own placement tests decide.

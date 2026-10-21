@@ -1,5 +1,16 @@
 # Outbound Plays
 
+<!-- BML:START treat-as -->
+
+**BML:** use the plays as shapes and replace every example with placeholders and rows.
+- **Value-first teardown** is the natural play for BML's own new business (Self mode). The agent may draft the teardown, but a person reviews every one, and every observation about the prospect's page must be checkable on the page itself. No predicted lift ("costs a few points of annual uptake") unless BML has a source for it.
+- **Product-led outbound** is self-serve SaaS. It doesn't apply to local-service clients (BW-11); use it only for a client whose rows show a self-serve product.
+- **Problem-led** fits Client mode when the "free sample" is an offer the client actually makes (D-7 entry offers, D-4 pricing). Never invent a free estimate, visit or audit the client doesn't offer.
+- **Founder-led** maps to owner-led outreach for a local business. The agent drafts in the owner's voice (01); the owner or J-1 approves and sends.
+Volumes, rates and the "within minutes" trigger timing are SaaS figures: illustrative only. For local service, success is replies, intro calls and first referrals.
+
+<!-- BML:END treat-as -->
+
 A play is a repeatable outbound motion: a trigger, an offer, a sequence, and a definition of success. Plays keep outbound from becoming a pile of one-off emails. This reference covers four that work in 2026, with the conditions each needs.
 
 ## 1. Value-first teardown (services and agencies)

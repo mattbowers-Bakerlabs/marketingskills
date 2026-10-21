@@ -23,6 +23,8 @@ Client context lives in the client's ClickUp space, in the `Client Operations` d
 
 **Read order:** router → staged page 13 → current Monthly Context Brief → source pages only if needed (detail behind a cited row, topic filtering, or a stale page 13).
 
+**Approved assets:** before creating new creative, look for an approved `asset` record where the router or the Monthly Context Brief says assets are listed. If neither names a place, ask the user. Never search ClickUp or Drive broadly for them.
+
 **Staged file types:**
 
 | First line | What it is | How to treat it |
@@ -73,6 +75,15 @@ Also:
 - Prices only where the row says the client approved publishing them (D-4).
 - Review counts, ratings, and anything in the staged file's "Volatile facts" block carry "⚠ confirm before publishing".
 - Local market rows (L-*) are BML research: use them for targeting, topics and planning. A market statistic in public copy cites its source and date, and never implies the client's own results.
+- Offers, promotions and guarantees come only from D-5, D-7 and D-11, with prices per D-4. A dated promotion counts as a volatile fact. A new guarantee, offer or response-time promise is a recommendation for the client's approver (J-1), never copy.
+
+**Review requests** (any skill that asks customers for reviews):
+
+- Every completed customer gets the same ask, with at most one reminder across email and SMS combined. A click or reply on either channel stops both.
+- No gating: never route happy customers to a public review and others to private feedback.
+- No incentives of any kind for a review, on any platform.
+- No scripted wording, and never write a review for anyone.
+- Keep the review ask separate from any referral ask.
 
 ## 5. Guardrails
 
@@ -93,7 +104,7 @@ A client deliverable builds on **at least one belief** (F row, `APPROVED` or `PR
 - If the record has no usable belief or proof for the topic, don't fake one. Mark the footer `Distinctiveness: FAIL — not client-ready` and list the rows to fill.
 - Agency artifacts (reports, plans, decks) skip this check.
 
-Also check capacity and lead handling: don't push a service the client can't take on (B-6), promise response times beyond I-3, or duplicate something the brief shows as recently published.
+Also check capacity and lead handling: note capacity and season (B-6, I-10) as context beside the affected service and flag it in the footer, but never drop or block a service for them; don't promise response times beyond I-3, or duplicate something the brief shows as recently published.
 
 ## 7. Segment rules
 
@@ -104,6 +115,8 @@ The staged file lists the client's segments; a client can have more than one (a 
 - No patient data in any tool or draft. No patient names, dates of service, conditions tied to a person.
 - Clinical claims (outcomes, efficacy, results) only from approved published copy, and flagged for review by a named provider.
 - Testimonials and patient stories need written patient authorization on file (G-5, J-6).
+- Outbound messages (email, SMS, voicemail scripts) carry no condition, procedure, test, result or revealing provider specialty, and never ask for health information.
+- Anything of value to a referral source, a patient or a reviewer (fees, gifts, free or discounted services) is a compliance question for a person under J-3. Flag it; never design around it.
 - No scarcity, urgency, fear or outcome-promise framing unless a page 12 row permits it. Use reassurance instead: approved social proof, process clarity, credentials, access (hours, insurance, booking).
 - Tracking pixels and lead forms on patient-facing pages are a compliance question for a person, not a skill. Flag them; don't add them.
 
@@ -117,14 +130,20 @@ The staged file lists the client's segments; a client can have more than one (a 
 
 - Show license details where J-3 requires them.
 - Project photos only with a release on file (J-6). Never present AI images as real projects.
-- Respect service area (B-8, L-1) and seasonal capacity (B-6, I-10).
+- Respect service area (B-8, L-1). Note seasonal capacity (B-6, I-10) as context, never a gate.
 
 **Professional services and real estate**
 
 - Credentials and disclosures per J-3.
 - No outcome guarantees (returns, case results, sale prices) unless a row permits them.
+- Anything of value to a referral source (referral fees, gifts, rebates) is a compliance question for a person under J-3. Flag it; never design around it.
 
-**Other** — no extra rules beyond sections 1–6.
+**Other** — no extra rules beyond sections 1–6 and the all-segment rules below.
+
+**All segments**
+
+- Tools that output a price, payment or recommendation (estimators, calculators, quizzes) give estimates: a range, a disclaimer, and numbers only from rows. No skill builds a clinical diagnostic or symptom tool.
+- Compliance is flagged, not asserted. TCPA, CAN-SPAM, HIPAA, FTC review rules, licensing and financing disclosures become `[COMPLIANCE REVIEW: <topic>]` for a person. Never tell a client something is compliant.
 
 ## 8. Client edits and feedback
 

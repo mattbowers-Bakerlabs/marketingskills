@@ -1,5 +1,9 @@
 # Free Tool Types Reference
 
+<!-- BML:START bml-use -->
+> **BML client work:** start with `bml-local-tools.md`, which covers the local-service types and their ship gates. For the types below: any price, savings, tax or loan math needs the client's figures from D-4 or D-7 (approved for publishing), otherwise `[NEEDS PROOF: D-4]`; financing and loan calculators that show payments or rates are a J-3 compliance question for a person. "Benchmark against averages" needs a cited source, never an invented average. Generators of policies, contracts or legal or clinical text are not for BML clients. "Powered by" branding and "follow up with improvement offers" follow the client's CTA language (01) and lead handling (I-3). Clinical clients: no symptom, diagnostic or candidacy quizzes.
+<!-- BML:END bml-use -->
+
 Detailed guide to each type of marketing tool you can build.
 
 ## Contents

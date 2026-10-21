@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** product-embedded virality rarely applies to local service businesses, which sit at the limited end of the spectrum below. The named companies and launch figures are illustrative; never cite them in client work. Launch-deadline urgency is gated for clinical clients (context-rules §7). Use [bml-local-referrals.md](bml-local-referrals.md) instead.
+<!-- BML:END bml-use -->
+
 # Viral Mechanisms
 
 Virality can be **engineered through product design**, not just bought with reward programs. But don't force it — decide *whether* virality fits your product before building anything.

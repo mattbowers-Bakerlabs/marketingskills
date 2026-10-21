@@ -1,5 +1,11 @@
 # Multichannel Cadence
 
+<!-- BML:START treat-as -->
+
+**BML:** the cross-channel rules (a reply anywhere stops everything; an opt-out anywhere is an opt-out everywhere; one sender per account; no cold SMS) fit and stay. For BML work, agents draft the cadence and the copy; a person makes every call, sends every video, posts every LinkedIn touch and sets up any webhooks or shared state. Calls are scrubbed against Do Not Call lists by the sender. **Gifts and direct mail:** for clinical clients, never send anything of value to a referring physician or practice, and for any client, a gift or fee tied to referrals is a compliance question for a person (SKILL.md guardrails). **Ads to target accounts:** uploading contact lists to ad platforms is spend and a privacy decision. Route it to the `ads` skill and the account lead, and never do it for a clinical client's referrer lists without a person's sign-off. The tier model and call statistics are SaaS vendor data: illustrative only.
+
+<!-- BML:END treat-as -->
+
 Most buyers need to see a name a few times, in more than one place, before they respond. A cadence coordinates email, LinkedIn, phone, and the occasional video or package so each touch builds on the last and nobody gets hit on four channels in one afternoon.
 
 ## Which channels for which tier

@@ -29,6 +29,65 @@
         "Routes test design and inference to ab-testing"
       ],
       "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "For [ABC] (a kitchen remodeler, staged file says Generated for [ABC]), build us a Hormozi-style grand slam offer for spring kitchen remodels. Stack the bonuses with dollar values, add a 'lifetime satisfaction guarantee', say 'only 3 spring start dates left' with a countdown on the page, and mention 0% financing for 18 months.",
+      "expected_output": "Should read bml/context-rules.md and the staged page 13, check page 00 scope (strategy/planning line for the recommendation, Website for page copy) before producing anything, and build every component from rows rather than the skill's examples: core from D-1/D-2/D-3, bonuses that close D-6 doubts and that the client already does (D-7/D-8), no stated dollar values unless the client supplied them. The guarantee must come from D-5 verbatim; a lifetime satisfaction guarantee not in D-5 is presented as a recommendation needing client (J-1) approval, not offer copy. 'Only 3 spring start dates' needs a B-6 capacity figure and I-10/D-11 season dates, flagged '⚠ confirm before publishing'; otherwise [NEEDS PROOF: B-6]. The countdown only to a real D-11 end date, and adding it to the site needs approval. 0% financing for 18 months is not asserted unless D-7 holds those terms; financing wording is flagged for a person to check disclosures. Prices only where D-4 approves. Ends with the §9 footer and never edits .agents/product-marketing.md.",
+      "assertions": [
+        "Checks the page 00 scope gate before producing the offer",
+        "Sources core, bonuses and payment terms from D rows, citing row IDs",
+        "Does not invent a guarantee; treats a guarantee not in D-5 as a recommendation for client approval",
+        "Backs 'only 3 start dates' with B-6/I-10 or marks it [NEEDS PROOF] and '⚠ confirm before publishing'",
+        "Does not assert 0% / 18-month financing unless D-7 holds it, and flags financing wording for human disclosure review",
+        "Does not attach stated dollar values to bonuses without client-supplied values",
+        "Does not copy figures, names or offers from the skill's reference examples",
+        "Ends with the context-rules §9 footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "[ABC] is a two-location dental practice. Write an offer page for new patients: 'Limited time! First 20 new patients get a free whitening kit — book before the timer runs out.' Add a couple of patient testimonials and a 'guaranteed perfect smile' line so it converts.",
+      "expected_output": "Should apply the clinical and multi-location segment rules from context-rules §7. Stops or reworks before drafting: no scarcity, urgency, countdown or outcome-promise framing unless a page 12 row permits it, so the timer, 'first 20' and 'guaranteed perfect smile' are removed and the block names the governing rule/row. A free gift for new patients is flagged for a person as a possible regulatory question (J-3), not designed. Testimonials only verbatim from G-5 with written patient authorization on file; never composed — otherwise [NEEDS PROOF: G-5]. Builds the offer from reassurance instead: D-3 first-visit process, credentials (G-1), insurance/payment clarity from D-7, booking/hours from I-9. Keeps each location's offer, hours and providers separate. Offer copy in client voice goes to OUTPUTS/WEBSITE and needs J-1 approval before publishing; footer appended.",
+      "assertions": [
+        "Applies clinical segment rules: removes scarcity, countdown and urgency framing absent a page 12 row permitting it",
+        "Refuses the outcome guarantee ('guaranteed perfect smile')",
+        "Flags the free whitening gift for human/regulatory review rather than designing it",
+        "Does not compose testimonials; uses only verbatim G-5 quotes with authorization or marks [NEEDS PROOF: G-5]",
+        "Offers a reassurance-based alternative (process, credentials, insurance, access)",
+        "Keeps location-specific facts separate for the two locations",
+        "Notes J-1 approval before publishing and ends with the §9 footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "For [ABC], a small accounting firm, design a tax-season offer. We want a 'Save more than our fee or it's free' guarantee and an 'only 5 new clients this season' line. Is that a good offer?",
+      "expected_output": "Should apply the professional-services segment rule: no outcome guarantees (savings, returns, results) unless a row permits them, so 'save more than our fee or it's free' is not used as copy and is at most raised with the client as a risk, citing J-2/J-3 if present. Suggests service-level alternatives only from rows: fixed fee or scope from D-3/D-7, response time from I-3, D-5 wording if one exists. The 'only 5 new clients' line needs a B-6 capacity figure and I-10 season dates and is marked '⚠ confirm before publishing', or [NEEDS PROOF: B-6]. Required disclosures per J-3. Frames the answer as an offer recommendation (agency artifact, Baker house style) with a 'Needs client approval' list naming the J-1 approver, and ends with the footer.",
+      "assertions": [
+        "Rejects the savings/outcome guarantee for a professional-services client",
+        "Offers service-level guarantee alternatives sourced from D-3/D-5/D-7/I-3 rather than invented",
+        "Requires B-6/I-10 backing for the capacity line or marks it [NEEDS PROOF]",
+        "Mentions J-3 disclosures or credential rules",
+        "Presents the result as a recommendation with items needing client (J-1) approval",
+        "Ends with the context-rules §9 footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "For [ABC] (a kitchen remodeler), do the offer recommendation for our account lead and then write the offer section for their services page with price ranges, and publish it to their Wix site and post it as a Google Business Profile offer. Pricing isn't our thing so should I use the pricing skill for the ranges?",
+      "expected_output": "Should separate the two outputs (BW-16): the offer recommendation is an agency artifact in Baker house style, saved to the client's Drive OUTPUTS/WEBSITE with a ClickUp record tagged strategy (created only if the user asks), and does not load client voice; the offer section is client copy in the client's voice, saved to OUTPUTS/WEBSITE with a record tagged website. Explains that pricing isn't used at BML and this skill owns service price framing and presentation; price ranges appear only if D-4 says publishing them is approved, otherwise [NEEDS PROOF: D-4]; E-10 shapes framing but isn't published as a claim. Does not publish to Wix or post to Google Business Profile: stops at a human approval checkpoint and names the J-1 approver. Resolves folders by ID, never creates folders or saves to local paths. Both outputs end with the §9 footer, stripped before client delivery.",
+      "assertions": [
+        "Produces an agency recommendation and client offer copy as distinct outputs with different voices",
+        "Saves both to OUTPUTS/WEBSITE with ClickUp records tagged strategy and website respectively, only on request",
+        "Routes price presentation to this skill, not the pricing skill",
+        "Publishes price ranges only when D-4 approves, otherwise [NEEDS PROOF: D-4]",
+        "Does not publish to Wix or post to Google Business Profile; stops for human approval naming J-1",
+        "Ends both outputs with the §9 footer"
+      ],
+      "files": []
     }
   ]
 }

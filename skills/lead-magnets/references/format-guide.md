@@ -1,5 +1,9 @@
 # Lead Magnet Format Guide
 
+<!-- BML:START bml-note -->
+> **BML client work:** these format notes are general craft guidance. For local-service formats (cost guide, planning checklist, what to ask before hiring, seasonal maintenance, patient prep) use [bml-local-formats.md](bml-local-formats.md). Tools named below (Canva, Notion, Designrr, Beacon.by, Loom, course platforms) apply only if the client uses them; BML's default is Google Docs → PDF in the client's Drive. "Key stats or quotes", "example data" and swipe-file examples come from the client's rows (G-2, G-3, G-5) or are placeholders; never invent them, and never put competitor material in a client asset (J-4). Email mini-courses and webinar reminders route to **emails** and are drafted, never sent. Clinical quizzes or self-assessments must not collect symptoms or conditions and must not read as a diagnosis (`bml/context-rules.md` §7).
+<!-- BML:END bml-note -->
+
 Detailed creation guidance for each lead magnet format.
 
 ## Contents

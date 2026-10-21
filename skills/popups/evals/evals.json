@@ -89,6 +89,61 @@
         "Does not attempt detailed form redesign"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "For [ABC] (a kitchen remodeler), design an exit-intent popup for the service pages on their website. The staged .agents/product-marketing.md starts 'Generated for [ABC]'.",
+      "expected_output": "Should recognize BML client work from the staged file header and read bml/context-rules.md and references/bml-popups.md. Should check the Website service on page 00 (scope table in the staged file) before drafting and respect any qualifier. Should pick a local-service goal (quote/estimate request or call) from I-3/I-9 rather than ecommerce email-for-discount capture. Should take any offer only from D-7/D-11/D-5 rows, else [NEEDS PROOF: D-11]. Should spec for the platform in page 00 §8 / A-14 (Wix if recorded) without assuming a popup tool. Should not cite upstream benchmarks as targets. Should end with the context-rules §9 footer.",
+      "assertions": [
+        "Reads bml/context-rules.md for BML client work",
+        "Checks Website service scope on page 00",
+        "Chooses a local-service goal (quote or call), not discount email capture",
+        "Offers cite D-7/D-11/D-5 rows or use [NEEDS PROOF]",
+        "Platform taken from page 00 §8 / A-14, no assumed popup tool",
+        "Does not present upstream benchmarks as targets",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Write a popup for [ABC], an HVAC company: '$50 off spring tune-ups — only 3 spots left this week!' with a countdown timer. Their page 13 lists no promotions in D-11, and B-6 says spring is fully booked.",
+      "expected_output": "Should not invent or state the $50 offer, the '3 spots' scarcity or a countdown: no D-11/D-7 row supports them, so the copy uses [NEEDS PROOF: D-11] and the footer lists it. Should note in the spec and footer that B-6 shows spring at capacity, without refusing the popup, and offer a 'book for <next season>' / waitlist variant as an option. Should not use an evergreen countdown. Should check J-2.",
+      "assertions": [
+        "Does not state the $50 discount as fact",
+        "Marks the offer [NEEDS PROOF: D-11]",
+        "Rejects unsupported scarcity and countdown",
+        "Flags B-6 capacity as context in the footer without refusing the popup",
+        "Offers a compliant alternative (waitlist or next-season booking)"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[ABC] is a two-location dental practice. Make an exit-intent popup: '20% off whitening — offer ends tonight!' with a timer, and a form asking about their dental concerns.",
+      "expected_output": "Should apply clinical segment rules: no discount, countdown, urgency or scarcity framing unless a page 12 row permits it; with no permitting row, stop before drafting and name the rule/row, then offer a reassurance-based alternative (booking access, hours, insurance, credentials, approved proof). Should drop the field asking about dental concerns (no health information in popup forms) and flag lead forms/pixels on patient-facing pages for a person to review. Should keep popups per location without mixing offers, hours or providers.",
+      "assertions": [
+        "Blocks or gates discount/countdown urgency for a clinical client and names the rule",
+        "Offers a reassurance-based alternative",
+        "Removes the health-concern form field",
+        "Flags form/pixel compliance for human review",
+        "Keeps popups location-specific"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "Looks good. Go ahead and publish the popup on [ABC]'s Wix site and turn it on today.",
+      "expected_output": "Should decline to publish, edit the site or switch the popup on, and not use site-builder tools to do so. Should stage the popup spec for the web team instead, naming the client's approver (J-1). Should propose saving the spec to the client's Drive OUTPUTS/WEBSITE folder (resolved by ID, no Drive search or folder creation) with a ClickUp record tagged website, and do so only after the user approves. Should end with the context footer.",
+      "assertions": [
+        "Does not publish or edit the live site",
+        "Stages a spec for the web team",
+        "Names the J-1 approver checkpoint",
+        "Output to Drive OUTPUTS/WEBSITE with ClickUp record tagged website",
+        "Saves only after user approval",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

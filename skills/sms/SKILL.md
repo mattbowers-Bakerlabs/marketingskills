@@ -1,8 +1,8 @@
 ---
 name: sms
-description: When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Postscript," "Attentive," "Twilio," "A2P 10DLC," "TCPA," "SMS compliance," "short code," "toll-free SMS," "MMS campaign," "should I do SMS," "SMS vs email," "WhatsApp marketing," "WhatsApp Business API," "WhatsApp templates," or "click-to-WhatsApp." For email sequences, see emails. For SMS copy framing, see copywriting. For opt-in popups that capture phone numbers, see popups.
+description: When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Postscript," "Attentive," "Twilio," "A2P 10DLC," "TCPA," "SMS compliance," "short code," "toll-free SMS," "MMS campaign," "should I do SMS," "SMS vs email," "WhatsApp marketing," "WhatsApp Business API," "WhatsApp templates," or "click-to-WhatsApp." Also use for local-service texting: "appointment reminder texts," "missed-call text-back," "estimate follow-up texts," or "review request texts." For email sequences, see emails. For SMS copy framing, see copywriting. For opt-in popups that capture phone numbers, see popups.
 metadata:
-  version: 1.1.0
+  version: 1.1.0-bml.1
 ---
 
 # SMS Marketing
@@ -13,6 +13,18 @@ You are an expert in SMS and MMS marketing for direct-to-consumer brands, mobile
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**For a Baker Labs (BML) client, read `bml/context-rules.md` first** (repo root; `../../bml/context-rules.md` from this skill's folder). It applies when the request names a client code or client name, runs in a client's Claude Project, or the staged file's first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`. Where it conflicts with this skill, it wins.
+
+- **Never edit `.agents/product-marketing.md` for a client.** Changes go through context-rules §8. If the file is missing or names another client, run `product-marketing` (Load) first.
+- **Read order:** staged page 13 → current Monthly Context Brief → source pages only for detail behind a cited row (§1). Don't browse Drive or search ClickUp.
+- **Scope gate (§3):** the service on page 00 is **SMS**, or SMS listed inside **Email Marketing / lifecycle** in the scope summary. If neither is `Active` (or `Active — <qualifier>` that permits it), stop: "SMS isn't in [CODE]'s retainer." Offer a scope note for the account lead. An `INTAKE DRAFT` has no scope gate but is internal or pitch material only (§1).
+- **Answer the "Before Starting" questions from rows**, not by asking: business type and segment (page 13 header), platform, CRM, call tracking and booking tool (A-15, 00 §8), lead handling (I-3), online booking (I-9), capacity and seasons (B-6, I-10), service area (B-8), review practice and platforms (I-5, A-16). Ask only about what stays `OPEN`. BML clients are local service businesses: the ecommerce, app and SaaS options under Business Type and Goal below don't apply unless page 13 says so.
+- **Figures in this skill and its references** (open rates, opt-in rates, costs, CTR uplift, benchmarks, penalties) are upstream background. Never present one as the client's, as a forecast or as a promise.
+- **Claims (§4), guardrails (§5), distinctiveness, capacity and lead handling (§6), segment rules (§7)** apply to every message. Clinical clients: see `references/bml-local-service-flows.md` §2 (no PHI in texts).
+- **Outputs:** a flow spec plus message drafts, saved to the client's Drive `OUTPUTS/EMAIL` with a ClickUp record tagged `email`, ending with the §9 footer. Nothing is sent, scheduled or loaded into the client's platform (see BML outputs under Output Format).
+<!-- BML:END context -->
 
 Gather this context (ask if not provided):
 
@@ -109,6 +121,19 @@ Application-to-Person 10-digit long codes must be registered through The Campaig
 
 **For full compliance details, edge cases, opt-in copy templates, and STOP/HELP response templates**: see [references/compliance.md](references/compliance.md).
 
+<!-- BML:START compliance-gate -->
+### BML clients: compliance is flagged, not decided
+
+For BML client work, this skill keeps the compliance layer above but never makes the determination. It doesn't tell a client or account lead that a program, flow or message is compliant, that consent is sufficient, or that a message is transactional. Instead:
+
+- Propose a consent bucket for each message (`references/bml-local-service-flows.md` §1) and mark it `[COMPLIANCE REVIEW: consent bucket]`.
+- List the open compliance questions first in the plan: A2P 10DLC status (A-15), where and how marketing consent is captured, quiet-hour window and state rules, opt-out and HELP handling on the client's platform, consent-record retention. Each one is a question for a person, with the row it should come from.
+- Clinical segment: every flow is `[COMPLIANCE REVIEW: HIPAA]` and carries no condition, procedure, test or result (flows §2). Sign-off from the client's compliance contact comes before client review. Appointment and recall reminders stay in the practice's own system; BML doesn't draft them (flows §3b, §3e).
+- J-3 (regulatory and licensing rules) and the rest of page 12 restrict drafts at any status. A request that needs a violation stops and names the row (context-rules §5).
+- The settlement and penalty figures above are background for the agent. Don't quote them in client deliverables.
+- This overrides any "generally OK", "not required" or "separate consent OK" statement in this skill and its references (for example under Transactional and Post-Purchase below): those are inputs for the reviewer, not conclusions.
+<!-- BML:END compliance-gate -->
+
 ---
 
 ## Phone Number Types (US)
@@ -146,6 +171,10 @@ Short links are mandatory (`klvy.co`, `txt.attn.tv`, branded short domain). Trac
 ---
 
 ## SMS Sequence Types
+
+<!-- BML:START bml-flows -->
+**For BML clients, this overrides the sequence list below.** The default flows are local-service flows in `references/bml-local-service-flows.md`: missed-call text-back, appointment confirmation and reminder, estimate follow-up, post-job review request (no gating, no incentives) and seasonal or maintenance reminders (capacity and season from B-6 and I-10 noted beside each service and flagged in the footer). Use the ecommerce flows below (abandoned cart, browse abandonment, replenishment, flash sales, BFCM, VIP) only when page 13 shows the client sells online and the scope covers it. Win-back for memberships or maintenance plans goes to `emails`, with SMS as a layer.
+<!-- BML:END bml-flows -->
 
 ### Welcome / Opt-In Confirmation (immediate)
 
@@ -225,6 +254,19 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 
 **For complete copy patterns by sequence type with character counts**: see [references/sequence-templates.md](references/sequence-templates.md).
 
+<!-- BML:START copy -->
+### BML clients: copy rules
+
+- **Voice:** SMS drafts are client deliverables. Use the client's voice from page 01 and its required CTA language, not "texting a friend" if 01 says otherwise. The flow spec around them is an agency artifact in Baker house style.
+- **Sender ID:** the business name exactly as page 13 gives it (the location name for a multi-location brand, per context-rules §7).
+- **Value and proof:** "specifically" means from rows. Offers, codes, prices, financing, response times and schedule openings come only from D-4, D-7, D-11, I-3 and B-6. Otherwise write `[NEEDS PROOF: <row ID>]`. Never default to a "10% off for joining" offer.
+- **CTA:** a call, a booking or a reply, routed to whoever I-3 names.
+- **Urgency:** no invented deadlines or scarcity for any client. For clinical clients, none at all unless a page 12 row permits it.
+- **Personalization:** first name only if the client's platform holds it and the bucket allows it. No condition, procedure or visit type for clinical clients. Location references stay inside the service area (B-8).
+- **Links:** the client's platform short links or a branded domain the client owns, with UTM tags. The `klvy.co` / `txt.attn.tv` examples in Core Principles assume those platforms.
+- **Distinctiveness (§6):** checked across the flow set. At least one message (usually the estimate follow-up or seasonal reminder) carries a belief (F) and a proof point (G); transactional messages are exempt.
+<!-- BML:END copy -->
+
 ---
 
 ## Platform Selection
@@ -246,6 +288,10 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 - B2B SaaS doing transactional/auth → **Twilio** or **Customer.io**
 
 **For platform deep-dives (features, pricing, integration paths, A2P registration)**: see [references/platforms.md](references/platforms.md).
+
+<!-- BML:START platform -->
+**For BML clients:** the platform is whatever A-15 or page 00 §8 records (often texting built into the client's CRM, field-service, booking or practice-management tool). Write the spec for that platform. Don't recommend a switch unless the user asks; if nothing is recorded, write "platform unknown — [NEEDS PROOF: A-15]" and give selection criteria rather than a pick. Every tool in this section and in Tool Integrations is "if the client uses it". BML doesn't operate a client's SMS platform, and agents never write to a client's CRM or texting tool.
+<!-- BML:END platform -->
 
 ---
 
@@ -279,6 +325,10 @@ Optional Send 2 (24h later): Reminder + best-seller showcase
 
 Cross-reference **ab-testing** skill for proper test design and **analytics** for attribution setup.
 
+<!-- BML:START measurement -->
+**For BML clients, the benchmarks above don't apply.** They are ecommerce DTC ranges. Revenue per send and list-growth targets rarely fit a local service business. Measure what counts as a conversion for this client (context-rules, BW-12): booked appointments, kept appointments (fewer no-shows), estimate-to-job rate, calls from missed-call replies, reviews left. Baselines come from A rows (A-7 review velocity, A-12 tracking health, I-4 lead-to-customer rate). Where no row holds one, write "benchmark unknown". Read GA4 and Business Profile data through Windsor.ai, and keep UTM tags on every link. Opt-out rate per send still applies.
+<!-- BML:END measurement -->
+
 ---
 
 ## Output Format
@@ -294,6 +344,25 @@ When the user asks for an SMS plan, return:
 
 Keep recommendations specific. Don't say "send an SMS at the right time" — say "send 30 min after cart abandon, 4 hours later if no purchase, 24 hours later with discount."
 
+<!-- BML:START outputs -->
+### BML clients: output and approvals
+
+This overrides the list above for BML client work. Return one document:
+
+1. **Open questions and compliance flags** first (see the compliance gate above), each with its row ID.
+2. **Flows**, ranked by fit for this client (lead handling, capacity, review needs), not by ecommerce ROI.
+3. **Flow spec**: one table per flow, in the format in `references/bml-local-service-flows.md` §5, for the client's platform.
+4. **Message drafts** with character and segment counts, proposed consent bucket and A2P campaign use case. Keep them identical to the sample messages proposed for registration.
+5. **Measurement**: the conversions and baselines from the measurement block above.
+6. **Context footer** (context-rules §9), stripped before anything goes to the client.
+
+Specific timing is still the goal, but it comes from rows (D-3, I-3) or is marked as a proposal.
+
+**Approvals (nothing sends):** the skill drafts only. It never sends a text, schedules a send, sets up a recurring send or loads a flow into the client's platform, CRM or booking tool. Order: internal review (account lead) → compliance review where flagged (always for clinical) → ready for client review → client review (J-1 approver) → approved → the client or account lead builds it in the platform. Recurring drafting work becomes a scheduled task, set up only with the user's approval, whose runs draft and stop for review; never an in-session loop. Any Gmail use is drafts only, to the account lead.
+
+**Where it goes (after the user approves; until then, draft in the session):** the client's Drive `OUTPUTS/EMAIL` folder (resolved by ID, never by searching or creating folders), named `<CODE>_SMS_<flow>_YY.MM.DD`, with a ClickUp record tagged `email`, status `internal review`. Propose the record and create it only after the user approves. No persistent work in local paths.
+<!-- BML:END outputs -->
+
 ---
 
 ## Task-Specific Questions
@@ -305,6 +374,10 @@ Keep recommendations specific. Don't say "send an SMS at the right time" — say
 5. What sequences do you already have running?
 6. Are you DTC ecom, mobile app, B2B SaaS, services?
 7. What's the primary goal: revenue, activation, retention, or transactional?
+
+<!-- BML:START questions -->
+**For BML clients:** answer these from rows first (A-15, I-3, I-5, I-9, B-6, I-10, B-8, page 13 segment) and ask only what's still `OPEN`. Question 6 is answered by the segment; question 7 is usually lead handling, appointments and reviews.
+<!-- BML:END questions -->
 
 ---
 
@@ -350,3 +423,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 - **analytics**: For attribution and RPS measurement.
 - **ab-testing**: For SMS-specific test design.
 - **lead-magnets**: For incentivizing opt-in (the "10% off for joining" offer).
+
+<!-- BML:START related -->
+**BML routing:** `churn-prevention` and `onboarding` are not part of BML's library. Membership or maintenance-plan win-back → **emails** (SMS as a layer). Booking, estimate or opt-in form changes → **cro** (`references/form.md`). Phone capture on site → **popups**. Opt-in incentives → **offers** or **lead-magnets** only if D-7 or D-11 holds an approved offer.
+<!-- BML:END related -->

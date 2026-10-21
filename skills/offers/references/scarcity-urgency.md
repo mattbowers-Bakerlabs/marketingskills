@@ -1,5 +1,9 @@
 # Scarcity & Urgency
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. Scarcity and urgency must be true and capacity-backed: counts from B-6, seasons from I-10, end dates from D-11, and every count or date carries "⚠ confirm before publishing". J-2 can rule a tactic out. **Clinical clients: no scarcity, urgency, countdowns or fear framing unless a page 12 row permits it** (context-rules §7). Putting a countdown, banner or promotion live is publishing: stop for approval. The quoted examples (dates, prices, "Cohort 7", tax-prep) are illustrative only.
+<!-- BML:END bml-note -->
+
 The reason to buy now, not later.
 
 This is the most misused offer lever in the industry. Done right, it's a meaningful conversion lift and a respect-the-buyer's-time gesture. Done wrong (fake countdown timers, lies about inventory), it converts once and torches trust permanently.

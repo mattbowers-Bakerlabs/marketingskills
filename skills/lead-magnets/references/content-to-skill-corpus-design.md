@@ -1,5 +1,9 @@
 # Corpus Design and Extraction
 
+<!-- BML:START bml-use -->
+> **BML use:** follow the BML rules at the top of `content-to-skill.md`. The worked example is synthetic; never copy its speaker, date or wording into client work.
+<!-- BML:END bml-use -->
+
 ## Source Register
 
 Keep the register with the working corpus. Record at least:

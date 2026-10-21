@@ -1,5 +1,9 @@
 # Bonus Stacking
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. The values and bonuses here ($297, $1,200, "$250K MRR", Slack, Notion, discount codes) are illustrative: never copy them into client work. Objections come from D-6, F-8, F-9, G-7 and I-4, not from browsing the client's email, refund requests or call recordings. Don't contact the client's customers; asking buyers is a question for the account lead. A bonus must be something the client does or has agreed to add (D-1, D-7, D-8). No stated dollar values unless the client supplied them. For clinical clients, gifts or free services for patients are flagged for a person (J-3), not designed, unless a J-3 row explicitly permits them.
+<!-- BML:END bml-note -->
+
 How to add bonuses that raise perceived value without devaluing the core offer.
 
 ## What bonuses actually do

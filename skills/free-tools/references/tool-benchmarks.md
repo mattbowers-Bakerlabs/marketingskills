@@ -1,5 +1,9 @@
 # Free Tool Case Examples
 
+<!-- BML:START bml-use -->
+> **BML client work:** these are SaaS and product-company cases, illustrative only. Never copy their figures, company names or outcomes (signups, downloads, acquisitions) into client work or a client forecast, and don't present them as what a local service business can expect. Client facts come from rows (`bml/context-rules.md` §4); the forecast baseline is the client's own A-1, A-12 and I-4 rows, or "benchmark unknown". For local-service tool patterns see `bml-local-tools.md`.
+<!-- BML:END bml-use -->
+
 Use these sourced examples to study product design and distribution. They are not transferable conversion benchmarks: a tool's existence or later acquisition does not establish its visitor-to-lead rate, CAC, or incremental revenue.
 
 ## Framing: "Your product is my marketing opportunity"

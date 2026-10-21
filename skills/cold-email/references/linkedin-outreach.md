@@ -1,5 +1,11 @@
 # LinkedIn Outreach
 
+<!-- BML:START treat-as -->
+
+**BML: a person does every LinkedIn step.** Agents never view profiles, follow, react, comment, connect, message or send voice notes, on the client's accounts or BML's, and never use automation tools or their APIs (HeyReach, Unipile and the others). This overrides "The automation decision" and "For agents" below: for BML work the only options are **Manual** and **Assisted** (the agent drafts copy and a task list; a person acts). Commenting on posts counts as posting to social, so it needs a person too. Changes to a client's profile are client-facing and go through the J-1 approver. The example notes and messages are SaaS ("pricing tests", "SaaS teams") and the rates are vendor data: illustrative only, never copied or quoted to a client. Personal hooks follow the sourced-fact rule in SKILL.md.
+
+<!-- BML:END treat-as -->
+
 LinkedIn is the second channel in most B2B outbound and the first for some audiences: people who ignore cold email often accept a relevant connection request. It also has the tightest limits and the highest account risk of any channel. This reference covers the profile, the limits, the sequence, the copy, and the automation decision.
 
 Figures below come mostly from LinkedIn automation vendors' and agencies' own datasets (2025–26). Use them as ranges.

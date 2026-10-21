@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** use this file through [bml-local-referrals.md](bml-local-referrals.md) §3, which overrides it for BML clients. No incentives even where a platform permits them. "Existing authorization" never covers a send, configuration, reply or moderation report (approvals in §4). No reviewer names in BML artifacts. Clinical replies never confirm a patient. Google Business Profile and the A-16 platforms come first.
+<!-- BML:END bml-use -->
+
 # Review Programs
 
 Use this reference when the user wants more customer reviews, a review-request program, help responding to a review, reputation triage, or permission to reuse testimonials. Reviews are customer advocacy, so they live alongside referral and affiliate programs.

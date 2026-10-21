@@ -1,5 +1,9 @@
 # The Value Equation
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. The surface-ask table and the copywriting-course example (scores, the named framework, "~3x") are illustrative: never copy them into client work. For a client, the dream outcome comes from D-2 and B-1, proof from G rows (missing → `[NEEDS PROOF: <row>]`), timelines only from D-2 and D-3, and a named method only if D-3 describes one. Lever scores are agency judgement. Loom, Slack and async-intake ideas assume tools the client may not use: check A-15 first.
+<!-- BML:END bml-note -->
+
 The single most useful frame for offer design. Originated in Alex Hormozi's *$100M Offers*; the underlying idea (multiply benefits, divide costs) is much older — direct-response copywriters have been doing it for a century.
 
 ## The formula

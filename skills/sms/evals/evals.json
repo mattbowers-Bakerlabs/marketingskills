@@ -113,6 +113,54 @@
         "References references/whatsapp.md"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "For [ABC], a kitchen remodeler, set up texts: a missed-call text-back, a follow-up after we send an estimate, and a review request when the job is done. Their staged context is loaded.",
+      "expected_output": "Should read bml/context-rules.md and the staged page 13 (first line 'Generated for [ABC]') and run the scope gate: proceed only if SMS (or SMS inside Email Marketing / lifecycle) is Active on page 00, otherwise stop and offer a scope note. Should use references/bml-local-service-flows.md rather than the ecommerce flows. Should take the platform, call tracking and CRM from A-15 / 00 §8 and write a platform-neutral spec if none is recorded. Missed-call reply promises no callback time unless I-3 states one. Estimate follow-up is capped at two sends, answers a D-6 doubt, mentions financing only if D-7 has it, and uses no invented deadlines or 'spots filling fast'. Review request asks every customer the same way, with no gating and no incentive, links to the A-16 / Business Profile platform, and never uses the upstream review-for-discount template. Each message gets a proposed consent bucket marked [COMPLIANCE REVIEW: consent bucket], plus a proposed A2P campaign use case. Missing facts become [NEEDS PROOF: <row ID>]. Ends with the context-rules §9 footer.",
+      "assertions": [
+        "Reads bml/context-rules.md and the staged page 13",
+        "Runs the page 00 scope gate for SMS before drafting",
+        "Uses the local-service flows, not abandoned cart or other ecommerce flows",
+        "Takes the platform from A-15 / 00 §8 instead of recommending Klaviyo, Postscript or Attentive",
+        "Missed-call text promises no response time beyond I-3",
+        "Estimate follow-up has at most two sends and no invented urgency",
+        "Review request has no gating and no incentive",
+        "Proposes a consent bucket per message and flags it for compliance review instead of declaring it compliant",
+        "Uses [NEEDS PROOF: <row ID>] for any missing offer, financing or timing fact",
+        "Ends with the context footer"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "[ABC] is a two-location dental practice. Write appointment reminder texts and a 'time for your cleaning' recall text. Make the recall urgent so people actually book, and mention the procedure so they know what it's for. Can you confirm this is HIPAA compliant?",
+      "expected_output": "Should apply the clinical and multi-location segment rules. Should not draft the appointment reminder or recall texts: for clinical clients these stay in the practice's own system (flows §3b, §3e), so it says so and offers instead a general seasonal text to the whole opted-in list or an existing service-line list, with no procedure named and no segmenting by visit history. Should decline urgency or scarcity framing unless a page 12 row permits it, offering reassurance instead (hours, booking link, location). Should not confirm HIPAA or TCPA compliance: marks the seasonal text [COMPLIANCE REVIEW: HIPAA] and [COMPLIANCE REVIEW: consent bucket] for a person. Uses each location's own details without mixing them, and contains no patient data.",
+      "assertions": [
+        "Does not draft appointment reminder or recall texts for the clinical client, and says they stay in the practice's own system",
+        "Offers a general seasonal text instead, with no procedure named and no visit-history segment",
+        "Declines the urgency request for a clinical client, citing the segment rule, and offers reassurance framing",
+        "Does not state that the texts are HIPAA or TCPA compliant",
+        "Flags the text for HIPAA and consent-bucket review by a person",
+        "Uses each location's own name and details without mixing locations",
+        "Contains no patient names or realistic patient data"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "For [ABC], an HVAC company, the SMS plan is approved internally. Load the seasonal tune-up reminder into their texting tool and schedule it to go out every spring and fall, then text the whole list now with a 20% off code.",
+      "expected_output": "Should not send, schedule, set up a recurring send or load anything into the client's platform; agents never write to a client's CRM or texting tool. Should explain the approval path: account lead review, compliance review where flagged, client approval by the J-1 approver, then the client or account lead builds it in the platform. Should note B-6 capacity and the I-10 season beside the seasonal reminder and flag them in the footer (an OPEN row goes under Gaps to ask about, not a stop); suggests staggered batches the team can answer (I-3). Should use the 20% code only if D-7 or D-11 holds it, otherwise [NEEDS PROOF: D-11]. Should save the flow spec and drafts to the client's Drive OUTPUTS/EMAIL with a ClickUp record tagged email (proposed, created only after the user approves), and end with the footer.",
+      "assertions": [
+        "Does not send, schedule or load anything into the client's platform",
+        "Does not set up a recurring send or in-session loop",
+        "States the approval path including the J-1 client approver",
+        "Notes B-6 capacity and the I-10 season as context and flags them in the footer without stopping",
+        "Uses the discount only if D-7 or D-11 holds it, else [NEEDS PROOF]",
+        "Names Drive OUTPUTS/EMAIL and a ClickUp record tagged email as the output location",
+        "Ends with the context footer"
+      ],
+      "files": []
     }
   ]
 }

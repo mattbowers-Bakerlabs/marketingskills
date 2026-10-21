@@ -1,5 +1,9 @@
 # Offer Anatomy
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. Figures and offers here ("5 qualified leads per week", the fractional CMO example, "$6K" plans, the 2x bonus rule) are illustrative only: never copy them into client work. For a client: bonus values only if the client supplied them; scarcity only from B-6, I-10 and D-11; prices only where D-4 approves; payment structures only as D-7 states them. Pay-after-results and free-trial structures don't fit clinical or professional-services clients.
+<!-- BML:END bml-note -->
+
 A complete offer has six components. Skip any one and conversion suffers — usually noticeably.
 
 ## The six components

@@ -1,5 +1,9 @@
 # Lead Magnet Benchmarks
 
+<!-- BML:START bml-note -->
+> **BML client work:** these benchmarks are SaaS/B2B and illustrative only. Never copy a rate, CPL, cost or timeline from this file into a client plan, report or asset. For a local service client, use the client's own A rows (A-1, A-7, A-9, A-12) and I-4, or write "benchmark unknown — set a baseline". Success is a call, booking, quote request or signed job, not a trial. Creation costs here are not BML's fees.
+<!-- BML:END bml-note -->
+
 Reference data for planning and evaluating lead magnet performance.
 
 ---

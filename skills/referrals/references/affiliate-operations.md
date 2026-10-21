@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** this playbook applies only to a BML client that sells a product online through commission partners (see SKILL.md BML mode). The cohort figures are illustrative; never copy them into client work. Use the client's rows or `[NEEDS PROOF]`. Outreach is drafted, never sent; terms go to the client approver (J-1) and the J-3 contact; BML never configures tools, marks commissions paid or sends payouts. Professional referrers are never paid per referral: use [bml-local-referrals.md](bml-local-referrals.md) §2. Tools only if the client uses it.
+<!-- BML:END bml-use -->
+
 # Operating an Affiliate Program
 
 Load this for recruiting and managing commission-based partners, rather than a customer refer-a-friend loop. Keep tracking and tool selection in `affiliate-programs.md`; creator sponsorship and audience/content vetting belong to influencer-marketing. Recruit suitable partners through prospecting, then use this playbook for economics, activation, terms, and reconciliation.

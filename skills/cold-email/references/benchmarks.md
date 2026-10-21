@@ -1,5 +1,11 @@
 # Benchmarks, Data & Expert Methods
 
+<!-- BML:START treat-as -->
+
+**BML: illustrative only.** These are vendor datasets from SaaS and B2B-tech outbound (reply rates, seniority, industries, a SaaS funnel). Never copy a figure, expert claim or funnel into client work, and never present one as what a client should expect. Local-service referrer outreach has no benchmark on file: use the client's own results (A rows, I-2) or say "benchmark unknown". "Meetings" and "customers" in the funnel become intro calls and first referrals for local service. The mistakes list and cultural notes are fine as writing guidance.
+
+<!-- BML:END treat-as -->
+
 ## Core Performance Metrics
 
 Almost every public cold email benchmark comes from a vendor that sells sending, data, or agency services, and each measures differently (some count auto-replies as replies, some don't). Use these as ranges, and judge yourself against your own baseline.

@@ -2,7 +2,7 @@
 name: popups
 description: When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see cro. For general page conversion optimization, see cro.
 metadata:
-  version: 2.0.0
+  version: 2.0.0-bml.1
 ---
 
 # Popup CRO
@@ -13,6 +13,14 @@ You are an expert in popup and modal optimization. Your goal is to create popups
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+<!-- BML:START context -->
+**BML client work** (the request names a client code or name, runs in a client's Claude Project, or the staged file's first line starts `Generated for`, `UNGENERATED for` or `INTAKE DRAFT for`): read `bml/context-rules.md` (repo root; `../../bml/context-rules.md` from this skill's folder), then `references/bml-popups.md`. Where they conflict with this skill's examples, offers, benchmarks or output steps, they win. Never edit `.agents/product-marketing.md` for a client; changes go to rules §8. Missing or wrong-client file → run `product-marketing` Load first.
+- **Scope gate (§3):** the **Website** service on page 00. Absent or not `Active` → stop and offer a scope note for the account lead; a qualifier (e.g. "copy only", "planning only") limits the output, so say what it excludes. `INTAKE DRAFT` (prospect): no scope gate; pitch material only, facts marked "from public research".
+- **Read order (§1):** router → staged page 13 → Monthly Context Brief → source rows only if needed. No Drive or ClickUp browsing.
+- **Rules:** claims and `[NEEDS PROOF]` §4 · guardrails §5 · distinctiveness, capacity, lead handling §6 · segments §7 · footer §9.
+- **Output:** a staged spec, never a live popup — Drive `OUTPUTS/WEBSITE`, ClickUp record tagged `website`, after user approval (see Output Format).
+<!-- BML:END context -->
 
 Before providing recommendations, understand:
 
@@ -35,6 +43,10 @@ Before providing recommendations, understand:
    - Traffic sources (paid, organic, direct)
    - New vs. returning visitors
    - Page types where shown
+
+<!-- BML:START goals -->
+**For BML clients, this overrides Popup Purpose:** the default goal is a lead — call, booking, quote request, seasonal booking or lead-magnet download, with CTAs in 01's required language. Email/newsletter capture only if I-6 and A-15 show a list and an email platform. Answer Current State and Traffic Context from A-1, A-12 and I-1 before asking. Upstream Benchmarks and Common Popup Strategies are ecommerce/SaaS: illustrative only, never targets. Goal map and local-service strategies: `references/bml-popups.md`.
+<!-- BML:END goals -->
 
 ---
 
@@ -131,6 +143,10 @@ Before providing recommendations, understand:
 - Single use per visitor
 - Easy to apply code
 
+<!-- BML:START offers -->
+**For BML clients, this overrides the discount, deadline and exit-intent offers here and the countdown, urgency and escalating-offer experiments below:** an offer, discount, guarantee or deadline appears only if a row states it (D-7, D-11, D-5; prices per D-4), else `[NEEDS PROOF: D-11]`. Clinical: no discount, countdown, scarcity or urgency unless a page 12 row permits it. All clients: check J-2, and note capacity and season (B-6, I-10) beside the affected service and in the footer, never as a reason to drop it. See `references/bml-popups.md` › Offers gate.
+<!-- BML:END offers -->
+
 ### Exit Intent Popup
 **Goal**: Last-chance conversion
 
@@ -203,6 +219,10 @@ Before providing recommendations, understand:
 ---
 
 ## Copy Formulas
+
+<!-- BML:START copy -->
+**BML clients:** figures and phrases in these formulas ("10% Off", "Join [X] people", "Weekly tips in 5 min") are illustrative; never copy them. Fill brackets only from rows (counts from A-7/G-2 marked "⚠ confirm before publishing"; quotes verbatim from G-5), write in the client's voice (01), and build the popup set on ≥1 F and ≥1 G row (§6). Placeholder examples: `references/bml-popups.md` › Copy.
+<!-- BML:END copy -->
 
 ### Headlines
 - Benefit-driven: "Get [result] in [timeframe]"
@@ -299,6 +319,10 @@ Before providing recommendations, understand:
 ---
 
 ## Output Format
+
+<!-- BML:START outputs -->
+**BML clients:** spec for the client's site platform (page 00 §8 / A-14; BML-built sites are usually Wix); name a popup tool (OptinMonster, Klaviyo forms…) only if the client uses it. Never publish, edit the site or switch a popup on: stage the spec for the web team. Add platform, pages, offer + row ID, CTA destination (I-3), dates (D-11/I-10), consent text, tracking events (A-12) and approver (J-1); clinical: the popup's form and tracking are marked "Flag for compliance review (person)", not added. After the user approves, save to Drive `OUTPUTS/WEBSITE` (folder by ID; never search or create) with a ClickUp record tagged `website`; the account lead reviews, then J-1 approves before the web team builds. End with the §9 footer (internal; strip before the client sees it). Template: `references/bml-popups.md` › Spec.
+<!-- BML:END outputs -->
 
 ### Popup Design
 - **Type**: Email capture, lead magnet, etc.
@@ -452,3 +476,6 @@ Ideas to A/B test with expected outcomes
 - **cro**: For the page context around popups
 - **emails**: For what happens after popup conversion
 - **ab-testing**: For testing popup variations
+<!-- BML:START related -->
+- **offers** (BML): the offer itself · **conversion-tracking** / **analytics**: popup events · **cro** `references/form.md`: quote and booking forms · **emails**: follow-up only when Email Marketing is in scope
+<!-- BML:END related -->

@@ -1,5 +1,9 @@
 # Content Library to Agent Skill
 
+<!-- BML:START bml-use -->
+> **BML use:** on request only; never proposed by default for a local service client. Use it when a client owns a course, webinar, podcast or newsletter library (usually B2B or professional services) and page 00 covers the work; otherwise offer a scope note. Under `bml/context-rules.md`: only client-owned material, with the source register's permission column filled from the client's written confirmation (G-5, J-6 for guest speakers and likeness), never assumed; client facts and claims from rows or the cited source, else `[NEEDS PROOF]`; page 12 / F-13 guardrails apply to lessons; clinical content only from approved published copy with named provider review, and no patient data in any source or lesson (§7). The working corpus and the packaged artifact go to the client's Drive `OUTPUTS/WEBSITE` folder by ID, not a public GitHub repository or local path; any release, upload or public distribution stops for approval by the account lead and the client approver (J-1). Treat the "Dana" example in the corpus reference as synthetic; never reuse it. Install and download measurement only with disclosed, opt-in consent. Footer per §9.
+<!-- BML:END bml-use -->
+
 A new kind of lead magnet: package an owned course, webinar series, podcast, or newsletter archive as an installable agent skill, so the audience can put your expertise to work inside their own AI tools. Use this when the user says "course as a skill," "content to skill," "package our expertise for agents," or "agent-readable course."
 
 You help marketers turn existing expertise into a useful agent artifact: a small instruction/router layer with selectively loaded lessons and attributable source material. The goal is that an installed agent can answer a specific audience's questions from the library without inventing lessons, quotes, or certainty.

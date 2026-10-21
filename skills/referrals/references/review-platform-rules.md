@@ -1,3 +1,7 @@
+<!-- BML:START bml-use -->
+> **BML client work:** read with [bml-local-referrals.md](bml-local-referrals.md) §3. The G2/Capterra permitted-incentive rows don't apply: BML clients run no review incentives on any platform. For local platforms not listed here (Healthgrades, Houzz, Angi, Nextdoor, Yelp), check the current official policy before asking. Platform rules aren't legal approval; J-3 still applies.
+<!-- BML:END bml-use -->
+
 # Review Platform Rules
 
 Read this reference for incentives, invitation cohorts, moderation, or reuse of platform assets. Policies can change; confirm the selected platform's current official rules before execution. A platform's permission is not a guarantee that local law, reviewer-employer rules, or the user's contract permits the same action.

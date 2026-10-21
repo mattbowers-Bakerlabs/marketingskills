@@ -1,5 +1,9 @@
 # SaaS Offers — the discount trap + worked examples
 
+<!-- BML:START bml-note -->
+**BML clients:** read `bml/context-rules.md` and [bml-service-offers.md](bml-service-offers.md) first. This file is software-only. The named companies, prices and offers (AudienceTap, SaberSim, Teachable, Kit, $297 to $1,997) are illustrative: never copy them, or present them as results, in client work. The "~2× churn for discount-askers" figure is an upstream software claim, not a measured fact for any client: don't cite it in client deliverables. For a local service client, the equivalent of "a real seasonal window" is a D-11 promotion or I-10 season, and the client decides whether to run it.
+<!-- BML:END bml-note -->
+
 The rest of the offers library skews services, courses, and coaching. This reference covers the SaaS case specifically: why discounting is the wrong acquisition lever, and four worked offers that stack risk-reversal, bonuses, and scarcity for a software business.
 
 Read this alongside [offer-formats.md](offer-formats.md#self-serve-saas). For price level and tier structure, the `pricing` skill still does the heavier lifting — this covers the *offer* wrapped around the price.

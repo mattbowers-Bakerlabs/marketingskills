@@ -1,5 +1,11 @@
 # Personalization at Scale
 
+<!-- BML:START treat-as -->
+
+**BML:** the four levels and the "So What?" test fit. The signal stack (funding rounds, tech stack, conference talks, hiring SDRs) is SaaS; local-service signals are in [bml-referral-outreach.md](bml-referral-outreach.md). Every individual fact needs a source link and date from `prospecting` or the user. No source → segment-level message, never an invented "I saw your post". Role-level lines ("you're likely wearing multiple hats") are assumptions: phrase them as common patterns, never as facts about the person. Business facts only: nothing about a person's private life, family, health or home.
+
+<!-- BML:END treat-as -->
+
 Personalization drives **50–250% more replies** (Lavender). The key insight: **if your personalization has nothing to do with the problem you solve, it's just an attention hack** (Clay).
 
 ## Four Levels of Personalization
